@@ -1,0 +1,8 @@
+Co to jest Git?;System kontroli wersji (Version Control System). Pozwala śledzić zmiany w plikach i zarządzać historią projektu.;odin_git
+Jaka jest różnica w "zapisywaniu" między edytorem tekstu a Gitem?;Edytor nadpisuje plik (masz tylko aktualną wersję). Git zapisuje różnice (zmiany) oraz zachowuje pełną historię wszystkich poprzednich wersji.;odin_git
+Czy Git działa lokalnie czy zdalnie?;Lokalnie (na Twoim komputerze). Nie wymaga internetu do działania.;odin_git
+Czy GitHub działa lokalnie czy zdalnie?;Zdalnie. To serwis w chmurze (w internecie) do przechowywania repozytoriów.;odin_git
+Co to jest GitHub?;Platforma internetowa służąca do hostowania projektów Git. Umożliwia współpracę, udostępnianie kodu i budowanie portfolio.;odin_git
+Dlaczego Git jest przydatny dla pojedynczego programisty?;Pozwala przeglądać historię rozwoju projektu i łatwo przywracać wcześniejsze wersje plików w razie błędu.;odin_git
+Dlaczego Git/GitHub są ważne dla zespołów?;Umożliwiają łączenie (merge) pracy wielu osób nad tym samym projektem i rozwiązywanie konfliktów w kodzie.;odin_git
+Co oznacza, że Git jest "rozproszonym" (distributed) systemem kontroli wersji?;Oznacza to, że każdy deweloper posiada na swoim dysku pełną kopię całego projektu wraz z jego historią, a nie tylko pliki nad którymi pracuje.;odin_git

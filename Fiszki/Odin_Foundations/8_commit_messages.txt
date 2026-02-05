@@ -1,0 +1,10 @@
+Dlaczego warto dbać o jakość wiadomości commitów (wymień 2 powody)?;1. Pomaga innym (i Tobie w przyszłości) zrozumieć historię zmian i naprawiać błędy. 2. Rekruterzy patrzą na jakość commitów przy zatrudnianiu jako dowód profesjonalizmu.;odin_git_commits
+Z jakich dwóch głównych części składa się profesjonalna wiadomość commita?;Z Tematu (Subject) i Treści (Body).;odin_git_commits
+Co powinno oddzielać Temat (Subject) od Treści (Body) w wiadomości commita?;Pusta linia (blank line).;odin_git_commits
+Jaki jest zalecany limit znaków dla Tematu (Subject) commita i dlaczego?;Około 72 znaki. GitHub ucina dłuższe tematy w widoku listy.;odin_git_commits
+Co powinno znaleźć się w Treści (Body) commita?;Wyjaśnienie DLACZEGO zmiana była potrzebna i JAK problem został rozwiązany (kontekst), a nie tylko "co" zrobiono.;odin_git_commits
+Dlaczego wiadomość commita typu "fix bug" albo "update" jest uważana za złą?;Jest zbyt ogólna. Nie mówi, co dokładnie naprawiono ani dlaczego, co wprowadza zamieszanie w zespole.;odin_git_commits
+W jakim trybie gramatycznym (po angielsku) powinno się pisać Temat commita?;W trybie rozkazującym (Imperative Mood), np. "Add feature" zamiast "Added feature" czy "Adding feature".;odin_git_commits
+Jak wywołać edytor tekstowy (np. VS Code) do napisania długiego commita (z Subject i Body), zamiast pisać go w cudzysłowie?;Wpisz w terminalu samo `git commit` (bez flagi `-m`).;odin_git_commits
+Kiedy należy zrobić commit?;Po każdej "znaczącej zmianie" (np. gdy fragment kodu zadziała, naprawisz błąd lub literówkę). Zasada: "Commit early and often" (Wcześnie i często).;odin_git_commits
+Czym jest commit w kontekście historii projektu (metafora użyta w lekcji)?;Jest "migawką" (snapshot) stanu kodu w danym momencie, do której zawsze można wrócić.;odin_git_commits

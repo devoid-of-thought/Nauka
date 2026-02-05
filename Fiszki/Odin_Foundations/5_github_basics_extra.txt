@@ -1,0 +1,9 @@
+Co to jest "Atomic Commit" (Atomowy commit)?;To commit, który zawiera zmiany dotyczące tylko jednego zadania lub funkcjonalności. Ułatwia to cofanie zmian i pisanie czytelnych historii.;odin_git_best_practices
+Dlaczego warto robić "Atomic Commits"?;1. Łatwiej cofnąć konkretną zmianę bez psucia innych. 2. Historia zmian jest czytelna dla innych programistów.;odin_git_best_practices
+W poleceniu `git push origin main`, co oznacza "origin"?;To domyślna nazwa zdalnego repozytorium (połączenia z GitHubem).;odin_git_concepts
+W poleceniu `git push origin main`, co oznacza "main"?;To nazwa gałęzi (branch), którą wysyłasz na serwer.;odin_git_concepts
+Co oznacza plik wyświetlony na CZERWONO po wpisaniu `git status`?;Plik został zmieniony, ale nie jest jeszcze w poczekalni (staging area). Git o nim wie, ale go nie "pilnuje" w tym commicie.;odin_git_concepts
+Co oznacza plik wyświetlony na ZIELONO po wpisaniu `git status`?;Plik znajduje się w poczekalni (staging area) i zostanie dołączony do najbliższego commita.;odin_git_concepts
+Jaką komendą ustawić VS Code jako domyślny edytor dla komunikatów Gita (żeby nie otwierał się Vim)?;git config --global core.editor "code --wait";odin_git_config
+Dlaczego NIE należy edytować plików bezpośrednio na stronie GitHub?;Ponieważ powoduje to konflikty wersji między Twoim komputerem a serwerem, które mogą być trudne do naprawienia dla początkujących.;odin_git_best_practices
+Co robi komenda `git remote -v`?;Wyświetla listę zdalnych repozytoriów (URL) podłączonych do Twojego projektu (np. adres na GitHubie).;odin_git_commands

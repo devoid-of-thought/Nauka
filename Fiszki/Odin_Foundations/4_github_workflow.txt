@@ -1,0 +1,13 @@
+Jak sprawdzić status repozytorium (które pliki są zmienione/dodane)?;git status;odin_git
+Jak zainicjować (stworzyć) nowe repozytorium Git w obecnym folderze?;git init;odin_git
+Jak dodać WSZYSTKIE zmienione pliki do "poczekalni" (staging area)?;git add .;odin_git
+Jak dodać TYLKO JEDEN konkretny plik do "poczekalni"?;git add <nazwa_pliku>;odin_git
+Jak stworzyć commit (trwały zapis) z wiadomością?;git commit -m "Twoja wiadomość";odin_git
+Jak wyświetlić historię commitów?;git log;odin_git
+Jak połączyć lokalne repozytorium z nowym repozytorium na GitHubie?;git remote add origin <link_do_repozytorium_na_githubie>;odin_git
+Jak zmienić nazwę obecnej gałęzi na "main" (standard GitHub)?;git branch -M main;odin_git
+Jak wysłać (wypchnąć) zmiany na GitHub (pierwszy raz dla gałęzi main)?;git push -u origin main;odin_git
+Jak wysłać zmiany na GitHub (kolejne razy)?;git push;odin_git
+Jak pobrać repozytorium z GitHuba na swój komputer?;git clone <link_do_repozytorium>;odin_git
+Co robi komenda `git add`?;Przenosi zmiany z katalogu roboczego (Working Directory) do poczekalni (Staging Area), przygotowując je do commita.;odin_git
+Co robi komenda `git commit`?;Bierze pliki z poczekalni (Staging Area) i zapisuje je w historii repozytorium jako nową migawkę (snapshot).;odin_git

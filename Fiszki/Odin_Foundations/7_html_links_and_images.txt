@@ -1,0 +1,19 @@
+Jaki znacznik służy do tworzenia listy nieuporządkowanej (z kropkami)?;<ul> (Unordered List);odin_html_lists
+Jaki znacznik służy do tworzenia listy uporządkowanej (z numerami)?;<ol> (Ordered List);odin_html_lists
+Jaki znacznik oznacza pojedynczy element listy (zarówno w <ul> jak i <ol>)?;<li> (List Item);odin_html_lists
+Jaki znacznik służy do tworzenia linków (kotwic)?;<a> (Anchor);odin_html_links
+Jaki atrybut w znaczniku `<a>` określa adres docelowy linku?;href;odin_html_links
+Napisz kod: Link prowadzący do strony google.com z tekstem "Google";<a href="https://google.com">Google</a>;odin_html_syntax
+Jaki atrybut sprawia, że link otwiera się w nowej karcie?;target="_blank";odin_html_links
+Dlaczego przy używaniu `target="_blank"` należy dodać `rel="noopener noreferrer"`?;Ze względów bezpieczeństwa (zapobiega atakom typu phishing/tabnabbing) i prywatności.;odin_html_best_practices
+Czym jest "Link Absolutny" (Absolute link)?;To pełny adres internetowy zawierający protokół i domenę (np. https://google.com). Prowadzi zazwyczaj do zewnętrznych stron.;odin_html_theory
+Czym jest "Link Relatywny" (Relative link)?;To ścieżka do pliku względem pliku, w którym się znajdujesz (np. ./strona.html). Nie zawiera domeny. Służy do linkowania wewnątrz własnej strony.;odin_html_theory
+Co oznacza kropka i ukośnik `./` na początku ścieżki (np. `./obrazek.jpg`)?;Oznacza "obecny katalog" (ten sam folder, w którym jest plik HTML).;odin_html_syntax
+Co oznaczają dwie kropki i ukośnik `../` na początku ścieżki?;Oznacza "katalog nadrzędny" (wyjdź jeden folder wyżej/wstecz).;odin_html_syntax
+Jaki znacznik służy do wstawiania obrazków?;<img>;odin_html_images
+Czy znacznik `<img>` wymaga znacznika zamykającego?;Nie, jest to "void element" (element pusty).;odin_html_images
+Jaki atrybut wskazuje źródło pliku obrazka?;src;odin_html_images
+Do czego służy atrybut `alt` w obrazkach?;Zawiera tekst alternatywny wyświetlany, gdy obrazek się nie załaduje. Jest też czytany przez czytniki dla osób niewidomych.;odin_html_best_practices
+Dlaczego warto podawać atrybuty `width` i `height` w obrazkach, nawet jeśli zmieniamy je w CSS?;Aby zapobiec "skakaniu" układu strony (layout shift) podczas ładowania obrazka.;odin_html_best_practices
+Wymień 4 główne formaty obrazków używane w internecie (wg Knowledge Check);JPEG, PNG, GIF, SVG;odin_html_images
+Napisz kod: Obrazek "kot.jpg" znajdujący się w folderze "img" (względem obecnego pliku) z opisem "Mój kot";<img src="./img/kot.jpg" alt="Mój kot">;odin_html_syntax

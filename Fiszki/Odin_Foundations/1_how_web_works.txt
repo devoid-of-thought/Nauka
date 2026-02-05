@@ -1,0 +1,14 @@
+Co to jest Internet?;Globalna sieć miliardów komputerów i innych urządzeń elektronicznych, które mogą się ze sobą komunikować.
+Co to jest sieć (Network)?;Grupa dwóch lub więcej komputerów połączonych ze sobą w celu współdzielenia zasobów.
+Co to są pakiety (Packets)?;Małe fragmenty, na które dzielone są dane przesyłane przez internet. Są wysyłane niezależnie i ponownie składane w całość u odbiorcy.
+Co to jest Serwer (Server)?;Komputer podłączony do internetu, który przechowuje pliki stron internetowych i danych, a następnie wysyła je do klienta na żądanie.
+Co to jest Klient (Client)?;Urządzenie (np. laptop, telefon) lub oprogramowanie (przeglądarka), które wysyła żądanie do serwera w celu uzyskania dostępu do danych.
+Co to jest Serwer WWW (Web Server)?;Specjalny rodzaj serwera (oprogramowanie i sprzęt), który przechowuje pliki strony internetowej i udostępnia je przeglądarkom.
+Co to jest adres IP?;Unikalny ciąg liczb (np. 172.16.254.1) przypisany do każdego urządzenia w sieci, pozwalający na jego identyfikację i lokalizację.
+Co to jest DNS (Domain Name System)?;System działający jak "książka telefoniczna" internetu; tłumaczy nazwy domen zrozumiałe dla ludzi (np. google.com) na adresy IP zrozumiałe dla komputerów.
+Co to jest Przeglądarka (Web Browser)?;Oprogramowanie (np. Chrome, Firefox) służące do lokalizowania, pobierania i wyświetlania stron internetowych.
+Co to jest Wyszukiwarka (Search Engine)?;Strona internetowa (np. Google, Bing), która pomaga użytkownikom znajdować inne strony internetowe w sieci.
+Co to jest Router?;Urządzenie sprzętowe, które kieruje ruchem danych (pakietami) między różnymi sieciami (np. między Twoją siecią domową a internetem).
+Co to jest ISP?;Internet Service Provider (Dostawca usług internetowych) – firma, która zapewnia dostęp do internetu.
+Jaka jest różnica między stroną WWW a serwerem WWW?;Strona to dokument/plik, który czytasz. Serwer to komputer, na którym ten plik jest przechowywany.
+Co dzieje się po wpisaniu adresu w przeglądarce (uproszczone)?;Przeglądarka pyta serwer DNS o adres IP domeny -> DNS zwraca IP -> Przeglądarka wysyła żądanie do serwera pod tym IP -> Serwer odsyła pakiety danych strony -> Przeglądarka składa je w całość i wyświetla.

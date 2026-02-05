@@ -1,0 +1,20 @@
+Co to jest HTML Tag (Znacznik)?;Słowo kluczowe zamknięte w nawiasach ostrych (np. <p>). Definiuje strukturę, ale sam w sobie nie jest pełnym elementem.;odin_html_intro
+Jaka jest różnica między Znacznikiem (Tag) a Elementem (Element)?;Element to całość: znacznik otwierający + treść w środku + znacznik zamykający (np. <p>Tekst</p>). Znacznik to tylko <p>.;odin_html_intro
+Co to jest "Void Element" (Element pusty) i podaj przykład?;Element, który nie ma treści ani znacznika zamykającego. Np. <br> (złamanie linii) lub <img> (obrazek).;odin_html_intro
+Co oznacza termin "Semantic HTML" (Semantyczny HTML)?;Używanie znaczników zgodnie z ich przeznaczeniem i znaczeniem (np. <h1> dla nagłówka), a nie tylko dla wyglądu. Pomaga to wyszukiwarkom i czytnikom ekranowym.;odin_html_intro
+Dlaczego główny plik strony powinien nazywać się `index.html`?;Ponieważ serwery domyślnie szukają pliku o tej nazwie, gdy użytkownik wchodzi na adres strony bez podania konkretnego pliku.;odin_html_boilerplate
+Do czego służy deklaracja `<!DOCTYPE html>` na początku pliku?;Informuje przeglądarkę, że używamy najnowszej wersji HTML (HTML5) i jak ma renderować dokument.;odin_html_boilerplate
+Co znajduje się w elemencie `<html>`?;Wszystkie inne elementy strony. Jest to tzw. element korzeń (root element).;odin_html_boilerplate
+Co znajduje się w elemencie `<head>`?;Metadane, tytuł strony, linki do stylów – rzeczy ważne dla przeglądarki, ale NIE wyświetlane bezpośrednio w oknie treści.;odin_html_boilerplate
+Dlaczego warto zawsze dodawać `<meta charset="UTF-8">`?;Zapewnia poprawne kodowanie znaków, dzięki czemu polskie znaki (ą, ę) i symbole specjalne wyświetlają się poprawnie.;odin_html_boilerplate
+Do czego służy element `<title>`?;Ustawia tytuł strony widoczny na karcie przeglądarki (w tabie) oraz w wynikach wyszukiwania Google.;odin_html_boilerplate
+Co znajduje się w elemencie `<body>`?;Wszystko to, co widzi użytkownik na stronie (tekst, obrazki, linki).;odin_html_boilerplate
+Jaki jest skrót w VS Code do wygenerowania całego szablonu HTML?;Wpisz wykrzyknik `!` i naciśnij Enter.;odin_html_shortcuts
+Co robi znacznik `<h1>` do `<h6>`?;Definiuje nagłówki. <h1> to najważniejszy nagłówek (tytuł strony), a <h6> to najmniej ważny.;odin_html_text
+Jakiego znacznika używamy do tworzenia akapitów tekstu?;<p>;odin_html_text
+Co robi znacznik `<strong>` i czym różni się od pogrubienia?;Pogrubia tekst I dodaje mu znaczenie semantyczne "ważne" (important). Czytniki ekranowe mogą przeczytać go innym tonem.;odin_html_text
+Co robi znacznik `<em>` i czym różni się od kursywy?;Pochyla tekst (Italic) I dodaje mu "nacisk/emfazę" (emphasis).;odin_html_text
+Co to jest Zagnieżdżanie (Nesting)?;Umieszczanie jednego elementu wewnątrz drugiego (tworzenie relacji Rodzic-Dziecko).;odin_html_text
+Jak wygląda składnia komentarza w HTML?;;odin_html_text
+Jaki jest skrót w VS Code do zrobienia komentarza?;Ctrl + / (lub Cmd + / na Macu);odin_html_shortcuts
+Jak przeglądarka traktuje wielokrotne spacje i nowe linie w kodzie HTML (wewnątrz tekstu)?;Ignoruje je i zamienia na jedną spację (tzw. whitespace collapsing).;odin_html_text
