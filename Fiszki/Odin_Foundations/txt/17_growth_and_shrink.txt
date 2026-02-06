@@ -1,0 +1,12 @@
+Właściwość `flex` (shorthand) jest skrótem dla jakich trzech właściwości (w kolejności)?;flex-grow, flex-shrink, flex-basis;odin_flexbox_sizing
+Co oznacza zapis `flex: 1` (na jakie wartości się rozwija)?;flex-grow: 1, flex-shrink: 1, flex-basis: 0;odin_flexbox_sizing
+Co robi `flex-grow`?;Określa "współczynnik wzrostu". Decyduje, jak dużą część WOLNEJ przestrzeni (dostępnego miejsca) dany element powinien zająć w porównaniu do innych.;odin_flexbox_sizing
+Co robi `flex-shrink`?;Określa "współczynnik kurczenia". Decyduje, jak bardzo element powinien się skurczyć, gdy w kontenerze brakuje miejsca (gdy elementy się nie mieszczą).;odin_flexbox_sizing
+Co robi `flex-basis`?;Określa rozmiar początkowy (bazowy) elementu, ZANIM zacznie się on rozciągać (grow) lub kurczyć (shrink).;odin_flexbox_sizing
+Jaką wartość `flex-shrink` należy ustawić, aby element NIGDY się nie zmniejszał (nawet jak brakuje miejsca)?;flex-shrink: 0;odin_flexbox_sizing
+Jeśli jeden element ma `flex-grow: 2`, a pozostałe `flex-grow: 1`, co się stanie?;Ten pierwszy element weźmie DWA razy więcej wolnej przestrzeni niż pozostałe.;odin_flexbox_sizing
+Jaka jest różnica między `flex-basis: 0` a `flex-basis: auto`?;`0` ignoruje zawartość/szerokość elementu (zaczyna od zera, więc wszystkie elementy rosną równo). `auto` zaczyna od rozmiaru zawartości/szerokości (przez co większy tekst początkowy może dać szerszy element końcowy).;odin_flexbox_sizing
+Co oznacza zapis `flex: auto` (na jakie wartości się rozwija)?;flex-grow: 1, flex-shrink: 1, flex-basis: auto;odin_flexbox_sizing
+Dlaczego elementy z ustawionym `width: 250px` mogą mieć w rzeczywistości inną szerokość we Flexboxie?;Ponieważ `flex-grow` może je rozciągnąć (jeśli jest miejsce), a `flex-shrink` może je ścisnąć (jeśli brak miejsca). Flexbox traktuje `width` raczej jako sugestię (chyba że zablokujemy shrink/grow).;odin_flexbox_theory
+Jaka jest domyślna wartość `flex-shrink` (jeśli jej nie zmienisz)?;1 (elementy domyślnie kurczą się, by zmieścić się w kontenerze).;odin_flexbox_sizing
+Co się stanie, jeśli użyjesz skrótu `flex: 1` (gdzie basis=0) na elementach o różnej ilości tekstu?;Wszystkie elementy będą miały IDEALNIE równą szerokość, niezależnie od długości tekstu w środku.;odin_flexbox_behavior

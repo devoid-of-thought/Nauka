@@ -1,0 +1,14 @@
+Jaka jest podstawowa zasada Box Model (jaki kształt ma każdy element na stronie)?;Każdy element na stronie internetowej jest prostokątnym pudełkiem (box).;odin_css_box_model
+Wymień 4 warstwy Box Modelu w kolejności OD WEWNĄTRZ do ZEWNĄTRZ.;Content (Treść) -> Padding (Odstęp wewnętrzny) -> Border (Ramka) -> Margin (Margines zewnętrzny).;odin_css_box_model
+Co to jest Padding?;Przestrzeń między treścią (content) a ramką (border). Jest "wewnątrz" elementu.;odin_css_box_model
+Co to jest Border?;Ramka/linia znajdująca się między paddingiem a marginem.;odin_css_box_model
+Co to jest Margin?;Przestrzeń na zewnątrz ramki (border). Oddziela ten element od innych elementów.;odin_css_box_model
+Której właściwości użyjesz, aby odsunąć jeden element od drugiego (zrobić odstęp między nimi)?;Margin.;odin_css_box_model
+Której właściwości użyjesz, aby odsunąć tekst od ramki wewnątrz przycisku?;Padding.;odin_css_box_model
+Na czym polega problem ze "Standardowym Modelem Pudełkowym" (domyślnym w przeglądarkach)?;Jeśli ustawisz `width: 100px` i `padding: 20px`, element w rzeczywistości będzie miał 140px szerokości (100 + 20 + 20). Padding i Border są dodawane "ekstra" do szerokości.;odin_css_box_model
+Co robi `box-sizing: border-box` (Alternatywny Model)?;Sprawia, że padding i border są WLICZANE w szerokość (width) elementu. Jeśli ustawisz `width: 100px`, element będzie miał 100px, niezależnie od grubości ramki czy paddingu.;odin_css_box_model
+Jaki kod CSS należy wpisać, aby włączyć `border-box` dla WSZYSTKICH elementów na stronie (reset)?;* { box-sizing: border-box; };odin_css_syntax
+Jak wyśrodkować element blokowy w poziomie (horizontally)?;Ustawić mu konkretną szerokość (width) i dać `margin: 0 auto;` (lub `margin-left: auto; margin-right: auto;`).;odin_css_layout
+Czy Margin może mieć wartość ujemną (negative)?;Tak. Pozwala to na nakładanie elementów na siebie.;odin_css_details
+Czy Padding może mieć wartość ujemną?;Nie.;odin_css_details
+Co to jest "Margin Collapsing" (Zapadanie marginesów)?;Zjawisko, gdzie pionowe marginesy dwóch sąsiednich elementów nie sumują się (20px + 20px), lecz łączą w jeden większy (zostaje tylko 20px).;odin_css_theory

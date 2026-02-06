@@ -1,0 +1,11 @@
+Co to jest Pseudokod?;To opis algorytmu w języku naturalnym (zrozumiałym dla człowieka), który pomija ścisłą składnię języka programowania.;odin_pseudocode
+Jaki jest główny cel pisania pseudokodu PRZED właściwym kodowaniem?;Pozwala skupić się na LOGICE rozwiązania problemu bez rozpraszania się regułami składni (syntax) konkretnego języka.;odin_pseudocode
+Wymień 3 z 6 głównych konstrukcji (słów kluczowych) używanych w pseudokodzie (wg artykułu).;SEQUENCE (sekwencja), IF-THEN-ELSE (warunek), WHILE (pętla), REPEAT-UNTIL, FOR, CASE.;odin_pseudocode
+Dlaczego wcięcia (Indentation) są krytyczne w pseudokodzie?;Pokazują hierarchię i zagnieżdżenie (co jest wewnątrz pętli lub warunku). Bez nich logika jest nieczytelna.;odin_pseudocode
+Jaka jest różnica między pętlą `WHILE` a `REPEAT-UNTIL` w pseudokodzie?;`WHILE` sprawdza warunek na początku (może nie wykonać się ani razu). `REPEAT-UNTIL` sprawdza warunek na końcu (wykona się przynajmniej raz).;odin_pseudocode
+Jaką konwencję stosuje się zazwyczaj dla słów kluczowych w pseudokodzie (np. IF, ELSE)?;Pisze się je WIELKIMI LITERAMI (Capitalized), aby odróżnić je od reszty opisu.;odin_pseudocode
+Co oznacza konstrukcja `SEQUENCE`?;Że instrukcje są wykonywane liniowo, jedna po drugiej (od góry do dołu).;odin_pseudocode
+Czy pseudokod powinien zawierać specyficzne elementy języka (np. średniki `;` lub klamry `{}`)?;Nie. Pseudokod powinien być niezależny od języka programowania (language independent).;odin_pseudocode
+Jak zapisać w pseudokodzie zakończenie bloku warunkowego IF (dla czytelności)?;Używając słowa kluczowego `ENDIF`.;odin_pseudocode
+Dlaczego zamiast `name = first + last` w pseudokodzie lepiej napisać "Append last name to first name"?;Aby używać języka domeny problemu (zrozumiałego dla ludzi/biznesu), a nie języka implementacji.;odin_pseudocode
+Co to jest "Algorytm"?;To skończony ciąg jasnych instrukcji, które prowadzą do rozwiązania danego problemu (przepis krok po kroku).;odin_cs_basics

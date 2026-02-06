@@ -1,0 +1,19 @@
+Z czego składa się reguła CSS?;Z selektora i bloku deklaracji (w nawiasach klamrowych).;odin_css_theory
+Napisz kod: Selektor uniwersalny (wybierający wszystkie elementy);*;odin_css_syntax
+Jaki znak reprezentuje selektor KLASY?;. (kropka);odin_css_syntax
+Jaki znak reprezentuje selektor ID?;# (hash / płotek);odin_css_syntax
+Czym różni się Klasa od ID?;Klasę można użyć na wielu elementach wielokrotnie. ID musi być unikalne (tylko jeden taki element na stronie).;odin_css_theory
+Czy nazwa klasy lub ID może zaczynać się od cyfry?;Nie, to niepoprawna nazwa w CSS.;odin_css_theory
+Napisz kod: Selektor grupowy dla elementów h1 oraz p (ten sam styl dla obu);h1, p { ... };odin_css_syntax
+Co robi selektor `div.alert` (brak spacji)?;Wybiera tylko te elementy <div>, które JEDNOCZEŚNIE mają klasę "alert" (Chaining).;odin_css_syntax
+Co robi selektor `.menu .item` (jest spacja)?;Wybiera elementy z klasą "item", które są POTOMKAMI (są wewnątrz) elementu z klasą "menu". (Descendant combinator).;odin_css_theory
+Napisz kod: Selektor potomka (wybierz <p> będące wewnątrz <div>);div p { ... };odin_css_syntax
+Napisz kod: Linkowanie zewnętrznego pliku CSS w HTML;<link rel="stylesheet" href="style.css">;odin_css_syntax
+Gdzie umieszczamy element `<link>` do pliku CSS?;W sekcji <head>;odin_css_theory
+Jak dodać CSS "wewnętrznie" (Internal CSS) bez osobnego pliku?;Używając znacznika <style> w sekcji <head>.;odin_css_syntax
+Jak dodać CSS "liniowo" (Inline CSS) bezpośrednio do elementu?;Używając atrybutu style="..." wewnątrz znacznika otwierającego.;odin_css_syntax
+Która metoda dodawania CSS jest najlepsza i dlaczego?;Zewnętrzny plik CSS (External). Oddziela treść od wyglądu, odchudza kod HTML i pozwala używać jednego pliku stylów dla wielu podstron.;odin_css_best_practices
+Co się stanie, jeśli obrazek nie ma zdefiniowanej wysokości i szerokości w HTML/CSS?;Może spowodować "skakanie" treści strony podczas ładowania, ponieważ przeglądarka nie zarezerwuje na niego miejsca przed pobraniem.;odin_css_best_practices
+Jak zachować proporcje obrazka, zmieniając tylko jego szerokość?;Ustawić `width` na konkretną wartość, a `height` na `auto`.;odin_css_syntax
+Co oznacza `font-family: "Arial", sans-serif;` (dlaczego są dwie wartości)?;To tzw. fallback. Jeśli przeglądarka nie ma czcionki "Arial", użyje domyślnej czcionki systemowej bezszeryfowej (sans-serif).;odin_css_syntax
+Jaka wartość liczbowa odpowiada `font-weight: bold`?;700;odin_css_syntax

@@ -1,0 +1,664 @@
+#separator:tab
+#html:true
+Co to jest Internet?	Globalna sieć miliardów komputerów i innych urządzeń elektronicznych, które mogą się ze sobą komunikować.
+Co to jest sieć (Network)?	Grupa dwóch lub więcej komputerów połączonych ze sobą w celu współdzielenia zasobów.
+Co to są pakiety (Packets)?	Małe fragmenty, na które dzielone są dane przesyłane przez internet. Są wysyłane niezależnie i ponownie składane w całość u odbiorcy.
+Co to jest Serwer (Server)?	Komputer podłączony do internetu, który przechowuje pliki stron internetowych i danych, a następnie wysyła je do klienta na żądanie.
+Co to jest Klient (Client)?	Urządzenie (np. laptop, telefon) lub oprogramowanie (przeglądarka), które wysyła żądanie do serwera w celu uzyskania dostępu do danych.
+Co to jest Serwer WWW (Web Server)?	Specjalny rodzaj serwera (oprogramowanie i sprzęt), który przechowuje pliki strony internetowej i udostępnia je przeglądarkom.
+Co to jest adres IP?	Unikalny ciąg liczb (np. 172.16.254.1) przypisany do każdego urządzenia w sieci, pozwalający na jego identyfikację i lokalizację.
+Co to jest DNS (Domain Name System)?	System działający jak &quot;książka telefoniczna&quot; internetu
+Co to jest Przeglądarka (Web Browser)?	Oprogramowanie (np. Chrome, Firefox) służące do lokalizowania, pobierania i wyświetlania stron internetowych.
+Co to jest Wyszukiwarka (Search Engine)?	Strona internetowa (np. Google, Bing), która pomaga użytkownikom znajdować inne strony internetowe w sieci.
+Co to jest Router?	Urządzenie sprzętowe, które kieruje ruchem danych (pakietami) między różnymi sieciami (np. między Twoją siecią domową a internetem).
+Co to jest ISP?	Internet Service Provider (Dostawca usług internetowych) – firma, która zapewnia dostęp do internetu.
+Jaka jest różnica między stroną WWW a serwerem WWW?	Strona to dokument/plik, który czytasz. Serwer to komputer, na którym ten plik jest przechowywany.
+Co dzieje się po wpisaniu adresu w przeglądarce (uproszczone)?	Przeglądarka pyta serwer DNS o adres IP domeny -&gt; DNS zwraca IP -&gt; Przeglądarka wysyła żądanie do serwera pod tym IP -&gt; Serwer odsyła pakiety danych strony -&gt; Przeglądarka składa je w całość i wyświetla.
+Co to jest Command Line (CLI)?	Interfejs tekstowy, w którym wpisujesz polecenia, które komputer ma wykonać.
+Co oznacza symbol znaku zachęty (Prompt) - $ lub %?	Oznacza, że terminal oczekuje na wpisanie polecenia.
+Dlaczego hasła nie są widoczne podczas wpisywania ich w terminalu (np. przy sudo)?	Jest to funkcja bezpieczeństwa, aby ukryć długość i treść hasła przed osobami postronnymi.
+Jaki jest skrót klawiszowy do KOPIOWANIA w terminalu (Linux/Windows)?	Ctrl + Shift + C (na macOS: Cmd + C)
+Jaki jest skrót klawiszowy do WKLEJANIA w terminalu (Linux/Windows)?	Ctrl + Shift + V (na macOS: Cmd + V)
+Co robi klawisz TAB w terminalu?	Automatycznie uzupełnia polecenia lub ścieżki do plików (Tab completion).
+Do czego służy polecenie `whoami`?	Zwraca nazwę zalogowanego użytkownika.
+Do czego służy polecenie `pwd`?	Wyświetla ścieżkę do katalogu, w którym aktualnie się znajdujesz (Print Working Directory).
+Do czego służy polecenie `ls`?	Wyświetla zawartość (pliki i foldery) w bieżącym katalogu.
+Do czego służy polecenie `cd` (Change Directory)?	Służy do nawigacji (przechodzenia) między folderami.
+Gdzie przeniesie Cię samo polecenie `cd` (bez argumentów) lub `cd ~`?	Do katalogu domowego użytkownika (Home directory).
+Gdzie przeniesie Cię polecenie `cd ..`?	Poziom wyżej, do katalogu nadrzędnego (Parent directory).
+Jakie polecenie tworzy nowy katalog (folder)?	`mkdir &lt;nazwa_folderu&gt;`
+Jakie polecenie tworzy nowy, pusty plik?	`touch &lt;nazwa_pliku&gt;`
+Jak usunąć plik w terminalu?	`rm &lt;nazwa_pliku&gt;`
+Jak zmienić nazwę pliku lub katalogu (lub go przenieść)?	`mv &lt;stara_nazwa&gt; &lt;nowa_nazwa&gt;`
+Co oznacza kropka `.` w poleceniu takim jak `code .`?	Oznacza &quot;bieżący katalog&quot;.
+Jak otworzyć bieżący folder w VS Code z poziomu terminala?	`code .`
+Co to jest Git?	System kontroli wersji (Version Control System). Pozwala śledzić zmiany w plikach i zarządzać historią projektu.
+Jaka jest różnica w &quot;zapisywaniu&quot; między edytorem tekstu a Gitem?	Edytor nadpisuje plik (masz tylko aktualną wersję). Git zapisuje różnice (zmiany) oraz zachowuje pełną historię wszystkich poprzednich wersji.
+Czy Git działa lokalnie czy zdalnie?	Lokalnie (na Twoim komputerze). Nie wymaga internetu do działania.
+Czy GitHub działa lokalnie czy zdalnie?	Zdalnie. To serwis w chmurze (w internecie) do przechowywania repozytoriów.
+Co to jest GitHub?	Platforma internetowa służąca do hostowania projektów Git. Umożliwia współpracę, udostępnianie kodu i budowanie portfolio.
+Dlaczego Git jest przydatny dla pojedynczego programisty?	Pozwala przeglądać historię rozwoju projektu i łatwo przywracać wcześniejsze wersje plików w razie błędu.
+Dlaczego Git/GitHub są ważne dla zespołów?	Umożliwiają łączenie (merge) pracy wielu osób nad tym samym projektem i rozwiązywanie konfliktów w kodzie.
+Co oznacza, że Git jest &quot;rozproszonym&quot; (distributed) systemem kontroli wersji?	Oznacza to, że każdy deweloper posiada na swoim dysku pełną kopię całego projektu wraz z jego historią, a nie tylko pliki nad którymi pracuje.
+Jak sprawdzić status repozytorium (które pliki są zmienione/dodane)?	git status
+Jak zainicjować (stworzyć) nowe repozytorium Git w obecnym folderze?	git init
+"Jak dodać WSZYSTKIE zmienione pliki do ""poczekalni"" (staging area)?"	git add .
+"Jak dodać TYLKO JEDEN konkretny plik do ""poczekalni""?"	git add <nazwa_pliku>
+Jak stworzyć commit (trwały zapis) z wiadomością?	"git commit -m ""Twoja wiadomość"""
+Jak wyświetlić historię commitów?	git log
+Jak połączyć lokalne repozytorium z nowym repozytorium na GitHubie?	git remote add origin <link_do_repozytorium_na_githubie>
+"Jak zmienić nazwę obecnej gałęzi na ""main"" (standard GitHub)?"	git branch -M main
+Jak wysłać (wypchnąć) zmiany na GitHub (pierwszy raz dla gałęzi main)?	git push -u origin main
+Jak wysłać zmiany na GitHub (kolejne razy)?	git push
+Jak pobrać repozytorium z GitHuba na swój komputer?	git clone <link_do_repozytorium>
+Co robi komenda `git add`?	Przenosi zmiany z katalogu roboczego (Working Directory) do poczekalni (Staging Area), przygotowując je do commita.
+Co robi komenda `git commit`?	Bierze pliki z poczekalni (Staging Area) i zapisuje je w historii repozytorium jako nową migawkę (snapshot).
+Co to jest &quot;Atomic Commit&quot; (Atomowy commit)?	To commit, który zawiera zmiany dotyczące tylko jednego zadania lub funkcjonalności. Ułatwia to cofanie zmian i pisanie czytelnych historii.
+Dlaczego warto robić &quot;Atomic Commits&quot;?	1. Łatwiej cofnąć konkretną zmianę bez psucia innych. 2. Historia zmian jest czytelna dla innych programistów.
+W poleceniu `git push origin main`, co oznacza &quot;origin&quot;?	To domyślna nazwa zdalnego repozytorium (połączenia z GitHubem).
+W poleceniu `git push origin main`, co oznacza &quot;main&quot;?	To nazwa gałęzi (branch), którą wysyłasz na serwer.
+Co oznacza plik wyświetlony na CZERWONO po wpisaniu `git status`?	Plik został zmieniony, ale nie jest jeszcze w poczekalni (staging area). Git o nim wie, ale go nie &quot;pilnuje&quot; w tym commicie.
+Co oznacza plik wyświetlony na ZIELONO po wpisaniu `git status`?	Plik znajduje się w poczekalni (staging area) i zostanie dołączony do najbliższego commita.
+Jaką komendą ustawić VS Code jako domyślny edytor dla komunikatów Gita (żeby nie otwierał się Vim)?	git config --global core.editor &quot;code --wait&quot;
+Dlaczego NIE należy edytować plików bezpośrednio na stronie GitHub?	Ponieważ powoduje to konflikty wersji między Twoim komputerem a serwerem, które mogą być trudne do naprawienia dla początkujących.
+Co robi komenda `git remote -v`?	Wyświetla listę zdalnych repozytoriów (URL) podłączonych do Twojego projektu (np. adres na GitHubie).
+Co to jest HTML Tag (Znacznik)?	Słowo kluczowe zamknięte w nawiasach ostrych (np. <p>). Definiuje strukturę, ale sam w sobie nie jest pełnym elementem.
+Jaka jest różnica między Znacznikiem (Tag) a Elementem (Element)?	Element to całość: znacznik otwierający + treść w środku + znacznik zamykający (np. <p>Tekst</p>). Znacznik to tylko <p>.
+"Co to jest ""Void Element"" (Element pusty) i podaj przykład?"	Element, który nie ma treści ani znacznika zamykającego. Np. <br> (złamanie linii) lub <img> (obrazek).
+"Co oznacza termin ""Semantic HTML"" (Semantyczny HTML)?"	Używanie znaczników zgodnie z ich przeznaczeniem i znaczeniem (np. <h1> dla nagłówka), a nie tylko dla wyglądu. Pomaga to wyszukiwarkom i czytnikom ekranowym.
+Dlaczego główny plik strony powinien nazywać się `index.html`?	Ponieważ serwery domyślnie szukają pliku o tej nazwie, gdy użytkownik wchodzi na adres strony bez podania konkretnego pliku.
+Do czego służy deklaracja `<!DOCTYPE html>` na początku pliku?	Informuje przeglądarkę, że używamy najnowszej wersji HTML (HTML5) i jak ma renderować dokument.
+Co znajduje się w elemencie `<html>`?	Wszystkie inne elementy strony. Jest to tzw. element korzeń (root element).
+Co znajduje się w elemencie `<head>`?	Metadane, tytuł strony, linki do stylów – rzeczy ważne dla przeglądarki, ale NIE wyświetlane bezpośrednio w oknie treści.
+"Dlaczego warto zawsze dodawać `<meta charset=""UTF-8"">`?"	Zapewnia poprawne kodowanie znaków, dzięki czemu polskie znaki (ą, ę) i symbole specjalne wyświetlają się poprawnie.
+Do czego służy element `<title>`?	Ustawia tytuł strony widoczny na karcie przeglądarki (w tabie) oraz w wynikach wyszukiwania Google.
+Co znajduje się w elemencie `<body>`?	Wszystko to, co widzi użytkownik na stronie (tekst, obrazki, linki).
+Jaki jest skrót w VS Code do wygenerowania całego szablonu HTML?	Wpisz wykrzyknik `!` i naciśnij Enter.
+Co robi znacznik `<h1>` do `<h6>`?	Definiuje nagłówki. <h1> to najważniejszy nagłówek (tytuł strony), a <h6> to najmniej ważny.
+Jakiego znacznika używamy do tworzenia akapitów tekstu?	<p>
+Co robi znacznik `<strong>` i czym różni się od pogrubienia?	"Pogrubia tekst I dodaje mu znaczenie semantyczne ""ważne"" (important). Czytniki ekranowe mogą przeczytać go innym tonem."
+Co robi znacznik `<em>` i czym różni się od kursywy?	"Pochyla tekst (Italic) I dodaje mu ""nacisk/emfazę"" (emphasis)."
+Co to jest Zagnieżdżanie (Nesting)?	Umieszczanie jednego elementu wewnątrz drugiego (tworzenie relacji Rodzic-Dziecko).
+Jak wygląda składnia komentarza w HTML?	
+Jaki jest skrót w VS Code do zrobienia komentarza?	Ctrl + / (lub Cmd + / na Macu)
+Jak przeglądarka traktuje wielokrotne spacje i nowe linie w kodzie HTML (wewnątrz tekstu)?	Ignoruje je i zamienia na jedną spację (tzw. whitespace collapsing).
+Jaki znacznik służy do tworzenia listy nieuporządkowanej (z kropkami)?	<ul> (Unordered List)
+Jaki znacznik służy do tworzenia listy uporządkowanej (z numerami)?	<ol> (Ordered List)
+Jaki znacznik oznacza pojedynczy element listy (zarówno w <ul> jak i <ol>)?	<li> (List Item)
+Jaki znacznik służy do tworzenia linków (kotwic)?	<a> (Anchor)
+Jaki atrybut w znaczniku `<a>` określa adres docelowy linku?	href
+"Napisz kod: Link prowadzący do strony google.com z tekstem ""Google"""	"<a href=""https://google.com"">Google</a>"
+Jaki atrybut sprawia, że link otwiera się w nowej karcie?	"target=""_blank"""
+"Dlaczego przy używaniu `target=""_blank""` należy dodać `rel=""noopener noreferrer""`?"	Ze względów bezpieczeństwa (zapobiega atakom typu phishing/tabnabbing) i prywatności.
+"Czym jest ""Link Absolutny"" (Absolute link)?"	To pełny adres internetowy zawierający protokół i domenę (np. https://google.com). Prowadzi zazwyczaj do zewnętrznych stron.
+"Czym jest ""Link Relatywny"" (Relative link)?"	To ścieżka do pliku względem pliku, w którym się znajdujesz (np. ./strona.html). Nie zawiera domeny. Służy do linkowania wewnątrz własnej strony.
+Co oznacza kropka i ukośnik `./` na początku ścieżki (np. `./obrazek.jpg`)?	"Oznacza ""obecny katalog"" (ten sam folder, w którym jest plik HTML)."
+Co oznaczają dwie kropki i ukośnik `../` na początku ścieżki?	"Oznacza ""katalog nadrzędny"" (wyjdź jeden folder wyżej/wstecz)."
+Jaki znacznik służy do wstawiania obrazków?	<img>
+Czy znacznik `<img>` wymaga znacznika zamykającego?	"Nie, jest to ""void element"" (element pusty)."
+Jaki atrybut wskazuje źródło pliku obrazka?	src
+Do czego służy atrybut `alt` w obrazkach?	Zawiera tekst alternatywny wyświetlany, gdy obrazek się nie załaduje. Jest też czytany przez czytniki dla osób niewidomych.
+Dlaczego warto podawać atrybuty `width` i `height` w obrazkach, nawet jeśli zmieniamy je w CSS?	"Aby zapobiec ""skakaniu"" układu strony (layout shift) podczas ładowania obrazka."
+Wymień 4 główne formaty obrazków używane w internecie (wg Knowledge Check)	JPEG, PNG, GIF, SVG
+"Napisz kod: Obrazek ""kot.jpg"" znajdujący się w folderze ""img"" (względem obecnego pliku) z opisem ""Mój kot"""	"<img src=""./img/kot.jpg"" alt=""Mój kot"">"
+Dlaczego warto dbać o jakość wiadomości commitów (wymień 2 powody)?	1. Pomaga innym (i Tobie w przyszłości) zrozumieć historię zmian i naprawiać błędy. 2. Rekruterzy patrzą na jakość commitów przy zatrudnianiu jako dowód profesjonalizmu.
+Z jakich dwóch głównych części składa się profesjonalna wiadomość commita?	Z Tematu (Subject) i Treści (Body).
+Co powinno oddzielać Temat (Subject) od Treści (Body) w wiadomości commita?	Pusta linia (blank line).
+Jaki jest zalecany limit znaków dla Tematu (Subject) commita i dlaczego?	Około 72 znaki. GitHub ucina dłuższe tematy w widoku listy.
+Co powinno znaleźć się w Treści (Body) commita?	Wyjaśnienie DLACZEGO zmiana była potrzebna i JAK problem został rozwiązany (kontekst), a nie tylko &quot;co&quot; zrobiono.
+Dlaczego wiadomość commita typu &quot;fix bug&quot; albo &quot;update&quot; jest uważana za złą?	Jest zbyt ogólna. Nie mówi, co dokładnie naprawiono ani dlaczego, co wprowadza zamieszanie w zespole.
+W jakim trybie gramatycznym (po angielsku) powinno się pisać Temat commita?	W trybie rozkazującym (Imperative Mood), np. &quot;Add feature&quot; zamiast &quot;Added feature&quot; czy &quot;Adding feature&quot;.
+Jak wywołać edytor tekstowy (np. VS Code) do napisania długiego commita (z Subject i Body), zamiast pisać go w cudzysłowie?	Wpisz w terminalu samo `git commit` (bez flagi `-m`).
+Kiedy należy zrobić commit?	Po każdej &quot;znaczącej zmianie&quot; (np. gdy fragment kodu zadziała, naprawisz błąd lub literówkę). Zasada: &quot;Commit early and often&quot; (Wcześnie i często).
+Czym jest commit w kontekście historii projektu (metafora użyta w lekcji)?	Jest &quot;migawką&quot; (snapshot) stanu kodu w danym momencie, do której zawsze można wrócić.
+Z czego składa się reguła CSS?	Z selektora i bloku deklaracji (w nawiasach klamrowych).
+Napisz kod: Selektor uniwersalny (wybierający wszystkie elementy)	*
+Jaki znak reprezentuje selektor KLASY?	. (kropka)
+Jaki znak reprezentuje selektor ID?	"# (hash / płotek)"
+Czym różni się Klasa od ID?	Klasę można użyć na wielu elementach wielokrotnie. ID musi być unikalne (tylko jeden taki element na stronie).
+Czy nazwa klasy lub ID może zaczynać się od cyfry?	Nie, to niepoprawna nazwa w CSS.
+Napisz kod: Selektor grupowy dla elementów h1 oraz p (ten sam styl dla obu)	h1, p { ... }
+Co robi selektor `div.alert` (brak spacji)?	Wybiera tylko te elementy &lt;div&gt;, które JEDNOCZEŚNIE mają klasę &quot;alert&quot; (Chaining).
+Co robi selektor `.menu .item` (jest spacja)?	Wybiera elementy z klasą &quot;item&quot;, które są POTOMKAMI (są wewnątrz) elementu z klasą &quot;menu&quot;. (Descendant combinator).
+Napisz kod: Selektor potomka (wybierz &lt;p&gt; będące wewnątrz &lt;div&gt;)	div p { ... }
+Napisz kod: Linkowanie zewnętrznego pliku CSS w HTML	&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+Gdzie umieszczamy element `&lt;link&gt;` do pliku CSS?	W sekcji &lt;head&gt;
+Jak dodać CSS &quot;wewnętrznie&quot; (Internal CSS) bez osobnego pliku?	Używając znacznika &lt;style&gt; w sekcji &lt;head&gt;.
+Jak dodać CSS &quot;liniowo&quot; (Inline CSS) bezpośrednio do elementu?	Używając atrybutu style=&quot;...&quot; wewnątrz znacznika otwierającego.
+Która metoda dodawania CSS jest najlepsza i dlaczego?	Zewnętrzny plik CSS (External). Oddziela treść od wyglądu, odchudza kod HTML i pozwala używać jednego pliku stylów dla wielu podstron.
+Co się stanie, jeśli obrazek nie ma zdefiniowanej wysokości i szerokości w HTML/CSS?	Może spowodować &quot;skakanie&quot; treści strony podczas ładowania, ponieważ przeglądarka nie zarezerwuje na niego miejsca przed pobraniem.
+Jak zachować proporcje obrazka, zmieniając tylko jego szerokość?	Ustawić `width` na konkretną wartość, a `height` na `auto`.
+Co oznacza `font-family: &quot;Arial&quot;, sans-serif	` (dlaczego są dwie wartości)?
+Jaka wartość liczbowa odpowiada `font-weight: bold`?	700
+Co to jest &quot;Deklaracja&quot; (Declaration) w regule CSS?	To pojedyncza para: właściwość i wartość (np. `color: red`), zakończona średnikiem.
+Czy w HTML można nadać elementowi więcej niż jedną klasę?	Tak, oddzielając je spacją (np. class=&quot;btn btn-danger&quot;).
+Jak w CSS wybrać element, który posiada D WIE konkretne klasy jednocześnie (np. &quot;btn&quot; i &quot;danger&quot;)?	.btn.danger (bez spacji między kropkami)
+Dlaczego nie można łączyć w łańcuch dwóch selektorów typu (np. `divp`)?	Ponieważ jeden element HTML nie może być jednocześnie dwoma różnymi tagami (nie może być naraz divem i paragrafem).
+Czy nazwy klas i ID w CSS są wrażliwe na wielkość liter (Case Sensitive)?	Tak, `.Alert` i `.alert` to dwie różne klasy.
+Wymień 3 sposoby definiowania kolorów w CSS (poza nazwami słownymi).	HEX (szesnastkowy), RGB, HSL.
+"Co oznacza format koloru `#FF0000`?"	To format HEX (szesnastkowy).
+Co robi właściwość `font-family`?	Określa krój czcionki (fontu).
+Kiedy nazwa czcionki w `font-family` MUSI być ujęta w cudzysłów?	Gdy nazwa zawiera spację (np. &quot;Times New Roman&quot;).
+Czy nazwy ogólne czcionek (generic family names), np. sans-serif, serif, piszemy w cudzysłowie?	Nie, nazwy ogólne piszemy bez cudzysłowu.
+Jaka jest domyślna wartość `font-weight: normal` wyrażona liczbowo?	400
+Jaka właściwość odpowiada za wyrównanie tekstu w poziomie (np. do środka)?	text-align
+Co się stanie, jeśli w selektorze potomka zrobisz `.rodzic .dziecko`, ale `.dziecko` jest zagnieżdżone bardzo głęboko (np. jest prawnukiem)?	Zadziała. Selektor potomka (spacja) działa niezależnie od głębokości zagnieżdżenia.
+Jak w CSS ustawić tło elementu?	background-color
+Dlaczego w nazwach klas używamy myślników (np. `.alert-box`), a nie spacji?	Ponieważ spacja w atrybucie `class` w HTML służy do oddzielania różnych klas od siebie.
+Jak wygląda komentarz w pliku CSS (napisz składnię)?	/* To jest komentarz */ (UWAGA: Inaczej niż w HTML!)
+Jak wygląda komentarz w pliku HTML?	
+Co oznacza zapis `p.warning` (bez spacji)?	Wybiera tylko te elementy &lt;p&gt;, które mają klasę &quot;warning&quot;.
+Co oznacza zapis `p .warning` (ze spacją)?	Wybiera KAŻDY element z klasą &quot;warning&quot;, pod warunkiem, że znajduje się wewnątrz elementu &lt;p&gt;.
+Mamy kod: `.box { color: red	 }` oraz `.box { color: blue
+Czy można łączyć (chaining) więcej niż jeden selektor typu (np. `divp`)? Dlaczego?	Nie. Element HTML nie może być jednocześnie dwoma różnymi tagami (nie może być naraz &lt;div&gt; i &lt;p&gt;).
+Co to jest &quot;Fallback font&quot; w właściwości font-family?	To czcionka zapasowa (zazwyczaj ostatnia na liście, np. sans-serif), której przeglądarka użyje, jeśli nie znajdzie tych wymienionych wcześniej.
+Czy właściwość `font-size` wymaga podania jednostki (np. px)? Np. czy `font-size: 16` zadziała?	Nie zadziała (chyba że to 0). W CSS jednostki są wymagane (np. 16px).
+Jaki jest kolor tekstu dla: `color: transparent	`?
+Co robi selektor `* { box-sizing: border-box	 }` (ogólnie)?
+Jakie trzy rodzaje wartości przyjmuje `color` (oprócz nazw kolorów)?	"HEX (np. #fff), RGB (np. rgb(0,0,0)), HSL (np. hsl(0,0%,0%))."
+Co oznacza czwarta wartość w `rgba(0, 0, 0, 0.5)`?	Kanał Alfa (Alpha) - czyli przezroczystość (0.5 to 50% przezroczystości).
+Czy identyfikatory (ID) mogą zawierać spacje (np. `id=&quot;moj naglowek&quot;`)?	Nie, ID nie może zawierać spacji.
+Jaka jest podstawowa zasada Box Model (jaki kształt ma każdy element na stronie)?	Każdy element na stronie internetowej jest prostokątnym pudełkiem (box).
+Wymień 4 warstwy Box Modelu w kolejności OD WEWNĄTRZ do ZEWNĄTRZ.	Content (Treść) -&gt; Padding (Odstęp wewnętrzny) -&gt; Border (Ramka) -&gt; Margin (Margines zewnętrzny).
+Co to jest Padding?	Przestrzeń między treścią (content) a ramką (border). Jest &quot;wewnątrz&quot; elementu.
+Co to jest Border?	Ramka/linia znajdująca się między paddingiem a marginem.
+Co to jest Margin?	Przestrzeń na zewnątrz ramki (border). Oddziela ten element od innych elementów.
+Której właściwości użyjesz, aby odsunąć jeden element od drugiego (zrobić odstęp między nimi)?	Margin.
+Której właściwości użyjesz, aby odsunąć tekst od ramki wewnątrz przycisku?	Padding.
+Na czym polega problem ze &quot;Standardowym Modelem Pudełkowym&quot; (domyślnym w przeglądarkach)?	Jeśli ustawisz `width: 100px` i `padding: 20px`, element w rzeczywistości będzie miał 140px szerokości (100 + 20 + 20). Padding i Border są dodawane &quot;ekstra&quot; do szerokości.
+Co robi `box-sizing: border-box` (Alternatywny Model)?	Sprawia, że padding i border są WLICZANE w szerokość (width) elementu. Jeśli ustawisz `width: 100px`, element będzie miał 100px, niezależnie od grubości ramki czy paddingu.
+Jaki kod CSS należy wpisać, aby włączyć `border-box` dla WSZYSTKICH elementów na stronie (reset)?	* { box-sizing: border-box
+Jak wyśrodkować element blokowy w poziomie (horizontally)?	Ustawić mu konkretną szerokość (width) i dać `margin: 0 auto
+Czy Margin może mieć wartość ujemną (negative)?	Tak. Pozwala to na nakładanie elementów na siebie.
+Czy Padding może mieć wartość ujemną?	Nie.
+Co to jest &quot;Margin Collapsing&quot; (Zapadanie marginesów)?	Zjawisko, gdzie pionowe marginesy dwóch sąsiednich elementów nie sumują się (20px + 20px), lecz łączą w jeden większy (zostaje tylko 20px).
+Co to jest &quot;Normal Flow&quot; (Normalny przepływ) w CSS?	To domyślny sposób, w jaki przeglądarka układa elementy na stronie, jeśli nie zmienimy ich układu (nie użyjemy Flexboxa, Grida ani Position).
+Jak zachowują się elementy blokowe (Block-level elements)?	Zaczynają się od nowej linii i zajmują całą dostępną szerokość kontenera (rozciągają się w poziomie).
+Jak zachowują się elementy liniowe (Inline elements)?	Nie zaczynają nowej linii. Ustawiają się obok siebie w jednym wierszu (tak jak słowa w zdaniu) i zajmują tylko tyle szerokości, ile potrzebuje ich treść.
+Czy na elemencie LINIOWYM (inline) można ustawić `width` i `height`?	Nie. Wymiary (szerokość i wysokość) są ignorowane dla elementów inline.
+Czy na elemencie BLOKOWYM (block) można ustawić `width` i `height`?	Tak.
+Jak zachowują się pionowe marginesy i paddingi (top/bottom) na elementach LINIOWYCH?	Są widoczne wizualnie, ale NIE odpychają sąsiednich elementów (nie wpływają na układ reszty strony).
+Co to jest `display: inline-block`?	Hybryda. Element ustawia się w linii (jak tekst), ale SZANUJE wymiary (width/height) oraz marginesy i paddingi (jak blok).
+Jaka jest domyślna wartość `display` dla elementu `&lt;div&gt;`?	block
+Jaka jest domyślna wartość `display` dla elementu `&lt;span&gt;`?	inline
+Jaka jest domyślna wartość `display` dla elementu `&lt;a&gt;` (link)?	inline
+Jaka jest domyślna wartość `display` dla nagłówków (`&lt;h1&gt;`, `&lt;h2&gt;` itd.)?	block
+Jaka jest domyślna wartość `display` dla paragrafu `&lt;p&gt;`?	block
+Jaka jest semantyczna różnica między `&lt;div&gt;` a `&lt;span&gt;`?	Żadna. Oba są &quot;pustymi&quot; kontenerami bez znaczenia semantycznego. Różnią się tylko domyślnym stylem wyświetlania (div=block, span=inline).
+Kiedy używamy `&lt;span&gt;`?	Gdy chcemy wydzielić i ostylować fragment tekstu wewnątrz większego bloku (np. jedno słowo w akapicie na czerwono).
+Kiedy używamy `&lt;div&gt;`?	Gdy chcemy zgrupować większe sekcje strony w blok (np. kontener na artykuł, sekcję nagłówka).
+Co się stanie, jeśli wstawisz element blokowy (np. `&lt;div&gt;`) wewnątrz elementu liniowego (np. `&lt;span&gt;`)?	Jest to błąd (zazwyczaj) i może powodować nieprzewidywalne zachowanie przeglądarki lub &quot;rozbicie&quot; elementu liniowego.
+Jaka właściwość CSS włącza Flexbox na elemencie?	display: flex
+Co to jest Flex Container?	To element rodzic, na którym ustawiono `display: flex`. Zarządza on układem swoich dzieci.
+Co to jest Flex Item?	To każde BEZPOŚREDNIE dziecko Flex Containera.
+Jeśli ustawisz `display: flex` na elemencie `<ul>`, czym stają się elementy `<li>` wewnątrz niego?	Stają się Flex Items (elementami elastycznymi).
+Czy element może być jednocześnie Flex Itemem i Flex Containerem?	Tak. Może być dzieckiem innego Flexboxa, a jednocześnie mieć nadane `display: flex`, by zarządzać własnymi dziećmi (zagnieżdżanie).
+Jaki jest domyślny kierunek ustawiania się elementów po włączeniu `display: flex`?	Poziomy (w rzędzie / row). Elementy ustawią się obok siebie.
+Co powinieneś zrobić jako pierwsze, jeśli Twój Flexbox nie zachowuje się tak, jak oczekujesz?	"Otworzyć narzędzia deweloperskie (DevTools) i ""Zbadać"" element."
+Właściwość `flex` (shorthand) jest skrótem dla jakich trzech właściwości (w kolejności)?	flex-grow, flex-shrink, flex-basis
+Co oznacza zapis `flex: 1` (na jakie wartości się rozwija)?	flex-grow: 1, flex-shrink: 1, flex-basis: 0
+Co robi `flex-grow`?	Określa &quot;współczynnik wzrostu&quot;. Decyduje, jak dużą część WOLNEJ przestrzeni (dostępnego miejsca) dany element powinien zająć w porównaniu do innych.
+Co robi `flex-shrink`?	Określa &quot;współczynnik kurczenia&quot;. Decyduje, jak bardzo element powinien się skurczyć, gdy w kontenerze brakuje miejsca (gdy elementy się nie mieszczą).
+Co robi `flex-basis`?	Określa rozmiar początkowy (bazowy) elementu, ZANIM zacznie się on rozciągać (grow) lub kurczyć (shrink).
+Jaką wartość `flex-shrink` należy ustawić, aby element NIGDY się nie zmniejszał (nawet jak brakuje miejsca)?	flex-shrink: 0
+Jeśli jeden element ma `flex-grow: 2`, a pozostałe `flex-grow: 1`, co się stanie?	Ten pierwszy element weźmie DWA razy więcej wolnej przestrzeni niż pozostałe.
+Jaka jest różnica między `flex-basis: 0` a `flex-basis: auto`?	`0` ignoruje zawartość/szerokość elementu (zaczyna od zera, więc wszystkie elementy rosną równo). `auto` zaczyna od rozmiaru zawartości/szerokości (przez co większy tekst początkowy może dać szerszy element końcowy).
+Co oznacza zapis `flex: auto` (na jakie wartości się rozwija)?	flex-grow: 1, flex-shrink: 1, flex-basis: auto
+Dlaczego elementy z ustawionym `width: 250px` mogą mieć w rzeczywistości inną szerokość we Flexboxie?	Ponieważ `flex-grow` może je rozciągnąć (jeśli jest miejsce), a `flex-shrink` może je ścisnąć (jeśli brak miejsca). Flexbox traktuje `width` raczej jako sugestię (chyba że zablokujemy shrink/grow).
+Jaka jest domyślna wartość `flex-shrink` (jeśli jej nie zmienisz)?	1 (elementy domyślnie kurczą się, by zmieścić się w kontenerze).
+Co się stanie, jeśli użyjesz skrótu `flex: 1` (gdzie basis=0) na elementach o różnej ilości tekstu?	Wszystkie elementy będą miały IDEALNIE równą szerokość, niezależnie od długości tekstu w środku.
+Co to jest Kaskada (The Cascade) w CSS?	To algorytm określający, która reguła zostanie zastosowana do elementu, gdy istnieje wiele sprzecznych reguł (np. jedna mówi &quot;czerwony&quot;, a druga &quot;niebieski&quot;).
+Wymień 3 główne czynniki, które Kaskada bierze pod uwagę (w kolejności ważności).	1. Specyficzność (Specificity), 2. Dziedziczenie (Inheritance), 3. Kolejność reguł (Rule Order).
+Uporządkuj selektory od NAJMNIEJ do NAJBARDZIEJ specyficznego: Klasa, ID, Element (Type).	Element (Type) &lt; Klasa &lt; ID
+Co ma wyższą wagę (specyficzność): jeden selektor ID czy 10 selektorów Klasy?	Jeden selektor ID (ID zawsze wygrywa z dowolną liczbą klas).
+Co ma wyższą wagę (specyficzność): jeden selektor Klasy czy 10 selektorów Elementu (Tagów)?	Jeden selektor Klasy (Klasa zawsze wygrywa z dowolną liczbą tagów).
+"Mamy reguły: `#header { color: red"	 }` oraz `.menu .item { color: blue
+Mamy reguły: `.nav .item { color: red	 }` oraz `.item { color: blue
+Jeśli dwie reguły mają DOKŁADNIE taką samą specyficzność, która wygrywa?	Ta, która jest zdefiniowana jako OSTATNIA w pliku CSS (Rule Order).
+Czy selektor uniwersalny `*` dodaje jakąkolwiek wagę do specyficzności?	Nie, nie ma żadnej wartości specyficzności (jest słabszy nawet od selektora typu).
+Czy kombinatory (takie jak `+`, `&gt;`, `~` lub spacja) zwiększają specyficzność reguły?	Nie. Liczą się tylko same selektory (klasy, ID, tagi), a nie znaki między nimi.
+Co to jest Dziedziczenie (Inheritance)?	Przekazywanie niektórych właściwości CSS z elementu rodzica na elementy dzieci (np. kolor tekstu).
+Jakie rodzaje właściwości są zazwyczaj dziedziczone?	Właściwości związane z typografią (np. color, font-family, font-size).
+Jakie rodzaje właściwości zazwyczaj NIE są dziedziczone?	Właściwości związane z układem (layout), np. margin, padding, border, width.
+Co wygrywa: Dziedziczenie czy Bezpośrednie wskazywanie (Direct Targeting)?	Bezpośrednie wskazywanie. Nawet jeśli rodzic ma ID (bardzo silne), a dziecko ma tylko selektor typu (słabe), styl przypisany bezpośrednio do dziecka nadpisze styl odziedziczony.
+Co ma najwyższą specyficzność spośród: ID, Class, Type, Inline Style (styl liniowy)?	Inline Style (styl wpisany wprost w HTML: style=&quot;...&quot;).
+Mamy kod: `.menu .item { color: red	 }` oraz `.item { color: blue
+"Mamy kod: `#sidebar { color: red"	 }` oraz `html body div.sidebar { color: blue
+Mamy kod: `.box > .title { color: red	 }` oraz `.box .title { color: blue
+"Rodzic (Parent) ma ustawione `#container { color: red"	 }`. Dziecko (Child) wewnątrz ma ustawione `p { color: blue
+"Czy styl zdefiniowany ""liniowo"" w HTML (`<div style=""color: green"">`) wygra ze stylem zdefiniowanym w pliku CSS z użyciem ID?"	Tak. Style liniowe (Inline styles) mają wyższy priorytet niż jakiekolwiek selektory w pliku CSS.
+Mamy kod: `ul li { color: red	 }` oraz `.list-item { color: blue
+Ustawiasz `border: 1px solid black	` na elemencie `div`. Czy paragraf `<p>` wewnątrz tego diva odziedziczy ramkę?
+Mamy kod: `* { color: black	 }` oraz `h1 { color: orange
+Dlaczego `nav .link` ma taką samą specyficzność jak `nav > .link`?	Ponieważ znaki kombinatorów (spacja, >, +) nie dodają żadnych punktów do specyficzności. Liczą się tylko same nazwy selektorów (1 tag + 1 klasa w obu przypadkach).
+Jakie są dwa sposoby na otwarcie Inspektora (DevTools) w przeglądarce?	"1. Prawy przycisk myszy na elemencie -> ""Zbadaj"" (Inspect). 2. Klawisz F12 (lub Ctrl+Shift+I)."
+"Do czego służy panel ""Elements"" w DevTools?"	Pokazuje pełną strukturę HTML strony (drzewo DOM) i pozwala wybierać elementy.
+"Do czego służy panel ""Styles"" (zazwyczaj po prawej lub na dole)?"	Pokazuje reguły CSS, które są aktualnie zastosowane do wybranego elementu.
+Jak wybrać element do zbadania bezpośrednio ze strony (wizualnie), a nie szukając go w kodzie?	"Klikając ikonę ""strzałki w kwadracie"" (element select icon) w lewym górnym rogu DevTools, a następnie najeżdżając na element na stronie."
+Co oznacza przekreślony tekst (strikethrough) w panelu Styles (np. `color: red	`)?
+Czy zmiany stylów wprowadzone w Inspektorze (DevTools) są trwałe (czy zapisują się w Twoim pliku)?	Nie. Są tymczasowe i znikną natychmiast po odświeżeniu strony.
+Jaka jest główna zaleta edytowania stylów w DevTools?	Pozwala na natychmiastowy podgląd zmian (real-time) i eksperymentowanie bez konieczności edycji pliku i odświeżania strony.
+Jak sprawdzić, dlaczego Twój CSS nie działa, używając DevTools?	"Wybierz element i spójrz w panel ""Styles"". Sprawdź, czy Twoja reguła tam jest i czy nie jest przekreślona (nadpisana)."
+Jakie są dwie osie we Flexboxie?	Main Axis (Oś Główna) i Cross Axis (Oś Poprzeczna).
+Jaki jest domyślny kierunek Osi Głównej (Main Axis)?	Poziomy (od lewej do prawej), czyli `row`.
+Jaka właściwość CSS zmienia kierunek Osi Głównej?	flex-direction
+Jak ustawić elementy pionowo (w kolumnie) zamiast poziomo?	flex-direction: column
+Jeśli ustawisz `flex-direction: column`, jak biegnie Oś Główna (Main Axis)?	Pionowo (z góry na dół).
+Jeśli ustawisz `flex-direction: column`, jak biegnie Oś Poprzeczna (Cross Axis)?	Poziomo (z lewej do prawej).
+Jeśli ustawisz `flex-direction: row` (domyślnie), do czego odnosi się `flex-basis`?	Do SZEROKOŚCI (Width) elementu.
+Jeśli ustawisz `flex-direction: column`, do czego odnosi się `flex-basis`?	Do WYSOKOŚCI (Height) elementu.
+Dlaczego `flex-basis` zmienia swoje znaczenie w zależności od `flex-direction`?	Ponieważ `flex-basis` ZAWSZE określa rozmiar wzdłuż Osi Głównej (Main Axis).
+Dlaczego użycie skrótu `flex: 1` w kolumnie (`flex-direction: column`) może sprawić, że puste elementy znikną (zapadną się)?	Ponieważ `flex: 1` ustawia `flex-basis: 0`. W kolumnie oznacza to &quot;wysokość równą 0&quot;. Jeśli element nie ma treści (content) ani ustalonej wysokości, a kontener nie ma ustalonej wysokości, element będzie miał 0px.
+Jaka właściwość odpowiada za wyrównywanie elementów wzdłuż Osi Głównej (Main Axis)?	justify-content
+Jaka właściwość odpowiada za wyrównywanie elementów wzdłuż Osi Poprzecznej (Cross Axis)?	align-items
+Jakie są popularne wartości dla `justify-content` (wymień 3)?	flex-start, flex-end, center, space-between, space-around, space-evenly
+Co robi `justify-content: space-between`?	Rozkłada elementy tak, że pierwszy jest przyklejony do początku, ostatni do końca, a wolna przestrzeń jest równo rozdzielona MIĘDZY nimi.
+Czym różni się `space-between` od `space-around`?	W `space-between` elementy dotykają krawędzi kontenera. W `space-around` mają dodatkowy odstęp (połowę normalnego) również przed pierwszym i za ostatnim elementem.
+Jak wyśrodkować element IDEALNIE na środku kontenera (w pionie i poziomie)?	display: flex
+Jeśli ustawisz `flex-direction: row` (domyślnie), która właściwość centruje elementy w PIONIE?	align-items
+Jeśli ustawisz `flex-direction: column`, która właściwość centruje elementy w PIONIE?	justify-content (bo teraz pion to Oś Główna)
+Jeśli ustawisz `flex-direction: column`, która właściwość centruje elementy w POZIOMIE?	align-items (bo teraz poziom to Oś Poprzeczna)
+Jaka właściwość dodaje odstęp między elementami Flexboxa (zastępując marginesy)?	gap (np. gap: 10px)
+Co robi `align-items: stretch` (wartość domyślna)?	Rozciąga elementy wzdłuż Osi Poprzecznej, aby zajęły całą wysokość (lub szerokość w kolumnie) kontenera, o ile nie mają ustawionego sztywnego wymiaru.
+Jeśli `align-items` nie działa tak jak chcesz, co powinieneś sprawdzić w pierwszej kolejności?	Czy kontener ma ustaloną wysokość (jeśli centrujesz w pionie). Jeśli kontener jest niski (ma wysokość tylko taką jak treść), to nie ma &quot;przestrzeni&quot;, w której można by coś wyśrodkować.
+Jakie są 3 słowa kluczowe do deklarowania zmiennych w JavaScript?;let, const, var;odin_js_basics	
+Czym różni się `let` od `const`?;`let` pozwala na późniejszą zmianę wartości zmiennej (reassignment). `const` tworzy stałą, której nie można przypisać nowej wartości (wyrzuci błąd).;odin_js_basics	
+Dlaczego należy unikać słowa kluczowego `var`?;To stary sposób deklaracji. Posiada dziwne zachowania (związane z zasięgiem/hoistingiem), które mogą powodować błędy. Zastąpiono go przez nowocześniejsze `let` i `const`.;odin_js_basics	
+Jaka jest zalecana konwencja nazewnictwa zmiennych w JavaScript?;camelCase (pierwsze słowo małą literą, każde kolejne wielką, np. `myFirstName`).;odin_js_basics	
+Jak wypisać wiadomość w konsoli przeglądarki (Developer Tools)?;console.log(&quot;Twoja wiadomość&quot;);odin_js_basics	
+Jak podłączyć zewnętrzny plik JavaScript do pliku HTML?;Używając znacznika &lt;script src=&quot;nazwa_pliku.js&quot;&gt;&lt;/script&gt;.;odin_js_syntax	
+Co się stanie, jeśli spróbujesz dodać liczbę do stringa (np. `10 + &quot;5&quot;`)?;Nastąpi konkatenacja (złączenie). Wynikiem będzie string &quot;105&quot;.;odin_js_behavior	
+Co robi operator Modulo `%` (np. `10 % 3`)?;Zwraca resztę z dzielenia (w tym przypadku 1, bo 10 dzielone przez 3 to 3 i reszty 1).;odin_js_operators	
+Co robi operator inkrementacji `++`?;Zwiększa wartość zmiennej o 1.;odin_js_operators	
+Jaka jest różnica między `++i` (prefix) a `i++` (postfix)?;`++i` zwraca NOWĄ (już powiększoną) wartość. `i++` zwraca STARĄ wartość, a dopiero potem zwiększa zmienną w tle.;odin_js_details	
+Co robi &quot;Unary Plus&quot; (plus jednoargumentowy), np. `+&quot;10&quot;`?;Konwertuje stringa na liczbę (Number). Wynikiem będzie liczba 10.;odin_js_operators	
+Jaka jest kolejność wykonywania działań w JS?;Standardowa matematyczna (PEMDAS): Nawiasy -&gt; Mnożenie/Dzielenie -&gt; Dodawanie/Odejmowanie.;odin_js_basics	
+Co to jest re-assigning (przypisanie ponowne)?;Zmiana wartości istniejącej zmiennej, np. `let a = 5; a = 10;`. Jest możliwe tylko dla `let` i `var`, ale nie dla `const`.;odin_js_basics	
+Jakim słowem kluczowym tworzymy (deklarujemy) zmienną w nowoczesnym JavaScript?;let;odin_js_variables	
+Co się stanie, jeśli zadeklarujesz tę samą zmienną dwa razy (np. dwa razy użyjesz `let message`)?;Otrzymasz błąd (SyntaxError). Zmienną deklaruje się tylko raz.;odin_js_variables	
+Jakie dwa znaki specjalne są dozwolone w nazwach zmiennych (oprócz liter i cyfr)?;Dolar ($) i podkreślenie (_).;odin_js_variables	
+Czy nazwa zmiennej może zaczynać się od cyfry (np. `let 1a`)?;Nie.;odin_js_variables	
+Czy wielkość liter w nazwach zmiennych ma znaczenie (np. `apple` vs `APPLE`)?;Tak (Case matters). To dwie różne zmienne.;odin_js_variables	
+Co to są &quot;Słowa zastrzeżone&quot; (Reserved names) w JS?;Słowa używane przez sam język (np. `let`, `class`, `return`, `function`), których NIE możesz użyć jako nazwy zmiennej.;odin_js_variables	
+Co się stanie, jeśli przypiszesz wartość do zmiennej bez użycia `let/const` w trybie &quot;use strict&quot;?;Wyrzuci błąd (ReferenceError), że zmienna nie jest zdefiniowana.;odin_js_variables	
+Słowo kluczowe do deklarowania stałych (zmiennych, których nie można zmienić)?;const;odin_js_variables	
+Kiedy, zgodnie z konwencją, używamy WIELKICH_LITER (Screaming Snake Case) dla nazw stałych?;Tylko dla wartości znanych PRZED uruchomieniem programu (hard-coded), np. kolory HEX, stałe konfiguracyjne.;odin_js_variables	
+Jak nazywamy stałą `const`, której wartość jest obliczana dopiero w trakcie działania programu (run-time)?;Normalnie, używając camelCase (np. `const pageLoadTime = ...`).;odin_js_best_practices	
+Dlaczego nazwy zmiennych takie jak `data` lub `value` są uważane za złe?;Ponieważ nie mówią nic o tym, co jest w środku. Są zbyt ogólne.;odin_js_best_practices	
+Jaka jest analogia zmiennej ze świata rzeczywistego (użyta w lekcji)?;Pudełko z naklejoną etykietą (nazwą), do którego wkładamy dane.;odin_js_theory	
+Czy w nowoczesnym JS używamy słowa kluczowego `var`?;Nie (lub bardzo rzadko). Używamy `let` lub `const`.;odin_js_basics	
+Co to jest Operand?;To argument, na którym działa operator (np. w `5 * 2`, liczby 5 i 2 to operandy).;odin_js_operators	
+Czym różni się operator Unarny od Binarnego?;Operator unarny działa na jednym operandzie (np. `-x`), a binarny na dwóch (np. `x - y`).;odin_js_theory	
+Co robi operator `%` (Remainder)?;Zwraca resztę z dzielenia (NIE jest to procent).;odin_js_operators	
+Jaki jest wynik `5 % 2`?;1;odin_js_operators	
+Jaki jest wynik `8 % 3`?;2;odin_js_operators	
+Jak zapisać potęgowanie w JS (np. 2 do potęgi 3)?;2 ** 3;odin_js_operators	
+Co się stanie, jeśli użyjesz operatora `+` na dwóch operandach, z których jeden jest stringiem (np. `&quot;1&quot; + 2`)?;Nastąpi konkatenacja (złączenie). Liczba zostanie zamieniona na string. Wynik: &quot;12&quot;.;odin_js_behavior	
+"Jaki będzie wynik: `&#x27;1&#x27; + 2 + 2`?;&#x27;122&#x27; (Ponieważ pierwszy jest stringiem, reszta też jest traktowana jako ciąg znaków).;odin_js_behavior"	
+"Jaki będzie wynik: `2 + 2 + &#x27;1&#x27;`?;&#x27;41&#x27; (Najpierw wykona się 2+2=4, a dopiero potem zostanie doklejona &#x27;1&#x27;).;odin_js_behavior"	
+"Jaki będzie wynik odejmowania stringów: `&#x27;6&#x27; - &#x27;2&#x27;`?;4 (JS automatycznie skonwertuje stringi na liczby przy odejmowaniu, mnożeniu i dzieleniu).;odin_js_behavior"	
+Co robi operator Unarny Plus (np. `+x` lub `+&quot;12&quot;`)?;Konwertuje operand na liczbę (Number).;odin_js_operators	
+Jaki jest wynik `+true`?;1;odin_js_operators	
+Jaki jest wynik `+&quot;&quot;` (pusty string)?;0;odin_js_operators	
+Co to jest priorytet operatorów (Operator Precedence)?;Kolejność wykonywania działań (np. mnożenie przed dodawaniem).;odin_js_theory	
+Czy operator przypisania `=` zwraca jakąś wartość?;Tak, zwraca wartość, która została przypisana. (Dlatego możliwe jest `a = b = c = 5`).;odin_js_theory	
+Co robi skrócony operator `n += 5`?;To to samo co `n = n + 5`.;odin_js_syntax	
+Mamy kod: `let a = 1; let b = ++a;`. Jaka jest wartość `b`?;2 (Forma Prefixowa zwraca NOWĄ wartość).;odin_js_details	
+Mamy kod: `let a = 1; let b = a++;`. Jaka jest wartość `b`?;1 (Forma Postfixowa zwraca STARĄ wartość, sprzed inkrementacji).;odin_js_details	
+Co robi operator przecinka `,` (np. `let a = (1+2, 3+4)`)?;Ewaluuje wszystkie wyrażenia od lewej do prawej, ale zwraca wynik tylko OSTATNIEGO. (W tym przykładzie a = 7).;odin_js_details	
+Wymień 8 typów danych w JavaScript.;String, Number, BigInt, Boolean, Undefined, Null, Symbol, Object;odin_js_datatypes	
+Który z 8 typów danych w JavaScript NIE jest typem prostym (primitive)?;Object;odin_js_datatypes	
+"Jaka jest różnica między cudzysłowami pojedynczymi (&#x27; &#x27;) i podwójnymi (&quot; &quot;) w JS?;W JavaScript nie ma żadnej funkcjonalnej różnicy. Oba działają tak samo.;odin_js_strings"	
+Do czego służą grawisy (backticks ` `) w stringach?;Pozwalają na osadzanie zmiennych/wyrażeń wewnątrz tekstu (Template Literals) oraz na tworzenie stringów wielolinijkowych.;odin_js_strings	
+Jak osadzić zmienną `name` wewnątrz stringa używając grawisów (Template Literal)?;`Hello ${name}`;odin_js_syntax	
+Co to jest Metoda (Method) w kontekście typów danych?;To funkcja wbudowana w dany typ danych (np. `.toUpperCase()` dla stringów), która pozwala wykonywać na nim operacje.;odin_js_theory	
+Jaka jest różnica między metodą `.slice()` a `.substring()` (w uproszczeniu)?;`slice` obsługuje ujemne indeksy (liczy od końca), a `substring` traktuje ujemne indeksy jak 0.;odin_js_details	
+Jakie są 3 operatory logiczne w JS?;	
+Co to są wartości &quot;Falsy&quot;?;Wartości, które w kontekście logicznym (np. w instrukcji if) są traktowane jak fałsz (false).;odin_js_logic	
+Wymień 6 głównych wartości Falsy w JavaScript.;false, 0, &quot;&quot; (pusty string), null, undefined, NaN;odin_js_logic	
+Co to są wartości &quot;Truthy&quot;?;Wszystkie wartości, które NIE są falsy (czyli np. &quot;0&quot;, &quot;false&quot; jako string, pusty obiekt {}, pusta tablica []).;odin_js_logic	
+"Jaka jest różnica między operatorem `==` a `===`?;`==` sprawdza tylko wartość (z możliwą konwersją typów, np. 5 == &#x27;5&#x27; to prawda). `===` sprawdza wartość ORAZ typ danych (5 === &#x27;5&#x27; to fałsz).;odin_js_operators"	
+Jaka jest składnia operatora trójargumentowego (Ternary Operator)?;warunek ? wyrażenie_jeśli_prawda : wyrażenie_jeśli_fałsz;odin_js_syntax	
+Co to jest zagnieżdżanie (Nesting) w instrukcjach warunkowych?;Umieszczanie jednej instrukcji warunkowej (np. if) wewnątrz innej.;odin_js_logic	
+Kiedy warto użyć instrukcji `switch` zamiast `if/else`?;Gdy mamy jedną zmienną, która może przyjmować wiele konkretnych wartości (przypadków) i chcemy uniknąć długiej drabinki `else if`.;odin_js_best_practices	
+Jaki znak służy do &quot;ucieczki&quot; (escape character) w stringach (np. żeby użyć cudzysłowu wewnątrz cudzysłowu)?;Backslash (\);odin_js_syntax	
+Jaki jest wynik operacji: `undefined == null`?;true;odin_js_weird_js	
+Jaki jest wynik operacji: `undefined === null`?;false (bo to różne typy danych);odin_js_weird_js	
+Jak otworzyć Narzędzia Deweloperskie (DevTools) skrótem klawiszowym?	F12 lub Ctrl + Shift + C (Cmd + Opt + C na Macu)
+Co to jest &quot;Breakpoint&quot; (Punkt przerwania)?	To miejsce w kodzie, w którym execution (wykonanie programu) zostanie WSTRZYMANE. Pozwala to podejrzeć wartości zmiennych w tym konkretnym momencie.
+W jakiej zakładce DevTools debugujemy kod JavaScript (ustawiamy breakpointy)?	W zakładce &quot;Sources&quot; (Źródła).
+Jak ustawić breakpoint w zakładce Sources?	Klikając na NUMER LINII kodu, w której chcemy zatrzymać program.
+Jakie słowo kluczowe w JavaScript działa jak &quot;twardy&quot; breakpoint (automatycznie zatrzymuje kod w tym miejscu, jeśli DevTools są otwarte)?	debugger
+Jak symulować urządzenie mobilne (zmienić wielkość ekranu) w DevTools?	Klikając ikonę telefonu/tabletu (Device Toolbar) w lewym górnym rogu DevTools (lub skrót Ctrl+Shift+M).
+W jakiej zakładce możesz podejrzeć strukturę DOM i testować zmiany w HTML/CSS?	W zakładce &quot;Elements&quot;.
+Do czego służy zakładka &quot;Console&quot; (Konsola)?	Do podglądu błędów/ostrzeżeń oraz do interaktywnego wykonywania kodu JavaScript.
+Jak w DevTools wymusić na elemencie stan taki jak `:hover` (bez najeżdżania myszką)?	W zakładce Elements (Styles) kliknij przycisk `:hov` i zaznacz odpowiedni checkbox, LUB kliknij prawym na element w drzewie DOM -&gt; Force state -&gt; :hover.
+Czy zmiany w plikach JS dokonane w zakładce Sources zapisują się na Twoim dysku?	Zazwyczaj NIE (chyba że skonfigurujesz Workspaces). Po odświeżeniu strony zmiany znikną.
+Co to jest &quot;Call Stack&quot; widoczny podczas debugowania?	To lista funkcji, które zostały wywołane, aby dotrzeć do obecnego miejsca w kodzie (pokazuje &quot;ścieżkę&quot;, jaką przebył program).
+Co oznacza symbol znaku zachęty (Prompt) - `$` lub `%`?	Oznacza, że terminal jest gotowy i oczekuje na wpisanie polecenia.
+Dlaczego hasła nie są widoczne podczas wpisywania ich w terminalu (np. przy `sudo`)?	Jest to funkcja bezpieczeństwa, aby ukryć długość i treść hasła przed osobami postronnymi.
+Co robi klawisz `TAB` w terminalu?	Automatycznie uzupełnia polecenia lub ścieżki do plików (Tab completion).
+Jak wylistować WSZYSTKIE pliki, łącznie z ukrytymi (zaczynającymi się od kropki)?	`ls -a` (all)
+Jak wylistować pliki w formie listy ze szczegółami (uprawnienia, rozmiar, data)?	`ls -l` (long format)
+Jak połączyć flagi, aby zobaczyć wszystkie pliki w formie listy?	`ls -la` (lub `ls -al`)
+Jak wrócić do poprzedniego katalogu, w którym byłeś przed chwilą (jak przycisk &quot;Wstecz&quot; w pilocie)?	`cd -`
+Co oznacza symbol `.` (pojedyncza kropka) w ścieżce?	Obecny katalog (Current Directory).
+Co oznacza symbol `..` (dwie kropki) w ścieżce?	Katalog nadrzędny (Parent Directory).
+Co oznacza symbol `~` (tylda) w ścieżce?	Katalog domowy użytkownika (Home Directory).
+Co oznacza symbol `/` (slash) NA POCZĄTKU ścieżki (np. `/home/user`)?	Oznacza korzeń systemu (Root) - początek całego drzewa plików. Wskazuje na Ścieżkę Bezwzględną (Absolute Path).
+Jaka jest różnica między ścieżką bezwzględną (Absolute) a względną (Relative)?	Bezwzględna zaczyna się od `/` (root) i jest pełnym adresem. Względna NIE zaczyna się od `/` i opisuje drogę od miejsca, w którym aktualnie jesteś.
+Jak stworzyć strukturę katalogów zagnieżdżonych (np. folder w folderze) jedną komendą?	`mkdir -p rodzic/dziecko/wnuk` (flaga `-p` tworzy brakujące katalogi nadrzędne).
+Jak usunąć katalog wraz z całą zawartością?	`rm -r &lt;nazwa_katalogu&gt;` (Recursive)
+Jak skopiować plik?	`cp &lt;co_kopiujemy&gt; &lt;gdzie_kopiujemy&gt;`
+Jak skopiować cały katalog z zawartością?	`cp -r &lt;zrodlo&gt; &lt;cel&gt;` (Recursive)
+Jak wyczyścić ekran terminala?	Komenda `clear` lub skrót `Ctrl + L`
+Jak przerwać działanie komendy, która się zawiesiła lub trwa za długo?	Skrót `Ctrl + C`
+Jak wyświetlić zawartość pliku w terminalu (cały naraz)?	`cat nazwa_pliku` (Concatenate)
+Jak wyświetlić zawartość DŁUGIEGO pliku z możliwością przewijania (strona po stronie)?	`less nazwa_pliku`
+Jak wyjść z widoku `less` (lub `man`)?	Wciskając klawisz `q` (Quit).
+Jak wyświetlić pierwsze 10 linii pliku?	`head nazwa_pliku`
+Jak wyświetlić ostatnie 10 linii pliku?	`tail nazwa_pliku`
+Jak otworzyć podręcznik/dokumentację dla danej komendy (np. `ls`)?	`man ls` (Manual)
+Co robi komenda `echo &quot;Tekst&quot;`?	Wypisuje podany tekst na ekran (standardowe wyjście).
+Co robi operator przekierowania `&gt;` (np. `echo &quot;Hej&quot; &gt; plik.txt`)?	Zapisuje wynik komendy do pliku. UWAGA: NADPISUJE (kasuje) dotychczasową zawartość pliku!
+Co robi operator przekierowania `&gt;&gt;` (np. `echo &quot;Hej&quot; &gt;&gt; plik.txt`)?	DOPISUJE (Append) wynik komendy na końcu pliku, nie kasując jego zawartości.
+Co robi operator &quot;Pipe&quot; `|` (pionowa kreska)?	Przekazuje wynik (Output) komendy po lewej stronie jako wejście (Input) dla komendy po prawej stronie.
+Jak wyszukać konkretną frazę (tekst) wewnątrz pliku?	`grep &quot;szukany_tekst&quot; nazwa_pliku`
+Jak połączyć `ls` i `grep`, aby znaleźć plik, którego nazwy nie pamiętasz dokładnie?	`ls | grep &quot;fragment_nazwy&quot;`
+Do czego służy komenda `sudo` (SuperUser DO)?	Pozwala wykonać komendę z uprawnieniami administratora (root). Wymaga podania hasła.
+Jak wyszukać pliki po nazwie w całym drzewie katalogów (lub podkatalogu)?	`find . -name &quot;nazwa_pliku&quot;`
+Jak sprawdzić historię wpisywanych komend?	`history`
+Jak szybko uruchomić ponownie ostatnią wpisaną komendę?	`!!` (dwa wykrzykniki) lub strzałka w górę.
+Jak sprawdzić, jakie procesy zużywają najwięcej zasobów (taki Menedżer Zadań w terminalu)?	`top` (lub nowszy `htop`, jeśli jest zainstalowany).
+Co oznacza tylda `~` w ścieżce (np. `cd ~`)?	Oznacza katalog domowy (Home) użytkownika.
+Co robi operator &quot;Pipe&quot; `|` (pionowa kreska)?	Przekazuje wynik (Output) komendy po lewej stronie jako wejście (Input) dla komendy po prawej stronie (np. `komenda1 | komenda2`).
+Jak wyszukać linijki zawierające słowo &quot;error&quot; w pliku `server.log`?	`grep &quot;error&quot; server.log`
+Jak wyszukać frazę &quot;TODO&quot; we wszystkich plikach w bieżącym katalogu i podkatalogach (rekurencyjnie)?	`grep -r &quot;TODO&quot; .` (recursive)
+Jak szukać frazy ignorując wielkość liter (np. żeby znaleźć &quot;Error&quot;, &quot;ERROR&quot; i &quot;error&quot;)?	`grep -i &quot;fraza&quot;` (ignore case)
+Jak wyświetlić linie, które NIE zawierają danego słowa (odwrócenie dopasowania)?	`grep -v &quot;słowo&quot;` (invert match)
+Jak wyświetlić NUMERY linii, w których znaleziono szukaną frazę?	`grep -n &quot;fraza&quot; plik` (line number)
+Jak znaleźć w historii komend te, które zawierały słowo &quot;ssh&quot;?	`history | grep &quot;ssh&quot;`
+Co oznacza kropka `.` w komendzie `find . -name &quot;...&quot;`?	Oznacza katalog startowy wyszukiwania (tutaj: bieżący katalog).
+Jak znaleźć plik o nazwie `index.html` w bieżącym katalogu (i głębiej)?	`find . -name &quot;index.html&quot;`
+Jak znaleźć plik po nazwie, ignorując wielkość liter (np. znajduje `Logo.png` szukając `logo.png`)?	`find . -iname &quot;logo.png&quot;` (insensitive name)
+Jak znaleźć wszystkie pliki z rozszerzeniem `.js`?	`find . -name &quot;*.js&quot;`
+Jak wyszukać tylko KATALOGI (nie pliki) o nazwie &quot;node_modules&quot;?	`find . -type d -name &quot;node_modules&quot;` (type directory)
+Jak wyszukać tylko ZWYKŁE PLIKI (nie katalogi) o nazwie &quot;config&quot;?	`find . -type f -name &quot;config&quot;` (type file)
+Jak połączyć `ls` i `grep`, aby wyfiltrować listę plików (np. pokazać tylko te z &quot;json&quot; w nazwie)?	`ls | grep &quot;json&quot;`
+Jaka jest główna różnica między `grep` a `find`?	`grep` szuka TEKSTU W ŚRODKU plików. `find` szuka SAMYCH PLIKÓW (po nazwie, rozmiarze, typie) w systemie plików.
+Co oznaczają skróty: stdin, stdout, stderr?	Standard Input (0 - wejście/klawiatura), Standard Output (1 - wyjście/ekran), Standard Error (2 - błędy/ekran).
+Domyślnie, gdzie terminal wypisuje komunikaty o błędach (stderr)?	Na ekran (tak samo jak zwykłe wyniki stdout).
+Jak przekierować TYLKO błędy do pliku (ukrywając je z ekranu)?	Używając operatora `2&gt;` (np. `komenda 2&gt; bledy.txt`).
+Jak przekierować ZARÓWNO zwykły wynik, jak i błędy do jednego pliku?	`komenda &amp;&gt; plik.txt` (lub starsza składnia `komenda &gt; plik.txt 2&gt;&amp;1`).
+Co to jest `/dev/null`?	Specjalny plik systemowy (&quot;czarna dziura&quot; lub &quot;niszczarka&quot;), który bezpowrotnie kasuje wszystko, co do niego wyślesz.
+Jak wyciszyć komendę (ukryć jej wynik i błędy), żeby nic nie wypisywała na ekran?	Przekierować wszystko do `/dev/null`: `komenda &amp;&gt; /dev/null`
+Co robi komenda `wc` (Word Count)?	Liczy linie, słowa i znaki w pliku.
+Jak policzyć tylko LINIE w pliku (np. sprawdzić ile jest plików w folderze łącząc z `ls`)?	`wc -l` (lines). Np. `ls | wc -l`
+Co robi komenda `sort`?	Sortuje linie tekstu alfabetycznie (lub numerycznie z flagą `-n`).
+Co robi komenda `uniq`?	Usuwa SĄSIADUJĄCE duplikaty linii.
+Dlaczego często używa się `sort | uniq` razem?	Ponieważ `uniq` widzi duplikaty tylko wtedy, gdy są obok siebie. Najpierw trzeba posortować dane, żeby duplikaty znalazły się koło siebie.
+Co robi komenda `tail -f nazwa_pliku` (follow)?	Wyświetla koniec pliku i &quot;czeka&quot; na nowe linie. Służy do podglądania logów NA ŻYWO (real-time).
+Co robi operator `||` (dwie pionowe kreski) między komendami (np. `A || B`)?	Uruchamia komendę B tylko wtedy, gdy komenda A ZAKOŃCZY SIĘ BŁĘDEM (odwrotność `&amp;&amp;`).
+Jak wstawić zawartość jednego pliku do drugiego, łącząc je?	`cat plik1.txt plik2.txt &gt; polaczone.txt`
+Nie pamiętasz nazwy komendy, ale wiesz, że służy np. do kopiowania. Jak ją znaleźć?	`man -k copy` (lub `apropos copy`) - przeszukuje opisy komend.
+Jaki jest skrót klawiszowy, żeby wyczyścić bieżącą linijkę (jeśli wpisałeś głupoty i chcesz zacząć od nowa)?	`Ctrl + U`
+Jaki jest skrót klawiszowy, żeby przesunąć kursor na sam POCZĄTEK linii?	`Ctrl + A`
+Jaki jest skrót klawiszowy, żeby przesunąć kursor na sam KONIEC linii?	`Ctrl + E`
+Co to jest SSH (Secure Shell)?	Protokół sieciowy pozwalający na bezpieczne, szyfrowane logowanie się do zdalnego komputera (serwera) i wykonywanie na nim komend.
+Jaka jest podstawowa komenda do połączenia się z serwerem przez SSH?	`ssh uzytkownik@adres_ip` (np. `ssh root@192.168.1.50`)
+Co robi komenda `ssh-keygen`?	Generuje parę kluczy SSH (publiczny i prywatny) na Twoim komputerze. Służy to do logowania bez hasła.
+W parze kluczy SSH, gdzie powinien znaleźć się Klucz Publiczny (Public Key), a gdzie Prywatny (Private Key)?	Klucz PRYWATNY zostaje u Ciebie (na twoim laptopie). Klucz PUBLICZNY wysyłasz na serwer (do pliku `authorized_keys`).
+Jaka jest różnica między `apt update` a `apt upgrade` (w systemach Debian/Ubuntu)?	`update` tylko odświeża LISTĘ dostępnych pakietów (sprawdza nowości). `upgrade` faktycznie POBIERA i INSTALUJE aktualizacje.
+"Co to jest &quot;Shebang&quot; (`#!`) na początku skryptu (np. `#!/bin/bash`)?"	To informacja dla systemu, jakiego interpretera użyć do wykonania tego pliku (np. &quot;uruchom ten kod używając Basha&quot;).
+Jak uruchomić skrypt o nazwie `script.sh`, który znajduje się w bieżącym katalogu?	`./script.sh` (Kropka i slash są wymagane ze względów bezpieczeństwa).
+Jak przypisać wartość do zmiennej w Bashu (uwaga na spacje!)?	`ZMIENNA=&quot;wartość&quot;` (BEZ spacji wokół znaku równości!).
+Jak odczytać wartość zmiennej w Bashu?	Używając znaku dolara: `echo $ZMIENNA`
+Co robi komenda `ln -s plik_zrodlowy nazwa_skrotu` (Soft Link)?	Tworzy &quot;Dowiązanie Symboliczne&quot; (Symlink) - czyli skrót do pliku. Jeśli usuniesz plik źródłowy, skrót przestanie działać.
+Co to jest `.bashrc` (lub `.zshrc`)?	Plik konfiguracyjny powłoki, uruchamiany przy każdym starcie terminala. Tam definiuje się aliasy, zmienne środowiskowe i wygląd prompta.
+Jak stworzyć własny skrót (Alias) do długiej komendy?	Wpisując w `.bashrc`: `alias nazwa=&quot;długa komenda&quot;`. Np. `alias update=&quot;sudo apt update &amp;&amp; sudo apt upgrade&quot;`
+Co robi komenda `source .bashrc`?	Przeładowuje plik konfiguracyjny, aby zmiany (np. nowe aliasy) zadziałały od razu, bez restartowania terminala.
+Do czego służy komenda `diff plik1 plik2`?	Porównuje dwa pliki tekstowe linijka po linijce i pokazuje różnice między nimi.
+Co robi komenda `exit`?	Zamyka obecną sesję terminala (lub wylogowuje z SSH).
+Co oznacza skrót `chmod`?	Change Mode – służy do zmiany uprawnień do pliku/katalogu (np. nadanie praw do uruchamiania).
+Jak nadać plikowi uprawnienia do WYKONYWANIA (uruchamiania jako program)?	`chmod +x nazwa_pliku`
+Co oznaczają uprawnienia `rwx` przy pliku?	Read (czytanie), Write (zapis/edycja), Execute (wykonywanie).
+Do czego służy polecenie `chown`?	Change Owner – zmienia właściciela pliku lub grupy (np. `chown user:group plik`).
+Do czego służy polecenie `ps`?	Wyświetla listę aktualnie uruchomionych procesów (Process Status).
+Jak &quot;zabić&quot; (wymusić zamknięcie) proces znając jego ID (PID)?	`kill &lt;PID&gt;` (np. `kill 1234`)
+Jak &quot;zabić&quot; wszystkie procesy o danej nazwie (np. wszystkie instancje firefoxa)?	`killall firefox`
+Jak otworzyć plik w prostym edytorze tekstowym w terminalu (najłatwiejszym dla początkujących)?	`nano nazwa_pliku`
+Jak wyjść z edytora `nano`?	`Ctrl + X` (a następnie `Y`, aby zapisać zmiany).
+Jak wyjść z edytora `vim` bez zapisywania zmian (gdy przypadkiem tam wejdziesz)?	Wpisz `:q!` i naciśnij Enter.
+Jak zapisać i wyjść z edytora `vim`?	Wpisz `:wq` i naciśnij Enter (Write &amp; Quit).
+Jak spakować/zarchiwizować katalog do pliku `.tar.gz`?	`tar -czvf nazwa_archiwum.tar.gz katalog_zrodlowy`
+Jak rozpakować archiwum `.tar.gz`?	`tar -xzvf nazwa_archiwum.tar.gz`
+Jak pobrać plik z internetu bezpośrednio w terminalu?	`wget link_do_pliku` lub `curl -O link_do_pliku`
+Jak sprawdzić ilość wolnego miejsca na dyskach?	`df -h` (disk free, human-readable).
+Jak sprawdzić, ile miejsca zajmuje konkretny katalog?	`du -sh nazwa_katalogu` (disk usage, summary, human-readable).
+Co to jest Obiekt (Object) w JavaScript?	Zbiór par klucz-wartość (key-value pairs), służący do przechowywania złożonych danych.
+Czym różni się przechowywanie w zmiennej Typu Prostego (Primitive) od Obiektu?	Typ prosty przechowuje WARTOŚĆ (kopię danych). Obiekt przechowuje REFERENCJĘ (adres w pamięci, gdzie dane się znajdują).
+Jaki jest wynik: `let a = 10	 let b = a
+Jaki jest wynik: `const a = {x: 1}	 const b = a
+Co się stanie, jeśli przekażesz obiekt jako argument do funkcji, a funkcja zmieni jego właściwość?	Oryginalny obiekt poza funkcją RÓWNIEŻ ulegnie zmianie (bo przekazano referencję/adres).
+Co się stanie, jeśli przekażesz typ prosty (np. liczbę) do funkcji, a funkcja ją zmieni?	Oryginał poza funkcją pozostanie BEZ ZMIAN (bo przekazano tylko kopię wartości).
+Mamy kod: `let a = {n: 1}	 let b = a
+Dlaczego możemy modyfikować obiekt zadeklarowany przez `const` (np. `const obj = {}	 obj.a = 1`)?
+Jak dostać się do właściwości obiektu (np. `name`)?	"Używając kropki: `obj.name` lub nawiasów kwadratowych: `obj[&#x27;name&#x27;]`."
+Czy Tablice (Arrays) i Funkcje (Functions) w JavaScript są obiektami?	Tak. (Tablice to specjalny rodzaj obiektu z uporządkowanymi indeksami).
+"Kiedy MUSISZ użyć nawiasów kwadratowych `obj[&#x27;key&#x27;]` zamiast kropki `obj.key`? (Wymień 2 przypadki)"	"1. Gdy nazwa klucza jest przechowywana w ZMIENNEJ. 2. Gdy nazwa klucza zawiera spacje lub znaki specjalne (np. `obj[&#x27;first name&#x27;]`)."
+Mamy kod: `const key = &quot;name&quot;	 const obj = { name: &quot;Bob&quot; }
+Mamy kod: `const key = &quot;name&quot;	 const obj = { name: &quot;Bob&quot; }
+Jak usunąć właściwość z obiektu?	Używając operatora `delete` (np. `delete obj.age`).
+Jak sprawdzić, czy dany klucz istnieje w obiekcie (zwraca true/false)?	Używając operatora `in` (np. `&quot;age&quot; in user`).
+Jaka pętla służy do iterowania po KLUCZACH obiektu?	`for (let key in object) { ... }`
+Dlaczego nie zaleca się używania pętli `for...in` do tablic?	Ponieważ `for...in` iteruje po kluczach (w tablicy są to indeksy &quot;0&quot;, &quot;1&quot;...), nie gwarantuje kolejności i może zahaczyć o właściwości dziedziczone.
+Jak pobrać wszystkie klucze obiektu jako tablicę stringów?	`Object.keys(obj)`
+Jak pobrać wszystkie wartości obiektu jako tablicę?	`Object.values(obj)`
+Jak pobrać pary [klucz, wartość] jako tablicę tablic?	`Object.entries(obj)`
+Co to są &quot;Computed Property Names&quot; (Obliczane nazwy właściwości) przy tworzeniu obiektu?	Możliwość użycia zmiennej jako klucza wewnątrz nawiasów kwadratowych podczas definicji obiektu: `const obj = { [zmienna]: &quot;wartość&quot; }`.
+Co robi operator &quot;Optional Chaining&quot; `?.` (np. `user?.address?.street`)?	Pozwala bezpiecznie odwołać się do głęboko zagnieżdżonej właściwości. Jeśli `user` lub `address` nie istnieje (`null`/`undefined`), wyrażenie zwróci `undefined` zamiast wyrzucić błąd.
+Jaka jest różnica między `mousedown/mouseup` a `click`?	`click` odpala się dopiero po pełnym cyklu naciśnięcia i puszczenia przycisku myszy. `mousedown` odpala się natychmiast po wciśnięciu, a `mouseup` po puszczeniu.
+Jaka jest kluczowa różnica między `mouseover` a `mouseenter`?	`mouseover` BĄBELKUJE (odpala się, gdy wjedziesz na element LUB jego dzieci). `mouseenter` NIE bąbelkuje (odpala się tylko, gdy wjedziesz na sam element, ignoruje dzieci).
+W zdarzeniach klawiatury, jaka jest różnica między `event.key` a `event.code`?	"`event.key` zwraca ZNAK (np. ""a"" lub ""A"" zależnie od Shift). `event.code` zwraca KOD FIZYCZNEGO KLAWISZA (np. ""KeyA""), niezależnie od układu klawiatury czy wciśniętego Shifta."
+"Na czym polega ""Event Delegation"" (Delegacja Zdarzeń)?"	Na przypisaniu JEDNEGO event listenera do rodzica (np. listy `<ul>`), zamiast przypisywania listenerów do każdego dziecka (`<li>`) z osobna. Wykorzystuje mechanizm bąbelkowania (bubbling).
+Dlaczego Event Delegation jest wydajniejsza dla dynamicznych elementów?	"Ponieważ nie musisz dodawać/usuwać listenerów za każdym razem, gdy dodajesz nowy element do listy. Rodzic ""wyłapie"" kliknięcia również na nowych dzieciach."
+W Event Delegation, czym różni się `e.target` od `e.currentTarget`?	`e.target` to element, który FAKTYCZNIE kliknięto (np. ikonka wewnątrz przycisku). `e.currentTarget` to element, do którego przypisano listener (np. sam przycisk lub kontener).
+Co robi metoda `element.dispatchEvent(event)`?	Ręcznie wyzwala (uruchamia) zdarzenie na danym elemencie (symuluje np. kliknięcie).
+Jak stworzyć proste, własne zdarzenie (Custom Event)?	`const myEvent = new Event('hello')
+Czym różni się `new CustomEvent` od `new Event`?	`CustomEvent` pozwala przekazać dodatkowe dane w drugim argumencie (w obiekcie `detail`).
+Jak przekazać dane (payload) w Custom Event?	`new CustomEvent('nazwa', { detail: { twojeDane: 123 } })`
+Jakie zdarzenie klawiatury odpala się ciągle, gdy trzymasz klawisz wciśnięty?	`keydown` (z właściwością `repeat: true`).
+Jakie są 3 fazy przepływu zdarzenia (Event Flow) w standardzie DOM?	1. Faza Przechwytywania (Capturing Phase - od góry do elementu). 2. Faza Celu (Target Phase). 3. Faza Bąbelkowania (Bubbling Phase - od elementu do góry).
+Domyślnie `addEventListener` nasłuchuje w której fazie?	W fazie Bąbelkowania (Bubbling).
+Jak zmusić `addEventListener` do nasłuchiwania w fazie Przechwytywania (Capturing)?	Przekazując trzeci argument jako `true` lub obiekt opcji: `{ capture: true }`.
+Co robi metoda `e.preventDefault()`?	Blokuje domyślną akcję przeglądarki dla danego zdarzenia (np. powstrzymuje link przed otwarciem nowej strony lub formularz przed wysłaniem i przeładowaniem strony).
+Czy `e.preventDefault()` zatrzymuje bąbelkowanie zdarzenia?	Nie. Zatrzymuje tylko domyślną akcję. Zdarzenie nadal wędruje w górę DOM (chyba że użyjesz też `stopPropagation`).
+Dlaczego poniższy kod NIE usunie Event Listenera: `btn.removeEventListener('click', () => { ... })`?	Ponieważ funkcja strzałkowa/anonimowa tworzy nową referencję w pamięci. `removeEventListener` musi otrzymać DOKŁADNIE TĘ SAMĄ funkcję (nazwaną lub zapisaną w zmiennej), która była użyta w `add`.
+Jak dodać Event Listener, który wykona się TYLKO RAZ (i sam się usunie)?	Używając opcji `{ once: true }`: `btn.addEventListener('click', handler, { once: true })`.
+Jaka jest różnica między zdarzeniami `input` a `change` (w polach tekstowych)?	"`input` odpala się przy KAŻDEJ zmianie znaku (na żywo). `change` odpala się dopiero po ""zatwierdzeniu"" zmiany (np. gdy user kliknie poza pole - blur, lub wciśnie Enter)."
+Jaka jest różnica między zdarzeniem `DOMContentLoaded` a `load` (window)?	`DOMContentLoaded`: HTML został wczytany i drzewo DOM zbudowane (skrypty mogą działać), ale obrazki/style mogą się jeszcze ładować. `load`: Cała strona (wraz z obrazkami i stylami) została w pełni załadowana.
+Co wskazuje słowo kluczowe `this` wewnątrz standardowej funkcji (nie strzałkowej) użytej jako Event Handler?	Wskazuje na element, do którego przypięto listener (to samo co `e.currentTarget`).
+Co wskazuje słowo kluczowe `this` wewnątrz Funkcji Strzałkowej użytej jako Event Handler?	Wskazuje na kontekst zewnętrzny (leksykalny), czyli zazwyczaj `window` lub `undefined` (nie wskazuje na kliknięty element!). Dlatego w eventach często bezpieczniej używać `e.currentTarget`.
+Co to jest Funkcja w programowaniu?	To wydzielony fragment kodu (blok), który wykonuje określone zadanie i może być wielokrotnie używany (reusable).
+Jaka jest różnica między Parametrem a Argumentem?	Parametr to zmienna (placeholder) zadeklarowana przy TWORZENIU funkcji. Argument to konkretna wartość przekazana przy WYWOŁANIU funkcji.
+Mamy kod: `function hello(name) { ... }`. Czym jest `name`?	Parametrem.
+Mamy kod: `hello(&quot;Krzysztof&quot;)`. Czym jest `&quot;Krzysztof&quot;`?	Argumentem.
+Jak wywołać (uruchomić) funkcję o nazwie `myFunc`?	Dopisując nawiasy okrągłe na końcu: `myFunc()`
+Co robi słowo kluczowe `return`?	Zwraca wartość z funkcji do miejsca jej wywołania I natychmiast KOŃCZY działanie tej funkcji (kod po return się nie wykona).
+Co zwróci funkcja, która nie ma słowa kluczowego `return`?	undefined
+Jaka jest różnica między `console.log()` a `return`?	`console.log` tylko WYŚWIETLA wynik na ekranie (dla człowieka). `return` PRZEKAZUJE wynik do innej części programu (dla komputera), żeby można go było dalej użyć.
+Co to jest &quot;Function Scope&quot; (Zasięg funkcji)?	Zasada mówiąca, że zmienne zadeklarowane wewnątrz funkcji są widoczne TYLKO wewnątrz tej funkcji (nie można ich użyć na zewnątrz).
+Co to jest &quot;Funkcja Anonimowa&quot;?	To funkcja, która nie ma nazwy. Często używana jako argument do innych funkcji lub przypisywana do zmiennej.
+Co to jest &quot;Function Declaration&quot; (Deklaracja Funkcji)?	Klasyczny sposób tworzenia funkcji: `function nazwa() { ... }`.
+Co to jest &quot;Function Expression&quot; (Wyrażenie Funkcyjne)?	Przypisanie funkcji do zmiennej: `const nazwa = function() { ... }
+Co to jest &quot;Arrow Function&quot; (Funkcja Strzałkowa)?	Nowoczesna, krótsza składnia zapisu funkcji wprowadzona w ES6: `() =&gt; { ... }`.
+Co to są &quot;Default Parameters&quot; (Parametry domyślne)?	Możliwość przypisania domyślnej wartości parametrowi, jeśli przy wywołaniu nie podano argumentu (np. `function hello(name = &quot;User&quot;)`).
+Co to jest &quot;Call Stack&quot; (Stos wywołań)?	Mechanizm w JS śledzący, która funkcja jest aktualnie wykonywana. Jeśli funkcja A wywoła funkcję B, A czeka na &quot;stosie&quot;, aż B się zakończy.
+Co to są &quot;Zmienne Lokalne&quot; (Local variables)?	Zmienne zadeklarowane WEWNĄTRZ funkcji. Są widoczne tylko w tej funkcji.
+Czy funkcja ma dostęp do zmiennych zadeklarowanych NA ZEWNĄTRZ niej (Outer variables)?	Tak, może je odczytywać i modyfikować.
+Co to jest &quot;Shadowing&quot; (Przesłanianie) zmiennych?	Sytuacja, w której zmienna lokalna wewnątrz funkcji ma TAKĄ SAMĄ nazwę jak zmienna zewnętrzna. Wtedy funkcja używa tylko swojej wersji lokalnej (zewnętrzna jest ignorowana/przesłonięta).
+Kiedy aktywuje się &quot;Wartość domyślna&quot; (Default Value) parametru (np. `text = &quot;default&quot;`)?	Gdy argument nie został podany LUB jest ściśle równy `undefined`.
+Czy wartość domyślna parametru (`text = &quot;default&quot;`) zadziała, jeśli przekażesz `null`?	Nie. Zadziała tylko dla braku argumentu lub `undefined`. Dla `null` funkcja przyjmie wartość `null`.
+Co się stanie, jeśli po słowie kluczowym `return` wstawisz nową linię (Enter) przed wartością do zwrócenia?	JavaScript automatycznie wstawi średnik po `return`, przez co funkcja zwróci `undefined`, a kod w nowej linii zostanie zignorowany.
+Jaki typ danych zwracają zazwyczaj funkcje z prefiksem `check...` (np. `checkPermission`)?	Boolean (true/false).
+Jaki prefiks powinna mieć funkcja, która coś oblicza?	calc... (np. `calcSum`)
+Jaki prefiks powinna mieć funkcja, która pobiera/zwraca jakąś wartość?	get... (np. `getAge`)
+Jaka jest zasada &quot;One function – one action&quot;?	Funkcja powinna robić dokładnie to, co sugeruje jej nazwa, i nic więcej (np. `getAge` nie powinna wyświetlać alertu, tylko zwrócić wiek).
+Dlaczego warto wydzielać fragmenty kodu do osobnych funkcji, nawet jeśli użyjemy ich tylko raz?	Ponieważ dobrze nazwana funkcja działa jak komentarz – opisuje, CO robi dany blok kodu (Self-describing code).
+Co to są &quot;Global Variables&quot; (Zmienne globalne) i czy powinno się ich używać?	To zmienne zadeklarowane poza wszystkimi funkcjami. Należy ograniczać ich użycie do minimum, bo łatwo o błędy, gdy wiele funkcji modyfikuje tę samą globalną zmienną.
+W nowoczesnym JS, kiedy wartość domyślna parametru jest ewaluowana (obliczana): przy definicji czy przy wywołaniu?	Przy każdym wywołaniu funkcji (ważne, jeśli wartością domyślną jest wywołanie innej funkcji).
+Jaka jest różnica między Funkcją a Metodą (w JavaScript)?	Metoda to funkcja, która jest częścią obiektu (np. `String.replace()` lub `Array.join()`). Funkcja to samodzielny blok kodu.
+Co oznacza termin &quot;Invoke a function&quot;?	Oznacza &quot;wywołać&quot; (uruchomić/wykonać) funkcję.
+Co to jest &quot;Function Declaration&quot; (Deklaracja Funkcji) i czy podlega hoistingowi?	To zapis `function nazwa() { ... }`. TAK, podlega hoistingowi (można jej użyć w kodzie PRZED linijką, w której została zdefiniowana).
+Co to jest &quot;Function Expression&quot; (Wyrażenie Funkcyjne) i czy podlega hoistingowi?	To funkcja przypisana do zmiennej lub użyta jako argument (często anonimowa). NIE podlega hoistingowi (nie można użyć przed definicją).
+W funkcji strzałkowej (Arrow Function), kiedy możemy pominąć nawiasy okrągłe `()` wokół parametrów?	Gdy funkcja przyjmuje DOKŁADNIE JEDEN parametr.
+W funkcji strzałkowej, kiedy możemy pominąć nawiasy klamrowe `{}` i słowo `return`?	Gdy funkcja składa się tylko z JEDNEJ linii kodu, która zwraca wartość (tzw. implicit return).
+Przekształć tę funkcję na Arrow Function: `function(a) { return a + 10	 }`
+Co to jest &quot;Anonymous Function&quot; (Funkcja Anonimowa)?	Funkcja, która nie posiada nazwy. Często używana jako argument w `addEventListener` lub metodach tablicowych (np. `map`).
+Co to jest &quot;Global Scope&quot; (Zasięg Globalny)?	Najwyższy poziom kodu. Zmienne zdefiniowane tutaj są widoczne wszędzie.
+Co się stanie, jeśli w dwóch różnych plikach JS zdefiniujesz zmienną `const name = &quot;X&quot;` w zasięgu globalnym?	Wystąpi błąd (konflikt nazw), ponieważ obie zmienne znajdują się w tej samej przestrzeni globalnej.
+Jak rozwiązać problem konfliktów nazw zmiennych w różnych skryptach?	Zamknąć kod wewnątrz funkcji (lub modułów), tworząc dla nich osobny zasięg (Function Scope).
+Czy zmienne zadeklarowane przez `let` lub `const` wewnątrz bloku `if` lub pętli `for` są widoczne poza tym blokiem?	Nie. `let` i `const` mają zasięg blokowy (Block Scope).
+Co to jest &quot;Callback Function&quot; (w kontekście np. `addEventListener`)?	To funkcja przekazana jako argument do innej funkcji, która zostanie wywołana (&quot;called back&quot;) w odpowiednim momencie (np. po kliknięciu przycisku).
+Co to jest &quot;Function Declaration&quot; (Deklaracja Funkcji) - podaj składnię.	`function sayHi() { ... }` (Funkcja zadeklarowana jako osobna instrukcja w głównym przepływie kodu).
+Co to jest &quot;Function Expression&quot; (Wyrażenie Funkcyjne) - podaj składnię.	`let sayHi = function() { ... }
+Kiedy tworzona jest funkcja typu &quot;Function Declaration&quot;?	Przed wykonaniem kodu (w fazie inicjalizacji). Dzięki temu można jej użyć ZANIM zostanie zdefiniowana w kodzie (Hoisting).
+Kiedy tworzona jest funkcja typu &quot;Function Expression&quot;?	Dopiero w momencie, gdy interpreter dojdzie do danej linii kodu (execution flow). Nie można jej użyć przed tą linią.
+Dlaczego na końcu Function Expression (`let x = function(){}	`) stawiamy średnik, a przy Function Declaration nie?
+Czy funkcję można skopiować do innej zmiennej (np. `let func = sayHi`)?	Tak. Funkcja w JS to wartość. Zmienna `func` będzie teraz odnosić się do tej samej funkcji co `sayHi`.
+Co to jest &quot;Callback Function&quot;?	To funkcja przekazana jako argument do innej funkcji, z intencją, że zostanie wywołana (&quot;called back&quot;) później.
+Co się stanie w &quot;Strict Mode&quot;, jeśli zadeklarujesz funkcję (Function Declaration) wewnątrz bloku `if`?	Będzie widoczna TYLKO wewnątrz tego bloku `if`. Poza nim wystąpi błąd (funkcja nie istnieje).
+Jak zdefiniować funkcję warunkowo (wewnątrz `if`), aby była widoczna POZA tym blokiem?	Zadeklaruj zmienną (`let welcome`) poza blokiem, a wewnątrz bloku przypisz do niej funkcję (Function Expression `welcome = function...`).
+Co to jest &quot;Funkcja Anonimowa&quot;?	Funkcja bez nazwy (często używana w Function Expressions lub jako Callback).
+Który sposób definiowania funkcji jest zalecany jako pierwszy wybór i dlaczego?	Function Declaration. Jest bardziej czytelna i pozwala na wywołanie funkcji przed jej definicją (daje swobodę w organizacji kodu).
+Jaki jest najczęstszy błąd początkujących programistów wg V. Antona Spraula?	Skupianie się na nauce składni (syntax) zamiast na nauce rozwiązywania problemów.
+Jaki jest pierwszy krok w rozwiązywaniu problemu wg frameworku z artykułu?	Zrozumieć problem (Understand). Musisz umieć wyjaśnić go prostym językiem (plain English).
+Co to jest &quot;Rubber Ducking&quot; (lub mówienie do kaczuszki) w kontekście rozumienia problemu?	Technika polegająca na wyjaśnianiu problemu linijka po linijce innemu obiektowi (lub osobie). Często w trakcie mówienia sami zauważamy luki w naszej logice.
+Jaki jest drugi krok frameworku (po Zrozumieniu)?	Planowanie (Plan). Nie zaczynaj pisać kodu od razu. Zapisz kroki prowadzące od wejścia (Input) do wyjścia (Output).
+Jaki jest trzeci i NAJWAŻNIEJSZY krok w rozwiązywaniu problemów?	Dzielenie (Divide). Rozbij duży problem na mniejsze pod-problemy (sub-problems) i rozwiązuj je pojedynczo.
+Od jakich pod-problemów należy zacząć rozwiązywanie?	Od najprostszych (takich, na które znasz odpowiedź) lub takich, które nie zależą od innych części.
+Co zrobić, gdy utkniesz (Stuck)? Wymień 3 strategie z artykułu.	1. Debugowanie (krok po kroku), 2. Ponowna ocena (spojrzenie z innej perspektywy/zaczęcie od nowa), 3. Research (szukanie rozwiązań pod-problemów w Google).
+Dlaczego podczas szukania pomocy (Research) nie należy szukać rozwiązania CAŁEGO problemu?	Ponieważ jeśli nie będziesz musiał choć trochę powalczyć z problemem, niczego się nie nauczysz.
+W jaki sposób najlepsi (jak Elon Musk czy Peter Thiel) ćwiczą &quot;mikro rozwiązywanie problemów&quot;?	Grając w gry wideo, szachy, rozwiązując zagadki logiczne lub wyzwania na stronach typu Coderbyte.
+Co jest ważniejsze dla pracodawcy: znajomość konkretnego języka programowania czy umiejętność rozwiązywania problemów?	Umiejętność rozwiązywania problemów (Computational Thinking). Języka można się nauczyć szybko, myślenia nie.
+Co to jest Pseudokod?	To opis algorytmu w języku naturalnym (zrozumiałym dla człowieka), który pomija ścisłą składnię języka programowania.
+Jaki jest główny cel pisania pseudokodu PRZED właściwym kodowaniem?	Pozwala skupić się na LOGICE rozwiązania problemu bez rozpraszania się regułami składni (syntax) konkretnego języka.
+Wymień 3 z 6 głównych konstrukcji (słów kluczowych) używanych w pseudokodzie (wg artykułu).	SEQUENCE (sekwencja), IF-THEN-ELSE (warunek), WHILE (pętla), REPEAT-UNTIL, FOR, CASE.
+Dlaczego wcięcia (Indentation) są krytyczne w pseudokodzie?	Pokazują hierarchię i zagnieżdżenie (co jest wewnątrz pętli lub warunku). Bez nich logika jest nieczytelna.
+Jaka jest różnica między pętlą `WHILE` a `REPEAT-UNTIL` w pseudokodzie?	`WHILE` sprawdza warunek na początku (może nie wykonać się ani razu). `REPEAT-UNTIL` sprawdza warunek na końcu (wykona się przynajmniej raz).
+Jaką konwencję stosuje się zazwyczaj dla słów kluczowych w pseudokodzie (np. IF, ELSE)?	Pisze się je WIELKIMI LITERAMI (Capitalized), aby odróżnić je od reszty opisu.
+Co oznacza konstrukcja `SEQUENCE`?	Że instrukcje są wykonywane liniowo, jedna po drugiej (od góry do dołu).
+Czy pseudokod powinien zawierać specyficzne elementy języka (np. średniki `	` lub klamry `{}`)?
+Jak zapisać w pseudokodzie zakończenie bloku warunkowego IF (dla czytelności)?	Używając słowa kluczowego `ENDIF`.
+Dlaczego zamiast `name = first + last` w pseudokodzie lepiej napisać &quot;Append last name to first name&quot;?	Aby używać języka domeny problemu (zrozumiałego dla ludzi/biznesu), a nie języka implementacji.
+Co to jest &quot;Algorytm&quot;?	To skończony ciąg jasnych instrukcji, które prowadzą do rozwiązania danego problemu (przepis krok po kroku).
+Z jakich dwóch głównych części składa się obiekt błędu (Error Object) w JS?	Z Typu błędu (Name) i Wiadomości (Message).
+Co to jest &quot;Stack Trace&quot; (Ślad stosu) w komunikacie błędu?	To lista funkcji, które były wywoływane po kolei, prowadząc aż do momentu wystąpienia błędu. Pomaga prześledzić historię zdarzeń.
+Kiedy pojawia się `ReferenceError`?	Gdy próbujesz użyć zmiennej, która nie istnieje (nie została zadeklarowana) lub gdy zrobiłeś literówkę w jej nazwie.
+Kiedy pojawia się `SyntaxError`?	Gdy kod łamie reguły gramatyczne języka (np. brakujący nawias zamykający, literówka w słowie kluczowym `fuction` zamiast `function`).
+Kiedy pojawia się `TypeError` (podaj najczęstszą przyczynę)?	Gdy próbujesz wykonać operację na typie danych, który jej nie obsługuje (np. wywołanie `.push()` na Stringu lub próba wywołania zmiennej jak funkcji).
+Co oznacza komunikat `Uncaught TypeError: X is not a function`?	Że `X` istnieje, ale nie jest funkcją (np. jest tablicą, obiektem lub undefined), więc nie można go wywołać nawiasami `()`, ani użyć na nim danej metody.
+W komunikacie błędu widzisz: `at script.js:4:13`. Co oznaczają liczby 4 i 13?	4 to numer linii, a 13 to numer kolumny (znaku w linii), gdzie wystąpił błąd.
+Jaka jest kluczowa różnica między Błędem (Error) a Ostrzeżeniem (Warning)?	Błąd ZATRZYMUJE wykonanie programu (crash). Ostrzeżenie NIE przerywa działania programu, ale sygnalizuje potencjalny problem.
+Jaki kolor w konsoli zazwyczaj oznacza Błąd, a jaki Ostrzeżenie?	Błąd = Czerwony. Ostrzeżenie = Żółty.
+Co jest pierwszą rzeczą, którą powinieneś zrobić po zobaczeniu błędu (zanim zaczniesz zmieniać kod)?	PRZECZYTAĆ komunikat błędu. Mówi on co się stało i w której linii.
+Dlaczego &quot;Czysty Kod&quot; (Clean Code) jest ważny?	Ponieważ programiści spędzają znacznie więcej czasu na CZYTANIU kodu (swojego i innych) niż na jego pisaniu. Czysty kod jest łatwiejszy do zrozumienia i utrzymania.
+Jaka jest zasada `camelCase` w nazewnictwie zmiennych?	Pierwsze słowo małą literą, każde kolejne wielką (np. `myVariableName`).
+Dlaczego nazwy zmiennych takie jak `x`, `data`, `info` są złe?	Są zbyt ogólne i nie mówią nic o zawartości zmiennej. Wymagają zgadywania lub analizowania całego kodu.
+Jak powinny zaczynać się nazwy zmiennych przechowujących dane (np. stringi, liczby)?	Od rzeczownika lub przymiotnika (np. `userName`, `isActive`, `playerScore`).
+Jak powinny zaczynać się nazwy funkcji?	Od czasownika (akcji), np. `getUser`, `calculateScore`, `isLoggedIn`.
+Co to są &quot;Magic Numbers&quot; (Magiczne Liczby) w kodzie i dlaczego należy ich unikać?	To liczby wpisane &quot;na sztywno&quot; w kodzie (np. `if (status === 2)`). Należy ich unikać, bo nie wiadomo co oznaczają. Lepiej przypisać je do nazwanej stałej (np. `const STATUS_ACTIVE = 2`).
+Jaka jest konwencja nazewnictwa stałych (wartości, które są znane przed uruchomieniem programu i się nie zmieniają)?	WIELKIE_LITERY z podkreśleniami (SCREAMING_SNAKE_CASE), np. `const MAX_RETRY_COUNT = 5
+Jaka jest główna zasada dotycząca komentarzy w kodzie (&quot;Why vs How&quot;)?	Komentarze powinny wyjaśniać DLACZEGO coś zostało zrobione (intencję, biznesowy powód), a nie JAK działa kod (to powinno wynikać z samej nazwy funkcji/zmiennej).
+Dlaczego nie powinno się zostawiać w kodzie zakomentowanych fragmentów &quot;na później&quot;?	Ponieważ od śledzenia historii zmian i starego kodu jest GIT. Zakomentowany kod tylko zaśmieca plik.
+Kiedy komentarz jest zbędny (Redundant Comment)?	Gdy opisuje to, co widać w kodzie gołym okiem (np. `let i = 0
+Co zrobić, jeśli czujesz potrzebę napisania komentarza wyjaśniającego skomplikowany fragment kodu?	Spróbuj najpierw poprawić kod (Refactoring) – np. wydzielić ten fragment do osobnej funkcji z dobrą nazwą, która sama &quot;opowie&quot;, co robi.
+Jaka jest zalecana maksymalna długość linii kodu (orientacyjnie)?	Około 80 znaków (aby nie trzeba było przewijać ekranu w bok).
+Dlaczego warto zweryfikować logikę (np. pseudokodem lub diagramem) ZANIM zaczniesz pisać właściwy kod?	Pozwala to wykryć błędy logiczne wcześniej i uniknąć pisania &quot;na brudno&quot;, co oszczędza czas na późniejszym poprawianiu.
+Jakie kontenery w HTML powinny mieć nadane jasne nazwy (ID lub klasy)?	Główne kontenery strukturalne (np. header, footer, content-column), aby struktura strony była widoczna na pierwszy rzut oka.
+Jaki jest główny cel stosowania wcięć (Indentation) w kodzie?	Wizualne pokazanie, gdzie zaczyna się i kończy dany blok kodu lub element. Bez tego struktura jest nieczytelna.
+Kiedy jest najlepszy moment na pisanie komentarzy wyjaśniających kod?	W trakcie pisania kodu (gdy masz świeżą wiedzę na temat tego, jak on działa), a nie &quot;kiedyś później&quot;.
+Czego NIE należy pisać w komentarzach (wg artykułu)? Wymień 2 przykłady.	1. Notatek dla siebie (&quot;Dokończę to później&quot;). 2. Obwiniania innych (&quot;To kod Johna&quot;). 3. Wyjaśniania oczywistości. 4. Zostawiania bloków zakomentowanego, martwego kodu.
+Co należy zrobić z funkcją, która urosła do np. 100 linii kodu?	Należy ją rozbić na mniejsze, bardziej wyspecjalizowane funkcje.
+Jeśli Twoja firma nie ma standardów nazewnictwa (np. prefixów dla zmiennych), co powinieneś zrobić?	Stworzyć własny, spójny system i się go trzymać, aby uniknąć zgadywania &quot;co autor miał na myśli&quot;.
+Jaka jest złota zasada edytowania cudzego (lub starego) kodu?	Szanuj zastany styl. Jeśli dodajesz `if`, zachowaj istniejące wcięcia i styl komentarzy. Nie wprowadzaj chaosu.
+Dlaczego należy unikać mieszania języków (np. wpisywania stylów CSS inline w HTML lub bloków JS wewnątrz HTML)?	Powoduje to bałagan (Spaghetti Code) i utrudnia zarządzanie kodem. Logika, wygląd i struktura powinny być oddzielone.
+Dlaczego warto łączyć (summarize) wiele plików CSS/JS w mniejszą liczbę plików importowanych?	Każdy import to osobne zapytanie HTTP, które spowalnia ładowanie strony. Mniejsza liczba plików to lepsza wydajność i porządek.
+Co robi pętla (Loop)?	Pozwala na wielokrotne wykonanie tego samego bloku kodu (np. dla każdego elementu tablicy).
+Co to jest Tablica (Array)?	Uporządkowana kolekcja elementów (lista), przechowywana w jednej zmiennej.
+Jakim indeksem zaczyna się Tablica w JS?	Indeksem 0 (Zero-based indexing).
+Co robi metoda `.map()`?	Tworzy NOWĄ tablicę, wykonując podaną funkcję na KAŻDYM elemencie oryginalnej tablicy (Transformacja).
+Co robi metoda `.filter()`?	Tworzy NOWĄ tablicę, zawierającą tylko te elementy, które spełniają warunek (dla których funkcja callback zwróciła `true`).
+Co robi metoda `.reduce()`?	Przetwarza tablicę do POJEDYNCZEJ wartości (np. sumy wszystkich liczb), używając tzw. akumulatora.
+W metodzie `.reduce((acc, curr) =&gt; ...)` - czym jest `acc`?	To &quot;Accumulator&quot; (Akumulator) - zmienna, która przechowuje bieżący wynik operacji z poprzednich kroków pętli.
+Czy metody `map`, `filter` i `reduce` zmieniają oryginalną tablicę (mutate)?	Nie. Wszystkie zwracają nową wartość/tablicę, a oryginał pozostaje bez zmian (Non-mutating).
+Jaka jest różnica między `break` a `continue` w pętlach?	`break` całkowicie przerywa pętlę i wychodzi z niej. `continue` przerywa tylko OBECNĄ iterację (krok) i przechodzi do następnej.
+Co to jest TDD (Test Driven Development)?	Podejście, w którym najpierw piszesz automatyczny test (który początkowo nie przechodzi), a dopiero potem piszesz kod, który ma ten test spełnić.
+Dlaczego używamy TDD (podaj jedną zaletę)?	Daje pewność, że kod działa poprawnie i ułatwia późniejsze zmiany (refactoring), bo testy od razu wykryją błędy.
+Jaki jest wynik porównania `[1, 2] === [1, 2]` i dlaczego?	`false`. Tablice to typy referencyjne (Obiekty). JS porównuje ich adresy w pamięci, a to są dwie RÓŻNE instancje tablic (dwa różne &quot;domy&quot; o tym samym wyglądzie).
+Jaki jest wynik operacji `typeof []`?	"&#x27;object&#x27;. W JS tablice są specjalnym rodzajem obiektu."
+Jak sprawdzić, czy zmienna jest naprawdę tablicą (skoro `typeof` kłamie)?	Używając metody `Array.isArray(zmienna)`.
+Co się stanie w kodzie: `let a = [1]	 let b = a
+Jak stworzyć Płytką Kopię (Shallow Copy) tablicy, aby zmiany w niej nie wpływały na oryginał?	Używając Spread Operator: `const copy = [...originalArray]`
+Co robi Spread Operator `...` (trzy kropki) przed tablicą?	Rozpakowuje (rozrzuca) elementy tablicy na pojedyncze wartości (np. `Math.max(...numbers)`).
+Co to jest &quot;Destrukturyzacja Tablicy&quot; (Array Destructuring)?	Składnia pozwalająca wyciągnąć elementy z tablicy bezpośrednio do zmiennych. Np. `const [first, second] = myArray
+Jak pominąć drugi element tablicy podczas destrukturyzacji?	Używając pustego przecinka: `const [first, , third] = myArray
+Co to jest &quot;Rest Operator&quot; w kontekście destrukturyzacji (np. `const [first, ...rest] = arr`)?	Zbiera wszystkie POZOSTAŁE elementy tablicy do nowej tablicy o nazwie `rest`.
+Jak najszybciej usunąć duplikaty z tablicy (używając nowoczesnego JS)?	Zamieniając ją na Set, a potem z powrotem na tablicę: `[...new Set(array)]`.
+Co oznacza &quot;Chaining&quot; (Łańcuchowanie) metod tablicowych?	Wywoływanie jednej metody po drugiej, np. `arr.filter(...).map(...).reduce(...)`. Jest to możliwe, bo `filter` i `map` zwracają nową tablicę.
+Czy `const` zapobiega zmianie zawartości tablicy (np. `const arr = []	 arr.push(1)`)?
+Jaka jest różnica między `.filter()` a `.find()`?	`.filter()` zwraca NOWĄ TABLICĘ ze wszystkimi pasującymi elementami (może być pusta). `.find()` zwraca PIERWSZY pasujący ELEMENT (lub `undefined`, jeśli nic nie znajdzie).
+Co robi metoda `.includes()`?	Sprawdza, czy tablica zawiera konkretną wartość (np. liczbę lub string). Zwraca `true` lub `false`. Nie przyjmuje funkcji, tylko wartość.
+Jaka jest różnica między `.some()` a `.every()`?	`.some()` sprawdza, czy PRZYNAJMNIEJ JEDEN element spełnia warunek. `.every()` sprawdza, czy WSZYSTKIE elementy spełniają warunek.
+Co robi metoda `.sort()` z oryginalną tablicą?	Sortuje tablicę &quot;w miejscu&quot; (in place), czyli ZMIENIA (mutuje) oryginalną tablicę. Nie tworzy nowej.
+Dlaczego sortowanie liczb metodą `.sort()` bez argumentów daje dziwne wyniki (np. 10 jest przed 2)?	Ponieważ domyślny `.sort()` konwertuje elementy na stringi i porównuje je alfabetycznie (&quot;10&quot; jest wcześniej niż &quot;2&quot;).
+Jak poprawnie posortować tablicę liczb rosnąco?	Używając funkcji porównującej: `.sort((a, b) =&gt; a - b)`
+Jaka jest różnica między `.slice()` a `.splice()` (bardzo ważne!)?	`.slice()` (kroić/plasterkować) kopiuje fragment tablicy i zwraca nową (BEZPIECZNE). `.splice()` (splatać/wycinać) usuwa lub dodaje elementy w oryginalnej tablicy (MUTUJE ORYGINAŁ).
+Jaka pętla jest najlepsza do iterowania po elementach tablicy (jeśli nie używamy metod typu map/forEach)?	`for (const item of array)` (pętla `for...of`).
+Dlaczego nie powinno się używać pętli `for...in` do tablic?	Ponieważ `for...in` iteruje po kluczach (indeksach) i może uwzględnić dodatkowe właściwości dodane do prototypu tablicy, a kolejność nie jest gwarantowana. Służy do Obiektów.
+Jaka jest różnica między `.map()` a `.forEach()`?	`.map()` ZWRACA nową tablicę (używamy, gdy chcemy przetworzyć dane). `.forEach()` nic nie zwraca (`undefined`) - służy tylko do wykonania jakiejś akcji (np. console.log) dla każdego elementu (Side Effect).
+"Jak zamienić stringa na tablicę (np. &quot;Hello&quot; -&gt; [&#x27;H&#x27;, &#x27;e&#x27;, &#x27;l&#x27;, &#x27;l&#x27;, &#x27;o&#x27;])?"	"Metodą `.split(&#x27;&#x27;)` (na stringu) LUB `Array.from(&quot;Hello&quot;)`."
+Jak połączyć dwie tablice w jedną nową?	Metodą `.concat()` lub używając Spread Operator: `[...array1, ...array2]`
+Co to jest &quot;Red-Green-Refactor&quot; w TDD?	Cykl pracy: 1. Napisz test, który oblewa (Red). 2. Napisz minimalny kod, żeby test przeszedł (Green). 3. Popraw jakość kodu (Refactor).
+Co to jest DOM (Document Object Model)?	Drzewiasta reprezentacja struktury strony internetowej, gdzie każdy element HTML jest &quot;węzłem&quot; (Node) lub obiektem, którym można manipulować w JS.
+Jaka jest różnica między `document.querySelector()` a `document.querySelectorAll()`?	`querySelector` zwraca PIERWSZY pasujący element (lub null). `querySelectorAll` zwraca NodeList ze WSZYSTKIMI pasującymi elementami.
+Co to jest `NodeList` (zwracane przez `querySelectorAll`)?	Kolekcja węzłów, która przypomina tablicę, ale nią NIE jest (nie ma np. metody `map` czy `reduce`). Można ją jednak iterować przez `forEach`.
+Jaką metodą tworzymy nowy element HTML w pamięci (jeszcze nie widoczny na stronie)?	"`document.createElement(&#x27;tagName&#x27;)` (np. `document.createElement(&#x27;div&#x27;)`)."
+Jak dodać nowo stworzony element jako dziecko innego elementu (np. do kontenera)?	Używając metody `parentNode.appendChild(childNode)`
+Jaką właściwością najbezpieczniej dodawać tekst do elementu?	`element.textContent = &quot;Tekst&quot;`
+Dlaczego należy uważać z używaniem `element.innerHTML`?	Ponieważ pozwala na wstrzyknięcie kodu HTML (w tym złośliwych skryptów `&lt;script&gt;`), co stwarza ryzyko ataku XSS (Cross-Site Scripting).
+Jak zmienić styl elementu bezpośrednio w JS (Inline Style)?	`element.style.właściwość = &quot;wartość&quot;` (np. `div.style.backgroundColor = &quot;red&quot;` - pamiętaj o camelCase!).
+Jakie są 3 sposoby dodawania zdarzeń (Events) do elementu?	1. Atrybut w HTML (`onclick=&quot;...&quot;`). 2. Właściwość DOM (`btn.onclick = ...`). 3. Event Listener (`btn.addEventListener(...)`).
+Który sposób dodawania zdarzeń jest najlepszy i dlaczego?	`addEventListener`, ponieważ pozwala przypisać WIELE funkcji do tego samego zdarzenia i jest oddzielony od HTML.
+Co to jest &quot;Callback&quot; w kontekście `addEventListener`?	Funkcja, którą przekazujemy jako drugi argument, a która zostanie wywołana (&quot;called back&quot;) dopiero wtedy, gdy zdarzenie nastąpi.
+Co to jest parametr `e` (lub `event`) w funkcji callback?	To obiekt zdarzenia, który zawiera szczegóły na temat tego, co się stało (np. `e.target` mówi, co dokładnie zostało kliknięte, `e.key` jaki klawisz wciśnięto).
+Co to jest &quot;Event Bubbling&quot; (Bąbelkowanie Zdarzeń)?	Mechanizm, w którym zdarzenie (np. kliknięcie) najpierw odpala się na elemencie docelowym, a potem &quot;bąbelkuje&quot; w górę do rodzica, dziadka, aż do `document`.
+Jak zatrzymać bąbelkowanie zdarzenia (żeby nie dotarło do rodziców)?	`e.stopPropagation()`
+Gdzie w pliku HTML najlepiej umieścić tag `&lt;script&gt;` i dlaczego?	Na końcu `&lt;body&gt;` (przed zamknięciem), aby mieć pewność, że cały DOM został wczytany przed uruchomieniem skryptu (lub w `&lt;head&gt;` z atrybutem `defer`).
+Jaka jest różnica między `element.children` a `element.childNodes`?	`children` zwraca tylko ELEMENTY HTML (tagi). `childNodes` zwraca WSZYSTKIE węzły, w tym węzły tekstowe (np. białe znaki/entery między tagami) i komentarze.
+Jaka jest różnica między `nextSibling` a `nextElementSibling`?	`nextSibling` może zwrócić węzeł tekstowy (np. enter). `nextElementSibling` zwróci następny konkretny element HTML (tag).
+Jak dostać się do rodzica danego elementu?	Używając właściwości `parentElement` (lub `parentNode`).
+Mamy w HTML: `&lt;div data-key=&quot;123&quot; data-user-name=&quot;Bob&quot;&gt;`. Jak dostać się do tych danych w JS?	Używając właściwości `dataset`: `element.dataset.key` oraz `element.dataset.userName` (zauważ zmianę na camelCase!).
+Czy `element.style.color` zwróci kolor zdefiniowany w arkuszu CSS (pliku .css)?	Nie. `element.style` zwraca tylko style wpisane &quot;inline&quot; (bezpośrednio w tagu HTML).
+Jak odczytać OSTATECZNY styl elementu (nawet ten z pliku CSS), jaki widzi przeglądarka?	Używając metody `window.getComputedStyle(element).color`
+Jaka jest różnica między `textContent` a `innerText`?	`textContent` zwraca CAŁY tekst, nawet ten ukryty przez CSS. `innerText` zwraca tylko tekst widoczny dla użytkownika (szanuje style CSS) i jest wolniejszy.
+Co to jest `DocumentFragment` i do czego służy?	To &quot;lekki&quot;, wirtualny kontener na elementy DOM. Używamy go, gdy chcemy dodać wiele elementów do strony na raz (np. w pętli), aby uniknąć wielokrotnego przerysowywania strony (Reflow).
+Jaka jest różnica między &quot;Live Collection&quot; (np. z `getElementsByClassName`) a &quot;Static Collection&quot; (np. z `querySelectorAll`)?	Żywa kolekcja aktualizuje się automatycznie, gdy DOM się zmienia (dodasz nowy element - kolekcja rośnie). Statyczna to &quot;zdjęcie&quot; stanu w momencie wywołania (nie zmienia się).
+Jak sprawdzić, czy element posiada konkretną klasę CSS (bez manualnego przeszukiwania stringa)?	"`element.classList.contains(&#x27;nazwa-klasy&#x27;)`"
+Jak przełączyć klasę (dodać jak nie ma, usunąć jak jest) jedną metodą?	"`element.classList.toggle(&#x27;nazwa-klasy&#x27;)`"
+Dlaczego operacje zapisu do DOM (np. zmiana wymiarów, dodawanie elementów) są &quot;kosztowne&quot;?	Ponieważ zmuszają przeglądarkę do przeliczenia układu strony (Reflow/Layout) i ponownego narysowania pikseli (Repaint).
+Co reprezentuje obiekt `window` w JavaScript?	Reprezentuje całe okno przeglądarki (lub kartę), w którym załadowana jest strona. Zawiera właściwości takie jak szerokość okna (`innerWidth`) i jest &quot;rodzicem&quot; dla obiektu `document`.
+Co reprezentuje obiekt `navigator`?	Reprezentuje tożsamość i stan samej przeglądarki (nie strony). Używany np. do sprawdzania geolokalizacji, języka użytkownika czy dostępu do kamery.
+Co reprezentuje obiekt `document`?	Reprezentuje konkretną stronę załadowaną w oknie (DOM). To główny punkt wejścia do manipulacji treścią HTML i stylami.
+Jaka jest różnica między &quot;Child Node&quot; (Dziecko) a &quot;Descendant Node&quot; (Potomek)?	Dziecko jest BEZPOŚREDNIO wewnątrz rodzica (1 poziom niżej). Potomek to dowolny węzeł wewnątrz (dziecko, wnuk, prawnuk itd.).
+Co zwraca `document.querySelector(&quot;p&quot;)`?	Zwraca referencję do PIERWSZEGO elementu `&lt;p&gt;` znalezionego w dokumencie.
+Co zwraca `document.querySelectorAll(&quot;p&quot;)`?	Zwraca `NodeList` (obiekt tablicopodobny) zawierający referencje do WSZYSTKICH elementów `&lt;p&gt;` w dokumencie.
+Jak zmienić tekst wewnątrz elementu (np. w linku) używając JS?	Używając właściwości `textContent`, np. `link.textContent = &quot;Nowy Tekst&quot;
+Jak stworzyć nowy element HTML (np. paragraf) w pamięci?	`const para = document.createElement(&quot;p&quot;)
+Czy `document.createElement()` automatycznie dodaje element do widocznej strony?	Nie. Tworzy go tylko w pamięci. Aby był widoczny, trzeba go dodać do drzewa DOM (np. używając `appendChild`).
+Co się stanie, jeśli użyjesz `appendChild()` na elemencie, który JUŻ istnieje w innym miejscu na stronie?	Element zostanie PRZENIESIONY (Moved) w nowe miejsce, a nie skopiowany. W DOM może istnieć tylko jedna instancja danego węzła.
+Jak usunąć element, mając do niego referencję (w nowoczesnych przeglądarkach)?	`element.remove()
+Dlaczego w JS używamy `style.backgroundColor` zamiast `style.background-color`?	Ponieważ w JavaScript myślnik `-` jest operatorem odejmowania. Właściwości CSS z myślnikami są konwertowane na `camelCase`.
+Jaka jest zalecana metoda zmiany wyglądu elementu zamiast bezpośredniej edycji `element.style`?	Dodawanie lub usuwanie klas CSS za pomocą `element.classList.add(&quot;nazwa-klasy&quot;)`. Jest to czystsze i oddziela style od logiki.
+Co robi metoda `event.preventDefault()` (użyta np. przy wysyłaniu formularza)?	Zapobiega domyślnej akcji przeglądarki. W przypadku formularza zapobiega przeładowaniu strony po kliknięciu przycisku submit.
+Co robi metoda `input.focus()`?	Ustawia kursor w danym polu tekstowym, gotowy do pisania.

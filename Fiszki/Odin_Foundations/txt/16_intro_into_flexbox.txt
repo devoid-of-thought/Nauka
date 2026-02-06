@@ -1,0 +1,7 @@
+Jaka właściwość CSS włącza Flexbox na elemencie?;display: flex; (lub display: inline-flex);odin_flexbox_basics
+Co to jest Flex Container?;To element rodzic, na którym ustawiono `display: flex`. Zarządza on układem swoich dzieci.;odin_flexbox_basics
+Co to jest Flex Item?;To każde BEZPOŚREDNIE dziecko Flex Containera.;odin_flexbox_basics
+Jeśli ustawisz `display: flex` na elemencie `<ul>`, czym stają się elementy `<li>` wewnątrz niego?;Stają się Flex Items (elementami elastycznymi).;odin_flexbox_behavior
+Czy element może być jednocześnie Flex Itemem i Flex Containerem?;Tak. Może być dzieckiem innego Flexboxa, a jednocześnie mieć nadane `display: flex`, by zarządzać własnymi dziećmi (zagnieżdżanie).;odin_flexbox_theory
+Jaki jest domyślny kierunek ustawiania się elementów po włączeniu `display: flex`?;Poziomy (w rzędzie / row). Elementy ustawią się obok siebie.;odin_flexbox_behavior
+Co powinieneś zrobić jako pierwsze, jeśli Twój Flexbox nie zachowuje się tak, jak oczekujesz?;Otworzyć narzędzia deweloperskie (DevTools) i "Zbadać" element.;odin_flexbox_debugging

@@ -1,0 +1,10 @@
+Jakie są dwie osie we Flexboxie?;Main Axis (Oś Główna) i Cross Axis (Oś Poprzeczna).;odin_flexbox_axes
+Jaki jest domyślny kierunek Osi Głównej (Main Axis)?;Poziomy (od lewej do prawej), czyli `row`.;odin_flexbox_axes
+Jaka właściwość CSS zmienia kierunek Osi Głównej?;flex-direction;odin_flexbox_axes
+Jak ustawić elementy pionowo (w kolumnie) zamiast poziomo?;flex-direction: column;odin_flexbox_axes
+Jeśli ustawisz `flex-direction: column`, jak biegnie Oś Główna (Main Axis)?;Pionowo (z góry na dół).;odin_flexbox_axes
+Jeśli ustawisz `flex-direction: column`, jak biegnie Oś Poprzeczna (Cross Axis)?;Poziomo (z lewej do prawej).;odin_flexbox_axes
+Jeśli ustawisz `flex-direction: row` (domyślnie), do czego odnosi się `flex-basis`?;Do SZEROKOŚCI (Width) elementu.;odin_flexbox_axes
+Jeśli ustawisz `flex-direction: column`, do czego odnosi się `flex-basis`?;Do WYSOKOŚCI (Height) elementu.;odin_flexbox_axes
+Dlaczego `flex-basis` zmienia swoje znaczenie w zależności od `flex-direction`?;Ponieważ `flex-basis` ZAWSZE określa rozmiar wzdłuż Osi Głównej (Main Axis).;odin_flexbox_theory
+Dlaczego użycie skrótu `flex: 1` w kolumnie (`flex-direction: column`) może sprawić, że puste elementy znikną (zapadną się)?;Ponieważ `flex: 1` ustawia `flex-basis: 0`. W kolumnie oznacza to "wysokość równą 0". Jeśli element nie ma treści (content) ani ustalonej wysokości, a kontener nie ma ustalonej wysokości, element będzie miał 0px.;odin_flexbox_behavior

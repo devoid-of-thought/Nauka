@@ -1,0 +1,114 @@
+Co to jest Command Line (CLI)?;Interfejs tekstowy, w którym wpisujesz polecenia, które komputer ma wykonać.;linux_terminal
+Co oznacza symbol znaku zachęty (Prompt) - `$` lub `%`?;Oznacza, że terminal jest gotowy i oczekuje na wpisanie polecenia.;linux_terminal
+Dlaczego hasła nie są widoczne podczas wpisywania ich w terminalu (np. przy `sudo`)?;Jest to funkcja bezpieczeństwa, aby ukryć długość i treść hasła przed osobami postronnymi.;linux_terminal
+Jaki jest skrót klawiszowy do KOPIOWANIA w terminalu (Linux/Windows)?;Ctrl + Shift + C (na macOS: Cmd + C);linux_terminal
+Jaki jest skrót klawiszowy do WKLEJANIA w terminalu (Linux/Windows)?;Ctrl + Shift + V (na macOS: Cmd + V);linux_terminal
+Co robi klawisz `TAB` w terminalu?;Automatycznie uzupełnia polecenia lub ścieżki do plików (Tab completion).;linux_terminal
+Do czego służy polecenie `whoami`?;Zwraca nazwę zalogowanego użytkownika.;linux_terminal
+Do czego służy polecenie `pwd`?;Wyświetla ścieżkę do katalogu, w którym aktualnie się znajdujesz (Print Working Directory).;linux_terminal
+Do czego służy polecenie `ls`?;Wyświetla zawartość (pliki i foldery) w bieżącym katalogu.;linux_terminal
+Jak wylistować WSZYSTKIE pliki, łącznie z ukrytymi (zaczynającymi się od kropki)?;`ls -a` (all);linux_terminal
+Jak wylistować pliki w formie listy ze szczegółami (uprawnienia, rozmiar, data)?;`ls -l` (long format);linux_terminal
+Jak połączyć flagi, aby zobaczyć wszystkie pliki w formie listy?;`ls -la` (lub `ls -al`);linux_terminal
+Do czego służy polecenie `cd` (Change Directory)?;Służy do nawigacji (przechodzenia) między folderami.;linux_terminal
+Gdzie przeniesie Cię samo polecenie `cd` (bez argumentów) lub `cd ~`?;Do katalogu domowego użytkownika (Home directory).;linux_terminal
+Gdzie przeniesie Cię polecenie `cd ..`?;Poziom wyżej, do katalogu nadrzędnego (Parent directory).;linux_terminal
+Jak wrócić do poprzedniego katalogu, w którym byłeś przed chwilą (jak przycisk "Wstecz" w pilocie)?;`cd -`;linux_terminal
+Co oznacza symbol `.` (pojedyncza kropka) w ścieżce?;Obecny katalog (Current Directory).;linux_terminal
+Co oznacza symbol `..` (dwie kropki) w ścieżce?;Katalog nadrzędny (Parent Directory).;linux_terminal
+Co oznacza symbol `~` (tylda) w ścieżce?;Katalog domowy użytkownika (Home Directory).;linux_terminal
+Co oznacza symbol `/` (slash) NA POCZĄTKU ścieżki (np. `/home/user`)?;Oznacza korzeń systemu (Root) - początek całego drzewa plików. Wskazuje na Ścieżkę Bezwzględną (Absolute Path).;linux_terminal
+Jaka jest różnica między ścieżką bezwzględną (Absolute) a względną (Relative)?;Bezwzględna zaczyna się od `/` (root) i jest pełnym adresem. Względna NIE zaczyna się od `/` i opisuje drogę od miejsca, w którym aktualnie jesteś.;linux_terminal
+Jakie polecenie tworzy nowy katalog (folder)?;`mkdir <nazwa_folderu>`;linux_terminal
+Jak stworzyć strukturę katalogów zagnieżdżonych (np. folder w folderze) jedną komendą?;`mkdir -p rodzic/dziecko/wnuk` (flaga `-p` tworzy brakujące katalogi nadrzędne).;linux_terminal
+Jakie polecenie tworzy nowy, pusty plik?;`touch <nazwa_pliku>`;linux_terminal
+Jak usunąć plik w terminalu?;`rm <nazwa_pliku>`;linux_terminal
+Jak usunąć katalog wraz z całą zawartością?;`rm -r <nazwa_katalogu>` (Recursive);linux_terminal
+Jak zmienić nazwę pliku lub katalogu (lub go przenieść)?;`mv <stara_nazwa> <nowa_nazwa>`;linux_terminal
+Jak skopiować plik?;`cp <co_kopiujemy> <gdzie_kopiujemy>`;linux_terminal
+Jak skopiować cały katalog z zawartością?;`cp -r <zrodlo> <cel>` (Recursive);linux_terminal
+Jak wyczyścić ekran terminala?;Komenda `clear` lub skrót `Ctrl + L`;linux_terminal
+Jak przerwać działanie komendy, która się zawiesiła lub trwa za długo?;Skrót `Ctrl + C`;linux_terminal
+Jak otworzyć bieżący folder w VS Code z poziomu terminala?;`code .`;linux_terminal
+Jak wyświetlić zawartość pliku w terminalu (cały naraz)?;`cat nazwa_pliku` (Concatenate);linux_terminal_intermediate
+Jak wyświetlić zawartość DŁUGIEGO pliku z możliwością przewijania (strona po stronie)?;`less nazwa_pliku`;linux_terminal_intermediate
+Jak wyjść z widoku `less` (lub `man`)?;Wciskając klawisz `q` (Quit).;linux_terminal_intermediate
+Jak wyświetlić pierwsze 10 linii pliku?;`head nazwa_pliku`;linux_terminal_intermediate
+Jak wyświetlić ostatnie 10 linii pliku?;`tail nazwa_pliku`;linux_terminal_intermediate
+Jak otworzyć podręcznik/dokumentację dla danej komendy (np. `ls`)?;`man ls` (Manual);linux_terminal_intermediate
+Co robi komenda `echo "Tekst"`?;Wypisuje podany tekst na ekran (standardowe wyjście).;linux_terminal_intermediate
+Co robi operator przekierowania `>` (np. `echo "Hej" > plik.txt`)?;Zapisuje wynik komendy do pliku. UWAGA: NADPISUJE (kasuje) dotychczasową zawartość pliku!;linux_terminal_intermediate
+Co robi operator przekierowania `>>` (np. `echo "Hej" >> plik.txt`)?;DOPISUJE (Append) wynik komendy na końcu pliku, nie kasując jego zawartości.;linux_terminal_intermediate
+Co robi operator "Pipe" `|` (pionowa kreska)?;Przekazuje wynik (Output) komendy po lewej stronie jako wejście (Input) dla komendy po prawej stronie.;linux_terminal_intermediate
+Jak wyszukać konkretną frazę (tekst) wewnątrz pliku?;`grep "szukany_tekst" nazwa_pliku`;linux_terminal_intermediate
+Jak połączyć `ls` i `grep`, aby znaleźć plik, którego nazwy nie pamiętasz dokładnie?;`ls | grep "fragment_nazwy"`;linux_terminal_intermediate
+Do czego służy komenda `sudo` (SuperUser DO)?;Pozwala wykonać komendę z uprawnieniami administratora (root). Wymaga podania hasła.;linux_terminal_intermediate
+Jak wyszukać pliki po nazwie w całym drzewie katalogów (lub podkatalogu)?;`find . -name "nazwa_pliku"`;linux_terminal_intermediate
+Jak sprawdzić historię wpisywanych komend?;`history`;linux_terminal_intermediate
+Jak szybko uruchomić ponownie ostatnią wpisaną komendę?;`!!` (dwa wykrzykniki) lub strzałka w górę.;linux_terminal_intermediate
+Jak sprawdzić, jakie procesy zużywają najwięcej zasobów (taki Menedżer Zadań w terminalu)?;`top` (lub nowszy `htop`, jeśli jest zainstalowany).;linux_terminal_intermediate
+Co oznacza tylda `~` w ścieżce (np. `cd ~`)?;Oznacza katalog domowy (Home) użytkownika.;linux_terminal_intermediate
+Co robi operator "Pipe" `|` (pionowa kreska)?;Przekazuje wynik (Output) komendy po lewej stronie jako wejście (Input) dla komendy po prawej stronie (np. `komenda1 | komenda2`).;linux_pipes
+Jak wyszukać linijki zawierające słowo "error" w pliku `server.log`?;`grep "error" server.log`;linux_grep
+Jak wyszukać frazę "TODO" we wszystkich plikach w bieżącym katalogu i podkatalogach (rekurencyjnie)?;`grep -r "TODO" .` (recursive);linux_grep
+Jak szukać frazy ignorując wielkość liter (np. żeby znaleźć "Error", "ERROR" i "error")?;`grep -i "fraza"` (ignore case);linux_grep
+Jak wyświetlić linie, które NIE zawierają danego słowa (odwrócenie dopasowania)?;`grep -v "słowo"` (invert match);linux_grep
+Jak wyświetlić NUMERY linii, w których znaleziono szukaną frazę?;`grep -n "fraza" plik` (line number);linux_grep
+Jak znaleźć w historii komend te, które zawierały słowo "ssh"?;`history | grep "ssh"`;linux_pipes
+Co oznacza kropka `.` w komendzie `find . -name "..."`?;Oznacza katalog startowy wyszukiwania (tutaj: bieżący katalog).;linux_find
+Jak znaleźć plik o nazwie `index.html` w bieżącym katalogu (i głębiej)?;`find . -name "index.html"`;linux_find
+Jak znaleźć plik po nazwie, ignorując wielkość liter (np. znajduje `Logo.png` szukając `logo.png`)?;`find . -iname "logo.png"` (insensitive name);linux_find
+Jak znaleźć wszystkie pliki z rozszerzeniem `.js`?;`find . -name "*.js"`;linux_find
+Jak wyszukać tylko KATALOGI (nie pliki) o nazwie "node_modules"?;`find . -type d -name "node_modules"` (type directory);linux_find
+Jak wyszukać tylko ZWYKŁE PLIKI (nie katalogi) o nazwie "config"?;`find . -type f -name "config"` (type file);linux_find
+Jak połączyć `ls` i `grep`, aby wyfiltrować listę plików (np. pokazać tylko te z "json" w nazwie)?;`ls | grep "json"`;linux_pipes
+Jaka jest główna różnica między `grep` a `find`?;`grep` szuka TEKSTU W ŚRODKU plików. `find` szuka SAMYCH PLIKÓW (po nazwie, rozmiarze, typie) w systemie plików.;linux_theory
+Co oznaczają skróty: stdin, stdout, stderr?;Standard Input (0 - wejście/klawiatura), Standard Output (1 - wyjście/ekran), Standard Error (2 - błędy/ekran).;linux_streams
+Domyślnie, gdzie terminal wypisuje komunikaty o błędach (stderr)?;Na ekran (tak samo jak zwykłe wyniki stdout).;linux_streams
+Jak przekierować TYLKO błędy do pliku (ukrywając je z ekranu)?;Używając operatora `2>` (np. `komenda 2> bledy.txt`).;linux_streams
+Jak przekierować ZARÓWNO zwykły wynik, jak i błędy do jednego pliku?;`komenda &> plik.txt` (lub starsza składnia `komenda > plik.txt 2>&1`).;linux_streams
+Co to jest `/dev/null`?;Specjalny plik systemowy ("czarna dziura" lub "niszczarka"), który bezpowrotnie kasuje wszystko, co do niego wyślesz.;linux_streams
+Jak wyciszyć komendę (ukryć jej wynik i błędy), żeby nic nie wypisywała na ekran?;Przekierować wszystko do `/dev/null`: `komenda &> /dev/null`;linux_streams
+Co robi komenda `wc` (Word Count)?;Liczy linie, słowa i znaki w pliku.;linux_text_processing
+Jak policzyć tylko LINIE w pliku (np. sprawdzić ile jest plików w folderze łącząc z `ls`)?;`wc -l` (lines). Np. `ls | wc -l`;linux_text_processing
+Co robi komenda `sort`?;Sortuje linie tekstu alfabetycznie (lub numerycznie z flagą `-n`).;linux_text_processing
+Co robi komenda `uniq`?;Usuwa SĄSIADUJĄCE duplikaty linii.;linux_text_processing
+Dlaczego często używa się `sort | uniq` razem?;Ponieważ `uniq` widzi duplikaty tylko wtedy, gdy są obok siebie. Najpierw trzeba posortować dane, żeby duplikaty znalazły się koło siebie.;linux_text_processing
+Co robi komenda `tail -f nazwa_pliku` (follow)?;Wyświetla koniec pliku i "czeka" na nowe linie. Służy do podglądania logów NA ŻYWO (real-time).;linux_logs
+Co robi operator `||` (dwie pionowe kreski) między komendami (np. `A || B`)?;Uruchamia komendę B tylko wtedy, gdy komenda A ZAKOŃCZY SIĘ BŁĘDEM (odwrotność `&&`).;linux_logic
+Jak wstawić zawartość jednego pliku do drugiego, łącząc je?;`cat plik1.txt plik2.txt > polaczone.txt`;linux_text_processing
+Nie pamiętasz nazwy komendy, ale wiesz, że służy np. do kopiowania. Jak ją znaleźć?;`man -k copy` (lub `apropos copy`) - przeszukuje opisy komend.;linux_help
+Jaki jest skrót klawiszowy, żeby wyczyścić bieżącą linijkę (jeśli wpisałeś głupoty i chcesz zacząć od nowa)?;`Ctrl + U`;linux_shortcuts
+Jaki jest skrót klawiszowy, żeby przesunąć kursor na sam POCZĄTEK linii?;`Ctrl + A`;linux_shortcuts
+Jaki jest skrót klawiszowy, żeby przesunąć kursor na sam KONIEC linii?;`Ctrl + E`;linux_shortcuts
+Co to jest SSH (Secure Shell)?;Protokół sieciowy pozwalający na bezpieczne, szyfrowane logowanie się do zdalnego komputera (serwera) i wykonywanie na nim komend.;linux_ssh
+Jaka jest podstawowa komenda do połączenia się z serwerem przez SSH?;`ssh uzytkownik@adres_ip` (np. `ssh root@192.168.1.50`);linux_ssh
+Co robi komenda `ssh-keygen`?;Generuje parę kluczy SSH (publiczny i prywatny) na Twoim komputerze. Służy to do logowania bez hasła.;linux_ssh
+W parze kluczy SSH, gdzie powinien znaleźć się Klucz Publiczny (Public Key), a gdzie Prywatny (Private Key)?;Klucz PRYWATNY zostaje u Ciebie (na twoim laptopie). Klucz PUBLICZNY wysyłasz na serwer (do pliku `authorized_keys`).;linux_ssh
+Jaka jest różnica między `apt update` a `apt upgrade` (w systemach Debian/Ubuntu)?;`update` tylko odświeża LISTĘ dostępnych pakietów (sprawdza nowości). `upgrade` faktycznie POBIERA i INSTALUJE aktualizacje.;linux_admin
+Co to jest "Shebang" (`#!`) na początku skryptu (np. `#!/bin/bash`)?;To informacja dla systemu, jakiego interpretera użyć do wykonania tego pliku (np. "uruchom ten kod używając Basha").;linux_scripting
+Jak uruchomić skrypt o nazwie `script.sh`, który znajduje się w bieżącym katalogu?;`./script.sh` (Kropka i slash są wymagane ze względów bezpieczeństwa).;linux_scripting
+Jak przypisać wartość do zmiennej w Bashu (uwaga na spacje!)?;`ZMIENNA="wartość"` (BEZ spacji wokół znaku równości!).;linux_scripting
+Jak odczytać wartość zmiennej w Bashu?;Używając znaku dolara: `echo $ZMIENNA`;linux_scripting
+Co robi komenda `ln -s plik_zrodlowy nazwa_skrotu` (Soft Link)?;Tworzy "Dowiązanie Symboliczne" (Symlink) - czyli skrót do pliku. Jeśli usuniesz plik źródłowy, skrót przestanie działać.;linux_filesystem
+Co to jest `.bashrc` (lub `.zshrc`)?;Plik konfiguracyjny powłoki, uruchamiany przy każdym starcie terminala. Tam definiuje się aliasy, zmienne środowiskowe i wygląd prompta.;linux_config
+Jak stworzyć własny skrót (Alias) do długiej komendy?;Wpisując w `.bashrc`: `alias nazwa="długa komenda"`. Np. `alias update="sudo apt update && sudo apt upgrade"`;linux_config
+Co robi komenda `source .bashrc`?;Przeładowuje plik konfiguracyjny, aby zmiany (np. nowe aliasy) zadziałały od razu, bez restartowania terminala.;linux_config
+Do czego służy komenda `diff plik1 plik2`?;Porównuje dwa pliki tekstowe linijka po linijce i pokazuje różnice między nimi.;linux_tools
+Co robi komenda `exit`?;Zamyka obecną sesję terminala (lub wylogowuje z SSH).;linux_basics
+Co oznacza skrót `chmod`?;Change Mode – służy do zmiany uprawnień do pliku/katalogu (np. nadanie praw do uruchamiania).;linux_admin
+Jak nadać plikowi uprawnienia do WYKONYWANIA (uruchamiania jako program)?;`chmod +x nazwa_pliku`;linux_admin
+Co oznaczają uprawnienia `rwx` przy pliku?;Read (czytanie), Write (zapis/edycja), Execute (wykonywanie).;linux_admin
+Do czego służy polecenie `chown`?;Change Owner – zmienia właściciela pliku lub grupy (np. `chown user:group plik`).;linux_admin
+Do czego służy polecenie `ps`?;Wyświetla listę aktualnie uruchomionych procesów (Process Status).;linux_processes
+Jak "zabić" (wymusić zamknięcie) proces znając jego ID (PID)?;`kill <PID>` (np. `kill 1234`);linux_processes
+Jak "zabić" wszystkie procesy o danej nazwie (np. wszystkie instancje firefoxa)?;`killall firefox`;linux_processes
+Jak otworzyć plik w prostym edytorze tekstowym w terminalu (najłatwiejszym dla początkujących)?;`nano nazwa_pliku`;linux_editors
+Jak wyjść z edytora `nano`?;`Ctrl + X` (a następnie `Y`, aby zapisać zmiany).;linux_editors
+Jak wyjść z edytora `vim` bez zapisywania zmian (gdy przypadkiem tam wejdziesz)?;Wpisz `:q!` i naciśnij Enter.;linux_editors
+Jak zapisać i wyjść z edytora `vim`?;Wpisz `:wq` i naciśnij Enter (Write & Quit).;linux_editors
+Jak spakować/zarchiwizować katalog do pliku `.tar.gz`?;`tar -czvf nazwa_archiwum.tar.gz katalog_zrodlowy`;linux_tools
+Jak rozpakować archiwum `.tar.gz`?;`tar -xzvf nazwa_archiwum.tar.gz`;linux_tools
+Jak pobrać plik z internetu bezpośrednio w terminalu?;`wget link_do_pliku` lub `curl -O link_do_pliku`;linux_network
+Jak sprawdzić ilość wolnego miejsca na dyskach?;`df -h` (disk free, human-readable).;linux_system
+Jak sprawdzić, ile miejsca zajmuje konkretny katalog?;`du -sh nazwa_katalogu` (disk usage, summary, human-readable).;linux_system

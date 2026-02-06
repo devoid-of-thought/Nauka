@@ -1,0 +1,8 @@
+Jakie są dwa sposoby na otwarcie Inspektora (DevTools) w przeglądarce?;1. Prawy przycisk myszy na elemencie -> "Zbadaj" (Inspect). 2. Klawisz F12 (lub Ctrl+Shift+I).;odin_devtools_basics
+Do czego służy panel "Elements" w DevTools?;Pokazuje pełną strukturę HTML strony (drzewo DOM) i pozwala wybierać elementy.;odin_devtools_basics
+Do czego służy panel "Styles" (zazwyczaj po prawej lub na dole)?;Pokazuje reguły CSS, które są aktualnie zastosowane do wybranego elementu.;odin_devtools_basics
+Jak wybrać element do zbadania bezpośrednio ze strony (wizualnie), a nie szukając go w kodzie?;Klikając ikonę "strzałki w kwadracie" (element select icon) w lewym górnym rogu DevTools, a następnie najeżdżając na element na stronie.;odin_devtools_usage
+Co oznacza przekreślony tekst (strikethrough) w panelu Styles (np. `color: red;`)?;Oznacza, że ta reguła została nadpisana przez inną, ważniejszą regułę (zgodnie z zasadami Kaskady) lub jest niepoprawna.;odin_devtools_debugging
+Czy zmiany stylów wprowadzone w Inspektorze (DevTools) są trwałe (czy zapisują się w Twoim pliku)?;Nie. Są tymczasowe i znikną natychmiast po odświeżeniu strony.;odin_devtools_behavior
+Jaka jest główna zaleta edytowania stylów w DevTools?;Pozwala na natychmiastowy podgląd zmian (real-time) i eksperymentowanie bez konieczności edycji pliku i odświeżania strony.;odin_devtools_usage
+Jak sprawdzić, dlaczego Twój CSS nie działa, używając DevTools?;Wybierz element i spójrz w panel "Styles". Sprawdź, czy Twoja reguła tam jest i czy nie jest przekreślona (nadpisana).;odin_devtools_debugging

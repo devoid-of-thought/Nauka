@@ -1,0 +1,15 @@
+Co to jest Kaskada (The Cascade) w CSS?;To algorytm określający, która reguła zostanie zastosowana do elementu, gdy istnieje wiele sprzecznych reguł (np. jedna mówi "czerwony", a druga "niebieski").;odin_css_cascade
+Wymień 3 główne czynniki, które Kaskada bierze pod uwagę (w kolejności ważności).;1. Specyficzność (Specificity), 2. Dziedziczenie (Inheritance), 3. Kolejność reguł (Rule Order).;odin_css_cascade
+Uporządkuj selektory od NAJMNIEJ do NAJBARDZIEJ specyficznego: Klasa, ID, Element (Type).;Element (Type) < Klasa < ID;odin_css_cascade
+Co ma wyższą wagę (specyficzność): jeden selektor ID czy 10 selektorów Klasy?;Jeden selektor ID (ID zawsze wygrywa z dowolną liczbą klas).;odin_css_cascade
+Co ma wyższą wagę (specyficzność): jeden selektor Klasy czy 10 selektorów Elementu (Tagów)?;Jeden selektor Klasy (Klasa zawsze wygrywa z dowolną liczbą tagów).;odin_css_cascade
+Mamy reguły: `#header { color: red; }` oraz `.menu .item { color: blue; }`. Jaki będzie kolor?;Czerwony. Reguła pierwsza ma ID, które jest silniejsze niż dwie klasy.;odin_css_cascade
+Mamy reguły: `.nav .item { color: red; }` oraz `.item { color: blue; }`. Jaki będzie kolor?;Czerwony. Pierwsza reguła ma dwie klasy, druga tylko jedną (2 > 1).;odin_css_cascade
+Jeśli dwie reguły mają DOKŁADNIE taką samą specyficzność, która wygrywa?;Ta, która jest zdefiniowana jako OSTATNIA w pliku CSS (Rule Order).;odin_css_cascade
+Czy selektor uniwersalny `*` dodaje jakąkolwiek wagę do specyficzności?;Nie, nie ma żadnej wartości specyficzności (jest słabszy nawet od selektora typu).;odin_css_cascade
+Czy kombinatory (takie jak `+`, `>`, `~` lub spacja) zwiększają specyficzność reguły?;Nie. Liczą się tylko same selektory (klasy, ID, tagi), a nie znaki między nimi.;odin_css_cascade
+Co to jest Dziedziczenie (Inheritance)?;Przekazywanie niektórych właściwości CSS z elementu rodzica na elementy dzieci (np. kolor tekstu).;odin_css_cascade
+Jakie rodzaje właściwości są zazwyczaj dziedziczone?;Właściwości związane z typografią (np. color, font-family, font-size).;odin_css_cascade
+Jakie rodzaje właściwości zazwyczaj NIE są dziedziczone?;Właściwości związane z układem (layout), np. margin, padding, border, width.;odin_css_cascade
+Co wygrywa: Dziedziczenie czy Bezpośrednie wskazywanie (Direct Targeting)?;Bezpośrednie wskazywanie. Nawet jeśli rodzic ma ID (bardzo silne), a dziecko ma tylko selektor typu (słabe), styl przypisany bezpośrednio do dziecka nadpisze styl odziedziczony.;odin_css_cascade
+Co ma najwyższą specyficzność spośród: ID, Class, Type, Inline Style (styl liniowy)?;Inline Style (styl wpisany wprost w HTML: style="...").;odin_css_cascade

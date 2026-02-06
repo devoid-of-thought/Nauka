@@ -1,0 +1,16 @@
+Co to jest "Normal Flow" (Normalny przepływ) w CSS?;To domyślny sposób, w jaki przeglądarka układa elementy na stronie, jeśli nie zmienimy ich układu (nie użyjemy Flexboxa, Grida ani Position).;odin_css_layout
+Jak zachowują się elementy blokowe (Block-level elements)?;Zaczynają się od nowej linii i zajmują całą dostępną szerokość kontenera (rozciągają się w poziomie).;odin_css_layout
+Jak zachowują się elementy liniowe (Inline elements)?;Nie zaczynają nowej linii. Ustawiają się obok siebie w jednym wierszu (tak jak słowa w zdaniu) i zajmują tylko tyle szerokości, ile potrzebuje ich treść.;odin_css_layout
+Czy na elemencie LINIOWYM (inline) można ustawić `width` i `height`?;Nie. Wymiary (szerokość i wysokość) są ignorowane dla elementów inline.;odin_css_layout
+Czy na elemencie BLOKOWYM (block) można ustawić `width` i `height`?;Tak.;odin_css_layout
+Jak zachowują się pionowe marginesy i paddingi (top/bottom) na elementach LINIOWYCH?;Są widoczne wizualnie, ale NIE odpychają sąsiednich elementów (nie wpływają na układ reszty strony).;odin_css_layout
+Co to jest `display: inline-block`?;Hybryda. Element ustawia się w linii (jak tekst), ale SZANUJE wymiary (width/height) oraz marginesy i paddingi (jak blok).;odin_css_layout
+Jaka jest domyślna wartość `display` dla elementu `<div>`?;block;odin_css_layout
+Jaka jest domyślna wartość `display` dla elementu `<span>`?;inline;odin_css_layout
+Jaka jest domyślna wartość `display` dla elementu `<a>` (link)?;inline;odin_css_layout
+Jaka jest domyślna wartość `display` dla nagłówków (`<h1>`, `<h2>` itd.)?;block;odin_css_layout
+Jaka jest domyślna wartość `display` dla paragrafu `<p>`?;block;odin_css_layout
+Jaka jest semantyczna różnica między `<div>` a `<span>`?;Żadna. Oba są "pustymi" kontenerami bez znaczenia semantycznego. Różnią się tylko domyślnym stylem wyświetlania (div=block, span=inline).;odin_css_theory
+Kiedy używamy `<span>`?;Gdy chcemy wydzielić i ostylować fragment tekstu wewnątrz większego bloku (np. jedno słowo w akapicie na czerwono).;odin_css_usage
+Kiedy używamy `<div>`?;Gdy chcemy zgrupować większe sekcje strony w blok (np. kontener na artykuł, sekcję nagłówka).;odin_css_usage
+Co się stanie, jeśli wstawisz element blokowy (np. `<div>`) wewnątrz elementu liniowego (np. `<span>`)?;Jest to błąd (zazwyczaj) i może powodować nieprzewidywalne zachowanie przeglądarki lub "rozbicie" elementu liniowego.;odin_css_best_practices

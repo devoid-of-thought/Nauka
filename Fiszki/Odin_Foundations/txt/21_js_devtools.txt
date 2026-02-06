@@ -1,0 +1,11 @@
+Jak otworzyć Narzędzia Deweloperskie (DevTools) skrótem klawiszowym?;F12 lub Ctrl + Shift + C (Cmd + Opt + C na Macu);odin_js_devtools
+Co to jest "Breakpoint" (Punkt przerwania)?;To miejsce w kodzie, w którym execution (wykonanie programu) zostanie WSTRZYMANE. Pozwala to podejrzeć wartości zmiennych w tym konkretnym momencie.;odin_js_devtools
+W jakiej zakładce DevTools debugujemy kod JavaScript (ustawiamy breakpointy)?;W zakładce "Sources" (Źródła).;odin_js_devtools
+Jak ustawić breakpoint w zakładce Sources?;Klikając na NUMER LINII kodu, w której chcemy zatrzymać program.;odin_js_devtools
+Jakie słowo kluczowe w JavaScript działa jak "twardy" breakpoint (automatycznie zatrzymuje kod w tym miejscu, jeśli DevTools są otwarte)?;debugger;odin_js_devtools
+Jak symulować urządzenie mobilne (zmienić wielkość ekranu) w DevTools?;Klikając ikonę telefonu/tabletu (Device Toolbar) w lewym górnym rogu DevTools (lub skrót Ctrl+Shift+M).;odin_js_devtools
+W jakiej zakładce możesz podejrzeć strukturę DOM i testować zmiany w HTML/CSS?;W zakładce "Elements".;odin_js_devtools
+Do czego służy zakładka "Console" (Konsola)?;Do podglądu błędów/ostrzeżeń oraz do interaktywnego wykonywania kodu JavaScript.;odin_js_devtools
+Jak w DevTools wymusić na elemencie stan taki jak `:hover` (bez najeżdżania myszką)?;W zakładce Elements (Styles) kliknij przycisk `:hov` i zaznacz odpowiedni checkbox, LUB kliknij prawym na element w drzewie DOM -> Force state -> :hover.;odin_js_devtools
+Czy zmiany w plikach JS dokonane w zakładce Sources zapisują się na Twoim dysku?;Zazwyczaj NIE (chyba że skonfigurujesz Workspaces). Po odświeżeniu strony zmiany znikną.;odin_js_devtools
+Co to jest "Call Stack" widoczny podczas debugowania?;To lista funkcji, które zostały wywołane, aby dotrzeć do obecnego miejsca w kodzie (pokazuje "ścieżkę", jaką przebył program).;odin_js_debugging

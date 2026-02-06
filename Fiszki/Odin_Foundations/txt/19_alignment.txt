@@ -1,0 +1,12 @@
+Jaka właściwość odpowiada za wyrównywanie elementów wzdłuż Osi Głównej (Main Axis)?;justify-content;odin_flexbox_alignment
+Jaka właściwość odpowiada za wyrównywanie elementów wzdłuż Osi Poprzecznej (Cross Axis)?;align-items;odin_flexbox_alignment
+Jakie są popularne wartości dla `justify-content` (wymień 3)?;flex-start, flex-end, center, space-between, space-around, space-evenly;odin_flexbox_alignment
+Co robi `justify-content: space-between`?;Rozkłada elementy tak, że pierwszy jest przyklejony do początku, ostatni do końca, a wolna przestrzeń jest równo rozdzielona MIĘDZY nimi.;odin_flexbox_alignment
+Czym różni się `space-between` od `space-around`?;W `space-between` elementy dotykają krawędzi kontenera. W `space-around` mają dodatkowy odstęp (połowę normalnego) również przed pierwszym i za ostatnim elementem.;odin_flexbox_alignment
+Jak wyśrodkować element IDEALNIE na środku kontenera (w pionie i poziomie)?;display: flex; justify-content: center; align-items: center;;odin_flexbox_alignment
+Jeśli ustawisz `flex-direction: row` (domyślnie), która właściwość centruje elementy w PIONIE?;align-items;odin_flexbox_alignment
+Jeśli ustawisz `flex-direction: column`, która właściwość centruje elementy w PIONIE?;justify-content (bo teraz pion to Oś Główna);odin_flexbox_alignment
+Jeśli ustawisz `flex-direction: column`, która właściwość centruje elementy w POZIOMIE?;align-items (bo teraz poziom to Oś Poprzeczna);odin_flexbox_alignment
+Jaka właściwość dodaje odstęp między elementami Flexboxa (zastępując marginesy)?;gap (np. gap: 10px);odin_flexbox_alignment
+Co robi `align-items: stretch` (wartość domyślna)?;Rozciąga elementy wzdłuż Osi Poprzecznej, aby zajęły całą wysokość (lub szerokość w kolumnie) kontenera, o ile nie mają ustawionego sztywnego wymiaru.;odin_flexbox_behavior
+Jeśli `align-items` nie działa tak jak chcesz, co powinieneś sprawdzić w pierwszej kolejności?;Czy kontener ma ustaloną wysokość (jeśli centrujesz w pionie). Jeśli kontener jest niski (ma wysokość tylko taką jak treść), to nie ma "przestrzeni", w której można by coś wyśrodkować.;odin_flexbox_debugging

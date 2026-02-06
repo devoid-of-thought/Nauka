@@ -1,4 +1,4 @@
 # Moje Fiszki
 
-## [Odin Foundations](./Odin_Foundations)
+[Odin Foundations](./Odin_Foundations)
 

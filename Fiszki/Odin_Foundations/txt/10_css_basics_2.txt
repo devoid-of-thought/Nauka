@@ -1,0 +1,28 @@
+Co to jest "Deklaracja" (Declaration) w regule CSS?;To pojedyncza para: właściwość i wartość (np. `color: red`), zakończona średnikiem.;odin_css_syntax
+Czy w HTML można nadać elementowi więcej niż jedną klasę?;Tak, oddzielając je spacją (np. class="btn btn-danger").;odin_css_syntax
+Jak w CSS wybrać element, który posiada D WIE konkretne klasy jednocześnie (np. "btn" i "danger")?;.btn.danger (bez spacji między kropkami);odin_css_syntax
+Dlaczego nie można łączyć w łańcuch dwóch selektorów typu (np. `divp`)?;Ponieważ jeden element HTML nie może być jednocześnie dwoma różnymi tagami (nie może być naraz divem i paragrafem).;odin_css_logic
+Czy nazwy klas i ID w CSS są wrażliwe na wielkość liter (Case Sensitive)?;Tak, `.Alert` i `.alert` to dwie różne klasy.;odin_css_syntax
+Wymień 3 sposoby definiowania kolorów w CSS (poza nazwami słownymi).;HEX (szesnastkowy), RGB, HSL.;odin_css_properties
+Co oznacza format koloru `#FF0000`?;To format HEX (szesnastkowy).;odin_css_properties
+Co robi właściwość `font-family`?;Określa krój czcionki (fontu).;odin_css_properties
+Kiedy nazwa czcionki w `font-family` MUSI być ujęta w cudzysłów?;Gdy nazwa zawiera spację (np. "Times New Roman").;odin_css_properties
+Czy nazwy ogólne czcionek (generic family names), np. sans-serif, serif, piszemy w cudzysłowie?;Nie, nazwy ogólne piszemy bez cudzysłowu.;odin_css_properties
+Jaka jest domyślna wartość `font-weight: normal` wyrażona liczbowo?;400;odin_css_properties
+Jaka właściwość odpowiada za wyrównanie tekstu w poziomie (np. do środka)?;text-align;odin_css_properties
+Co się stanie, jeśli w selektorze potomka zrobisz `.rodzic .dziecko`, ale `.dziecko` jest zagnieżdżone bardzo głęboko (np. jest prawnukiem)?;Zadziała. Selektor potomka (spacja) działa niezależnie od głębokości zagnieżdżenia.;odin_css_logic
+Jak w CSS ustawić tło elementu?;background-color;odin_css_properties
+Dlaczego w nazwach klas używamy myślników (np. `.alert-box`), a nie spacji?;Ponieważ spacja w atrybucie `class` w HTML służy do oddzielania różnych klas od siebie.;odin_css_best_practices
+Jak wygląda komentarz w pliku CSS (napisz składnię)?;/* To jest komentarz */ (UWAGA: Inaczej niż w HTML!);odin_css_syntax
+Jak wygląda komentarz w pliku HTML?;;odin_css_syntax
+Co oznacza zapis `p.warning` (bez spacji)?;Wybiera tylko te elementy <p>, które mają klasę "warning".;odin_css_selectors
+Co oznacza zapis `p .warning` (ze spacją)?;Wybiera KAŻDY element z klasą "warning", pod warunkiem, że znajduje się wewnątrz elementu <p>.;odin_css_selectors
+Mamy kod: `.box { color: red; }` oraz `.box { color: blue; }`. Jaki kolor będzie miał tekst?;Niebieski (Blue). Jeśli selektory mają tę samą wagę, wygrywa ten, który jest zdefiniowany później (niżej) w pliku (Cascading).;odin_css_behavior
+Czy można łączyć (chaining) więcej niż jeden selektor typu (np. `divp`)? Dlaczego?;Nie. Element HTML nie może być jednocześnie dwoma różnymi tagami (nie może być naraz <div> i <p>).;odin_css_logic
+Co to jest "Fallback font" w właściwości font-family?;To czcionka zapasowa (zazwyczaj ostatnia na liście, np. sans-serif), której przeglądarka użyje, jeśli nie znajdzie tych wymienionych wcześniej.;odin_css_theory
+Czy właściwość `font-size` wymaga podania jednostki (np. px)? Np. czy `font-size: 16` zadziała?;Nie zadziała (chyba że to 0). W CSS jednostki są wymagane (np. 16px).;odin_css_syntax
+Jaki jest kolor tekstu dla: `color: transparent;`?;Przezroczysty (niewidoczny).;odin_css_properties
+Co robi selektor `* { box-sizing: border-box; }` (ogólnie)?;Aplikuje tę właściwość do WSZYSTKICH elementów na stronie (selektor uniwersalny).;odin_css_syntax
+Jakie trzy rodzaje wartości przyjmuje `color` (oprócz nazw kolorów)?;HEX (np. #fff), RGB (np. rgb(0,0,0)), HSL (np. hsl(0,0%,0%)).;odin_css_properties
+Co oznacza czwarta wartość w `rgba(0, 0, 0, 0.5)`?;Kanał Alfa (Alpha) - czyli przezroczystość (0.5 to 50% przezroczystości).;odin_css_properties
+Czy identyfikatory (ID) mogą zawierać spacje (np. `id="moj naglowek"`)?;Nie, ID nie może zawierać spacji.;odin_css_syntax

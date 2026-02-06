@@ -1,0 +1,54 @@
+Co to jest Funkcja w programowaniu?;To wydzielony fragment kodu (blok), który wykonuje określone zadanie i może być wielokrotnie używany (reusable).;odin_js_functions
+Jaka jest różnica między Parametrem a Argumentem?;Parametr to zmienna (placeholder) zadeklarowana przy TWORZENIU funkcji. Argument to konkretna wartość przekazana przy WYWOŁANIU funkcji.;odin_js_functions
+Mamy kod: `function hello(name) { ... }`. Czym jest `name`?;Parametrem.;odin_js_functions
+Mamy kod: `hello("Krzysztof")`. Czym jest `"Krzysztof"`?;Argumentem.;odin_js_functions
+Jak wywołać (uruchomić) funkcję o nazwie `myFunc`?;Dopisując nawiasy okrągłe na końcu: `myFunc()`;odin_js_functions
+Co robi słowo kluczowe `return`?;Zwraca wartość z funkcji do miejsca jej wywołania I natychmiast KOŃCZY działanie tej funkcji (kod po return się nie wykona).;odin_js_functions
+Co zwróci funkcja, która nie ma słowa kluczowego `return`?;undefined;odin_js_functions
+Jaka jest różnica między `console.log()` a `return`?;`console.log` tylko WYŚWIETLA wynik na ekranie (dla człowieka). `return` PRZEKAZUJE wynik do innej części programu (dla komputera), żeby można go było dalej użyć.;odin_js_functions
+Co to jest "Function Scope" (Zasięg funkcji)?;Zasada mówiąca, że zmienne zadeklarowane wewnątrz funkcji są widoczne TYLKO wewnątrz tej funkcji (nie można ich użyć na zewnątrz).;odin_js_scope
+Co to jest "Funkcja Anonimowa"?;To funkcja, która nie ma nazwy. Często używana jako argument do innych funkcji lub przypisywana do zmiennej.;odin_js_functions
+Co to jest "Function Declaration" (Deklaracja Funkcji)?;Klasyczny sposób tworzenia funkcji: `function nazwa() { ... }`.;odin_js_syntax
+Co to jest "Function Expression" (Wyrażenie Funkcyjne)?;Przypisanie funkcji do zmiennej: `const nazwa = function() { ... };`.;odin_js_syntax
+Co to jest "Arrow Function" (Funkcja Strzałkowa)?;Nowoczesna, krótsza składnia zapisu funkcji wprowadzona w ES6: `() => { ... }`.;odin_js_syntax
+Co to są "Default Parameters" (Parametry domyślne)?;Możliwość przypisania domyślnej wartości parametrowi, jeśli przy wywołaniu nie podano argumentu (np. `function hello(name = "User")`).;odin_js_syntax
+Co to jest "Call Stack" (Stos wywołań)?;Mechanizm w JS śledzący, która funkcja jest aktualnie wykonywana. Jeśli funkcja A wywoła funkcję B, A czeka na "stosie", aż B się zakończy.;odin_js_theory
+Co to są "Zmienne Lokalne" (Local variables)?;Zmienne zadeklarowane WEWNĄTRZ funkcji. Są widoczne tylko w tej funkcji.;odin_js_scope
+Czy funkcja ma dostęp do zmiennych zadeklarowanych NA ZEWNĄTRZ niej (Outer variables)?;Tak, może je odczytywać i modyfikować.;odin_js_scope
+Co to jest "Shadowing" (Przesłanianie) zmiennych?;Sytuacja, w której zmienna lokalna wewnątrz funkcji ma TAKĄ SAMĄ nazwę jak zmienna zewnętrzna. Wtedy funkcja używa tylko swojej wersji lokalnej (zewnętrzna jest ignorowana/przesłonięta).;odin_js_scope
+Kiedy aktywuje się "Wartość domyślna" (Default Value) parametru (np. `text = "default"`)?;Gdy argument nie został podany LUB jest ściśle równy `undefined`.;odin_js_syntax
+Czy wartość domyślna parametru (`text = "default"`) zadziała, jeśli przekażesz `null`?;Nie. Zadziała tylko dla braku argumentu lub `undefined`. Dla `null` funkcja przyjmie wartość `null`.;odin_js_details
+Co się stanie, jeśli po słowie kluczowym `return` wstawisz nową linię (Enter) przed wartością do zwrócenia?;JavaScript automatycznie wstawi średnik po `return`, przez co funkcja zwróci `undefined`, a kod w nowej linii zostanie zignorowany.;odin_js_pitfalls
+Jaki typ danych zwracają zazwyczaj funkcje z prefiksem `check...` (np. `checkPermission`)?;Boolean (true/false).;odin_js_naming
+Jaki prefiks powinna mieć funkcja, która coś oblicza?;calc... (np. `calcSum`);odin_js_naming
+Jaki prefiks powinna mieć funkcja, która pobiera/zwraca jakąś wartość?;get... (np. `getAge`);odin_js_naming
+Jaka jest zasada "One function – one action"?;Funkcja powinna robić dokładnie to, co sugeruje jej nazwa, i nic więcej (np. `getAge` nie powinna wyświetlać alertu, tylko zwrócić wiek).;odin_js_best_practices
+Dlaczego warto wydzielać fragmenty kodu do osobnych funkcji, nawet jeśli użyjemy ich tylko raz?;Ponieważ dobrze nazwana funkcja działa jak komentarz – opisuje, CO robi dany blok kodu (Self-describing code).;odin_js_best_practices
+Co to są "Global Variables" (Zmienne globalne) i czy powinno się ich używać?;To zmienne zadeklarowane poza wszystkimi funkcjami. Należy ograniczać ich użycie do minimum, bo łatwo o błędy, gdy wiele funkcji modyfikuje tę samą globalną zmienną.;odin_js_best_practices
+W nowoczesnym JS, kiedy wartość domyślna parametru jest ewaluowana (obliczana): przy definicji czy przy wywołaniu?;Przy każdym wywołaniu funkcji (ważne, jeśli wartością domyślną jest wywołanie innej funkcji).;odin_js_details
+Jaka jest różnica między Funkcją a Metodą (w JavaScript)?;Metoda to funkcja, która jest częścią obiektu (np. `String.replace()` lub `Array.join()`). Funkcja to samodzielny blok kodu.;odin_js_mdn
+Co oznacza termin "Invoke a function"?;Oznacza "wywołać" (uruchomić/wykonać) funkcję.;odin_js_mdn
+Co to jest "Function Declaration" (Deklaracja Funkcji) i czy podlega hoistingowi?;To zapis `function nazwa() { ... }`. TAK, podlega hoistingowi (można jej użyć w kodzie PRZED linijką, w której została zdefiniowana).;odin_js_mdn
+Co to jest "Function Expression" (Wyrażenie Funkcyjne) i czy podlega hoistingowi?;To funkcja przypisana do zmiennej lub użyta jako argument (często anonimowa). NIE podlega hoistingowi (nie można użyć przed definicją).;odin_js_mdn
+;;odin_js_mdn
+W funkcji strzałkowej (Arrow Function), kiedy możemy pominąć nawiasy okrągłe `()` wokół parametrów?;Gdy funkcja przyjmuje DOKŁADNIE JEDEN parametr.;odin_js_mdn
+W funkcji strzałkowej, kiedy możemy pominąć nawiasy klamrowe `{}` i słowo `return`?;Gdy funkcja składa się tylko z JEDNEJ linii kodu, która zwraca wartość (tzw. implicit return).;odin_js_mdn
+Przekształć tę funkcję na Arrow Function: `function(a) { return a + 10; }`;`a => a + 10`;odin_js_syntax
+Co to jest "Anonymous Function" (Funkcja Anonimowa)?;Funkcja, która nie posiada nazwy. Często używana jako argument w `addEventListener` lub metodach tablicowych (np. `map`).;odin_js_mdn
+Co to jest "Global Scope" (Zasięg Globalny)?;Najwyższy poziom kodu. Zmienne zdefiniowane tutaj są widoczne wszędzie.;odin_js_scope
+Co się stanie, jeśli w dwóch różnych plikach JS zdefiniujesz zmienną `const name = "X"` w zasięgu globalnym?;Wystąpi błąd (konflikt nazw), ponieważ obie zmienne znajdują się w tej samej przestrzeni globalnej.;odin_js_scope
+;;odin_js_mdn
+Jak rozwiązać problem konfliktów nazw zmiennych w różnych skryptach?;Zamknąć kod wewnątrz funkcji (lub modułów), tworząc dla nich osobny zasięg (Function Scope).;odin_js_scope
+Czy zmienne zadeklarowane przez `let` lub `const` wewnątrz bloku `if` lub pętli `for` są widoczne poza tym blokiem?;Nie. `let` i `const` mają zasięg blokowy (Block Scope).;odin_js_scope
+Co to jest "Callback Function" (w kontekście np. `addEventListener`)?;To funkcja przekazana jako argument do innej funkcji, która zostanie wywołana ("called back") w odpowiednim momencie (np. po kliknięciu przycisku).;odin_js_theory
+Co to jest "Function Declaration" (Deklaracja Funkcji) - podaj składnię.;`function sayHi() { ... }` (Funkcja zadeklarowana jako osobna instrukcja w głównym przepływie kodu).;odin_js_functions_advanced
+Co to jest "Function Expression" (Wyrażenie Funkcyjne) - podaj składnię.;`let sayHi = function() { ... };` (Funkcja stworzona wewnątrz wyrażenia, np. przypisania do zmiennej).;odin_js_functions_advanced
+Kiedy tworzona jest funkcja typu "Function Declaration"?;Przed wykonaniem kodu (w fazie inicjalizacji). Dzięki temu można jej użyć ZANIM zostanie zdefiniowana w kodzie (Hoisting).;odin_js_functions_advanced
+Kiedy tworzona jest funkcja typu "Function Expression"?;Dopiero w momencie, gdy interpreter dojdzie do danej linii kodu (execution flow). Nie można jej użyć przed tą linią.;odin_js_functions_advanced
+Dlaczego na końcu Function Expression (`let x = function(){};`) stawiamy średnik, a przy Function Declaration nie?;Ponieważ Function Expression jest częścią instrukcji przypisania (`let x = ...;`), a instrukcje w JS kończymy średnikiem.;odin_js_syntax
+Czy funkcję można skopiować do innej zmiennej (np. `let func = sayHi`)?;Tak. Funkcja w JS to wartość. Zmienna `func` będzie teraz odnosić się do tej samej funkcji co `sayHi`.;odin_js_theory
+Co to jest "Callback Function"?;To funkcja przekazana jako argument do innej funkcji, z intencją, że zostanie wywołana ("called back") później.;odin_js_pattern
+Co się stanie w "Strict Mode", jeśli zadeklarujesz funkcję (Function Declaration) wewnątrz bloku `if`?;Będzie widoczna TYLKO wewnątrz tego bloku `if`. Poza nim wystąpi błąd (funkcja nie istnieje).;odin_js_scope
+Jak zdefiniować funkcję warunkowo (wewnątrz `if`), aby była widoczna POZA tym blokiem?;Zadeklaruj zmienną (`let welcome`) poza blokiem, a wewnątrz bloku przypisz do niej funkcję (Function Expression `welcome = function...`).;odin_js_pattern
+Co to jest "Funkcja Anonimowa"?;Funkcja bez nazwy (często używana w Function Expressions lub jako Callback).;odin_js_syntax
+Który sposób definiowania funkcji jest zalecany jako pierwszy wybór i dlaczego?;Function Declaration. Jest bardziej czytelna i pozwala na wywołanie funkcji przed jej definicją (daje swobodę w organizacji kodu).;odin_js_best_practices

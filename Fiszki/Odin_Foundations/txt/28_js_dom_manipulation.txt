@@ -1,0 +1,42 @@
+Co to jest DOM (Document Object Model)?;Drzewiasta reprezentacja struktury strony internetowej, gdzie każdy element HTML jest "węzłem" (Node) lub obiektem, którym można manipulować w JS.;odin_dom_basics
+Jaka jest różnica między `document.querySelector()` a `document.querySelectorAll()`?;`querySelector` zwraca PIERWSZY pasujący element (lub null). `querySelectorAll` zwraca NodeList ze WSZYSTKIMI pasującymi elementami.;odin_dom_selectors
+Co to jest `NodeList` (zwracane przez `querySelectorAll`)?;Kolekcja węzłów, która przypomina tablicę, ale nią NIE jest (nie ma np. metody `map` czy `reduce`). Można ją jednak iterować przez `forEach`.;odin_dom_types
+Jaką metodą tworzymy nowy element HTML w pamięci (jeszcze nie widoczny na stronie)?;`document.createElement('tagName')` (np. `document.createElement('div')`).;odin_dom_methods
+Jak dodać nowo stworzony element jako dziecko innego elementu (np. do kontenera)?;Używając metody `parentNode.appendChild(childNode)`;odin_dom_methods
+Jaką właściwością najbezpieczniej dodawać tekst do elementu?;`element.textContent = "Tekst"`;odin_dom_methods
+Dlaczego należy uważać z używaniem `element.innerHTML`?;Ponieważ pozwala na wstrzyknięcie kodu HTML (w tym złośliwych skryptów `<script>`), co stwarza ryzyko ataku XSS (Cross-Site Scripting).;odin_dom_security
+Jak zmienić styl elementu bezpośrednio w JS (Inline Style)?;`element.style.właściwość = "wartość"` (np. `div.style.backgroundColor = "red"` - pamiętaj o camelCase!).;odin_dom_styles
+Jakie są 3 sposoby dodawania zdarzeń (Events) do elementu?;1. Atrybut w HTML (`onclick="..."`). 2. Właściwość DOM (`btn.onclick = ...`). 3. Event Listener (`btn.addEventListener(...)`).;odin_dom_events
+Który sposób dodawania zdarzeń jest najlepszy i dlaczego?;`addEventListener`, ponieważ pozwala przypisać WIELE funkcji do tego samego zdarzenia i jest oddzielony od HTML.;odin_dom_events
+Co to jest "Callback" w kontekście `addEventListener`?;Funkcja, którą przekazujemy jako drugi argument, a która zostanie wywołana ("called back") dopiero wtedy, gdy zdarzenie nastąpi.;odin_dom_events
+Co to jest parametr `e` (lub `event`) w funkcji callback?;To obiekt zdarzenia, który zawiera szczegóły na temat tego, co się stało (np. `e.target` mówi, co dokładnie zostało kliknięte, `e.key` jaki klawisz wciśnięto).;odin_dom_events
+Co to jest "Event Bubbling" (Bąbelkowanie Zdarzeń)?;Mechanizm, w którym zdarzenie (np. kliknięcie) najpierw odpala się na elemencie docelowym, a potem "bąbelkuje" w górę do rodzica, dziadka, aż do `document`.;odin_dom_theory
+Jak zatrzymać bąbelkowanie zdarzenia (żeby nie dotarło do rodziców)?;`e.stopPropagation()`;odin_dom_methods
+Gdzie w pliku HTML najlepiej umieścić tag `<script>` i dlaczego?;Na końcu `<body>` (przed zamknięciem), aby mieć pewność, że cały DOM został wczytany przed uruchomieniem skryptu (lub w `<head>` z atrybutem `defer`).;odin_html_structure
+Jaka jest różnica między `element.children` a `element.childNodes`?;`children` zwraca tylko ELEMENTY HTML (tagi). `childNodes` zwraca WSZYSTKIE węzły, w tym węzły tekstowe (np. białe znaki/entery między tagami) i komentarze.;odin_dom_traversal
+Jaka jest różnica między `nextSibling` a `nextElementSibling`?;`nextSibling` może zwrócić węzeł tekstowy (np. enter). `nextElementSibling` zwróci następny konkretny element HTML (tag).;odin_dom_traversal
+Jak dostać się do rodzica danego elementu?;Używając właściwości `parentElement` (lub `parentNode`).;odin_dom_traversal
+Mamy w HTML: `<div data-key="123" data-user-name="Bob">`. Jak dostać się do tych danych w JS?;Używając właściwości `dataset`: `element.dataset.key` oraz `element.dataset.userName` (zauważ zmianę na camelCase!).;odin_dom_attributes
+Czy `element.style.color` zwróci kolor zdefiniowany w arkuszu CSS (pliku .css)?;Nie. `element.style` zwraca tylko style wpisane "inline" (bezpośrednio w tagu HTML).;odin_dom_styles
+Jak odczytać OSTATECZNY styl elementu (nawet ten z pliku CSS), jaki widzi przeglądarka?;Używając metody `window.getComputedStyle(element).color`;odin_dom_styles
+Jaka jest różnica między `textContent` a `innerText`?;`textContent` zwraca CAŁY tekst, nawet ten ukryty przez CSS. `innerText` zwraca tylko tekst widoczny dla użytkownika (szanuje style CSS) i jest wolniejszy.;odin_dom_details
+Co to jest `DocumentFragment` i do czego służy?;To "lekki", wirtualny kontener na elementy DOM. Używamy go, gdy chcemy dodać wiele elementów do strony na raz (np. w pętli), aby uniknąć wielokrotnego przerysowywania strony (Reflow).;odin_dom_optimization
+Jaka jest różnica między "Live Collection" (np. z `getElementsByClassName`) a "Static Collection" (np. z `querySelectorAll`)?;Żywa kolekcja aktualizuje się automatycznie, gdy DOM się zmienia (dodasz nowy element - kolekcja rośnie). Statyczna to "zdjęcie" stanu w momencie wywołania (nie zmienia się).;odin_dom_types
+Jak sprawdzić, czy element posiada konkretną klasę CSS (bez manualnego przeszukiwania stringa)?;`element.classList.contains('nazwa-klasy')`;odin_dom_methods
+Jak przełączyć klasę (dodać jak nie ma, usunąć jak jest) jedną metodą?;`element.classList.toggle('nazwa-klasy')`;odin_dom_methods
+Dlaczego operacje zapisu do DOM (np. zmiana wymiarów, dodawanie elementów) są "kosztowne"?;Ponieważ zmuszają przeglądarkę do przeliczenia układu strony (Reflow/Layout) i ponownego narysowania pikseli (Repaint).;odin_dom_theory
+Co reprezentuje obiekt `window` w JavaScript?;Reprezentuje całe okno przeglądarki (lub kartę), w którym załadowana jest strona. Zawiera właściwości takie jak szerokość okna (`innerWidth`) i jest "rodzicem" dla obiektu `document`.;odin_dom_mdn
+Co reprezentuje obiekt `navigator`?;Reprezentuje tożsamość i stan samej przeglądarki (nie strony). Używany np. do sprawdzania geolokalizacji, języka użytkownika czy dostępu do kamery.;odin_dom_mdn
+Co reprezentuje obiekt `document`?;Reprezentuje konkretną stronę załadowaną w oknie (DOM). To główny punkt wejścia do manipulacji treścią HTML i stylami.;odin_dom_mdn
+Jaka jest różnica między "Child Node" (Dziecko) a "Descendant Node" (Potomek)?;Dziecko jest BEZPOŚREDNIO wewnątrz rodzica (1 poziom niżej). Potomek to dowolny węzeł wewnątrz (dziecko, wnuk, prawnuk itd.).;odin_dom_tree
+Co zwraca `document.querySelector("p")`?;Zwraca referencję do PIERWSZEGO elementu `<p>` znalezionego w dokumencie.;odin_dom_selectors
+Co zwraca `document.querySelectorAll("p")`?;Zwraca `NodeList` (obiekt tablicopodobny) zawierający referencje do WSZYSTKICH elementów `<p>` w dokumencie.;odin_dom_selectors
+Jak zmienić tekst wewnątrz elementu (np. w linku) używając JS?;Używając właściwości `textContent`, np. `link.textContent = "Nowy Tekst";`.;odin_dom_manipulation
+Jak stworzyć nowy element HTML (np. paragraf) w pamięci?;`const para = document.createElement("p");`;odin_dom_creation
+Czy `document.createElement()` automatycznie dodaje element do widocznej strony?;Nie. Tworzy go tylko w pamięci. Aby był widoczny, trzeba go dodać do drzewa DOM (np. używając `appendChild`).;odin_dom_creation
+Co się stanie, jeśli użyjesz `appendChild()` na elemencie, który JUŻ istnieje w innym miejscu na stronie?;Element zostanie PRZENIESIONY (Moved) w nowe miejsce, a nie skopiowany. W DOM może istnieć tylko jedna instancja danego węzła.;odin_dom_manipulation
+Jak usunąć element, mając do niego referencję (w nowoczesnych przeglądarkach)?;`element.remove();`;odin_dom_manipulation
+Dlaczego w JS używamy `style.backgroundColor` zamiast `style.background-color`?;Ponieważ w JavaScript myślnik `-` jest operatorem odejmowania. Właściwości CSS z myślnikami są konwertowane na `camelCase`.;odin_dom_styles
+Jaka jest zalecana metoda zmiany wyglądu elementu zamiast bezpośredniej edycji `element.style`?;Dodawanie lub usuwanie klas CSS za pomocą `element.classList.add("nazwa-klasy")`. Jest to czystsze i oddziela style od logiki.;odin_dom_styles
+Co robi metoda `event.preventDefault()` (użyta np. przy wysyłaniu formularza)?;Zapobiega domyślnej akcji przeglądarki. W przypadku formularza zapobiega przeładowaniu strony po kliknięciu przycisku submit.;odin_dom_events
+Co robi metoda `input.focus()`?;Ustawia kursor w danym polu tekstowym, gotowy do pisania.;odin_dom_events

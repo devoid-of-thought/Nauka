@@ -1,0 +1,63 @@
+Jakie są 3 słowa kluczowe do deklarowania zmiennych w JavaScript?;let, const, var;odin_js_basics
+Czym różni się `let` od `const`?;`let` pozwala na późniejszą zmianę wartości zmiennej (reassignment). `const` tworzy stałą, której nie można przypisać nowej wartości (wyrzuci błąd).;odin_js_basics
+Dlaczego należy unikać słowa kluczowego `var`?;To stary sposób deklaracji. Posiada dziwne zachowania (związane z zasięgiem/hoistingiem), które mogą powodować błędy. Zastąpiono go przez nowocześniejsze `let` i `const`.;odin_js_basics
+Jaka jest zalecana konwencja nazewnictwa zmiennych w JavaScript?;camelCase (pierwsze słowo małą literą, każde kolejne wielką, np. `myFirstName`).;odin_js_basics
+Jak wypisać wiadomość w konsoli przeglądarki (Developer Tools)?;console.log("Twoja wiadomość");odin_js_basics
+Jak podłączyć zewnętrzny plik JavaScript do pliku HTML?;Używając znacznika <script src="nazwa_pliku.js"></script>.;odin_js_syntax
+Co się stanie, jeśli spróbujesz dodać liczbę do stringa (np. `10 + "5"`)?;Nastąpi konkatenacja (złączenie). Wynikiem będzie string "105".;odin_js_behavior
+Co robi operator Modulo `%` (np. `10 % 3`)?;Zwraca resztę z dzielenia (w tym przypadku 1, bo 10 dzielone przez 3 to 3 i reszty 1).;odin_js_operators
+Co robi operator inkrementacji `++`?;Zwiększa wartość zmiennej o 1.;odin_js_operators
+Jaka jest różnica między `++i` (prefix) a `i++` (postfix)?;`++i` zwraca NOWĄ (już powiększoną) wartość. `i++` zwraca STARĄ wartość, a dopiero potem zwiększa zmienną w tle.;odin_js_details
+Co robi "Unary Plus" (plus jednoargumentowy), np. `+"10"`?;Konwertuje stringa na liczbę (Number). Wynikiem będzie liczba 10.;odin_js_operators
+Jaka jest kolejność wykonywania działań w JS?;Standardowa matematyczna (PEMDAS): Nawiasy -> Mnożenie/Dzielenie -> Dodawanie/Odejmowanie.;odin_js_basics
+Co to jest re-assigning (przypisanie ponowne)?;Zmiana wartości istniejącej zmiennej, np. `let a = 5; a = 10;`. Jest możliwe tylko dla `let` i `var`, ale nie dla `const`.;odin_js_basics
+Jakim słowem kluczowym tworzymy (deklarujemy) zmienną w nowoczesnym JavaScript?;let;odin_js_variables
+Co się stanie, jeśli zadeklarujesz tę samą zmienną dwa razy (np. dwa razy użyjesz `let message`)?;Otrzymasz błąd (SyntaxError). Zmienną deklaruje się tylko raz.;odin_js_variables
+Jakie dwa znaki specjalne są dozwolone w nazwach zmiennych (oprócz liter i cyfr)?;Dolar ($) i podkreślenie (_).;odin_js_variables
+Czy nazwa zmiennej może zaczynać się od cyfry (np. `let 1a`)?;Nie.;odin_js_variables
+Czy wielkość liter w nazwach zmiennych ma znaczenie (np. `apple` vs `APPLE`)?;Tak (Case matters). To dwie różne zmienne.;odin_js_variables
+Co to są "Słowa zastrzeżone" (Reserved names) w JS?;Słowa używane przez sam język (np. `let`, `class`, `return`, `function`), których NIE możesz użyć jako nazwy zmiennej.;odin_js_variables
+Co się stanie, jeśli przypiszesz wartość do zmiennej bez użycia `let/const` w trybie "use strict"?;Wyrzuci błąd (ReferenceError), że zmienna nie jest zdefiniowana.;odin_js_variables
+Słowo kluczowe do deklarowania stałych (zmiennych, których nie można zmienić)?;const;odin_js_variables
+Kiedy, zgodnie z konwencją, używamy WIELKICH_LITER (Screaming Snake Case) dla nazw stałych?;Tylko dla wartości znanych PRZED uruchomieniem programu (hard-coded), np. kolory HEX, stałe konfiguracyjne.;odin_js_variables
+Jak nazywamy stałą `const`, której wartość jest obliczana dopiero w trakcie działania programu (run-time)?;Normalnie, używając camelCase (np. `const pageLoadTime = ...`).;odin_js_best_practices
+Dlaczego nazwy zmiennych takie jak `data` lub `value` są uważane za złe?;Ponieważ nie mówią nic o tym, co jest w środku. Są zbyt ogólne.;odin_js_best_practices
+Jaka jest analogia zmiennej ze świata rzeczywistego (użyta w lekcji)?;Pudełko z naklejoną etykietą (nazwą), do którego wkładamy dane.;odin_js_theory
+Czy w nowoczesnym JS używamy słowa kluczowego `var`?;Nie (lub bardzo rzadko). Używamy `let` lub `const`.;odin_js_basics
+Co to jest Operand?;To argument, na którym działa operator (np. w `5 * 2`, liczby 5 i 2 to operandy).;odin_js_operators
+Czym różni się operator Unarny od Binarnego?;Operator unarny działa na jednym operandzie (np. `-x`), a binarny na dwóch (np. `x - y`).;odin_js_theory
+Co robi operator `%` (Remainder)?;Zwraca resztę z dzielenia (NIE jest to procent).;odin_js_operators
+Jaki jest wynik `5 % 2`?;1;odin_js_operators
+Jaki jest wynik `8 % 3`?;2;odin_js_operators
+Jak zapisać potęgowanie w JS (np. 2 do potęgi 3)?;2 ** 3;odin_js_operators
+Co się stanie, jeśli użyjesz operatora `+` na dwóch operandach, z których jeden jest stringiem (np. `"1" + 2`)?;Nastąpi konkatenacja (złączenie). Liczba zostanie zamieniona na string. Wynik: "12".;odin_js_behavior
+Jaki będzie wynik: `'1' + 2 + 2`?;'122' (Ponieważ pierwszy jest stringiem, reszta też jest traktowana jako ciąg znaków).;odin_js_behavior
+Jaki będzie wynik: `2 + 2 + '1'`?;'41' (Najpierw wykona się 2+2=4, a dopiero potem zostanie doklejona '1').;odin_js_behavior
+Jaki będzie wynik odejmowania stringów: `'6' - '2'`?;4 (JS automatycznie skonwertuje stringi na liczby przy odejmowaniu, mnożeniu i dzieleniu).;odin_js_behavior
+Co robi operator Unarny Plus (np. `+x` lub `+"12"`)?;Konwertuje operand na liczbę (Number).;odin_js_operators
+Jaki jest wynik `+true`?;1;odin_js_operators
+Jaki jest wynik `+""` (pusty string)?;0;odin_js_operators
+Co to jest priorytet operatorów (Operator Precedence)?;Kolejność wykonywania działań (np. mnożenie przed dodawaniem).;odin_js_theory
+Czy operator przypisania `=` zwraca jakąś wartość?;Tak, zwraca wartość, która została przypisana. (Dlatego możliwe jest `a = b = c = 5`).;odin_js_theory
+Co robi skrócony operator `n += 5`?;To to samo co `n = n + 5`.;odin_js_syntax
+Mamy kod: `let a = 1; let b = ++a;`. Jaka jest wartość `b`?;2 (Forma Prefixowa zwraca NOWĄ wartość).;odin_js_details
+Mamy kod: `let a = 1; let b = a++;`. Jaka jest wartość `b`?;1 (Forma Postfixowa zwraca STARĄ wartość, sprzed inkrementacji).;odin_js_details
+Co robi operator przecinka `,` (np. `let a = (1+2, 3+4)`)?;Ewaluuje wszystkie wyrażenia od lewej do prawej, ale zwraca wynik tylko OSTATNIEGO. (W tym przykładzie a = 7).;odin_js_details
+Wymień 8 typów danych w JavaScript.;String, Number, BigInt, Boolean, Undefined, Null, Symbol, Object;odin_js_datatypes
+Który z 8 typów danych w JavaScript NIE jest typem prostym (primitive)?;Object;odin_js_datatypes
+Jaka jest różnica między cudzysłowami pojedynczymi (' ') i podwójnymi (" ") w JS?;W JavaScript nie ma żadnej funkcjonalnej różnicy. Oba działają tak samo.;odin_js_strings
+Do czego służą grawisy (backticks ` `) w stringach?;Pozwalają na osadzanie zmiennych/wyrażeń wewnątrz tekstu (Template Literals) oraz na tworzenie stringów wielolinijkowych.;odin_js_strings
+Jak osadzić zmienną `name` wewnątrz stringa używając grawisów (Template Literal)?;`Hello ${name}`;odin_js_syntax
+Co to jest Metoda (Method) w kontekście typów danych?;To funkcja wbudowana w dany typ danych (np. `.toUpperCase()` dla stringów), która pozwala wykonywać na nim operacje.;odin_js_theory
+Jaka jest różnica między metodą `.slice()` a `.substring()` (w uproszczeniu)?;`slice` obsługuje ujemne indeksy (liczy od końca), a `substring` traktuje ujemne indeksy jak 0.;odin_js_details
+Jakie są 3 operatory logiczne w JS?;|| (OR), && (AND), ! (NOT);odin_js_operators
+Co to są wartości "Falsy"?;Wartości, które w kontekście logicznym (np. w instrukcji if) są traktowane jak fałsz (false).;odin_js_logic
+Wymień 6 głównych wartości Falsy w JavaScript.;false, 0, "" (pusty string), null, undefined, NaN;odin_js_logic
+Co to są wartości "Truthy"?;Wszystkie wartości, które NIE są falsy (czyli np. "0", "false" jako string, pusty obiekt {}, pusta tablica []).;odin_js_logic
+Jaka jest różnica między operatorem `==` a `===`?;`==` sprawdza tylko wartość (z możliwą konwersją typów, np. 5 == '5' to prawda). `===` sprawdza wartość ORAZ typ danych (5 === '5' to fałsz).;odin_js_operators
+Jaka jest składnia operatora trójargumentowego (Ternary Operator)?;warunek ? wyrażenie_jeśli_prawda : wyrażenie_jeśli_fałsz;odin_js_syntax
+Co to jest zagnieżdżanie (Nesting) w instrukcjach warunkowych?;Umieszczanie jednej instrukcji warunkowej (np. if) wewnątrz innej.;odin_js_logic
+Kiedy warto użyć instrukcji `switch` zamiast `if/else`?;Gdy mamy jedną zmienną, która może przyjmować wiele konkretnych wartości (przypadków) i chcemy uniknąć długiej drabinki `else if`.;odin_js_best_practices
+Jaki znak służy do "ucieczki" (escape character) w stringach (np. żeby użyć cudzysłowu wewnątrz cudzysłowu)?;Backslash (\);odin_js_syntax
+Jaki jest wynik operacji: `undefined == null`?;true;odin_js_weird_js
+Jaki jest wynik operacji: `undefined === null`?;false (bo to różne typy danych);odin_js_weird_js

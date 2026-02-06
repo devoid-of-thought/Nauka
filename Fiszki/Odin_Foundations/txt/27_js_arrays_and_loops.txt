@@ -1,0 +1,36 @@
+Co robi pętla (Loop)?;Pozwala na wielokrotne wykonanie tego samego bloku kodu (np. dla każdego elementu tablicy).;odin_js_loops
+Co to jest Tablica (Array)?;Uporządkowana kolekcja elementów (lista), przechowywana w jednej zmiennej.;odin_js_arrays
+Jakim indeksem zaczyna się Tablica w JS?;Indeksem 0 (Zero-based indexing).;odin_js_arrays
+Co robi metoda `.map()`?;Tworzy NOWĄ tablicę, wykonując podaną funkcję na KAŻDYM elemencie oryginalnej tablicy (Transformacja).;odin_js_arrays
+Co robi metoda `.filter()`?;Tworzy NOWĄ tablicę, zawierającą tylko te elementy, które spełniają warunek (dla których funkcja callback zwróciła `true`).;odin_js_arrays
+Co robi metoda `.reduce()`?;Przetwarza tablicę do POJEDYNCZEJ wartości (np. sumy wszystkich liczb), używając tzw. akumulatora.;odin_js_arrays
+W metodzie `.reduce((acc, curr) => ...)` - czym jest `acc`?;To "Accumulator" (Akumulator) - zmienna, która przechowuje bieżący wynik operacji z poprzednich kroków pętli.;odin_js_arrays
+Czy metody `map`, `filter` i `reduce` zmieniają oryginalną tablicę (mutate)?;Nie. Wszystkie zwracają nową wartość/tablicę, a oryginał pozostaje bez zmian (Non-mutating).;odin_js_arrays
+Jaka jest różnica między `break` a `continue` w pętlach?;`break` całkowicie przerywa pętlę i wychodzi z niej. `continue` przerywa tylko OBECNĄ iterację (krok) i przechodzi do następnej.;odin_js_loops
+Co to jest TDD (Test Driven Development)?;Podejście, w którym najpierw piszesz automatyczny test (który początkowo nie przechodzi), a dopiero potem piszesz kod, który ma ten test spełnić.;odin_js_methodology
+Dlaczego używamy TDD (podaj jedną zaletę)?;Daje pewność, że kod działa poprawnie i ułatwia późniejsze zmiany (refactoring), bo testy od razu wykryją błędy.;odin_js_methodology
+Jaki jest wynik porównania `[1, 2] === [1, 2]` i dlaczego?;`false`. Tablice to typy referencyjne (Obiekty). JS porównuje ich adresy w pamięci, a to są dwie RÓŻNE instancje tablic (dwa różne "domy" o tym samym wyglądzie).;odin_js_references
+Jaki jest wynik operacji `typeof []`?;'object'. W JS tablice są specjalnym rodzajem obiektu.;odin_js_theory
+Jak sprawdzić, czy zmienna jest naprawdę tablicą (skoro `typeof` kłamie)?;Używając metody `Array.isArray(zmienna)`.;odin_js_arrays_advanced
+Co się stanie w kodzie: `let a = [1]; let b = a; b.push(2);` - jaka jest wartość `a`?;`[1, 2]`. Przypisanie `b = a` skopiowało tylko REFERENCJĘ (adres), a nie zawartość. Obie zmienne wskazują na tę samą tablicę w pamięci.;odin_js_references
+Jak stworzyć Płytką Kopię (Shallow Copy) tablicy, aby zmiany w niej nie wpływały na oryginał?;Używając Spread Operator: `const copy = [...originalArray]`; (lub `.slice()`).;odin_js_syntax
+Co robi Spread Operator `...` (trzy kropki) przed tablicą?;Rozpakowuje (rozrzuca) elementy tablicy na pojedyncze wartości (np. `Math.max(...numbers)`).;odin_js_syntax
+Co to jest "Destrukturyzacja Tablicy" (Array Destructuring)?;Składnia pozwalająca wyciągnąć elementy z tablicy bezpośrednio do zmiennych. Np. `const [first, second] = myArray;`.;odin_js_syntax
+Jak pominąć drugi element tablicy podczas destrukturyzacji?;Używając pustego przecinka: `const [first, , third] = myArray;`.;odin_js_syntax
+Co to jest "Rest Operator" w kontekście destrukturyzacji (np. `const [first, ...rest] = arr`)?;Zbiera wszystkie POZOSTAŁE elementy tablicy do nowej tablicy o nazwie `rest`.;odin_js_syntax
+Jak najszybciej usunąć duplikaty z tablicy (używając nowoczesnego JS)?;Zamieniając ją na Set, a potem z powrotem na tablicę: `[...new Set(array)]`.;odin_js_tricks
+Co oznacza "Chaining" (Łańcuchowanie) metod tablicowych?;Wywoływanie jednej metody po drugiej, np. `arr.filter(...).map(...).reduce(...)`. Jest to możliwe, bo `filter` i `map` zwracają nową tablicę.;odin_js_pattern
+Czy `const` zapobiega zmianie zawartości tablicy (np. `const arr = []; arr.push(1)`)?;Nie. `const` blokuje tylko zmianę przypisania zmiennej (nie możesz napisać `arr = coś_innego`), ale zawartość obiektu/tablicy, na którą wskazuje, można zmieniać (mutować).;odin_js_references
+Jaka jest różnica między `.filter()` a `.find()`?;`.filter()` zwraca NOWĄ TABLICĘ ze wszystkimi pasującymi elementami (może być pusta). `.find()` zwraca PIERWSZY pasujący ELEMENT (lub `undefined`, jeśli nic nie znajdzie).;odin_js_arrays_advanced
+Co robi metoda `.includes()`?;Sprawdza, czy tablica zawiera konkretną wartość (np. liczbę lub string). Zwraca `true` lub `false`. Nie przyjmuje funkcji, tylko wartość.;odin_js_arrays_advanced
+Jaka jest różnica między `.some()` a `.every()`?;`.some()` sprawdza, czy PRZYNAJMNIEJ JEDEN element spełnia warunek. `.every()` sprawdza, czy WSZYSTKIE elementy spełniają warunek.;odin_js_arrays_advanced
+Co robi metoda `.sort()` z oryginalną tablicą?;Sortuje tablicę "w miejscu" (in place), czyli ZMIENIA (mutuje) oryginalną tablicę. Nie tworzy nowej.;odin_js_arrays_pitfalls
+Dlaczego sortowanie liczb metodą `.sort()` bez argumentów daje dziwne wyniki (np. 10 jest przed 2)?;Ponieważ domyślny `.sort()` konwertuje elementy na stringi i porównuje je alfabetycznie ("10" jest wcześniej niż "2").;odin_js_arrays_pitfalls
+Jak poprawnie posortować tablicę liczb rosnąco?;Używając funkcji porównującej: `.sort((a, b) => a - b)`;odin_js_syntax
+Jaka jest różnica między `.slice()` a `.splice()` (bardzo ważne!)?;`.slice()` (kroić/plasterkować) kopiuje fragment tablicy i zwraca nową (BEZPIECZNE). `.splice()` (splatać/wycinać) usuwa lub dodaje elementy w oryginalnej tablicy (MUTUJE ORYGINAŁ).;odin_js_arrays_advanced
+Jaka pętla jest najlepsza do iterowania po elementach tablicy (jeśli nie używamy metod typu map/forEach)?;`for (const item of array)` (pętla `for...of`).;odin_js_loops
+Dlaczego nie powinno się używać pętli `for...in` do tablic?;Ponieważ `for...in` iteruje po kluczach (indeksach) i może uwzględnić dodatkowe właściwości dodane do prototypu tablicy, a kolejność nie jest gwarantowana. Służy do Obiektów.;odin_js_pitfalls
+Jaka jest różnica między `.map()` a `.forEach()`?;`.map()` ZWRACA nową tablicę (używamy, gdy chcemy przetworzyć dane). `.forEach()` nic nie zwraca (`undefined`) - służy tylko do wykonania jakiejś akcji (np. console.log) dla każdego elementu (Side Effect).;odin_js_arrays_advanced
+Jak zamienić stringa na tablicę (np. "Hello" -> ['H', 'e', 'l', 'l', 'o'])?;Metodą `.split('')` (na stringu) LUB `Array.from("Hello")`.;odin_js_conversion
+Jak połączyć dwie tablice w jedną nową?;Metodą `.concat()` lub używając Spread Operator: `[...array1, ...array2]`;odin_js_syntax
+Co to jest "Red-Green-Refactor" w TDD?;Cykl pracy: 1. Napisz test, który oblewa (Red). 2. Napisz minimalny kod, żeby test przeszedł (Green). 3. Popraw jakość kodu (Refactor).;odin_js_methodology

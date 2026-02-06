@@ -1,0 +1,10 @@
+Z jakich dwóch głównych części składa się obiekt błędu (Error Object) w JS?;Z Typu błędu (Name) i Wiadomości (Message).;odin_js_errors
+Co to jest "Stack Trace" (Ślad stosu) w komunikacie błędu?;To lista funkcji, które były wywoływane po kolei, prowadząc aż do momentu wystąpienia błędu. Pomaga prześledzić historię zdarzeń.;odin_js_debugging
+Kiedy pojawia się `ReferenceError`?;Gdy próbujesz użyć zmiennej, która nie istnieje (nie została zadeklarowana) lub gdy zrobiłeś literówkę w jej nazwie.;odin_js_errors
+Kiedy pojawia się `SyntaxError`?;Gdy kod łamie reguły gramatyczne języka (np. brakujący nawias zamykający, literówka w słowie kluczowym `fuction` zamiast `function`).;odin_js_errors
+Kiedy pojawia się `TypeError` (podaj najczęstszą przyczynę)?;Gdy próbujesz wykonać operację na typie danych, który jej nie obsługuje (np. wywołanie `.push()` na Stringu lub próba wywołania zmiennej jak funkcji).;odin_js_errors
+Co oznacza komunikat `Uncaught TypeError: X is not a function`?;Że `X` istnieje, ale nie jest funkcją (np. jest tablicą, obiektem lub undefined), więc nie można go wywołać nawiasami `()`, ani użyć na nim danej metody.;odin_js_errors
+W komunikacie błędu widzisz: `at script.js:4:13`. Co oznaczają liczby 4 i 13?;4 to numer linii, a 13 to numer kolumny (znaku w linii), gdzie wystąpił błąd.;odin_js_debugging
+Jaka jest kluczowa różnica między Błędem (Error) a Ostrzeżeniem (Warning)?;Błąd ZATRZYMUJE wykonanie programu (crash). Ostrzeżenie NIE przerywa działania programu, ale sygnalizuje potencjalny problem.;odin_js_theory
+Jaki kolor w konsoli zazwyczaj oznacza Błąd, a jaki Ostrzeżenie?;Błąd = Czerwony. Ostrzeżenie = Żółty.;odin_js_devtools
+Co jest pierwszą rzeczą, którą powinieneś zrobić po zobaczeniu błędu (zanim zaczniesz zmieniać kod)?;PRZECZYTAĆ komunikat błędu. Mówi on co się stało i w której linii.;odin_js_debugging

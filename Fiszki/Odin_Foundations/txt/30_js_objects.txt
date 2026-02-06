@@ -1,0 +1,22 @@
+Co to jest Obiekt (Object) w JavaScript?;Zbiór par klucz-wartość (key-value pairs), służący do przechowywania złożonych danych.;odin_js_objects
+Czym różni się przechowywanie w zmiennej Typu Prostego (Primitive) od Obiektu?;Typ prosty przechowuje WARTOŚĆ (kopię danych). Obiekt przechowuje REFERENCJĘ (adres w pamięci, gdzie dane się znajdują).;odin_js_references
+Jaki jest wynik: `let a = 10; let b = a; b = 20; console.log(a);`?;10. (Dla typów prostych `b` jest niezależną kopią `a`).;odin_js_references
+Jaki jest wynik: `const a = {x: 1}; const b = a; b.x = 2; console.log(a.x);`?;2. (Obie zmienne `a` i `b` wskazują na TEN SAM obiekt w pamięci. Zmiana przez jedną zmienną jest widoczna w drugiej).;odin_js_references
+Co się stanie, jeśli przekażesz obiekt jako argument do funkcji, a funkcja zmieni jego właściwość?;Oryginalny obiekt poza funkcją RÓWNIEŻ ulegnie zmianie (bo przekazano referencję/adres).;odin_js_references
+Co się stanie, jeśli przekażesz typ prosty (np. liczbę) do funkcji, a funkcja ją zmieni?;Oryginał poza funkcją pozostanie BEZ ZMIAN (bo przekazano tylko kopię wartości).;odin_js_references
+Mamy kod: `let a = {n: 1}; let b = a; a = {n: 2};`. Co zawiera `b`?;`{n: 1}`. Zmienna `a` dostała nowy adres (nowy obiekt), ale zmienna `b` nadal trzyma stary adres (stary obiekt).;odin_js_references
+Dlaczego możemy modyfikować obiekt zadeklarowany przez `const` (np. `const obj = {}; obj.a = 1`)?;Ponieważ `const` chroni tylko REFERENCJĘ (nie można przypisać do zmiennej nowego obiektu/adresu), ale nie chroni zawartości "domu", na który ta referencja wskazuje.;odin_js_const
+Jak dostać się do właściwości obiektu (np. `name`)?;Używając kropki: `obj.name` lub nawiasów kwadratowych: `obj['name']`.;odin_js_syntax
+Czy Tablice (Arrays) i Funkcje (Functions) w JavaScript są obiektami?;Tak. (Tablice to specjalny rodzaj obiektu z uporządkowanymi indeksami).;odin_js_theory
+Kiedy MUSISZ użyć nawiasów kwadratowych `obj['key']` zamiast kropki `obj.key`? (Wymień 2 przypadki);1. Gdy nazwa klucza jest przechowywana w ZMIENNEJ. 2. Gdy nazwa klucza zawiera spacje lub znaki specjalne (np. `obj['first name']`).;odin_js_objects_access
+Mamy kod: `const key = "name"; const obj = { name: "Bob" };`. Co zwróci `obj.key`?;`undefined`. JS szuka klucza o dosłownej nazwie "key", a nie wartości zmiennej.;odin_js_objects_access
+Mamy kod: `const key = "name"; const obj = { name: "Bob" };`. Co zwróci `obj[key]`?;`"Bob"`. Nawiasy kwadratowe ewaluują (obliczają) to, co jest w środku, więc JS szuka klucza "name".;odin_js_objects_access
+Jak usunąć właściwość z obiektu?;Używając operatora `delete` (np. `delete obj.age`).;odin_js_objects_methods
+Jak sprawdzić, czy dany klucz istnieje w obiekcie (zwraca true/false)?;Używając operatora `in` (np. `"age" in user`).;odin_js_objects_methods
+Jaka pętla służy do iterowania po KLUCZACH obiektu?;`for (let key in object) { ... }`;odin_js_loops
+Dlaczego nie zaleca się używania pętli `for...in` do tablic?;Ponieważ `for...in` iteruje po kluczach (w tablicy są to indeksy "0", "1"...), nie gwarantuje kolejności i może zahaczyć o właściwości dziedziczone.;odin_js_pitfalls
+Jak pobrać wszystkie klucze obiektu jako tablicę stringów?;`Object.keys(obj)`;odin_js_objects_methods
+Jak pobrać wszystkie wartości obiektu jako tablicę?;`Object.values(obj)`;odin_js_objects_methods
+Jak pobrać pary [klucz, wartość] jako tablicę tablic?;`Object.entries(obj)`;odin_js_objects_methods
+Co to są "Computed Property Names" (Obliczane nazwy właściwości) przy tworzeniu obiektu?;Możliwość użycia zmiennej jako klucza wewnątrz nawiasów kwadratowych podczas definicji obiektu: `const obj = { [zmienna]: "wartość" }`.;odin_js_syntax
+Co robi operator "Optional Chaining" `?.` (np. `user?.address?.street`)?;Pozwala bezpiecznie odwołać się do głęboko zagnieżdżonej właściwości. Jeśli `user` lub `address` nie istnieje (`null`/`undefined`), wyrażenie zwróci `undefined` zamiast wyrzucić błąd.;odin_js_syntax

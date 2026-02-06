@@ -1,0 +1,10 @@
+Jaki jest najczęstszy błąd początkujących programistów wg V. Antona Spraula?;Skupianie się na nauce składni (syntax) zamiast na nauce rozwiązywania problemów.;odin_problem_solving
+Jaki jest pierwszy krok w rozwiązywaniu problemu wg frameworku z artykułu?;Zrozumieć problem (Understand). Musisz umieć wyjaśnić go prostym językiem (plain English).;odin_problem_solving
+Co to jest "Rubber Ducking" (lub mówienie do kaczuszki) w kontekście rozumienia problemu?;Technika polegająca na wyjaśnianiu problemu linijka po linijce innemu obiektowi (lub osobie). Często w trakcie mówienia sami zauważamy luki w naszej logice.;odin_problem_solving
+Jaki jest drugi krok frameworku (po Zrozumieniu)?;Planowanie (Plan). Nie zaczynaj pisać kodu od razu. Zapisz kroki prowadzące od wejścia (Input) do wyjścia (Output).;odin_problem_solving
+Jaki jest trzeci i NAJWAŻNIEJSZY krok w rozwiązywaniu problemów?;Dzielenie (Divide). Rozbij duży problem na mniejsze pod-problemy (sub-problems) i rozwiązuj je pojedynczo.;odin_problem_solving
+Od jakich pod-problemów należy zacząć rozwiązywanie?;Od najprostszych (takich, na które znasz odpowiedź) lub takich, które nie zależą od innych części.;odin_problem_solving
+Co zrobić, gdy utkniesz (Stuck)? Wymień 3 strategie z artykułu.;1. Debugowanie (krok po kroku), 2. Ponowna ocena (spojrzenie z innej perspektywy/zaczęcie od nowa), 3. Research (szukanie rozwiązań pod-problemów w Google).;odin_problem_solving
+Dlaczego podczas szukania pomocy (Research) nie należy szukać rozwiązania CAŁEGO problemu?;Ponieważ jeśli nie będziesz musiał choć trochę powalczyć z problemem, niczego się nie nauczysz.;odin_problem_solving
+W jaki sposób najlepsi (jak Elon Musk czy Peter Thiel) ćwiczą "mikro rozwiązywanie problemów"?;Grając w gry wideo, szachy, rozwiązując zagadki logiczne lub wyzwania na stronach typu Coderbyte.;odin_problem_solving
+Co jest ważniejsze dla pracodawcy: znajomość konkretnego języka programowania czy umiejętność rozwiązywania problemów?;Umiejętność rozwiązywania problemów (Computational Thinking). Języka można się nauczyć szybko, myślenia nie.;odin_problem_solving
