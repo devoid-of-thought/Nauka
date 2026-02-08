@@ -1,0 +1,20 @@
+Co to są "default styles" w kontekście przeglądarek?;Są to style domyślne aplikowane automatycznie przez przeglądarkę do każdej strony internetowej.
+Skąd technicznie pochodzą domyślne style widoczne na stronie bez własnego CSS?;Z arkuszy stylów klienta użytkownika (user-agent stylesheets).
+Jaki jest cel istnienia {{c1::user-agent stylesheets}}?;Zapewnienie podstawowego, czytelnego wyglądu strony internetowej, która nie posiada własnych stylów CSS.
+Prawda czy Fałsz: Domyślne style (user-agent styles) są identyczne w każdej przeglądarce (Chrome, Firefox, Safari).;Fałsz (różnią się nieznacznie w zależności od przeglądarki).
+Jaki jest typowy domyślny styl dla elementu <h1>?;Większa i pogrubiona czcionka.
+Jaki jest typowy domyślny styl dla nieodwiedzonego elementu <a>?;Niebieski kolor tekstu i podkreślenie.
+Wymień dwie właściwości CSS (properties), które są często domyślnie ustawiane przez przeglądarkę i mogą przeszkadzać w layoutcie.;Margin oraz padding.
+W jaki sposób najprościej nadpisać domyślne style przeglądarki?;Napisać własną regułę CSS dla danego elementu w swoim arkuszu stylów.
+Dlaczego reguły w Twoim arkuszu stylów nadpisują reguły przeglądarki?;Ponieważ style autora mają wyższy priorytet (precedence) niż style user-agent.
+Co to jest CSS Reset?;Jest to arkusz stylów zawierający reguły mające na celu usunięcie lub zmianę domyślnych stylów user-agent.
+Jaki jest główny cel używania CSS Reset w kontekście kompatybilności?;Zniwelowanie niespójności w wyglądzie elementów między różnymi przeglądarkami.
+Użycie CSS Reset zapewnia deweloperowi tzw. {{c1::czystą kartę (clean slate)}} do nakładania własnych stylów bez zakłóceń.;czystą kartę (clean slate)
+Prawda czy Fałsz: Używanie CSS Reset jest obowiązkowe w każdym projekcie.;Fałsz (jest to opcjonalne).
+Co oznacza stwierdzenie, że CSS Reset jest "subiektywny" (opinionated)?;Oznacza to, że odzwierciedla on preferencje i wybory dewelopera, który go stworzył.
+Czy deweloper musi korzystać z gotowych rozwiązań CSS Reset?;Nie, może stworzyć własny reset lub nie używać żadnego.
+{{c1::User-agent stylesheet}} to inna nazwa na domyślne style wbudowane w przeglądarkę.;User-agent stylesheet
+Dlaczego nagłówki (h1-h6) mają różne rozmiary, nawet gdy nie dodamy żadnego CSS?;Ponieważ przeglądarka nakłada na nie style z user-agent stylesheet.
+Prawda czy Fałsz: Twoje style CSS mają niższy priorytet niż style user-agent.;Fałsz (mają wyższy priorytet).
+Jaka jest alternatywa dla używania gotowego (prebuilt) CSS Reset?;Napisanie własnego resetu lub ręczne nadpisywanie stylów w miarę potrzeb.
+Z czym najczęściej zmagają się początkujący, jeśli nie zresetują stylów przeglądarki (podaj przykład związany z odstępami)?;Z nieoczekiwanymi marginesami (margins) i dopełnieniem (padding) wokół elementów.

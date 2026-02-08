@@ -1,0 +1,8 @@
+Jaki znacznik służy do stworzenia tabeli w HTML?;<table>
+Z czego składają się tabele HTML?;Z wierszy i kolumn (struktura dwuwymiarowa).
+Jaki znacznik definiuje wiersz w tabeli?;<tr> (table row)
+Jaki znacznik definiuje komórkę nagłówkową w tabeli?;<th> (table header)
+Jaki znacznik definiuje standardową komórkę z danymi w tabeli?;<td> (table data)
+Dlaczego nie należy używać tabel do tworzenia układu strony (layoutu)?;Ponieważ jest to niesemantyczne (mylące dla czytników ekranowych), utrudnia responsywność (RWD) i tworzy skomplikowany kod.
+Do czego służy znacznik <caption>?;Definiuje tytuł lub opis tabeli (powinien być pierwszym elementem wewnątrz <table>).
+Do czego służy atrybut "scope" w nagłówkach tabeli (<th>)?;Pomaga czytnikom ekranowym zrozumieć, czy dany nagłówek dotyczy całego wiersza (row), czy kolumny (col).

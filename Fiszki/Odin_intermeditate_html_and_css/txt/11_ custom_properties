@@ -1,0 +1,23 @@
+Jak inaczej nazywamy "Custom properties" w CSS?;Zmienne CSS (CSS variables).
+Jaka jest główna zaleta używania Custom Properties w dużych projektach?;Pozwalają na zdefiniowanie wartości w jednym miejscu i używanie jej w wielu, co ułatwia aktualizacje i zapewnia spójność (np. kolorów).
+Jaką składnią rozpoczyna się deklaracja nazwy zmiennej CSS?;Dwoma myślnikami (np. `--nazwa-zmiennej`).
+Prawda czy Fałsz: Nazwy zmiennych CSS są wrażliwe na wielkość liter (case-sensitive).;Prawda (`--main-color` to nie to samo co `--Main-Color`).
+Jakiej funkcji CSS używamy, aby odczytać wartość zmiennej?;`var()`
+Jak wygląda składnia użycia zmiennej `--main-bg` jako koloru tła?;`background-color: var(--main-bg);`
+Ile parametrów przyjmuje funkcja `var()`?;Dwa (pierwszy to nazwa zmiennej, drugi to opcjonalna wartość zastępcza/fallback).
+Co się stanie, jeśli użyjesz `var(--nieistniejaca-zmienna, blue)`, a zmienna nie została zdefiniowana?;Zostanie użyta wartość `blue` (fallback).
+Czym jest "zakres" (scope) zmiennej CSS?;To obszar, w którym zmienna jest dostępna – obejmuje selektor, w którym została zdefiniowana, oraz wszystkich jego potomków.
+Jeśli zdefiniujesz zmienną wewnątrz klasy `.card`, czy będzie ona dostępna dla elementu na zewnątrz tej klasy?;Nie, będzie dostępna tylko dla `.card` i jego dzieci.
+W jakim selektorze najlepiej definiować zmienne globalne (dostępne w całym dokumencie)?;W selektorze `:root`.
+Co reprezentuje selektor `:root` w HTML?;Element `<html>`, ale z wyższą specyficznością (specificity).
+Jakie zapytanie mediów (media query) pozwala wykryć preferencje użytkownika dotyczące trybu ciemnego/jasnego w systemie operacyjnym?;`@media (prefers-color-scheme: dark)` (lub light).
+Dlaczego przy używaniu `prefers-color-scheme` warto zdefiniować domyślne kolory poza tym zapytaniem?;Aby zapewnić stylizację dla użytkowników, którzy nie mają ustawionych preferencji lub używają przeglądarek niewspierających tego zapytania.
+Jaki jest główny problem z "tradycyjnym" podejściem do zmiennych CSS, gdzie definiujemy kolory w `:root` i przypisujemy je ręcznie do każdego elementu dziecka w klasach modyfikatorów?;Prowadzi to do nadmiaru skomplikowanych selektorów i trudniejszego utrzymania kodu (konieczność nadpisywania stylów dla każdego elementu dziecka osobno).
+Na czym polega technika "locally scoped custom properties" (lokalnie zakresowanych zmiennych) omawiana w wideo?;Na definiowaniu zmiennych na poziomie rodzica komponentu (np. `.plan`), a elementy dzieci (np. przycisk, ikona) używają tych zmiennych, zamiast sztywnych wartości.
+Co oznacza konwencja nazywania zmiennych z podkreślnikiem na początku, np. `--_icon-color` (tzw. "pseudo-private properties")?;Sugeruje to, że zmienna jest "prywatna" dla danego komponentu i służy do jego wewnętrznej logiki, a nie do konfiguracji globalnej.
+W funkcji `var(--zmienna, fallback)`, do czego służy drugi argument (fallback)?;Jest to wartość domyślna, która zostanie użyta, jeśli zmienna `--zmienna` nie została zdefiniowana.
+Dlaczego używanie `fallback` wewnątrz `var()` (np. `var(--_color, pink)`) jest kluczowe dla omawianej strategii?;Pozwala ustawić domyślny wygląd komponentu bez konieczności definiowania zmiennej, a modyfikatory (np. `.plan--dark`) muszą jedynie zdefiniować tę zmienną, aby nadpisać styl.
+Jak technika lokalnych zmiennych upraszcza tworzenie wariantów komponentów (np. inna wersja kolorystyczna karty)?;Wystarczy zmienić wartości zmiennych w klasie rodzica (np. `--_color: blue`), a wszystkie elementy dzieci automatycznie zaktualizują swój wygląd bez dodatkowych selektorów CSS.
+Jaka jest zaleta używania zmiennych przy skomplikowanych właściwościach, takich jak `box-shadow`?;Zamiast przepisywać cały ciąg wartości (offsety, rozmycie) w celu zmiany koloru cienia, wystarczy zmienić tylko zmienną odpowiadającą za kolor.
+Prawda czy Fałsz: Zmieniając lokalną zmienną w klasie modyfikatora (np. `.card--highlight`), musisz używać selektorów potomnych, aby zmienić kolor przycisku wewnątrz tej karty.;Fałsz (jeśli przycisk używa tej zmiennej, zmieni się automatycznie).
+W kontekście wydajności i "czystości" kodu, co eliminuje podejście oparte na lokalnych zmiennych?;Eliminuje konieczność tworzenia wielu specyficznych selektorów dla każdego wariantu (np. `.plan-dark .button`, `.plan-dark .icon`).

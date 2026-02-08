@@ -1,0 +1,15 @@
+Jaka jest domyślna wartość właściwości `position` dla wszystkich elementów HTML?;static
+Czy właściwości przesunięcia (`top`, `bottom`, `left`, `right`) działają na element z `position: static`?;Nie.
+Czym różni się `position: relative` od `static` w kontekście przepływu dokumentu (document flow)?;Niczym – element `relative` nadal zajmuje swoje pierwotne miejsce w przepływie, różni się tylko możliwością wizualnego przesunięcia.
+Względem czego przesuwany jest element, gdy ustawimy mu `position: {{c1::relative}}`?;Względem jego normalnej (pierwotnej) pozycji.
+Co dzieje się z miejscem w układzie strony (przestrzenią) po elemencie, któremu nadano `position: absolute`?;Miejsce to znika, ponieważ element jest całkowicie usuwany z normalnego przepływu dokumentu.
+Element z `position: absolute` pozycjonuje się względem najbliższego pozycjonowanego {{c1::przodka (ancestor)}}.;przodka (ancestor)
+Co to znaczy, że przodek jest "pozycjonowany" (positioned ancestor)?;Oznacza to, że ma ustawioną wartość `position` inną niż `static` (np. relative, absolute, fixed, sticky).
+Jeśli element z `position: absolute` nie ma żadnego pozycjonowanego przodka, względem czego się ustawi?;Względem bloku początkowego (zazwyczaj elementu `<html>` / widoku).
+Wymień trzy typowe zastosowania dla `position: absolute` wspomniane w tekście.;Modale, tekst na obrazku, ikony nałożone na inne elementy.
+Względem czego ZAWSZE pozycjonowany jest element z `position: {{c1::fixed}}`?;Względem okna przeglądarki (viewportu).
+Czy element z `position: fixed` przesuwa się wraz z przewijaniem strony?;Nie, pozostaje "przyklejony" w tym samym miejscu ekranu.
+Jak zachowuje się element z `position: sticky`?;Zachowuje się jak zwykły element (`relative`) dopóki nie zostanie przewinięty do określonego punktu, wtedy zachowuje się jak `fixed` w obrębie swojego rodzica.
+Prawda czy Fałsz: Element `sticky` jest usuwany z normalnego przepływu dokumentu (jak absolute/fixed).;Fałsz (pozostaje w przepływie i zajmuje miejsce).
+Jaki jest klasyczny przykład użycia dla `position: sticky`?;Nagłówki sekcji (section headings) lub pasek nawigacji, który przykleja się do góry po przewinięciu.
+Dlaczego odradza się budowanie całego layoutu strony na `position: absolute`?;Ponieważ jest to trudne w zarządzaniu; do layoutów lepiej używać Flexboxa lub CSS Grid.

@@ -1,0 +1,31 @@
+Właściwość CSS `background` jest tzw. {{c1::shorthandem}} (skrótem) dla 8 różnych właściwości związanych z tłem.;shorthandem
+Jeśli zdefiniujesz wiele obrazów tła (`background-image`), który z nich zostanie wyrenderowany na samym wierzchu?;Ten, który jest wymieniony jako pierwszy na liście.
+Czy w przypadku właściwości `background` zawsze zaleca się stosowanie zapisu skróconego (shorthand)?;Nie, czasem użycie pojedynczych właściwości (np. `background-color`) jest bardziej czytelne.
+Co robi wartość `background-size: {{c1::cover}}`?;Skaluje obraz tak, aby całkowicie wypełnił kontener, przycinając go (crop) jeśli proporcje się nie zgadzają.
+Co robi wartość `background-size: {{c1::contain}}`?;Skaluje obraz tak, aby był w całości widoczny wewnątrz kontenera, co może powodować powstanie pustych przestrzeni.
+Jaka jest różnica między `background-origin` a `background-clip`?;`origin` ustala punkt startowy pozycjonowania obrazu, a `clip` decyduje, gdzie tło (obraz i kolor) zostanie przycięte/ukryte.
+Właściwość `background-attachment: {{c1::fixed}}` sprawia, że obraz tła pozostaje w miejscu podczas przewijania strony (viewportu).;fixed
+Jeśli ustawisz `background-position: center bottom`, gdzie znajdzie się obraz?;Wyśrodkowany w poziomie i przyklejony do dołu kontenera.
+Wymień trzy podstawowe parametry definiowane w skróconej właściwości `border`.;Szerokość (width), styl (style), kolor (color).
+Która właściwość CSS służy do zaokrąglania rogów elementów?;border-radius
+Jak uzyskać efekt koła z kwadratowego elementu używając `border-radius`?;Ustawić `border-radius: 50%`.
+Co oznacza składnia z ukośnikiem w `border-radius`, np. `10px / 20px`?;Pierwsza wartość to promień poziomy, druga to promień pionowy (tworzy elipsę).
+Czy `border-radius` wpływa na przycinanie tła (background clipping) wewnątrz elementu?;Tak, tło (i `overflow: hidden`) dostosuje się do zaokrąglonych rogów.
+Jak technicznie stworzyć trójkąt w CSS używając tylko właściwości `border`?;Ustawić `width/height` na 0 i użyć szerokich obramowań, gdzie jedno ma kolor, a sąsiednie są `transparent`.
+Prawda czy Fałsz: Właściwość `outline` różni się od `border` tym, że nie zajmuje miejsca w pudełku (box model) i nie zaokrągla się z `border-radius`.;Prawda.
+Jaki efekt wizualny nadaje stronie użycie `box-shadow`?;Dodaje cień, tworząc poczucie głębi i oddzielenia elementów (warstw).
+Dobra praktyka przy `box-shadow`: Cienie powinny być {{c1::jasne i subtelne}}, a nie ciemne i wyraźne.;jasne i subtelne
+W jakiej kolejności podajemy wartości długości w `box-shadow` (np. `10px 5px 2px 1px`)?;offset-x, offset-y, blur-radius (rozmycie), spread-radius (rozszerzenie).
+Słowo kluczowe {{c1::inset}} w `box-shadow` zmienia cień z zewnętrznego na wewnętrzny.;inset
+Jaka jest różnica między `blur-radius` a `spread-radius` w `box-shadow`?;Blur rozmywa krawędzie cienia, a Spread powiększa lub pomniejsza lity kształt cienia przed rozmyciem.
+Czy `box-shadow` wpływa na layout (rozmiar) elementu w modelu pudełkowym?;Nie, cień nie zajmuje miejsca w layoucie i może nachodzić na inne elementy.
+Która właściwość CSS kontroluje zachowanie elementu, gdy jego zawartość jest zbyt duża, aby się w nim zmieścić?;overflow
+Jaka wartość właściwości `overflow` doda paski przewijania (scrollbars) do kontenera, jeśli treść się nie mieści?;auto (lub scroll)
+Co się dzieje z marginesami (margins) elementów wewnątrz kontenera z `overflow: hidden` (w kontekście BFC)?;`overflow: hidden` (i inne niż visible) tworzy Block Formatting Context, co zapobiega wypadaniu marginesów (margin collapsing) z tego kontenera.
+Jaka jest różnica między `overflow: scroll` a `overflow: auto`?;`scroll` zawsze pokazuje paski przewijania (nawet nieaktywne), a `auto` pokazuje je tylko wtedy, gdy treść się nie mieści.
+Właściwość `overflow-x` i `overflow-y` pozwala sterować przewijaniem niezależnie dla osi {{c1::poziomej}} i {{c1::pionowej}}.;poziomej; pionowej
+Co kontroluje właściwość `opacity`?;Stopień przezroczystości elementu (od 0 do 1).
+Wymień jedno typowe zastosowanie dla właściwości `opacity`.;Efekty najechania myszką (hover effects) lub warstwowanie elementów.
+Jaka jest kluczowa różnica między `opacity: 0.5` a `background-color: rgba(0,0,0,0.5)`?;`opacity` wpływa na cały element i jego dzieci (wszystko jest półprzezroczyste), a `rgba` tylko na tło (tekst pozostaje nieprzezroczysty).
+Prawda czy Fałsz: Ustawienie `opacity` na wartość mniejszą niż 1 tworzy nowy kontekst układania (Stacking Context).;Prawda (wpływa to na `z-index`).
+Prawda czy Fałsz: Aby używać CSS efektywnie, musisz nauczyć się na pamięć wszystkich dostępnych właściwości.;Fałsz (używa się regularnie tylko niewielkiej części z nich).

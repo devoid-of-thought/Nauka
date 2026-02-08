@@ -1,0 +1,74 @@
+Czym jest Emmet?;Wtyczka wbudowana w VS Code, która pomaga efektywniej pisać kod HTML i CSS dzięki systemowi skrótów.
+Jaki skrót Emmet generuje podstawowy szablon (boilerplate) HTML?;! (wykrzyknik), a następnie Enter.
+Jaka składnia Emmet utworzy element <p class="text"></p>?;p.text
+Jaki operator w Emmet służy do zagnieżdżania elementów (tworzenia dziecka wewnątrz rodzica)?;> (np. div>p)
+Jaka składnia Emmet pozwoli stworzyć trzy te same elementy (np. 3 elementy listy)?;Operator mnożenia * (np. li*3)
+Jakie dwie funkcje Emmet są sugerowane jako warte przypisania do własnych skrótów klawiszowych?;Wrap with Abbreviation (Otocz skrótem) oraz Remove Tag (Usuń znacznik).
+Jaki jest skrót klawiszowy, aby otworzyć okno skrótów w VS Code na Windows/Linux?;Ctrl + K, a następnie Ctrl + S.
+Jaki jest skrót klawiszowy, aby otworzyć okno skrótów w VS Code na Mac?;Cmd + K, a następnie Cmd + S.
+Jak znaleźć konkretną akcję Emmet w menu skrótów klawiszowych VS Code?;Wpisując w wyszukiwarkę: Emmet:<nazwa akcji> (np. Emmet:Wrap With Abbreviation).
+Jaki operator Emmet służy do tworzenia rodzeństwa (element obok elementu)?;+ (np. div+p)
+Jaki operator Emmet służy do wyjścia o poziom wyżej w drzewie elementów?;^ (np. div>p^ul stworzy p wewnątrz div, a ul obok div)
+Co wygeneruje skrót: .nazwa (bez podania tagu)?;div class="nazwa" (domyślny tag to div)
+Co wygeneruje skrót: ul>.item$*3 ?;Listę ul z trzema elementami li o klasach: item1, item2, item3 (znak $ numeruje elementy)
+Jaki operator Emmet pozwala dodać tekst wewnątrz elementu?;{} (np. p{Cześć})
+Jaki operator Emmet pozwala dodać atrybut niestandardowy (np. href, title)?;[] (np. a[href="#"])
+Co wygeneruje skrót: lorem ?;Akapit z domyślnym tekstem "Lorem ipsum..." (30 słów)
+Co wygeneruje skrót: lorem10 ?;Tekst "Lorem ipsum..." ograniczony do 10 słów
+Co wygeneruje skrót: link:css ?;Pełny tag <link> dołączający plik style.css
+Co wygeneruje skrót: a:link ?;Link <a href="http://"></a>
+Co wygeneruje skrót CSS: m10 ?;margin: 10px;
+Co wygeneruje skrót CSS: p20 ?;padding: 20px;
+Co wygeneruje skrót CSS: w100p ?;width: 100%; (p oznacza procenty)
+Co wygeneruje skrót CSS: df ?;display: flex;
+Co wygeneruje skrót CSS: jcc ?;justify-content: center;
+Co wygeneruje skrót CSS: aic ?;align-items: center;
+Co wygeneruje skrót CSS: fdc ?;flex-direction: column;
+Co wygeneruje skrót CSS: tac ?;text-align: center;
+Co wygeneruje skrót CSS: poa ?;position: absolute;
+Co wygeneruje skrót CSS: tdn ?;text-decoration: none;
+Co wygeneruje skrót: #header ?;<div id="header"></div> (domyślny tag dla ID to div)
+Do czego służą nawiasy () w Emmet?;Do grupowania elementów, aby operatory (+, ^) działały na całej grupie, np. (header>ul)+footer
+Co wygeneruje skrót: ul>.item (bez podawania li)?;<ul><li class="item"></li></ul> (Emmet "zgaduje" domyślny tag dziecka)
+Co wygeneruje skrót: img ?;<img src="" alt="">
+Co wygeneruje skrót: script:src ?;<script src=""></script>
+Co wygeneruje skrót: input:text ?;<input type="text" name="" id="">
+Co wygeneruje skrót: input:checkbox ?;<input type="checkbox" name="" id="">
+Co wygeneruje skrót: btn:s ?;<button type="submit"></button>
+Co wygeneruje skrót: form:get ?;<form action="" method="get"></form>
+Co wygeneruje skrót: link:favicon ?;<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+Co wygeneruje skrót CSS: m0-auto ?;margin: 0 auto;
+Co wygeneruje skrót CSS: por ?;position: relative;
+Co wygeneruje skrót CSS: dib ?;display: inline-block;
+Co wygeneruje skrót CSS: db ?;display: block;
+Co wygeneruje skrót CSS: jcsb ?;justify-content: space-between;
+Co wygeneruje skrót CSS: fwb ?;font-weight: bold;
+Co wygeneruje skrót CSS: lh1.5 ?;line-height: 1.5;
+Co wygeneruje skrót CSS: fz20 ?;font-size: 20px;
+Co wygeneruje skrót CSS: bgc#333 ?;background-color: #333;
+Co wygeneruje skrót CSS: cur:p ?;cursor: pointer;
+[cite_start]Co wygeneruje skrót: meta:vp ?;<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" /> [cite: 264]
+[cite_start]Co wygeneruje skrót: form:post ?;<form action="" method="post"></form> [cite: 333]
+[cite_start]Co wygeneruje skrót: input:password (lub input:p) ?;<input type="password" name="" id="" /> [cite: 350]
+[cite_start]Co wygeneruje skrót: textarea ?;<textarea name="" id="" cols="30" rows="10"></textarea> [cite: 393]
+[cite_start]Co wygeneruje skrót: select+ ?;<select name="" id=""><option value=""></option></select> (Tworzy select z opcją w środku) [cite: 522]
+[cite_start]Co wygeneruje skrót CSS: bxz:bb ?;box-sizing: border-box; [cite: 737]
+[cite_start]Co wygeneruje skrót CSS: bd+ ?;border: 1px solid #000; [cite: 1253]
+[cite_start]Co wygeneruje skrót CSS: bd:n ?;border: none; [cite: 1257]
+[cite_start]Co wygeneruje skrót CSS: bdrs ?;border-radius: ; [cite: 1436]
+[cite_start]Co wygeneruje skrót CSS: ov:h ?;overflow: hidden; [cite: 676]
+[cite_start]Co wygeneruje skrót CSS: ov:s ?;overflow: scroll; [cite: 686]
+[cite_start]Co wygeneruje skrót CSS: pos:f ?;position: fixed; [cite: 566]
+[cite_start]Co wygeneruje skrót CSS: z ?;z-index: ; [cite: 602]
+[cite_start]Co wygeneruje skrót CSS: fl:l ?;float: left; [cite: 612]
+[cite_start]Co wygeneruje skrót CSS: cl:b ?;clear: both; [cite: 553]
+[cite_start]Co wygeneruje skrót CSS: ta:r ?;text-align: right; [cite: 905]
+[cite_start]Co wygeneruje skrót CSS: tt:u ?;text-transform: uppercase; [cite: 1053]
+[cite_start]Co wygeneruje skrót CSS: ff:ss ?;font-family: sans-serif; [cite: 849]
+[cite_start]Co wygeneruje skrót CSS: bgi ?;background-image: url(); [cite: 1085]
+[cite_start]Co wygeneruje skrót CSS: bgr:n ?;background-repeat: no-repeat; [cite: 1097]
+[cite_start]Co wygeneruje skrót CSS: bgsz:cv ?;background-size: cover; [cite: 1188]
+[cite_start]Co wygeneruje skrót CSS: fxw:w ?;flex-wrap: wrap; [cite: 1724]
+[cite_start]Co wygeneruje skrót CSS: trf:r ?;transform: rotate(angle); [cite: 1727]
+[cite_start]Co wygeneruje skrót CSS: trs ?;transition: prop time; [cite: 1804]
+Co wygeneruje skrót CSS: ! [cite_start]?;!important [cite: 1512]

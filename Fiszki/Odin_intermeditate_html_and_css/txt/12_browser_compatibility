@@ -1,0 +1,16 @@
+Jak nazywała się pierwsza przeglądarka internetowa stworzona w 1990 roku (później przemianowana na Nexus)?;WorldWideWeb
+Kto stworzył pierwszą przeglądarkę internetową podczas pracy w CERN?;Tim Berners-Lee
+Dlaczego pierwsza przeglądarka "WorldWideWeb" zmieniła nazwę na "Nexus"?;Aby uniknąć mylenia nazwy programu z samą siecią WWW (World Wide Web).
+Jaka przeglądarka, wydana w 1995 roku, zdominowała rynek osiągając w pewnym momencie ponad 90% udziałów?;Internet Explorer
+Jaka fundacja powstała na bazie Netscape, aby stworzyć konkurencję dla Internet Explorera (i stworzyła Firefoxa)?;Mozilla Foundation
+W którym roku Google wypuściło przeglądarkę Chrome?;2008
+Czym są PWA w kontekście ewolucji oprogramowania webowego?;Progressive Web Apps (aplikacje działające w pełni w przeglądarce, zastępujące programy instalowane natywnie).
+Jaki silnik renderujący (rendering engine) jest wykorzystywany przez Chrome i przeglądarki oparte na Chromium?;{{c1::Blink}}
+Jaki silnik renderujący (rendering engine) jest wykorzystywany przez przeglądarkę Safari?;{{c1::WebKit}}
+Jeśli aplikacja webowa działa poprawnie w Chrome, w jakich innych przeglądarkach najprawdopodobniej też zadziała bez problemów?;W innych przeglądarkach opartych na Chromium (np. Edge, Brave).
+Jaka organizacja zajmuje się tworzeniem standardów webowych (w tym nowych funkcji CSS) i dbaniem o kompatybilność?;W3C (World Wide Web Consortium).
+Jaka strona internetowa jest standardem branżowym do sprawdzania wsparcia przeglądarek dla nowych funkcji HTML/CSS?;Can I Use (caniuse.com)
+Prawda czy Fałsz: Przeglądarki mobilne (np. Safari na iOS) działają identycznie jak ich wersje desktopowe (Safari na macOS).;Fałsz (często wymagają osobnych dostosowań).
+Jaki silnik renderujący jest wymuszony dla WSZYSTKICH przeglądarek (w tym Chrome i Firefox) na systemie iOS/iPadOS?;{{c1::WebKit}}
+Prawda czy Fałsz: Chrome zainstalowany na iPhonie używa silnika Blink.;Fałsz (używa WebKit z powodu restrykcji Apple).
+Czego NIE emuluje przeglądarka desktopowa (np. Chrome DevTools) podczas symulacji urządzenia mobilnego?;Specyficznych zachowań systemu operacyjnego i silnika renderującego danego telefonu (emuluje głównie rozmiar ekranu).

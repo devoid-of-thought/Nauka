@@ -1,0 +1,44 @@
+Po czym rozpoznasz funkcję w składni CSS?;Po słowie kluczowym, po którym następują nawiasy zawierające argumenty, np. `rgb(0,0,0)`.
+Czy w czystym CSS (bez preprocesorów) można tworzyć własne funkcje?;Nie, można korzystać tylko z wbudowanych funkcji.
+Jaka jest główna zaleta funkcji `calc()` w kontekście jednostek?;Pozwala na wykonywanie działań matematycznych na mieszanych jednostkach (np. odejmowanie pikseli od `vh`).
+Prawda czy Fałsz: Funkcje `calc()` można zagnieżdżać wewnątrz siebie.;Prawda.
+Co zwraca funkcja CSS `min(val1, val2, ...)`?;Zwraca najmniejszą wartość z podanej listy.
+Jeśli element ma `width: min(150px, 100%)`, a kontener ma szerokość 100px, jaka będzie szerokość elementu?;100px (ponieważ 100% < 150px).
+Jeśli element ma `width: min(150px, 100%)`, a kontener ma szerokość 500px, jaka będzie szerokość elementu?;150px (limituje go stała wartość, która jest mniejsza niż 100%).
+Co zwraca funkcja CSS `max(val1, val2, ...)`?;Zwraca największą wartość z podanej listy.
+Kiedy funkcja `max()` jest szczególnie przydatna (wg tekstu)?;Gdy chcemy zapewnić dostępność przy używaniu zoomu przeglądarki lub na bardzo małych oknach (element nie stanie się zbyt mały).
+Ile argumentów przyjmuje funkcja `clamp()`?;3
+W jakiej kolejności podajemy argumenty do funkcji `clamp()`?;{{c1::wartość minimalna}}, {{c1::wartość preferowana (skalująca)}}, {{c1::wartość maksymalna}}.
+Jeśli masz `font-size: clamp(1rem, 5vw, 2rem)`, a wyliczone `5vw` wynosi `0.5rem`, jaki będzie ostateczny rozmiar czcionki?;1rem (wartość minimalna).
+Jeśli masz `font-size: clamp(1rem, 5vw, 2rem)`, a wyliczone `5vw` wynosi `3rem`, jaki będzie ostateczny rozmiar czcionki?;2rem (wartość maksymalna).
+Która funkcja CSS pozwala płynnie skalować tekst między dwoma skrajnymi wartościami w oparciu o szerokość widoku?;clamp()
+Czy wewnątrz funkcji `min()` lub `max()` można wykonywać proste działania matematyczne (np. `100vw - 2rem`)?;Tak, nie trzeba wtedy używać dodatkowo `calc()`.
+Do czego służy funkcja CSS `var()`?;Służy do pobierania wartości zdefiniowanej wcześniej zmiennej CSS (Custom Property).
+Jaka funkcja CSS pozwala na użycie wartości atrybutu HTML w stylach (np. w `content`)?;attr()
+Co robi funkcja `calc()`?;Pozwala na wykonywanie obliczeń matematycznych na wartościach CSS (np. dodawanie różnych jednostek).
+Która funkcja CSS wybiera najmniejszą wartość z podanej listy argumentów?;min()
+Która funkcja CSS wybiera największą wartość z podanej listy argumentów?;max()
+Jak działa funkcja `clamp(min, val, max)`?;Ogranicza wartość `val` tak, aby nie była mniejsza niż `min` i nie większa niż `max` (idealne do responsywnej typografii).
+Do czego służy funkcja `url()`?;Do wskazywania ścieżki do zewnętrznego zasobu, np. obrazka tła lub czcionki.
+Która funkcja tworzy gradient liniowy (przejście kolorów wzdłuż linii prostej)?;linear-gradient()
+Która funkcja tworzy gradient promienisty (rozchodzący się od środka na zewnątrz)?;radial-gradient()
+Która funkcja tworzy gradient stożkowy (obracający się wokół środka, np. do wykresów kołowych)?;conic-gradient()
+Wymień funkcję, która powtarza gradient liniowy w nieskończoność.;repeating-linear-gradient()
+Do czego służy funkcja `rgb()`?;Definiuje kolor za pomocą modelu Czerwony-Zielony-Niebieski (Red-Green-Blue).
+Co oznacza skrót w funkcji `hsl()`?;Hue (barwa), Saturation (nasycenie), Lightness (jasność).
+Jaka funkcja filtra rozmywa obraz?;blur()
+Jaka funkcja filtra zmienia obraz na czarno-biały (skala szarości)?;grayscale()
+Jaka funkcja filtra odwraca kolory (tworzy negatyw)?;invert()
+Jaka funkcja filtra dodaje cień rzucany przez obiekt (często używana dla obrazków PNG z przezroczystością)?;drop-shadow()
+Czym różni się `box-shadow` od funkcji filtra `drop-shadow()`?;`box-shadow` tworzy cień pudełka (prostokąta), a `drop-shadow()` tworzy cień uwzględniający kształt zawartości (np. przezroczystego obrazka).
+Jaka funkcja transformacji przesuwa element w poziomie i pionie?;translate() (lub translate3d/translateX/translateY)
+Jaka funkcja transformacji obraca element o zadany kąt?;rotate()
+Jaka funkcja transformacji zmienia rozmiar elementu (skaluje go)?;scale()
+Jaka funkcja transformacji pochyla element wzdłuż osi X lub Y?;skew()
+W kontekście CSS Grid, co robi funkcja `repeat()`?;Pozwala powtórzyć definicję kolumny lub wiersza określoną liczbę razy (np. `repeat(3, 1fr)`).
+W CSS Grid, funkcja {{c1::minmax(min, max)}} definiuje zakres wielkości ścieżki (track) od minimalnej do maksymalnej.;minmax
+Jaka funkcja pozwala na pobranie zmiennych środowiskowych przeglądarki (np. bezpiecznego obszaru na iPhone'ach z notchem)?;env()
+Jaka funkcja służy do przycinania elementu do kształtu koła?;circle() (wewnątrz właściwości clip-path lub shape-outside)
+Jaka funkcja służy do przycinania elementu do dowolnego wielokąta (definiując punkty)?;polygon()
+Do czego służy funkcja `brightness()`?;Zmienia jasność obrazu/elementu (wartość < 1 przyciemnia, > 1 rozjaśnia).
+Do czego służy funkcja `contrast()`?;Zmienia kontrast obrazu/elementu.

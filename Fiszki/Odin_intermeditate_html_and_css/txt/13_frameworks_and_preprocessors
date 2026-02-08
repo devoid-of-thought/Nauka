@@ -1,0 +1,8 @@
+Co to jest Framework CSS?;To gotowy zestaw kodu CSS (biblioteka), który dostarcza wstępnie stylowane komponenty i systemy układu, aby przyspieszyć tworzenie stron.
+Podaj przykład frameworka CSS typu "component-based" (opartego na gotowych komponentach, jak przyciski czy nawigacja).;Bootstrap (lub Bulma, Foundation).
+Podaj przykład frameworka CSS typu "utility-first" (opartego na klasach pomocniczych zmieniających pojedyncze właściwości).;Tailwind CSS.
+Jaka jest główna wada polegania na frameworkach CSS na wczesnym etapie nauki?;Ogranicza zrozumienie fundamentów CSS, co utrudnia późniejsze debugowanie i nadpisywanie domyślnych stylów frameworka.
+Co to jest Preprocesor CSS (np. Sass)?;To narzędzie/język rozszerzający możliwości CSS (np. o pętle, domieszki), który następnie jest kompilowany do zwykłego kodu CSS zrozumiałego dla przeglądarki.
+Wymień trzy popularne preprocesory CSS.;Sass, Less, Stylus.
+Jakie dwie funkcje, dawniej dostępne tylko w preprocesorach, są teraz natywnie wspierane w czystym CSS (Vanilla CSS)?;Zmienne (Custom Properties) oraz zagnieżdżanie (CSS Nesting).
+Dlaczego rekruterzy często pytają o "Vanilla CSS", nawet jeśli firma używa frameworków?;Ponieważ solidne podstawy czystego CSS są niezbędne do zrozumienia, jak framework działa "pod maską" i do naprawiania problemów, których framework nie przewidział.

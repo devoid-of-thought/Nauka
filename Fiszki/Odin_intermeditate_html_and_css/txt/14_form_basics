@@ -1,0 +1,54 @@
+Jaki element HTML służy jako kontener dla wszystkich kontrolek formularza?;<form>
+Do czego służy atrybut `action` w elemencie `<form>`?;Określa adres URL, na który dane formularza mają zostać wysłane do przetworzenia.
+Do czego służy atrybut `method` w elemencie `<form>`?;Określa metodę HTTP (np. GET lub POST), która zostanie użyta do wysłania danych.
+Której metody HTTP należy użyć, jeśli chcemy pobrać dane z serwera (np. wyniki wyszukiwania)?;GET 
+Której metody HTTP używamy, gdy chcemy zmienić coś na serwerze (np. utworzyć konto, dokonać płatności)?;POST
+Jaki atrybut elementu `<input>` decyduje o tym, jak przeglądarka go wyrenderuje i jakich danych oczekuje?;type 
+Dlaczego sam element `<input>` nie jest wystarczający z punktu widzenia UX i dostępności?;Ponieważ użytkownik nie wie, jakie dane ma wprowadzić (brak etykiety).
+Jaki element HTML służy do tworzenia etykiet dla pól formularza?;<label>
+Aby powiązać `<label>` z inputem, atrybut `for` etykiety musi być taki sam jak atrybut {{c1::id}} inputa.;id 
+Co się stanie, gdy użytkownik kliknie w tekst etykiety powiązanej z inputem?;Kursor automatycznie ustawi się w tym polu (focus).
+Do czego służy atrybut `placeholder`?;Wyświetla tymczasowy tekst wewnątrz pola, podpowiadając format lub rodzaj danych. 
+Dlaczego atrybut `name` jest kluczowy dla każdego pola formularza?;Ponieważ służy jako klucz (zmienna) identyfikujący dane po stronie serwera; bez niego dane nie zostaną wysłane.
+Jaki typ inputa (`type="..."`) służy do wprowadzania haseł i maskuje znaki?;password
+Czym różni się `<textarea>` od `<input type="text">` w kwestii składni HTML?;`<textarea>` posiada tag zamykający (`</textarea>`) i pozwala na wprowadzanie wielu linii tekstu. 
+Jakie atrybuty kontrolują początkowy rozmiar elementu `<textarea>`?;rows (wiersze) i cols (kolumny).
+Jaka właściwość CSS pozwala zablokować użytkownikowi możliwość zmiany rozmiaru pola `<textarea>`?;`resize` (np. `resize: none;`).
+Jaki element HTML tworzy rozwijaną listę opcji (dropdown)?;<select> 
+Jaki element definiuje pojedynczą pozycję wewnątrz listy `<select>`?;<option>
+W elemencie `<select>`, atrybut {{c1::value}} w `<option>` określa dane wysyłane na serwer, a treść znacznika to tekst widoczny dla użytkownika.;value
+Jaki atrybut sprawia, że dana opcja w `<select>` jest domyślnie wybrana?;selected
+Do czego służy element `<optgroup>` wewnątrz `<select>`?;Do grupowania opcji w kategorie z nagłówkami.
+Kiedy należy używać przycisków radiowych (`<input type="radio">`) zamiast checkboxów?;Gdy użytkownik ma wybrać tylko jedną opcję z zestawu.
+W jaki sposób przeglądarka wie, że grupa przycisków radiowych jest ze sobą powiązana (zaznaczenie jednego odznacza inne)?;Wszystkie muszą mieć ten sam atrybut `name`. 
+Kiedy używamy checkboxów (`<input type="checkbox">`)?;Gdy użytkownik może wybrać wiele opcji jednocześnie lub przełączyć pojedynczą opcję (tak/nie).
+Jaki element służy do semantycznego grupowania powiązanych elementów formularza (np. grupy radio buttonów) w ramkę?;{{c1::<fieldset>}} 
+Jaki element służy do dodania podpisu (tytułu) dla grupy `<fieldset>`?;{{c1::<legend>}}
+Gdzie w strukturze `<fieldset>` powinien znajdować się element `<legend>`?;Bezpośrednio po otwierającym tagu `<fieldset>`.
+Jaki jest domyślny typ (`type`) dla elementu `<button>` wewnątrz formularza?;submit
+Co robi przycisk `<button type="reset">`?;Czyści formularz i przywraca wartości domyślne wszystkich pól.
+Jeśli chcesz użyć przycisku w formularzu tylko do akcji JavaScript (bez wysyłania danych), jaki `type` musisz mu nadać?;button
+Czy dozwolone jest zagnieżdżanie jednego elementu `<form>` wewnątrz innego?;Nie, jest to surowo zabronione i powoduje nieprzewidywalne działanie.
+W jaki sposób można powiązać element input z formularzem, jeśli input znajduje się fizycznie poza znacznikiem `<form>`?;Używając atrybutu `form` w inpucie (podając id formularza).
+Na czym polega "niejawne" (implicit) powiązanie etykiety z polem formularza?;Na zagnieżdżeniu elementu `<input>` bezpośrednio wewnątrz znacznika `<label>`.
+Jakie dwa atrybuty (pseudoklasy) pozwalają stylować pola formularza w zależności od tego, czy muszą zostać wypełnione?;:required i :optional
+Dlaczego stylowanie pól wymaganych (`:required`) wyłącznie kolorem jest niewystarczające?;Ponieważ osoby z zaburzeniami widzenia barw (daltoniści) mogą nie zauważyć różnicy; należy dodać wskaźnik tekstowy lub ikonę.
+Jakie pseudoklasy pozwalają stylować pola w zależności od poprawności wprowadzonych danych (walidacji)?;:valid i :invalid 
+Prawda czy Fałsz: Pole z atrybutem `required`, które jest puste, pasuje do pseudoklasy `:invalid`.;Prawda.
+Puste pole typu `email` (bez atrybutu `required`) będzie pasować do pseudoklasy {{c1::valid}}.;valid
+Jakie pseudoklasy służą do stylowania inputów numerycznych, których wartość mieści się (lub nie) w zakresie określonym przez `min` i `max`?;:in-range i :out-of-range
+Która pseudoklasa wybiera elementy, które są zaznaczone domyślnie po załadowaniu strony (nawet jeśli użytkownik je później odznaczy)?;:default
+Co oznacza stan `:indeterminate` dla grupy przycisków radiowych?;Żaden z przycisków w grupie nie jest zaznaczony. 
+Jaka jest różnica między polem `:disabled` a `:read-only`?;`:disabled` nie wysyła danych na serwer i nie można go kliknąć; `:read-only` wysyła dane i można go zaznaczyć/skopiować, ale nie edytować.
+Czy `input` typu `text` obsługuje pseudoelementy `::before` i `::after` (generated content)?;Nie (ponieważ jest elementem pustym/zastępowanym).
+Jak obejść brak obsługi `::before`/`::after` w inputach tekstowych, aby dodać np. ikonę walidacji?;Należy dodać pusty element (np. `<span>`) tuż za inputem i stylować go w oparciu o stan inputa. 
+Co robi pseudoklasa `:focus-within`?;Wybiera element, jeśli on sam LUB którykolwiek z jego potomków posiada focus.
+Dlaczego stylowanie elementów takich jak `input type="date"` czy `checkbox` jest trudne?;Ponieważ każda przeglądarka renderuje je w specyficzny, domyślny sposób, który trudno nadpisać samym CSS. 
+Jaka reguła CSS pozwala wymusić na elementach formularza dziedziczenie czcionki od rodzica?;`font-family: inherit;`.
+Dlaczego zaleca się stosowanie `box-sizing: {{c1::border-box}}` dla wszystkich elementów formularza?;Aby miały spójne rozmiary niezależnie od domyślnych wartości paddingu i obramowania w różnych przeglądarkach.
+Jaka właściwość CSS służy do usuwania domyślnego, systemowego stylu kontrolek formularza (np. zaokrągleń w iOS)?;{{c1::appearance}} (z wartością `none`). 
+Dlaczego właściwość `appearance: none` jest kluczowa przy stylowaniu checkboxów i radio buttonów?;Ponieważ usuwa ich sztywny, domyślny wygląd, co pozwala na stworzenie własnego designu.
+Jak w CSS ukryć domyślny przycisk "x" (anuluj) wewnątrz `<input type="search">`?;Używając pseudoelementu `::-webkit-search-cancel-button` z `display: none`.
+Prawda czy Fałsz: Można w pełni ostylować rozwijaną listę opcji (`<option>`) w standardowym elemencie `<select>` używając tylko CSS.;Fałsz (lista rozwijana jest renderowana przez system operacyjny).
+Jaki jest sprawdzony sposób na stworzenie własnego przycisku "Wybierz plik" dla `<input type="file">`?;Ukrycie właściwego inputa i ostylowanie powiązanej z nim etykiety `<label>`, która działa jak przycisk.
+Co trzeba zrobić, aby w pełni kontrolować wygląd kalendarza w formularzu?;Należy użyć biblioteki JavaScript (custom date picker) zamiast natywnego `<input type="date">`.

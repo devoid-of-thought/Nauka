@@ -1,0 +1,14 @@
+Co oznacza skrót SVG?;Scalable Vector Graphics (Skalowalna Grafika Wektorowa).
+Czym różni się grafika wektorowa od rastrowej?;Wektorowa opiera się na matematycznych wzorach; rastrowa na siatce pikseli.
+Dlaczego SVG nie tracą jakości przy powiększaniu?;Ponieważ są zdefiniowane za pomocą formuł matematycznych, a nie ustalonej liczby pikseli.
+Na jakim języku znaczników opiera się kod SVG?;Na XML.
+Wymień typowe zastosowania formatu SVG.;Ikony, wykresy/grafy, proste ilustracje, tła z powtarzalnym wzorem.
+W jakich sytuacjach NIE należy używać SVG?;Do zdjęć fotorealistycznych lub obrazów z bardzo dużą ilością detali i złożonych tekstur.
+Dlaczego pliki SVG są "czytelne dla człowieka" (human-readable)?;Ponieważ są plikami tekstowymi opartymi na XML, a nie binarnymi (jak JPEG).
+Za co odpowiada atrybut xmlns w SVG?;Określa przestrzeń nazw XML (XML NameSpace), niezbędną do poprawnego renderowania przez przeglądarkę.
+Za co odpowiada atrybut viewBox w SVG?;Definiuje granice widoku, proporcje (aspect ratio) i punkt początkowy układu współrzędnych SVG.
+Wymień przykładowe podstawowe elementy (tagi) budujące SVG.;<rect>, <circle>, <path>, <text>.
+Na czym polega metoda "Inline" przy dodawaniu SVG?;Na wklejeniu kodu SVG bezpośrednio do pliku HTML, zamiast linkowania go jako zewnętrzny plik.
+Jaka jest główna zaleta metody "Inline" dla SVG?;Umożliwia zmianę właściwości elementów SVG (np. fill, stroke) za pomocą CSS i JavaScript.
+Jakie są wady metody "Inline" dla SVG?;Pogarsza czytelność kodu HTML, utrudnia cachowanie i może opóźnić ładowanie strony przy dużych plikach.
+Jaka jest główna wada linkowania SVG jako zwykłego obrazka (<img> lub background-image)?;Brak dostępu do wewnętrznej struktury SVG (nie można stylować jego elementów przez CSS/JS).

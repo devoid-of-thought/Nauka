@@ -1,0 +1,31 @@
+Jaki znak reprezentuje "Child Combinator" (kombinator dziecka) i co on wybiera?;`>` (znak większości). Wybiera tylko bezpośrednie dzieci danego elementu.
+Jaka jest różnica między selektorem `div p` a `div > p`?;`div p` wybiera wszystkie akapity wewnątrz div (potomków), a `div > p` tylko te, które są bezpośrednio w nim zagnieżdżone (dzieci).
+Jaki znak reprezentuje "Adjacent Sibling Combinator" (kombinator przylegającego rodzeństwa)?;`+` (plus).
+Co wybierze selektor `.group1 + div`?;Wybierze element `div`, który znajduje się bezpośrednio po elemencie z klasą `.group1` (na tym samym poziomie drzewa DOM).
+Jaki znak reprezentuje "General Sibling Combinator" (kombinator ogólnego rodzeństwa)?;`~` (tylda).
+Co wybierze selektor `.group1 ~ div`?;Wszystkie elementy `div`, które są rodzeństwem `.group1` i znajdują się po nim w kodzie HTML (nie muszą z nim sąsiadować bezpośrednio).
+Jaka jest różnica w składni między pseudo-klasami a pseudo-elementami (według nowoczesnego standardu)?;Pseudo-klasy używają pojedynczego dwukropka (`:`), a pseudo-elementy podwójnego dwukropka (`::`).
+Do czego służą pseudo-klasy (np. `:hover`)?;Do wybierania elementów na podstawie ich stanu (np. najechanie myszką) lub struktury, które już istnieją w HTML.
+Do czego służą pseudo-elementy (np. `::before`)?;Do stylowania konkretnych części elementu lub tworzenia elementów, które nie istnieją w kodzie HTML.
+Która pseudo-klasa wybiera główny element dokumentu (zazwyczaj `<html>`) i służy do definiowania zmiennych globalnych?;:root
+Jaka pseudo-klasa wybiera element, który nie ma żadnych dzieci (nawet tekstu)?;:empty
+Jak wybrać co trzeci element listy za pomocą `:nth-child`?;`:nth-child(3n)`
+Co oznacza selektor `:nth-child(3n + 3)`?;Wybiera co trzeci element, zaczynając liczenie od trzeciego elementu.
+Jaka właściwość CSS jest niezbędna, aby pseudo-elementy `::before` i `::after` były widoczne?;content (np. `content: '';`).
+Co robi selektor atrybutu `[atrybut^="wartość"]` (np. `a[href^="http"]`)?;Wybiera elementy, których atrybut **zaczyna się** od podanego ciągu znaków.
+Co robi selektor atrybutu `[atrybut$="wartość"]` (np. `img[src$=".jpg"]`)?;Wybiera elementy, których atrybut **kończy się** na podany ciąg znaków.
+Co robi selektor atrybutu `[atrybut*="wartość"]` (np. `[class*="btn"]`)?;Wybiera elementy, których atrybut **zawiera** podany ciąg znaków w dowolnym miejscu.
+Który pseudo-element pozwala na zmianę koloru zaznaczenia tekstu przez użytkownika?;::selection
+Jaka pseudo-klasa odpowiada za stan elementu w momencie kliknięcia (np. wciśnięty przycisk)?;:active
+W jakiej kolejności w CSS powinny być zdefiniowane pseudo-klasy linków, aby działały poprawnie (tzw. zasada LVHA)?;Link (:link), Visited (:visited), Hover (:hover), Active (:active).
+Jaki znak w CSS reprezentuje "Descendant Combinator" (kombinator potomka)?;Pojedyncza spacja ( ).
+Co wybiera selektor potomka (np. `div p`)?;Wszystkie elementy `p` znajdujące się wewnątrz `div`, niezależnie od poziomu zagnieżdżenia (dzieci, wnuki itd.).
+Prawda czy Fałsz: Selektor `ul > li` wybierze również elementy `li`, które są zagnieżdżone w innej liście wewnątrz tego `ul`.;Fałsz (wybiera tylko bezpośrednie dzieci pierwszego poziomu).
+Jaki znak reprezentuje "Child Combinator" (kombinator dziecka)?;{{c1::>}} (znak większości).
+Jaki znak reprezentuje "Next-sibling Combinator" (kombinator następnego rodzeństwa)?;{{c1::+}} (plus).
+Aby wybrać element `img`, który znajduje się **bezpośrednio** po akapicie `p` (i ma tego samego rodzica), użyjesz selektora: `p {{c1::+}} img`;+
+Jaki znak reprezentuje "Subsequent-sibling Combinator" (kombinator dalszego rodzeństwa)?;{{c1::~}} (tylda).
+Jaka jest główna różnica w działaniu między `+` a `~`?;`+` wybiera tylko **pierwszy** sąsiadujący element, a `~` wybiera **wszystkie** pasujące elementy rodzeństwa występujące po nim.
+Prawda czy Fałsz: Kombinator `~` (tylda) wybiera elementy rodzeństwa, nawet jeśli są oddzielone innymi elementami (nie sąsiadują bezpośrednio).;Prawda (muszą tylko mieć tego samego rodzica i występować później w kodzie).
+Dlaczego nadmierne używanie długich łańcuchów kombinatorów (np. `div > article > p > span`) jest odradzane?;Ponieważ sprawia, że CSS jest trudny do ponownego użycia (zbyt mocno związany z konkretną strukturą HTML).
+W jakiej sytuacji użycie skomplikowanych kombinatorów jest najbardziej uzasadnione?;Gdy nie mamy dostępu do edycji kodu HTML (np. jest on generowany przez CMS) i nie możemy dodać klas.

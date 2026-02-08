@@ -1,0 +1,93 @@
+Co dzieje się, gdy zdefiniowana w CSS czcionka nie jest zainstalowana na komputerze użytkownika?;Przeglądarka użyje czcionki zapasowej (fallback) lub domyślnej czcionki systemowej.
+Czym jest "system font stack" w CSS?;To lista rodzin czcionek dobrana tak, aby użyć domyślnego fontu interfejsu systemu operacyjnego użytkownika.
+Dlaczego stosowanie "system font stack" jest korzystne dla wydajności?;Ponieważ nie wymaga pobierania żadnych dodatkowych plików z sieci.
+Wymień dwa sposoby importowania fontów z bibliotek online (takich jak Google Fonts).;1. Tag `<link>` w HTML. 2. Reguła `@import` w pliku CSS.
+Dlaczego przy korzystaniu z zewnętrznych fontów (Web Fonts) zawsze należy podać {{c1::fallback font}} (czcionkę zapasową)?;Na wypadek awarii zewnętrznego API, zmiany URL lub problemów z siecią.
+Jaki jest główny problem prawny związany z używaniem Google Fonts API w kontekście europejskim?;Naruszenie RODO (GDPR) poprzez udostępnianie adresu IP użytkownika serwerom Google.
+Jaka jest alternatywa dla korzystania z Google Fonts API, która jest zgodna z RODO?;Pobranie plików czcionek i hostowanie ich samodzielnie (self-hosting).
+Jaka reguła CSS (at-rule) służy do definiowania własnych, hostowanych lokalnie czcionek?;@font-face
+Wewnątrz reguły `@font-face`, która właściwość wskazuje na ścieżkę do pliku z czcionką?;src
+Dlaczego przy self-hostingu fontów należy uważać na formaty plików (np. WOFF, TTF)?;Ponieważ nie wszystkie przeglądarki obsługują każdy format pliku czcionki.
+Kiedy należy używać właściwości `font-style: italic` zamiast znacznika `<em>`?;Gdy chcemy uzyskać pochylenie wyłącznie w celach wizualnych, bez znaczenia semantycznego (emphasis).
+Co semantycznie oznacza znacznik HTML `<em>`?;Nacisk (emphasis) na dany fragment tekstu, zmieniający jego wydźwięk.
+Która właściwość CSS służy do zmiany odstępów między literami?;letter-spacing
+Która właściwość CSS służy do zmiany odstępów między wierszami tekstu?;line-height
+Co robi właściwość `text-transform: uppercase`?;Zamienia wszystkie litery w tekście na wielkie.
+Co robi właściwość `text-transform: capitalize`?;Zamienia pierwszą literę każdego słowa na wielką.
+Prawda czy Fałsz: `line-height` wpływa na odstępy między literami.;Fałsz (wpływa na odstępy między liniami/wierszami).
+Która właściwość CSS dodaje cień do tekstu?;text-shadow
+Jaka wartość właściwości `text-overflow` sprawia, że ucięty tekst kończy się wielokropkiem (...)?;ellipsis
+Wymień trzy właściwości CSS niezbędne do poprawnego działania `text-overflow: ellipsis`.;1. white-space: nowrap; 2. overflow: hidden; 3. text-overflow: ellipsis;
+Dlaczego ustawienie `white-space: nowrap` jest konieczne dla efektu `text-overflow: ellipsis`?;Ponieważ domyślnie tekst zawijałby się do nowej linii, zamiast wychodzić poza kontener i zostać uciętym.
+Co oznacza termin "fallback font" w deklaracji `font-family`?;To czcionka, której przeglądarka użyje, jeśli pierwsza (preferowana) czcionka nie jest dostępna.
+Do czego służy właściwość CSS `text-transform`?;Kontroluje wielkość liter w tekście (np. zamiana na wielkie, małe, kapitalizacja).
+Co robi wartość `text-transform: capitalize`?;Zmienia pierwszą literę każdego słowa na wielką.
+Co robi wartość `text-transform: uppercase`?;Zmienia wszystkie znaki w tekście na wielkie litery.
+Co robi wartość `text-transform: lowercase`?;Zmienia wszystkie znaki w tekście na małe litery.
+Jaka wartość `text-transform` zapobiega zmianie wielkości liter (wyświetla tekst tak jak w HTML)?;none
+Jaka wartość `text-transform` jest używana do wymuszenia znaków o stałej szerokości (głównie w pismach azjatyckich)?;full-width
+Co robi `text-transform: full-size-kana`?;Konwertuje małe znaki Kana na ich odpowiedniki normalnej wielkości (używane w języku japońskim).
+Aby zamienić tekst nagłówka na same wielkie litery, użyj reguły: `text-transform: {{c1::uppercase}}`;uppercase
+Prawda czy Fałsz: `text-transform` zmienia faktyczną treść w kodzie HTML.;Fałsz (zmienia tylko sposób wyświetlania/renderowania).
+Jak działa mechanizm `font-family` w CSS, gdy podamy kilka nazw czcionek?;Przeglądarka sprawdza listę od lewej do prawej i używa pierwszej czcionki dostępnej w systemie.
+Co to są "Web-safe fonts" (bezpieczne czcionki internetowe)?;To niewielka grupa czcionek, które są zainstalowane na niemal wszystkich popularnych systemach operacyjnych.
+Jaka jest główna wada polegania wyłącznie na "Web-safe fonts"?;Ograniczone możliwości projektowe i konieczność testowania, czy design działa z różnymi czcionkami systemowymi.
+Co umożliwiają "Web fonts" (czcionki internetowe) w przeciwieństwie do czcionek systemowych?;Pozwalają przeglądarce pobrać plik czcionki wraz ze stroną, co gwarantuje wyświetlenie wybranego kroju u każdego użytkownika.
+Jaka reguła CSS (at-rule) służy do definiowania plików czcionek do pobrania?;@font-face
+Prawda czy Fałsz: Wszystkie czcionki dostępne w internecie są darmowe do komercyjnego użytku.;Fałsz (często wymagają licencji, opłat lub uznania autorstwa).
+Co oznacza skrót WOFF?;Web Open Font Format.
+Który format czcionki internetowej jest obecnie zalecany jako pierwszy na liście ze względu na kompresję i możliwości?;{{c1::WOFF2}}
+Jaki format czcionki obsługuje zmienne czcionki (variable fonts) i kolekcje czcionek?;WOFF2
+Dlaczego kolejność formatów w deskryptorze `src` w `@font-face` jest istotna?;Ponieważ przeglądarka wybierze pierwszy format z listy, który jest w stanie obsłużyć.
+Prawda czy Fałsz: W `@font-face` należy umieścić format WOFF2 przed formatem WOFF.;Prawda (najlepsze formaty powinny być na górze).
+Jakie formaty czcionek są potrzebne do obsługi bardzo starych, "legacy" przeglądarek?;EOT, TTF i SVG.
+Wymień dwie popularne biblioteki online z czcionkami (font services).;Google Fonts, Adobe Fonts (lub Font Squirrel).
+Co robi deskryptor `src` w regule `@font-face`?;Określa ścieżkę (url) do pliku czcionki oraz jej format.
+Po co stosuje się wskazówkę `format("...")` w deskryptorze `src`?;Aby przeglądarka mogła szybciej określić, czy obsługuje dany plik, bez konieczności jego pobierania.
+W regule `@font-face`, deskryptor {{c1::font-family}} nadaje nazwę czcionce, której będziesz później używać w stylach CSS.;font-family
+Jeśli importujesz ten sam krój w wersji pogrubionej i zwykłej, jak powinieneś je nazwać w `font-family` wewnątrz `@font-face`?;Powinieneś użyć tej samej nazwy rodziny, a różnicować je deskryptorami `font-weight` (np. normal vs bold).
+Do czego służy deskryptor `font-display` w `@font-face`?;Określa zachowanie wyświetlania czcionki w trakcie jej ładowania (np. czy pokazać tekst od razu inną czcionką).
+Jakie narzędzie online (wspomniane w tekście) służy do generowania zestawów webfontów (pliki + CSS) z przesłanych plików?;Transfonter (lub Webfont Generator na Font Squirrel).
+Gdzie w pliku CSS powinny znajdować się reguły `@font-face`?;Na samym początku pliku (przed użyciem czcionek w stylach).
+W jaki sposób opóźnione ładowanie czcionek wpływa na metrykę FCP (First Contentful Paint)?;Opóźnia renderowanie tekstu, co wydłuża czas do pojawienia się pierwszej treści na ekranie.
+Co jest główną przyczyną przesunięć układu (Layout Shifts) związanych z czcionkami?;Różnica w rozmiarze i układzie między czcionką internetową (web font) a czcionką zapasową (fallback font).
+Prawda czy Fałsz: Przeglądarka pobiera plik czcionki natychmiast po napotkaniu deklaracji `@font-face` w CSS.;Fałsz (pobiera ją dopiero wtedy, gdy jest ona faktycznie użyta w stylach dla elementu obecnego na stronie).
+Dlaczego warto umieszczać krytyczne deklaracje `@font-face` bezpośrednio w `<head>` (inlining), zamiast w zewnętrznym pliku CSS?;Aby przeglądarka odkryła informację o czcionkach szybciej, nie czekając na pobranie całego zewnętrznego arkusza stylów.
+Jakie dwa rodzaje linków `preconnect` należy dodać dla czcionek z zewnętrznych źródeł (np. Google Fonts)?;1. Preconnect do domeny arkusza stylów (CSS). 2. Preconnect z atrybutem `crossorigin` do domeny plików czcionek.
+Dlaczego link `preconnect` dla plików czcionek wymaga atrybutu `crossorigin`?;Ponieważ pliki czcionek, w przeciwieństwie do CSS, są pobierane przez połączenie CORS.
+Jaka jest główna wada nadmiernego używania `<link rel="preload">` dla czcionek?;Zabiera zasoby potrzebne do ładowania innych krytycznych elementów i ignoruje inteligentne mechanizmy jak `unicode-range`.
+Jaki format czcionki jest obecnie rekomendowany jako standard dla wszystkich nowoczesnych przeglądarek?;{{c1::WOFF2}}
+O ile procent format WOFF2 kompresuje dane lepiej niż WOFF (dzięki algorytmowi Brotli)?;Około 30%.
+Na czym polega technika "subsetting" (tworzenie podzbiorów) czcionek?;Na usunięciu z pliku czcionki nieużywanych znaków (glifów), co zmniejsza rozmiar pliku.
+Który deskryptor w `@font-face` informuje przeglądarkę, dla jakich znaków dany plik czcionki powinien zostać pobrany?;{{c1::unicode-range}}
+Co to są "Variable Fonts" (czcionki zmienne)?;To pliki czcionek, które w jednym pliku zawierają wiele wariantów (np. różne grubości), sterowanych za pomocą "osi" (axes).
+Jaką wartość `font-family` należy ustawić, aby użyć domyślnej czcionki interfejsu systemu operacyjnego (bez pobierania plików)?;system-ui
+Co oznacza strategia `font-display: block`?;Tekst jest niewidoczny przez krótki czas (ok. 3s) w oczekiwaniu na font; jeśli się nie załaduje, używany jest font zapasowy.
+Co oznacza strategia `font-display: swap`?;Tekst jest natychmiast wyświetlany fontem zapasowym, a po załadowaniu fontu internetowego następuje jego podmiana.
+Co oznacza strategia `font-display: optional`?;Przeglądarka czeka bardzo krótko (ok. 100ms) na font; jeśli się nie załaduje, zostaje przy foncie zapasowym i nie podmienia go później.
+Która strategia `font-display` jest najlepsza dla wydajności i stabilności układu (brak CLS), ale może skutkować brakiem własnej czcionki?;font-display: optional
+Dlaczego "Icon Fonts" (czcionki ikonowe) są odradzane w kontekście CLS (Layout Shift)?;Ponieważ font zapasowy wygląda drastycznie inaczej niż ikona, co powoduje duże przesunięcia przy ładowaniu.
+Co jest nowoczesną alternatywą dla "Icon Fonts", lepszą dla dostępności i wydajności?;Obrazy SVG.
+Jaka właściwość CSS (deskryptor w `@font-face`) pozwala przeskalować font zapasowy, aby pasował wielkością do fontu docelowego?;{{c1::size-adjust}}
+Skąd pochodzą domyślne style (np. marginesy, wielkość nagłówków), jeśli nie zdefiniujesz własnych w CSS?;Z arkuszy stylów klienta użytkownika (User Agent stylesheets).
+Dlaczego tekst na stronach internetowych jest domyślnie responsywny?;Ponieważ przeglądarki automatycznie zawijają tekst (wrap) na krawędzi widoku (viewport).
+Jakie są cztery kluczowe elementy typografii wymienione w tekście (poza wyborem fontu)?;Preferencje użytkownika, rozmiar tekstu, długość linii, odstępy między liniami.
+Co oznacza jednostka CSS {{c1::vw}}?;Viewport width (szerokość widoku).
+Dlaczego nie należy ustawiać `font-size` używając wyłącznie jednostki `vw` (np. `font-size: 2.5vw`)?;Ponieważ uniemożliwia to użytkownikowi zmianę rozmiaru tekstu (zoom) i jest złe dla dostępności.
+Jak można naprawić problem dostępności przy skalowaniu tekstu za pomocą `vw`?;Używając funkcji `calc()` do dodania jednostki relatywnej (np. `0.75rem + 1.5vw`).
+Funkcja CSS {{c1::clamp()}} przyjmuje trzy wartości w kolejności: {{c2::minimum}}, {{c2::preferowana}}, {{c2::maksimum}}.;clamp()
+Jaki zakres znaków jest uważany za satysfakcjonującą długość linii tekstu dla pojedynczej kolumny?;45 do 75 znaków (ideał to 66).
+Jaka właściwość CSS służy do ograniczania szerokości bloku tekstu (zamiast `width`)?;max-inline-size
+Jakiej jednostki CSS należy używać do definiowania długości linii tekstu (line length)?;{{c1::ch}} (character unit).
+Dlaczego przy definiowaniu długości linii (line length) należy unikać pikseli (`px`)?;Ponieważ nie skalują się one wraz ze zmianą rozmiaru czcionki przez użytkownika.
+Zasada dotycząca `line-height`: Krótsze linie tekstu mogą mieć {{c1::większy}} line-height, a dłuższe linie wymagają ostrożniejszego (mniejszego) dopasowania.;większy
+Dlaczego wartość `line-height` powinna być podawana bez jednostki (unitless), np. `1.5`?;Aby wysokość linii była zawsze relatywna do aktualnego rozmiaru czcionki (font-size).
+Jaki format pliku czcionki internetowej (web font) zapewnia najlepszą wydajność i wsparcie?;{{c1::woff2}}
+Jaki atrybut w tagu `<link>` służy do priorytetowego pobierania pliku czcionki?;rel="preload"
+Prawda czy Fałsz: Atrybut `crossorigin` jest wymagany przy preloadowaniu fontów, nawet jeśli hostujesz je na własnym serwerze.;Prawda.
+Co robi właściwość `font-display: swap`?;Wyświetla tekst czcionką systemową natychmiast, a następnie podmienia ją na web font, gdy ten się załaduje.
+Jaka jest główna wada `font-display: swap`?;Może powodować zauważalne przesunięcie treści (layout shift) w momencie podmiany czcionki.
+Właściwość CSS w `@font-face`, która pozwala zminimalizować przesunięcia układu (layout shift) poprzez skalowanie fontu zapasowego to {{c1::size-adjust}}.;size-adjust
+Czym są "Variable Fonts" (czcionki zmienne)?;To pojedyncze pliki czcionek, które zawierają w sobie wiele wariantów (np. różne wagi i style), zamiast wymagać osobnych plików.
+Kiedy stosowanie Variable Fonts przynosi największe korzyści wydajnościowe?;Gdy projekt wykorzystuje wiele różnych wag i stylów tej samej rodziny czcionek.
+Właściwość `font-family: {{c1::system-ui}}` pozwala użyć domyślnej czcionki systemu operacyjnego bez pobierania plików.;system-ui

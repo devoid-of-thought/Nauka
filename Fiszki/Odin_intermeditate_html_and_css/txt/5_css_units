@@ -1,0 +1,51 @@
+Jaka jest główna różnica między jednostkami absolutnymi a relatywnymi w CSS?;Jednostki absolutne są zawsze takie same, natomiast jednostki relatywne zmieniają się w zależności od kontekstu.
+Dlaczego {{c1::px}} jest uznawany za jednostkę absolutną?;Ponieważ rozmiar piksela nie zmienia się w relacji do innych elementów na stronie.
+Jaka jest jedyna jednostka absolutna zalecana do stosowania w projektach internetowych (web projects)?;Piksel (px).
+W jakim kontekście mają sens jednostki takie jak `in` (cale) lub `cm` (centymetry) w CSS?;W kontekście druku (print setting).
+Do czego odnosi się jednostka {{c1::em}} (gdy nie jest używana do określania font-size)?;Do rozmiaru czcionki (font-size) danego elementu.
+Jeśli element ma `font-size: 16px`, a jego szerokość ustawisz na `4em`, ile wyniesie szerokość w pikselach?;64px (16 * 4).
+Do czego odnosi się jednostka `em`, gdy jest używana do ustawienia właściwości `font-size`?;Do rozmiaru czcionki (font-size) elementu nadrzędnego (rodzica).
+Do czego zawsze odnosi się jednostka {{c1::rem}}?;Do rozmiaru czcionki elementu głównego (root element: :root lub html).
+Jaka jest główna zaleta stosowania `rem` nad `em`?;Unikamy złożoności związanej ze śledzeniem rozmiaru czcionki rodzica (brak efektu kaskadowego powiększania/zmniejszania).
+Dlaczego zaleca się stosowanie {{c1::rem}} do definiowania rozmiarów czcionek na stronie?;Ponieważ szanuje to ustawienia przeglądarki użytkownika (zwiększa dostępność/readability).
+Co oznacza skrót jednostki `vh`?;Viewport Height (wysokość obszaru widocznego).
+Co oznacza skrót jednostki `vw`?;Viewport Width (szerokość obszaru widocznego).
+Ile procent wysokości viewportu to `1vh`?;1%.
+Prawda czy Fałsz: `1vw` jest równe 10% szerokości viewportu.;Fałsz (jest równe 1%).
+Podaj przykład zastosowania dla jednostek viewportu (`vh`/`vw`).;Sekcje typu "full-height hero" lub interfejsy przypominające aplikacje pełnoekranowe.
+Kiedy warto użyć jednostki `%` (procent) zamiast `vw` dla szerokości?;Gdy chcemy, aby szerokość zależała od elementu nadrzędnego (rodzica), a nie od szerokości całego okna przeglądarki.
+Prawda czy Fałsz: Powinieneś nauczyć się na pamięć wszystkich dostępnych jednostek CSS przed rozpoczęciem pracy.;Fałsz (należy dobierać jednostki w zależności od pożądanego zachowania elementu).
+Jeśli chcesz, aby margines skalował się wraz z rozmiarem czcionki głównej, jakiej jednostki użyjesz?;rem
+W jaki sposób w dokumentacji MDN oznaczane są typy wartości (value types)?;Są otoczone nawiasami kątowymi, np. <color> lub <length>.
+Co oznacza termin "data type" w kontekście CSS?;To inna nazwa na "value type" (typ wartości) – terminy te są używane zamiennie.
+Jaki typ danych numerycznych w CSS reprezentuje liczbę całkowitą (np. 1024)?;{{c1::<integer>}}
+Jaki typ danych numerycznych w CSS reprezentuje liczbę dziesiętną (np. 0.25)?;{{c1::<number>}}
+Co to jest typ {{c1::<dimension>}} w CSS?;To liczba z dołączoną jednostką (np. 10px, 45deg, 5s).
+Czy wartość procentowa (np. 50%) w CSS jest stała?;Nie, jest zawsze relatywna względem innej wartości (np. elementu rodzica).
+Wymień jedną jednostkę długości absolutnej (absolute length unit), która jest powszechnie używana na ekranach.;px (piksel).
+Ile fizycznych pikseli urządzenia to zawsze 1px w CSS?;To zależy (na ekranach HD 1px może obejmować wiele fizycznych pikseli; jest to jednostka percepcyjna).
+Ile pikseli (px) mieści się w jednym calu (in) według standardu CSS?;96px
+Dlaczego jednostki takie jak `cm`, `mm` czy `in` są rzadko używane w projektowaniu stron na ekrany?;Ponieważ są bardziej przydatne w druku (print) i nie zawsze oddają fizyczne wymiary na różnych ekranach.
+Do czego odnosi się jednostka `em`, gdy jest używana w właściwości `font-size`?;Do rozmiaru czcionki elementu rodzica (parent element).
+Do czego odnosi się jednostka `em`, gdy jest używana w właściwościach innych niż `font-size` (np. width)?;Do rozmiaru czcionki tego samego elementu (my own font-size).
+Do czego zawsze odnosi się jednostka `rem`?;Do rozmiaru czcionki elementu głównego (root element: <html>).
+Co oznacza skrót `rem`?;Root em.
+Co się stanie z rozmiarem elementów opartych na `rem`, jeśli zmienisz `font-size` w elemencie `html`?;Wszystkie te elementy przeskalują się relatywnie do nowej wartości bazowej.
+Jaka jest różnica w dziedziczeniu rozmiaru między zagnieżdżonymi listami używającymi `em` a `rem`?;Zagnieżdżone `em` kumulują się (rosną/maleją wykładniczo), a `rem` pozostają stałe względem korzenia.
+Jeśli ustawisz `width: 50%` dla elementu, względem czego zostanie ona obliczona?;Względem szerokości elementu rodzica (parent container).
+Podaj przykład właściwości CSS, która akceptuje liczbę bez jednostki (unitless number).;opacity (lub line-height, flex-grow).
+W jakim zakresie mieści się wartość właściwości `opacity`?;Od 0 (pełna przezroczystość) do 1 (pełne krycie).
+Czy liczby w CSS powinny być otaczane cudzysłowem?;Nie (chyba że są częścią ciągu znaków w `content`).
+Jakim symbolem rozpoczyna się kod koloru szesnastkowego (hexadecimal)?;{{c1::#}} (hash/płotek)
+Ile znaków (oprócz #) ma standardowy kod HEX koloru (bez przezroczystości)?;6 znaków.
+Co oznacza skrócony kod HEX, np. `#f0f`?;Jest to odpowiednik `#ff00ff` (każdy znak jest dublowany).
+Jaka jest składnia funkcji `rgb()` z kanałem alfa (przezroczystością) w nowoczesnym CSS?;`rgb(red green blue / alpha)` (wartości oddzielone spacją, alfa po ukośniku).
+Jaka jest różnica między użyciem `opacity` a kanałem alfa w kolorze (np. w `rgb` lub `hex`)?;`opacity` czyni przezroczystym cały element i jego dzieci, a kanał alfa tylko konkretny kolor (np. tła).
+Co oznacza litera "H" w modelu kolorów HSL/HWB i w jakich jednostkach jest wyrażana?;Hue (barwa), wyrażana jako kąt (0-360 stopni) na kole barw.
+Prawda czy Fałsz: Typ wartości `<image>` w CSS obsługuje tylko pliki obrazów (np. .jpg, .png).;Fałsz (obsługuje również gradienty).
+Jaka jest domyślna pozycja w `<position>`, jeśli podasz tylko jedną wartość (np. tylko oś X)?;Center (wyśrodkowanie drugiej osi).
+Czy słowa kluczowe w CSS (np. `red`, `solid`, `center`) są traktowane jako typ String?;Nie, są to identyfikatory (identifiers) i nie używa się przy nich cudzysłowu.
+Kiedy w CSS używamy cudzysłowu dla wartości tekstowych?;Gdy wartość jest faktycznym ciągiem znaków (String), np. w właściwości `content`.
+Do czego służy funkcja CSS `calc()`?;Pozwala na wykonywanie obliczeń matematycznych wewnątrz wartości CSS (np. dodawanie pikseli do procentów).
+Dlaczego `calc(20% + 100px)` jest użyteczne, skoro nie można po prostu dodać tych liczb?;Ponieważ `20%` jest wartością zmienną (zależną od kontekstu), a `100px` stałą; `calc` oblicza to na żywo w przeglądarce.
+Wymień trzy funkcje matematyczne CSS inne niż `calc()` wspomniane w tekście.;min(), max(), clamp().
