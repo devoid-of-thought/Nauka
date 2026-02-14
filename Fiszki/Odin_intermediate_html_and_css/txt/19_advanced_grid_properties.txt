@@ -1,0 +1,10 @@
+Jaka funkcja CSS pozwala zdefiniować wiele kolumn o tym samym rozmiarze bez konieczności wpisywania ich ręcznie?;`repeat()` (np. `repeat(5, 1fr)`).
+Co reprezentuje jednostka `fr` w CSS Grid?;Ułamek **pozostałej** dostępnej przestrzeni w kontenerze (fraction of remaining space).
+Jeśli zdefiniujesz kolumny jako `1fr 2fr`, jak zostanie podzielona przestrzeń?;Druga kolumna otrzyma dwa razy więcej miejsca niż pierwsza (odpowiednio 1/3 i 2/3 dostępnej przestrzeni).
+Co zwróci funkcja CSS `min(100px, 50vw)`, jeśli okno przeglądarki ma szerokość 1000px (czyli 50vw = 500px)?;100px (ponieważ funkcja `min` zawsze wybiera **mniejszą** z podanych wartości).
+Co zwróci funkcja CSS `max(100px, 50vw)`, jeśli okno przeglądarki ma szerokość 1000px?;500px (ponieważ funkcja `max` zawsze wybiera **większą** z podanych wartości).
+Jaka funkcja CSS (specyficzna głównie dla Grida) pozwala zdefiniować zakres wielkości ścieżki od wartości minimalnej do maksymalnej?;`minmax(min, max)`
+Jaka jest składnia funkcji `clamp()`, która pozwala na płynne skalowanie elementu w określonych granicach?;`clamp(minimum, ideal, maximum)`
+Jaka jest kluczowa różnica między `auto-fit` a `auto-fill` w funkcji `repeat()`?;`auto-fit` **rozciąga** istniejące elementy, aby wypełniły cały wiersz (zwija puste ścieżki do 0), natomiast `auto-fill` **zachowuje** miejsce na potencjalne nowe kolumny (pozostawia puste przestrzenie), nawet jeśli ich nie ma.
+Jak wygląda "święty graal" responsywnego Grida (snippet CSS), który tworzy tyle kolumn, ile się zmieści, bez użycia Media Queries?;`grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));` (wartość 200px jest przykładowa).
+Czy funkcja `clamp()` może być używana tylko w CSS Grid?;Nie, `clamp()` jest uniwersalną funkcją CSS (działa np. dla `font-size`, `width` itd.), w przeciwieństwie do `minmax()`, która działa głównie w Gridzie.

@@ -1,0 +1,20 @@
+W jaki sposób tworzy się wyrażenie regularne za pomocą literału (literal syntax)?;Poprzez otoczenie wzorca ukośnikami, np. `const re = /ab+c/;`
+W jaki sposób tworzy się wyrażenie regularne za pomocą konstruktora?;Używając `new RegExp()`, np. `const re = new RegExp("ab+c");`
+Kiedy należy używać literału wyrażenia regularnego (`/abc/`) zamiast konstruktora?;Gdy wzorzec jest stały (nie zmienia się). Zapewnia to kompilację podczas ładowania skryptu i lepszą wydajność.
+Kiedy należy używać konstruktora `new RegExp()`?;Gdy wzorzec jest dynamiczny (np. pochodzi z danych wprowadzonych przez użytkownika) lub zmienia się w trakcie działania programu.
+Jaki znak służy do "uciekaczki" (escaping) znaków specjalnych w Regex?;Backslash `\` (odwrócony ukośnik).
+Jak należy zapisać wyrażenie `/a*b/` używając konstruktora `RegExp` (uwzględniając escaping w stringu)?;`new RegExp("a\\*b")` (należy podwoić backslash, ponieważ jest to literał łańcuchowy).
+Co robi metoda `RegExp.prototype.test()`?;Sprawdza, czy wzorzec występuje w ciągu znaków. Zwraca `true` lub `false`.
+Co robi metoda `RegExp.prototype.exec()`?;Wykonuje wyszukiwanie w ciągu znaków. Zwraca tablicę z wynikami (i grupami przechwytującymi) lub `null` w przypadku braku dopasowania. 
+Wymień metody obiektu `String`, które obsługują wyrażenia regularne.;`match()`, `matchAll()`, `replace()`, `replaceAll()`, `search()`, `split()`
+Co oznacza flaga `g` w wyrażeniu regularnym?;Global search (wyszukiwanie globalne - nie zatrzymuje się po pierwszym dopasowaniu).
+Co oznacza flaga `i` w wyrażeniu regularnym?;Case-insensitive (ignorowanie wielkości liter).
+Co oznacza flaga `m` w wyrażeniu regularnym?;Multiline (wielowierszowość). Sprawia, że `^` i `$` dopasowują się do początku/końca każdej linii, a nie tylko całego ciągu. 
+Jaka jest różnica w działaniu `str.match(re)` a `re.exec(str)` gdy użyta jest flaga `g`?;`str.match(re)` zwraca tablicę wszystkich dopasowań naraz (bez szczegółów grup). `re.exec(str)` zwraca jedno dopasowanie na raz, aktualizując `lastIndex`, co pozwala na iterację w pętli.
+Co zwraca metoda `str.search(re)`?;Indeks pierwszego dopasowania lub `-1`, jeśli nie znaleziono.
+Do czego służą nawiasy `()` w wyrażeniu regularnym?;Tworzą grupę przechwytującą (capturing group), która zapamiętuje dopasowany podciąg do późniejszego wykorzystania.
+Jaki kwantyfikator oznacza "0 lub więcej wystąpień"?;`*`
+Jaki kwantyfikator oznacza "1 lub więcej wystąpień"?;`+`
+Jaki kwantyfikator oznacza "0 lub 1 wystąpienie" (opcjonalność)?;`?`
+Jaki wynik da `const re = /a*/;` dla ciągu `"bbbb"`?;Puste dopasowanie `""` na indeksie 0 (ponieważ `*` dopuszcza 0 wystąpień).
+Właściwość `lastIndex` obiektu RegExp jest aktualizowana tylko wtedy, gdy włączona jest flaga {{c1::g}} (global).;g

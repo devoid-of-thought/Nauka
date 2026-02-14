@@ -1,0 +1,39 @@
+Jaki atrybut HTML sprawia, że pole formularza musi zostać wypełnione przed wysłaniem?;required
+Dlaczego z punktu widzenia UX i dostępności samo dodanie atrybutu `required` nie wystarcza?;Należy wizualnie oznaczyć pole (np. gwiazdką `*` w etykiecie), aby użytkownik wiedział, że jest wymagane przed próbą wysłania. 
+Jaki atrybut określa minimalną liczbę znaków, którą użytkownik musi wpisać w polu tekstowym?;minlength
+Prawda czy Fałsz: Atrybut `minlength="5"` sprawia, że pole jest wymagane (nie można wysłać pustego).;Fałsz (walidacja `minlength` działa tylko wtedy, gdy użytkownik wpisze jakąś wartość, puste pole zostanie przepuszczone, chyba że dodasz też `required`).
+Jaki atrybut określa maksymalną liczbę znaków w polu tekstowym i blokuje wpisywanie kolejnych?;maxlength
+Jakie atrybuty służą do ograniczenia zakresu wartości liczbowych (dolna i górna granica) w polach typu `number`, `date` itp.?;min oraz max
+Jaka jest różnica między `minlength` a `min`?;`minlength` dotyczy liczby znaków (dla tekstu), a `min` dotyczy wartości liczbowej (dla liczb/dat).
+Jaki atrybut pozwala walidować wartość pola na podstawie wyrażenia regularnego (Regex)?;{{c1::pattern}} 
+Jaki jest domyślny komunikat przeglądarki, gdy dane nie pasują do atrybutu `pattern` i jak go ulepszyć?;Komunikat to zazwyczaj ogólne "Proszę dopasować do wymaganego formatu". Należy użyć atrybutu `title` lub `placeholder`, aby pokazać użytkownikowi oczekiwany format (np. kod pocztowy).
+Jakie dwie pseudoklasy CSS pozwalają stylować pola w zależności od wyniku walidacji (np. zielona ramka dla poprawnych, czerwona dla błędnych)?;:valid oraz :invalid 
+Czy walidacja po stronie klienta (HTML/JS) jest wystarczająca do zapewnienia bezpieczeństwa danych?;Nie, zawsze niezbędna jest walidacja po stronie serwera (server-side validation), ponieważ walidację w przeglądarce można łatwo ominąć.
+Dlaczego walidacja formularzy po stronie klienta (client-side) NIE może być traktowana jako jedyny środek bezpieczeństwa?;Ponieważ walidację w przeglądarce można łatwo ominąć (np. wyłączając JS lub modyfikując żądanie sieciowe); zawsze wymagana jest walidacja po stronie serwera. 
+Jaka jest główna zaleta walidacji po stronie klienta (w porównaniu do walidacji tylko na serwerze)?;Lepsze UX: użytkownik otrzymuje natychmiastową informację zwrotną bez konieczności oczekiwania na przeładowanie strony lub odpowiedź serwera.
+Co robi atrybut `novalidate` dodany do elementu `<form>`?;Wyłącza domyślne dymki z błędami i automatyczne blokowanie wysyłania przez przeglądarkę, ale nadal pozwala korzystać z API walidacji w JavaScript i pseudoklas CSS.
+Jaki obiekt w JavaScript przechowuje szczegółowe flagi błędów walidacji (np. `valueMissing`, `typeMismatch`) dla danego pola?;`validity` (np. `input.validity`). 
+W obiekcie `ValidityState`, która właściwość zwraca `true`, jeśli pole jest wymagane, ale puste?;{{c1::valueMissing}}
+W obiekcie `ValidityState`, która właściwość zwraca `true`, jeśli dane nie pasują do wyrażenia regularnego zdefiniowanego w atrybucie `pattern`?;{{c1::patternMismatch}}
+Jak za pomocą JavaScript (Constraint Validation API) ustawić niestandardowy komunikat błędu i oznaczyć pole jako nieprawidłowe?;Używając metody `input.setCustomValidity("Treść błędu")`.
+W jaki sposób w JavaScript przywrócić pole do stanu "prawidłowego" (valid) po wcześniejszym użyciu `setCustomValidity`?;Należy wywołać `setCustomValidity("")` z pustym ciągiem znaków.
+Co robi metoda `form.checkValidity()`?;Sprawdza, czy wszystkie pola w formularzu są poprawne; zwraca `true`/`false` i uruchamia zdarzenie `invalid` dla błędnych pól.
+Czym różni się pseudoklasa CSS `:invalid` od `:user-invalid`?;`:invalid` oznacza błąd natychmiast (nawet przy pustym formularzu), a `:user-invalid` czeka, aż użytkownik wejdzie w interakcję z polem (np. wpisze coś lub opuści pole), co jest lepsze dla UX. 
+Jaki atrybut ARIA warto dodać do elementu wyświetlającego komunikat błędu, aby czytniki ekranowe odczytały go natychmiast po pojawieniu się?;`aria-live="polite"` (lub "assertive").
+W kontekście Constraint Validation API, co oznacza flaga `validity.tooShort`?;Że wartość wprowadzona przez użytkownika jest krótsza niż wymagane `minlength`.
+Dlaczego do wprowadzania numerów kart kredytowych odradza się używania `<input type="number">`?;Ponieważ ten typ dodaje przyciski inkrementacji (spinners), które są bezużyteczne przy kartach, oraz pozwala na przypadkową zmianę wartości strzałkami.
+Jakie jest zalecane rozwiązanie dla pola karty kredytowej, aby wymusić klawiaturę numeryczną na mobile, ale uniknąć spinnerów?;Użycie `<input type="text">` z atrybutem `inputmode="numeric"`. 
+Dlaczego nie należy polegać wyłącznie na atrybucie `placeholder` jako etykiecie pola?;Ponieważ znika on po wpisaniu znaku, co utrudnia użytkownikowi przypomnienie sobie celu pola, oraz często ma zbyt niski kontrast (dostępność). 
+W obiekcie `ValidityState` (JS), która właściwość zwróci `true`, jeśli wartość jest mniejsza niż atrybut `min`?;{{c1::rangeUnderflow}}
+W obiekcie `ValidityState` (JS), która właściwość zwróci `true`, jeśli wartość nie pasuje do typu pola (np. zły format emaila)?;{{c1::typeMismatch}}
+Jaka pseudoklasa CSS pozwala na stylowanie elementu rodzica (np. kontenera `div`), gdy znajdujący się wewnątrz niego input posiada focus?;{{c1:: :focus-within}}
+Jaka jest główna wada tworzenia własnych kontrolek formularza (np. custom date picker) zamiast używania natywnych?;Trudności z zapewnieniem pełnej dostępności (klawiatura, czytniki ekranu) i obsługi na wszystkich urządzeniach (dotyk, różne rozmiary ekranu). 
+Jakie zdarzenie (event) jest wyzwalane na każdym nieprawidłowym polu formularza podczas próby wysłania (jeśli nie użyto `novalidate`)?;`invalid` (zdarzenie to nie bąbelkuje / does not bubble).
+Gdzie jest najlepsze miejsce na wyświetlanie komunikatów o błędach walidacji?;Bezpośrednio przy błędnym polu (input), a nie zgrupowane w jednym miejscu (np. na górze strony). 
+Dlaczego **nie należy** wyłączać (disable) przycisku "Submit" w formularzu, nawet jeśli jest on niekompletny?;Ponieważ użytkownik może nie wiedzieć, co jest nie tak lub przeoczyć pole; kliknięcie przycisku powinno uruchomić walidację i wskazać błędy. 
+Dlaczego poleganie wyłącznie na kolorze (np. czerwona ramka) przy oznaczaniu błędów jest błędem UX?;Ponieważ osoby z zaburzeniami widzenia barw (daltoniści) mogą nie zauważyć błędu; należy dodać ikonę lub tekst. 
+Prawda czy Fałsz: Komunikaty o błędach powinny być ukryte pod ikoną (tooltip), aby nie zaśmiecać interfejsu.;Fałsz (błędy powinny być widoczne od razu, bez konieczności najeżdżania myszką).
+Kiedy należy pokazać użytkownikowi wymagania dotyczące hasła (np. "min. 8 znaków")?;Od razu (upfront), zanim zacznie pisać, a nie dopiero po wystąpieniu błędu. 
+Jaki język powinien być stosowany w komunikatach błędów?;Ludzki i zrozumiały (human language), a nie techniczny (np. "Database error 503" vs "Coś poszło nie tak, spróbuj ponownie").
+Co jest lepsze od świetnego systemu raportowania błędów w formularzu?;Projektowanie formularza tak, aby zapobiegać błędom, zanim one wystąpią (Prevention over Cure).
+Czy warto stosować "positive feedback" (zielone oznaczenia) w formularzach?;Tak, warto informować użytkownika nie tylko o błędach, ale też o poprawnym wypełnieniu pola (np. zielony "ptaszek").

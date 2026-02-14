@@ -1,0 +1,21 @@
+Jaka jest najważniejsza, "złota zasada" bezpieczeństwa aplikacji internetowych?;Nigdy nie ufaj danym pochodzącym z przeglądarki (użytkownika).
+Co oznacza skrót XSS?;Cross-Site Scripting.
+Na czym polega atak XSS (Cross-Site Scripting)?;Na wstrzyknięciu złośliwego skryptu (uruchamianego po stronie klienta) do przeglądarki innego użytkownika za pośrednictwem strony internetowej.
+[Image of cross-site scripting xss attack flow diagram reflected vs stored]
+Czym różni się "Reflected XSS" od "Persistent (Stored) XSS"?;Reflected XSS zwraca złośliwy skrypt natychmiastowo i jednorazowo (np. w wyniku wyszukiwania), a Persistent XSS zapisuje go na serwerze (np. w komentarzu), atakując każdego, kto wyświetli daną treść.
+Jaka jest najskuteczniejsza obrona przed atakami XSS?;Sanityzacja danych wejściowych (input sanitization) i wyłączanie/usuwanie znaczników HTML mogących uruchomić kod (np. `<script>`).
+Na czym polega atak SQL Injection?;Na wstrzyknięciu fragmentu kodu SQL przez dane wejściowe użytkownika, co pozwala na nieautoryzowany dostęp lub modyfikację bazy danych.
+[Image of sql injection attack example diagram]
+Dlaczego zapytania typu `SELECT * FROM users WHERE name = '` + userName + `';` są podatne na SQL Injection?;Ponieważ użytkownik może wpisać fragment kodu SQL (np. `' OR '1'='1`), który zmieni logikę zapytania, zamiast być potraktowanym jako zwykły tekst.
+Jaka jest najlepsza metoda zapobiegania SQL Injection?;Stosowanie zapytań parametryzowanych (parameterized queries / prepared statements).
+Co oznacza skrót CSRF?;Cross-Site Request Forgery.
+Na czym polega atak CSRF?;Atakujący zmusza przeglądarkę zalogowanego użytkownika do wykonania niechcianej akcji (np. przelewu) na zaufanej stronie bez wiedzy ofiary.
+[Image of cross-site request forgery csrf attack flow diagram]
+Dlaczego atak CSRF jest skuteczny, nawet jeśli atakujący nie zna hasła ofiary?;Ponieważ przeglądarka ofiary automatycznie dołącza pliki cookie (z sesją logowania) do każdego żądania wysyłanego do danej domeny, nawet jeśli żądanie zostało zainicjowane przez inną stronę.
+Jaki jest powszechny mechanizm obrony przed CSRF?;Wymaganie, aby każde żądanie modyfikujące dane (POST) zawierało unikalny, generowany przez serwer "token" (tajny klucz), którego atakujący nie zna.
+Na czym polega atak Clickjacking?;Na umieszczeniu niewidocznej warstwy (np. przezroczystego iframe) nad widoczną stroną, co sprawia, że użytkownik klika w coś innego, niż myśli.
+[Image of clickjacking attack visual diagram iframe]
+Jakie nagłówki HTTP pomagają chronić przed Clickjackingiem?;Nagłówki zabraniające osadzania strony w ramkach (iframe) na innych witrynach (np. X-Frame-Options lub Content Security Policy).
+Na czym polega atak DoS (Denial of Service)?;Na zalaniu serwera ogromną liczbą fałszywych żądań, aby uniemożliwić dostęp prawowitym użytkownikom.
+Co to jest "Directory Traversal"?;Próba dostępu do plików poza dozwolonym katalogiem serwera poprzez użycie znaków nawigacji po ścieżkach (np. `../../`).
+Dlaczego HTTPS jest kluczowy dla bezpieczeństwa formularzy logowania?;Ponieważ szyfruje dane przesyłane między klientem a serwerem, chroniąc hasła i tokeny sesji przed podsłuchaniem.

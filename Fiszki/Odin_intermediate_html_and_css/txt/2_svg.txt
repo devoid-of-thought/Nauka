@@ -1,5 +1,5 @@
 Co oznacza skrót SVG?;Scalable Vector Graphics (Skalowalna Grafika Wektorowa).
-Czym różni się grafika wektorowa od rastrowej?;Wektorowa opiera się na matematycznych wzorach; rastrowa na siatce pikseli.
+Czym różni się grafika wektorowa od rastrowej?;Wektorowa opiera się na matematycznych wzorach, rastrowa na siatce pikseli.
 Dlaczego SVG nie tracą jakości przy powiększaniu?;Ponieważ są zdefiniowane za pomocą formuł matematycznych, a nie ustalonej liczby pikseli.
 Na jakim języku znaczników opiera się kod SVG?;Na XML.
 Wymień typowe zastosowania formatu SVG.;Ikony, wykresy/grafy, proste ilustracje, tła z powtarzalnym wzorem.

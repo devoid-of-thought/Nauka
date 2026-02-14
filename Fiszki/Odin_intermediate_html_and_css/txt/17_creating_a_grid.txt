@@ -1,0 +1,27 @@
+Czym różni się CSS Grid od Flexboxa w kontekście wymiarów układu?;CSS Grid jest dwuwymiarowy (wiersze i kolumny), a Flexbox jednowymiarowy (wiersz LUB kolumna).
+Jak nazywamy element, na którym zastosowano `display: grid`?;Grid Container (Kontener siatki).
+Jak nazywamy bezpośrednie dzieci kontenera siatki?;Grid Items (Elementy siatki).
+Czym jest "Grid Line" (Linia siatki)?;To linia podziału tworząca strukturę siatki (może być pozioma lub pionowa). 
+Czym jest "Grid Track" (Ścieżka siatki)?;To przestrzeń między dwiema sąsiednimi liniami siatki (czyli kolumna lub wiersz).
+Czym jest "Grid Area" (Obszar siatki)?;To całkowita przestrzeń otoczona czterema liniami siatki (może składać się z wielu komórek). 
+Czym jest "Grid Cell" (Komórka siatki)?;To najmniejsza jednostka siatki; przestrzeń między dwiema sąsiednimi liniami rzędu i dwiema sąsiednimi liniami kolumny.
+Jaka jednostka w CSS Grid reprezentuje ułamek dostępnej wolnej przestrzeni?;{{c1::fr}}
+Jaką funkcję CSS można użyć w `grid-template-columns` do zdefiniowania 12 równych kolumn bez wpisywania `1fr` 12 razy?;`repeat(12, 1fr)`
+W właściwości `grid-template-areas`, jaki znak reprezentuje pustą komórkę siatki?;Kropka (`.`).
+Jaki jest skrót (shorthand) dla właściwości `grid-template-rows`, `grid-template-columns` i `grid-template-areas`?;`grid-template` (lub po prostu `grid`).
+Która właściwość wyrównuje elementy siatki wewnątrz ich komórek wzdłuż osi wiersza (inline/row axis)?;{{c1::justify-items}} 
+Która właściwość wyrównuje elementy siatki wewnątrz ich komórek wzdłuż osi kolumny (block/column axis)?;{{c1::align-items}}
+Jaki jest skrót dla `align-items` i `justify-items`?;`place-items`
+Która właściwość wyrównuje **całą siatkę** wewnątrz kontenera wzdłuż osi wiersza (gdy siatka jest mniejsza niż kontener)?;{{c1::justify-content}}
+Która właściwość wyrównuje **całą siatkę** wewnątrz kontenera wzdłuż osi kolumny?;{{c1::align-content}}
+Co to jest "Implicit Grid" (Siatka niejawna)?;Siatka utworzona automatycznie przez przeglądarkę dla elementów, które nie mieszczą się w zdefiniowanej siatce jawnej (explicit grid).
+Jakie właściwości określają rozmiar ścieżek utworzonych w siatce niejawnej?;`grid-auto-rows` oraz `grid-auto-columns`.
+Co robi właściwość `grid-auto-flow: dense`?;Nakazuje algorytmowi automatycznego rozmieszczania wypełnianie pustych przestrzeni (dziur) w siatce mniejszymi elementami, które pojawiają się później w kodzie HTML. 
+Jaka jest różnica między `grid-column-start` a `grid-column-end`?;`start` określa linię, na której element się zaczyna, a `end` linię, na której się kończy.
+Jak sprawić, by element siatki rozciągał się na 3 kolumny, używając słowa kluczowego `span`?;`grid-column: span 3;` (lub np. `grid-column: 1 / span 3`).
+Jaki jest skrót dla `grid-row-start` i `grid-row-end`?;`grid-row` (składnia: `start / end`).
+Która właściwość pozwala elementowi dziecka nadpisać wyrównanie `justify-items` ustawione na rodzicu?;`justify-self`
+Która właściwość pozwala elementowi dziecka nadpisać wyrównanie `align-items` ustawione na rodzicu?;`align-self`
+Jaka funkcja definiuje zakres wielkości ścieżki (min i max), pozwalając jej na elastyczność?;`minmax(min, max)`
+Jaka jest różnica między `auto-fill` a `auto-fit` w funkcji `repeat()`?;`auto-fill` zachowuje puste kolumny, jeśli jest na nie miejsce; `auto-fit` zwija puste kolumny, aby rozciągnąć istniejące elementy na całą szerokość. 
+Czym jest CSS Subgrid?;To funkcja pozwalająca zagnieżdżonej siatce (dziecku elementu grid) na dziedziczenie linii i ścieżek z siatki rodzica (używając `grid-template-columns: subgrid`).

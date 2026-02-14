@@ -1,0 +1,624 @@
+#separator:tab
+#html:true
+Czym jest Emmet?	Wtyczka wbudowana w VS Code, która pomaga efektywniej pisać kod HTML i CSS dzięki systemowi skrótów.
+Jaki skrót Emmet generuje podstawowy szablon (boilerplate) HTML?	! (wykrzyknik), a następnie Enter.
+"Jaka składnia Emmet utworzy element <p class=""text""></p>?"	p.text
+Jaki operator w Emmet służy do zagnieżdżania elementów (tworzenia dziecka wewnątrz rodzica)?	&gt; (np. div&gt;p)
+Jaka składnia Emmet pozwoli stworzyć trzy te same elementy (np. 3 elementy listy)?	Operator mnożenia * (np. li*3)
+Jakie dwie funkcje Emmet są sugerowane jako warte przypisania do własnych skrótów klawiszowych?	Wrap with Abbreviation (Otocz skrótem) oraz Remove Tag (Usuń znacznik).
+Jaki jest skrót klawiszowy, aby otworzyć okno skrótów w VS Code na Windows/Linux?	Ctrl + K, a następnie Ctrl + S.
+Jaki jest skrót klawiszowy, aby otworzyć okno skrótów w VS Code na Mac?	Cmd + K, a następnie Cmd + S.
+Jak znaleźć konkretną akcję Emmet w menu skrótów klawiszowych VS Code?	Wpisując w wyszukiwarkę: Emmet:&lt;nazwa akcji&gt; (np. Emmet:Wrap With Abbreviation).
+Jaki operator Emmet służy do tworzenia rodzeństwa (element obok elementu)?	+ (np. div+p)
+Jaki operator Emmet służy do wyjścia o poziom wyżej w drzewie elementów?	^ (np. div&gt;p^ul stworzy p wewnątrz div, a ul obok div)
+Co wygeneruje skrót: .nazwa (bez podania tagu)?	div class=&quot;nazwa&quot; (domyślny tag to div)
+Co wygeneruje skrót: ul&gt;.item$*3 ?	Listę ul z trzema elementami li o klasach: item1, item2, item3 (znak $ numeruje elementy)
+Jaki operator Emmet pozwala dodać tekst wewnątrz elementu?	{} (np. p{Cześć})
+Jaki operator Emmet pozwala dodać atrybut niestandardowy (np. href, title)?	"[] (np. a[href=""#""])"
+Co wygeneruje skrót: lorem ?	Akapit z domyślnym tekstem &quot;Lorem ipsum...&quot; (30 słów)
+Co wygeneruje skrót: lorem10 ?	Tekst &quot;Lorem ipsum...&quot; ograniczony do 10 słów
+Co wygeneruje skrót: link:css ?	Pełny tag &lt;link&gt; dołączający plik style.css
+Co wygeneruje skrót: a:link ?	Link &lt;a href=&quot;http://&quot;&gt;&lt;/a&gt;
+Co wygeneruje skrót CSS: m10 ?	margin: 10px
+Co wygeneruje skrót CSS: p20 ?	padding: 20px
+Co wygeneruje skrót CSS: w100p ?	width: 100%
+Co wygeneruje skrót CSS: df ?	display: flex
+Co wygeneruje skrót CSS: jcc ?	justify-content: center
+Co wygeneruje skrót CSS: aic ?	align-items: center
+Co wygeneruje skrót CSS: fdc ?	flex-direction: column
+Co wygeneruje skrót CSS: tac ?	text-align: center
+Co wygeneruje skrót CSS: poa ?	position: absolute
+Co wygeneruje skrót CSS: tdn ?	text-decoration: none
+"Co wygeneruje skrót: #header ?"	&lt;div id=&quot;header&quot;&gt;&lt;/div&gt; (domyślny tag dla ID to div)
+Do czego służą nawiasy () w Emmet?	Do grupowania elementów, aby operatory (+, ^) działały na całej grupie, np. (header&gt;ul)+footer
+Co wygeneruje skrót: ul&gt;.item (bez podawania li)?	&lt;ul&gt;&lt;li class=&quot;item&quot;&gt;&lt;/li&gt;&lt;/ul&gt; (Emmet &quot;zgaduje&quot; domyślny tag dziecka)
+Co wygeneruje skrót: img ?	&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+Co wygeneruje skrót: script:src ?	&lt;script src=&quot;&quot;&gt;&lt;/script&gt;
+Co wygeneruje skrót: input:text ?	&lt;input type=&quot;text&quot; name=&quot;&quot; id=&quot;&quot;&gt;
+Co wygeneruje skrót: input:checkbox ?	&lt;input type=&quot;checkbox&quot; name=&quot;&quot; id=&quot;&quot;&gt;
+Co wygeneruje skrót: btn:s ?	&lt;button type=&quot;submit&quot;&gt;&lt;/button&gt;
+Co wygeneruje skrót: form:get ?	&lt;form action=&quot;&quot; method=&quot;get&quot;&gt;&lt;/form&gt;
+Co wygeneruje skrót: link:favicon ?	&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot;&gt;
+Co wygeneruje skrót CSS: m0-auto ?	margin: 0 auto
+Co wygeneruje skrót CSS: por ?	position: relative
+Co wygeneruje skrót CSS: dib ?	display: inline-block
+Co wygeneruje skrót CSS: db ?	display: block
+Co wygeneruje skrót CSS: jcsb ?	justify-content: space-between
+Co wygeneruje skrót CSS: fwb ?	font-weight: bold
+Co wygeneruje skrót CSS: lh1.5 ?	line-height: 1.5
+Co wygeneruje skrót CSS: fz20 ?	font-size: 20px
+"Co wygeneruje skrót CSS: bgc#333 ?"	"background-color: #333"
+Co wygeneruje skrót CSS: cur:p ?	cursor: pointer
+[cite_start]Co wygeneruje skrót: meta:vp ?	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot; /&gt; [cite: 264]
+[cite_start]Co wygeneruje skrót: form:post ?	&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;&lt;/form&gt; [cite: 333]
+[cite_start]Co wygeneruje skrót: input:password (lub input:p) ?	&lt;input type=&quot;password&quot; name=&quot;&quot; id=&quot;&quot; /&gt; [cite: 350]
+[cite_start]Co wygeneruje skrót: textarea ?	&lt;textarea name=&quot;&quot; id=&quot;&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt; [cite: 393]
+[cite_start]Co wygeneruje skrót: select+ ?	&lt;select name=&quot;&quot; id=&quot;&quot;&gt;&lt;option value=&quot;&quot;&gt;&lt;/option&gt;&lt;/select&gt; (Tworzy select z opcją w środku) [cite: 522]
+[cite_start]Co wygeneruje skrót CSS: bxz:bb ?	box-sizing: border-box
+[cite_start]Co wygeneruje skrót CSS: bd+ ?	"border: 1px solid #000"
+[cite_start]Co wygeneruje skrót CSS: bd:n ?	border: none
+[cite_start]Co wygeneruje skrót CSS: bdrs ?	border-radius: 
+[cite_start]Co wygeneruje skrót CSS: ov:h ?	overflow: hidden
+[cite_start]Co wygeneruje skrót CSS: ov:s ?	overflow: scroll
+[cite_start]Co wygeneruje skrót CSS: pos:f ?	position: fixed
+[cite_start]Co wygeneruje skrót CSS: z ?	z-index: 
+[cite_start]Co wygeneruje skrót CSS: fl:l ?	float: left
+[cite_start]Co wygeneruje skrót CSS: cl:b ?	clear: both
+[cite_start]Co wygeneruje skrót CSS: ta:r ?	text-align: right
+[cite_start]Co wygeneruje skrót CSS: tt:u ?	text-transform: uppercase
+[cite_start]Co wygeneruje skrót CSS: ff:ss ?	font-family: sans-serif
+[cite_start]Co wygeneruje skrót CSS: bgi ?	background-image: url()
+[cite_start]Co wygeneruje skrót CSS: bgr:n ?	background-repeat: no-repeat
+[cite_start]Co wygeneruje skrót CSS: bgsz:cv ?	background-size: cover
+[cite_start]Co wygeneruje skrót CSS: fxw:w ?	flex-wrap: wrap
+[cite_start]Co wygeneruje skrót CSS: trf:r ?	transform: rotate(angle)
+[cite_start]Co wygeneruje skrót CSS: trs ?	transition: prop time
+Co wygeneruje skrót CSS: ! [cite_start]?	!important [cite: 1512]
+Co oznacza skrót SVG?	Scalable Vector Graphics (Skalowalna Grafika Wektorowa).
+Czym różni się grafika wektorowa od rastrowej?	Wektorowa opiera się na matematycznych wzorach, rastrowa na siatce pikseli.
+Dlaczego SVG nie tracą jakości przy powiększaniu?	Ponieważ są zdefiniowane za pomocą formuł matematycznych, a nie ustalonej liczby pikseli.
+Na jakim języku znaczników opiera się kod SVG?	Na XML.
+Wymień typowe zastosowania formatu SVG.	Ikony, wykresy/grafy, proste ilustracje, tła z powtarzalnym wzorem.
+W jakich sytuacjach NIE należy używać SVG?	Do zdjęć fotorealistycznych lub obrazów z bardzo dużą ilością detali i złożonych tekstur.
+"Dlaczego pliki SVG są ""czytelne dla człowieka"" (human-readable)?"	Ponieważ są plikami tekstowymi opartymi na XML, a nie binarnymi (jak JPEG).
+Za co odpowiada atrybut xmlns w SVG?	Określa przestrzeń nazw XML (XML NameSpace), niezbędną do poprawnego renderowania przez przeglądarkę.
+Za co odpowiada atrybut viewBox w SVG?	Definiuje granice widoku, proporcje (aspect ratio) i punkt początkowy układu współrzędnych SVG.
+Wymień przykładowe podstawowe elementy (tagi) budujące SVG.	&lt;rect&gt;, &lt;circle&gt;, &lt;path&gt;, &lt;text&gt;.
+Na czym polega metoda &quot;Inline&quot; przy dodawaniu SVG?	Na wklejeniu kodu SVG bezpośrednio do pliku HTML, zamiast linkowania go jako zewnętrzny plik.
+Jaka jest główna zaleta metody &quot;Inline&quot; dla SVG?	Umożliwia zmianę właściwości elementów SVG (np. fill, stroke) za pomocą CSS i JavaScript.
+Jakie są wady metody &quot;Inline&quot; dla SVG?	Pogarsza czytelność kodu HTML, utrudnia cachowanie i może opóźnić ładowanie strony przy dużych plikach.
+Jaka jest główna wada linkowania SVG jako zwykłego obrazka (<img> lub background-image)?	Brak dostępu do wewnętrznej struktury SVG (nie można stylować jego elementów przez CSS/JS).
+Jaka jest główna wada linkowania SVG jako zwykłego obrazka (&lt;img&gt; lub background-image)?	Brak dostępu do wewnętrznej struktury SVG (nie można stylować jego elementów przez CSS/JS).
+Jaki znacznik służy do stworzenia tabeli w HTML?	&lt;table&gt;
+Z czego składają się tabele HTML?	Z wierszy i kolumn (struktura dwuwymiarowa).
+Jaki znacznik definiuje wiersz w tabeli?	&lt;tr&gt; (table row)
+Jaki znacznik definiuje komórkę nagłówkową w tabeli?	&lt;th&gt; (table header)
+Jaki znacznik definiuje standardową komórkę z danymi w tabeli?	&lt;td&gt; (table data)
+Dlaczego nie należy używać tabel do tworzenia układu strony (layoutu)?	Ponieważ jest to niesemantyczne (mylące dla czytników ekranowych), utrudnia responsywność (RWD) i tworzy skomplikowany kod.
+Do czego służy znacznik &lt;caption&gt;?	Definiuje tytuł lub opis tabeli (powinien być pierwszym elementem wewnątrz &lt;table&gt;).
+Do czego służy atrybut &quot;scope&quot; w nagłówkach tabeli (&lt;th&gt;)?	Pomaga czytnikom ekranowym zrozumieć, czy dany nagłówek dotyczy całego wiersza (row), czy kolumny (col).
+Jaka składnia Emmet utworzy element &lt;p class=&quot;text&quot;&gt;&lt;/p&gt;?	p.text
+Co to są &quot;default styles&quot; w kontekście przeglądarek?	Są to style domyślne aplikowane automatycznie przez przeglądarkę do każdej strony internetowej.
+Skąd technicznie pochodzą domyślne style widoczne na stronie bez własnego CSS?	Z arkuszy stylów klienta użytkownika (user-agent stylesheets).
+Jaki jest cel istnienia {{c1::user-agent stylesheets}}?	Zapewnienie podstawowego, czytelnego wyglądu strony internetowej, która nie posiada własnych stylów CSS.
+Prawda czy Fałsz: Domyślne style (user-agent styles) są identyczne w każdej przeglądarce (Chrome, Firefox, Safari).	Fałsz (różnią się nieznacznie w zależności od przeglądarki).
+Jaki jest typowy domyślny styl dla elementu &lt;h1&gt;?	Większa i pogrubiona czcionka.
+Jaki jest typowy domyślny styl dla nieodwiedzonego elementu &lt;a&gt;?	Niebieski kolor tekstu i podkreślenie.
+Wymień dwie właściwości CSS (properties), które są często domyślnie ustawiane przez przeglądarkę i mogą przeszkadzać w layoutcie.	Margin oraz padding.
+W jaki sposób najprościej nadpisać domyślne style przeglądarki?	Napisać własną regułę CSS dla danego elementu w swoim arkuszu stylów.
+Dlaczego reguły w Twoim arkuszu stylów nadpisują reguły przeglądarki?	Ponieważ style autora mają wyższy priorytet (precedence) niż style user-agent.
+Co to jest CSS Reset?	Jest to arkusz stylów zawierający reguły mające na celu usunięcie lub zmianę domyślnych stylów user-agent.
+Jaki jest główny cel używania CSS Reset w kontekście kompatybilności?	Zniwelowanie niespójności w wyglądzie elementów między różnymi przeglądarkami.
+Użycie CSS Reset zapewnia deweloperowi tzw. {{c1::czystą kartę (clean slate)}} do nakładania własnych stylów bez zakłóceń.	czystą kartę (clean slate)
+Prawda czy Fałsz: Używanie CSS Reset jest obowiązkowe w każdym projekcie.	Fałsz (jest to opcjonalne).
+Co oznacza stwierdzenie, że CSS Reset jest &quot;subiektywny&quot; (opinionated)?	Oznacza to, że odzwierciedla on preferencje i wybory dewelopera, który go stworzył.
+Czy deweloper musi korzystać z gotowych rozwiązań CSS Reset?	Nie, może stworzyć własny reset lub nie używać żadnego.
+{{c1::User-agent stylesheet}} to inna nazwa na domyślne style wbudowane w przeglądarkę.	User-agent stylesheet
+Dlaczego nagłówki (h1-h6) mają różne rozmiary, nawet gdy nie dodamy żadnego CSS?	Ponieważ przeglądarka nakłada na nie style z user-agent stylesheet.
+Prawda czy Fałsz: Twoje style CSS mają niższy priorytet niż style user-agent.	Fałsz (mają wyższy priorytet).
+Jaka jest alternatywa dla używania gotowego (prebuilt) CSS Reset?	Napisanie własnego resetu lub ręczne nadpisywanie stylów w miarę potrzeb.
+Z czym najczęściej zmagają się początkujący, jeśli nie zresetują stylów przeglądarki (podaj przykład związany z odstępami)?	Z nieoczekiwanymi marginesami (margins) i dopełnieniem (padding) wokół elementów.
+Jaka jest główna różnica między jednostkami absolutnymi a relatywnymi w CSS?	Jednostki absolutne są zawsze takie same, natomiast jednostki relatywne zmieniają się w zależności od kontekstu.
+Dlaczego {{c1::px}} jest uznawany za jednostkę absolutną?	Ponieważ rozmiar piksela nie zmienia się w relacji do innych elementów na stronie.
+Jaka jest jedyna jednostka absolutna zalecana do stosowania w projektach internetowych (web projects)?	Piksel (px).
+W jakim kontekście mają sens jednostki takie jak `in` (cale) lub `cm` (centymetry) w CSS?	W kontekście druku (print setting).
+Do czego odnosi się jednostka {{c1::em}} (gdy nie jest używana do określania font-size)?	Do rozmiaru czcionki (font-size) danego elementu.
+Jeśli element ma `font-size: 16px`, a jego szerokość ustawisz na `4em`, ile wyniesie szerokość w pikselach?	64px (16 * 4).
+Do czego odnosi się jednostka `em`, gdy jest używana do ustawienia właściwości `font-size`?	Do rozmiaru czcionki (font-size) elementu nadrzędnego (rodzica).
+Do czego zawsze odnosi się jednostka {{c1::rem}}?	Do rozmiaru czcionki elementu głównego (root element: :root lub html).
+Jaka jest główna zaleta stosowania `rem` nad `em`?	Unikamy złożoności związanej ze śledzeniem rozmiaru czcionki rodzica (brak efektu kaskadowego powiększania/zmniejszania).
+Dlaczego zaleca się stosowanie {{c1::rem}} do definiowania rozmiarów czcionek na stronie?	Ponieważ szanuje to ustawienia przeglądarki użytkownika (zwiększa dostępność/readability).
+Co oznacza skrót jednostki `vh`?	Viewport Height (wysokość obszaru widocznego).
+Co oznacza skrót jednostki `vw`?	Viewport Width (szerokość obszaru widocznego).
+Ile procent wysokości viewportu to `1vh`?	1%.
+Prawda czy Fałsz: `1vw` jest równe 10% szerokości viewportu.	Fałsz (jest równe 1%).
+Podaj przykład zastosowania dla jednostek viewportu (`vh`/`vw`).	Sekcje typu &quot;full-height hero&quot; lub interfejsy przypominające aplikacje pełnoekranowe.
+Kiedy warto użyć jednostki `%` (procent) zamiast `vw` dla szerokości?	Gdy chcemy, aby szerokość zależała od elementu nadrzędnego (rodzica), a nie od szerokości całego okna przeglądarki.
+Prawda czy Fałsz: Powinieneś nauczyć się na pamięć wszystkich dostępnych jednostek CSS przed rozpoczęciem pracy.	Fałsz (należy dobierać jednostki w zależności od pożądanego zachowania elementu).
+Jeśli chcesz, aby margines skalował się wraz z rozmiarem czcionki głównej, jakiej jednostki użyjesz?	rem
+W jaki sposób w dokumentacji MDN oznaczane są typy wartości (value types)?	Są otoczone nawiasami kątowymi, np. &lt;color&gt; lub &lt;length&gt;.
+Co oznacza termin &quot;data type&quot; w kontekście CSS?	To inna nazwa na &quot;value type&quot; (typ wartości) – terminy te są używane zamiennie.
+Jaki typ danych numerycznych w CSS reprezentuje liczbę całkowitą (np. 1024)?	{{c1::&lt;integer&gt;}}
+Jaki typ danych numerycznych w CSS reprezentuje liczbę dziesiętną (np. 0.25)?	{{c1::&lt;number&gt;}}
+Co to jest typ {{c1::&lt;dimension&gt;}} w CSS?	To liczba z dołączoną jednostką (np. 10px, 45deg, 5s).
+Czy wartość procentowa (np. 50%) w CSS jest stała?	Nie, jest zawsze relatywna względem innej wartości (np. elementu rodzica).
+Wymień jedną jednostkę długości absolutnej (absolute length unit), która jest powszechnie używana na ekranach.	px (piksel).
+Ile fizycznych pikseli urządzenia to zawsze 1px w CSS?	To zależy (na ekranach HD 1px może obejmować wiele fizycznych pikseli
+Ile pikseli (px) mieści się w jednym calu (in) według standardu CSS?	96px
+Dlaczego jednostki takie jak `cm`, `mm` czy `in` są rzadko używane w projektowaniu stron na ekrany?	Ponieważ są bardziej przydatne w druku (print) i nie zawsze oddają fizyczne wymiary na różnych ekranach.
+Do czego odnosi się jednostka `em`, gdy jest używana w właściwości `font-size`?	Do rozmiaru czcionki elementu rodzica (parent element).
+Do czego odnosi się jednostka `em`, gdy jest używana w właściwościach innych niż `font-size` (np. width)?	Do rozmiaru czcionki tego samego elementu (my own font-size).
+Do czego zawsze odnosi się jednostka `rem`?	Do rozmiaru czcionki elementu głównego (root element: &lt;html&gt;).
+Co oznacza skrót `rem`?	Root em.
+Co się stanie z rozmiarem elementów opartych na `rem`, jeśli zmienisz `font-size` w elemencie `html`?	Wszystkie te elementy przeskalują się relatywnie do nowej wartości bazowej.
+Jaka jest różnica w dziedziczeniu rozmiaru między zagnieżdżonymi listami używającymi `em` a `rem`?	Zagnieżdżone `em` kumulują się (rosną/maleją wykładniczo), a `rem` pozostają stałe względem korzenia.
+Jeśli ustawisz `width: 50%` dla elementu, względem czego zostanie ona obliczona?	Względem szerokości elementu rodzica (parent container).
+Podaj przykład właściwości CSS, która akceptuje liczbę bez jednostki (unitless number).	opacity (lub line-height, flex-grow).
+W jakim zakresie mieści się wartość właściwości `opacity`?	Od 0 (pełna przezroczystość) do 1 (pełne krycie).
+Czy liczby w CSS powinny być otaczane cudzysłowem?	Nie (chyba że są częścią ciągu znaków w `content`).
+Jakim symbolem rozpoczyna się kod koloru szesnastkowego (hexadecimal)?	"{{c1::#}} (hash/płotek)"
+"Ile znaków (oprócz #) ma standardowy kod HEX koloru (bez przezroczystości)?"	6 znaków.
+"Co oznacza skrócony kod HEX, np. `#f0f`?"	"Jest to odpowiednik `#ff00ff` (każdy znak jest dublowany)."
+Jaka jest składnia funkcji `rgb()` z kanałem alfa (przezroczystością) w nowoczesnym CSS?	`rgb(red green blue / alpha)` (wartości oddzielone spacją, alfa po ukośniku).
+Jaka jest różnica między użyciem `opacity` a kanałem alfa w kolorze (np. w `rgb` lub `hex`)?	`opacity` czyni przezroczystym cały element i jego dzieci, a kanał alfa tylko konkretny kolor (np. tła).
+Co oznacza litera &quot;H&quot; w modelu kolorów HSL/HWB i w jakich jednostkach jest wyrażana?	Hue (barwa), wyrażana jako kąt (0-360 stopni) na kole barw.
+Prawda czy Fałsz: Typ wartości `&lt;image&gt;` w CSS obsługuje tylko pliki obrazów (np. .jpg, .png).	Fałsz (obsługuje również gradienty).
+Jaka jest domyślna pozycja w `&lt;position&gt;`, jeśli podasz tylko jedną wartość (np. tylko oś X)?	Center (wyśrodkowanie drugiej osi).
+Czy słowa kluczowe w CSS (np. `red`, `solid`, `center`) są traktowane jako typ String?	Nie, są to identyfikatory (identifiers) i nie używa się przy nich cudzysłowu.
+Kiedy w CSS używamy cudzysłowu dla wartości tekstowych?	Gdy wartość jest faktycznym ciągiem znaków (String), np. w właściwości `content`.
+Do czego służy funkcja CSS `calc()`?	Pozwala na wykonywanie obliczeń matematycznych wewnątrz wartości CSS (np. dodawanie pikseli do procentów).
+Dlaczego `calc(20% + 100px)` jest użyteczne, skoro nie można po prostu dodać tych liczb?	Ponieważ `20%` jest wartością zmienną (zależną od kontekstu), a `100px` stałą
+Wymień trzy funkcje matematyczne CSS inne niż `calc()` wspomniane w tekście.	min(), max(), clamp().
+Co dzieje się, gdy zdefiniowana w CSS czcionka nie jest zainstalowana na komputerze użytkownika?	Przeglądarka użyje czcionki zapasowej (fallback) lub domyślnej czcionki systemowej.
+Czym jest &quot;system font stack&quot; w CSS?	To lista rodzin czcionek dobrana tak, aby użyć domyślnego fontu interfejsu systemu operacyjnego użytkownika.
+Dlaczego stosowanie &quot;system font stack&quot; jest korzystne dla wydajności?	Ponieważ nie wymaga pobierania żadnych dodatkowych plików z sieci.
+Wymień dwa sposoby importowania fontów z bibliotek online (takich jak Google Fonts).	1. Tag `&lt;link&gt;` w HTML. 2. Reguła `@import` w pliku CSS.
+Dlaczego przy korzystaniu z zewnętrznych fontów (Web Fonts) zawsze należy podać {{c1::fallback font}} (czcionkę zapasową)?	Na wypadek awarii zewnętrznego API, zmiany URL lub problemów z siecią.
+Jaki jest główny problem prawny związany z używaniem Google Fonts API w kontekście europejskim?	Naruszenie RODO (GDPR) poprzez udostępnianie adresu IP użytkownika serwerom Google.
+Jaka jest alternatywa dla korzystania z Google Fonts API, która jest zgodna z RODO?	Pobranie plików czcionek i hostowanie ich samodzielnie (self-hosting).
+Jaka reguła CSS (at-rule) służy do definiowania własnych, hostowanych lokalnie czcionek?	@font-face
+Wewnątrz reguły `@font-face`, która właściwość wskazuje na ścieżkę do pliku z czcionką?	src
+Dlaczego przy self-hostingu fontów należy uważać na formaty plików (np. WOFF, TTF)?	Ponieważ nie wszystkie przeglądarki obsługują każdy format pliku czcionki.
+Kiedy należy używać właściwości `font-style: italic` zamiast znacznika `&lt;em&gt;`?	Gdy chcemy uzyskać pochylenie wyłącznie w celach wizualnych, bez znaczenia semantycznego (emphasis).
+Co semantycznie oznacza znacznik HTML `&lt;em&gt;`?	Nacisk (emphasis) na dany fragment tekstu, zmieniający jego wydźwięk.
+Która właściwość CSS służy do zmiany odstępów między literami?	letter-spacing
+Która właściwość CSS służy do zmiany odstępów między wierszami tekstu?	line-height
+Co robi właściwość `text-transform: uppercase`?	Zamienia wszystkie litery w tekście na wielkie.
+Co robi właściwość `text-transform: capitalize`?	Zamienia pierwszą literę każdego słowa na wielką.
+Prawda czy Fałsz: `line-height` wpływa na odstępy między literami.	Fałsz (wpływa na odstępy między liniami/wierszami).
+Która właściwość CSS dodaje cień do tekstu?	text-shadow
+Jaka wartość właściwości `text-overflow` sprawia, że ucięty tekst kończy się wielokropkiem (...)?	ellipsis
+Wymień trzy właściwości CSS niezbędne do poprawnego działania `text-overflow: ellipsis`.	1. white-space: nowrap
+Dlaczego ustawienie `white-space: nowrap` jest konieczne dla efektu `text-overflow: ellipsis`?	Ponieważ domyślnie tekst zawijałby się do nowej linii, zamiast wychodzić poza kontener i zostać uciętym.
+Co oznacza termin &quot;fallback font&quot; w deklaracji `font-family`?	To czcionka, której przeglądarka użyje, jeśli pierwsza (preferowana) czcionka nie jest dostępna.
+Do czego służy właściwość CSS `text-transform`?	Kontroluje wielkość liter w tekście (np. zamiana na wielkie, małe, kapitalizacja).
+Co robi wartość `text-transform: capitalize`?	Zmienia pierwszą literę każdego słowa na wielką.
+Co robi wartość `text-transform: uppercase`?	Zmienia wszystkie znaki w tekście na wielkie litery.
+Co robi wartość `text-transform: lowercase`?	Zmienia wszystkie znaki w tekście na małe litery.
+Jaka wartość `text-transform` zapobiega zmianie wielkości liter (wyświetla tekst tak jak w HTML)?	none
+Jaka wartość `text-transform` jest używana do wymuszenia znaków o stałej szerokości (głównie w pismach azjatyckich)?	full-width
+Co robi `text-transform: full-size-kana`?	Konwertuje małe znaki Kana na ich odpowiedniki normalnej wielkości (używane w języku japońskim).
+Aby zamienić tekst nagłówka na same wielkie litery, użyj reguły: `text-transform: {{c1::uppercase}}`	uppercase
+Prawda czy Fałsz: `text-transform` zmienia faktyczną treść w kodzie HTML.	Fałsz (zmienia tylko sposób wyświetlania/renderowania).
+Jak działa mechanizm `font-family` w CSS, gdy podamy kilka nazw czcionek?	Przeglądarka sprawdza listę od lewej do prawej i używa pierwszej czcionki dostępnej w systemie.
+Co to są &quot;Web-safe fonts&quot; (bezpieczne czcionki internetowe)?	To niewielka grupa czcionek, które są zainstalowane na niemal wszystkich popularnych systemach operacyjnych.
+Jaka jest główna wada polegania wyłącznie na &quot;Web-safe fonts&quot;?	Ograniczone możliwości projektowe i konieczność testowania, czy design działa z różnymi czcionkami systemowymi.
+Co umożliwiają &quot;Web fonts&quot; (czcionki internetowe) w przeciwieństwie do czcionek systemowych?	Pozwalają przeglądarce pobrać plik czcionki wraz ze stroną, co gwarantuje wyświetlenie wybranego kroju u każdego użytkownika.
+Jaka reguła CSS (at-rule) służy do definiowania plików czcionek do pobrania?	@font-face
+Prawda czy Fałsz: Wszystkie czcionki dostępne w internecie są darmowe do komercyjnego użytku.	Fałsz (często wymagają licencji, opłat lub uznania autorstwa).
+Co oznacza skrót WOFF?	Web Open Font Format.
+Który format czcionki internetowej jest obecnie zalecany jako pierwszy na liście ze względu na kompresję i możliwości?	{{c1::WOFF2}}
+Jaki format czcionki obsługuje zmienne czcionki (variable fonts) i kolekcje czcionek?	WOFF2
+Dlaczego kolejność formatów w deskryptorze `src` w `@font-face` jest istotna?	Ponieważ przeglądarka wybierze pierwszy format z listy, który jest w stanie obsłużyć.
+Prawda czy Fałsz: W `@font-face` należy umieścić format WOFF2 przed formatem WOFF.	Prawda (najlepsze formaty powinny być na górze).
+Jakie formaty czcionek są potrzebne do obsługi bardzo starych, &quot;legacy&quot; przeglądarek?	EOT, TTF i SVG.
+Wymień dwie popularne biblioteki online z czcionkami (font services).	Google Fonts, Adobe Fonts (lub Font Squirrel).
+Co robi deskryptor `src` w regule `@font-face`?	Określa ścieżkę (url) do pliku czcionki oraz jej format.
+Po co stosuje się wskazówkę `format(&quot;...&quot;)` w deskryptorze `src`?	Aby przeglądarka mogła szybciej określić, czy obsługuje dany plik, bez konieczności jego pobierania.
+W regule `@font-face`, deskryptor {{c1::font-family}} nadaje nazwę czcionce, której będziesz później używać w stylach CSS.	font-family
+Jeśli importujesz ten sam krój w wersji pogrubionej i zwykłej, jak powinieneś je nazwać w `font-family` wewnątrz `@font-face`?	Powinieneś użyć tej samej nazwy rodziny, a różnicować je deskryptorami `font-weight` (np. normal vs bold).
+Do czego służy deskryptor `font-display` w `@font-face`?	Określa zachowanie wyświetlania czcionki w trakcie jej ładowania (np. czy pokazać tekst od razu inną czcionką).
+Jakie narzędzie online (wspomniane w tekście) służy do generowania zestawów webfontów (pliki + CSS) z przesłanych plików?	Transfonter (lub Webfont Generator na Font Squirrel).
+Gdzie w pliku CSS powinny znajdować się reguły `@font-face`?	Na samym początku pliku (przed użyciem czcionek w stylach).
+W jaki sposób opóźnione ładowanie czcionek wpływa na metrykę FCP (First Contentful Paint)?	Opóźnia renderowanie tekstu, co wydłuża czas do pojawienia się pierwszej treści na ekranie.
+Co jest główną przyczyną przesunięć układu (Layout Shifts) związanych z czcionkami?	Różnica w rozmiarze i układzie między czcionką internetową (web font) a czcionką zapasową (fallback font).
+Prawda czy Fałsz: Przeglądarka pobiera plik czcionki natychmiast po napotkaniu deklaracji `@font-face` w CSS.	Fałsz (pobiera ją dopiero wtedy, gdy jest ona faktycznie użyta w stylach dla elementu obecnego na stronie).
+Dlaczego warto umieszczać krytyczne deklaracje `@font-face` bezpośrednio w `&lt;head&gt;` (inlining), zamiast w zewnętrznym pliku CSS?	Aby przeglądarka odkryła informację o czcionkach szybciej, nie czekając na pobranie całego zewnętrznego arkusza stylów.
+Jakie dwa rodzaje linków `preconnect` należy dodać dla czcionek z zewnętrznych źródeł (np. Google Fonts)?	1. Preconnect do domeny arkusza stylów (CSS). 2. Preconnect z atrybutem `crossorigin` do domeny plików czcionek.
+Dlaczego link `preconnect` dla plików czcionek wymaga atrybutu `crossorigin`?	Ponieważ pliki czcionek, w przeciwieństwie do CSS, są pobierane przez połączenie CORS.
+Jaka jest główna wada nadmiernego używania `&lt;link rel=&quot;preload&quot;&gt;` dla czcionek?	Zabiera zasoby potrzebne do ładowania innych krytycznych elementów i ignoruje inteligentne mechanizmy jak `unicode-range`.
+Jaki format czcionki jest obecnie rekomendowany jako standard dla wszystkich nowoczesnych przeglądarek?	{{c1::WOFF2}}
+O ile procent format WOFF2 kompresuje dane lepiej niż WOFF (dzięki algorytmowi Brotli)?	Około 30%.
+Na czym polega technika &quot;subsetting&quot; (tworzenie podzbiorów) czcionek?	Na usunięciu z pliku czcionki nieużywanych znaków (glifów), co zmniejsza rozmiar pliku.
+Który deskryptor w `@font-face` informuje przeglądarkę, dla jakich znaków dany plik czcionki powinien zostać pobrany?	{{c1::unicode-range}}
+Co to są &quot;Variable Fonts&quot; (czcionki zmienne)?	To pliki czcionek, które w jednym pliku zawierają wiele wariantów (np. różne grubości), sterowanych za pomocą &quot;osi&quot; (axes).
+Jaką wartość `font-family` należy ustawić, aby użyć domyślnej czcionki interfejsu systemu operacyjnego (bez pobierania plików)?	system-ui
+Co oznacza strategia `font-display: block`?	Tekst jest niewidoczny przez krótki czas (ok. 3s) w oczekiwaniu na font
+Co oznacza strategia `font-display: swap`?	Tekst jest natychmiast wyświetlany fontem zapasowym, a po załadowaniu fontu internetowego następuje jego podmiana.
+Co oznacza strategia `font-display: optional`?	Przeglądarka czeka bardzo krótko (ok. 100ms) na font
+Która strategia `font-display` jest najlepsza dla wydajności i stabilności układu (brak CLS), ale może skutkować brakiem własnej czcionki?	font-display: optional
+Dlaczego &quot;Icon Fonts&quot; (czcionki ikonowe) są odradzane w kontekście CLS (Layout Shift)?	Ponieważ font zapasowy wygląda drastycznie inaczej niż ikona, co powoduje duże przesunięcia przy ładowaniu.
+Co jest nowoczesną alternatywą dla &quot;Icon Fonts&quot;, lepszą dla dostępności i wydajności?	Obrazy SVG.
+Jaka właściwość CSS (deskryptor w `@font-face`) pozwala przeskalować font zapasowy, aby pasował wielkością do fontu docelowego?	{{c1::size-adjust}}
+Skąd pochodzą domyślne style (np. marginesy, wielkość nagłówków), jeśli nie zdefiniujesz własnych w CSS?	Z arkuszy stylów klienta użytkownika (User Agent stylesheets).
+Dlaczego tekst na stronach internetowych jest domyślnie responsywny?	Ponieważ przeglądarki automatycznie zawijają tekst (wrap) na krawędzi widoku (viewport).
+Jakie są cztery kluczowe elementy typografii wymienione w tekście (poza wyborem fontu)?	Preferencje użytkownika, rozmiar tekstu, długość linii, odstępy między liniami.
+Co oznacza jednostka CSS {{c1::vw}}?	Viewport width (szerokość widoku).
+Dlaczego nie należy ustawiać `font-size` używając wyłącznie jednostki `vw` (np. `font-size: 2.5vw`)?	Ponieważ uniemożliwia to użytkownikowi zmianę rozmiaru tekstu (zoom) i jest złe dla dostępności.
+Jak można naprawić problem dostępności przy skalowaniu tekstu za pomocą `vw`?	Używając funkcji `calc()` do dodania jednostki relatywnej (np. `0.75rem + 1.5vw`).
+Funkcja CSS {{c1::clamp()}} przyjmuje trzy wartości w kolejności: {{c2::minimum}}, {{c2::preferowana}}, {{c2::maksimum}}.	clamp()
+Jaki zakres znaków jest uważany za satysfakcjonującą długość linii tekstu dla pojedynczej kolumny?	45 do 75 znaków (ideał to 66).
+Jaka właściwość CSS służy do ograniczania szerokości bloku tekstu (zamiast `width`)?	max-inline-size
+Jakiej jednostki CSS należy używać do definiowania długości linii tekstu (line length)?	{{c1::ch}} (character unit).
+Dlaczego przy definiowaniu długości linii (line length) należy unikać pikseli (`px`)?	Ponieważ nie skalują się one wraz ze zmianą rozmiaru czcionki przez użytkownika.
+Zasada dotycząca `line-height`: Krótsze linie tekstu mogą mieć {{c1::większy}} line-height, a dłuższe linie wymagają ostrożniejszego (mniejszego) dopasowania.	większy
+Dlaczego wartość `line-height` powinna być podawana bez jednostki (unitless), np. `1.5`?	Aby wysokość linii była zawsze relatywna do aktualnego rozmiaru czcionki (font-size).
+Jaki format pliku czcionki internetowej (web font) zapewnia najlepszą wydajność i wsparcie?	{{c1::woff2}}
+Jaki atrybut w tagu `&lt;link&gt;` służy do priorytetowego pobierania pliku czcionki?	rel=&quot;preload&quot;
+Prawda czy Fałsz: Atrybut `crossorigin` jest wymagany przy preloadowaniu fontów, nawet jeśli hostujesz je na własnym serwerze.	Prawda.
+Co robi właściwość `font-display: swap`?	Wyświetla tekst czcionką systemową natychmiast, a następnie podmienia ją na web font, gdy ten się załaduje.
+Jaka jest główna wada `font-display: swap`?	Może powodować zauważalne przesunięcie treści (layout shift) w momencie podmiany czcionki.
+Właściwość CSS w `@font-face`, która pozwala zminimalizować przesunięcia układu (layout shift) poprzez skalowanie fontu zapasowego to {{c1::size-adjust}}.	size-adjust
+Czym są &quot;Variable Fonts&quot; (czcionki zmienne)?	To pojedyncze pliki czcionek, które zawierają w sobie wiele wariantów (np. różne wagi i style), zamiast wymagać osobnych plików.
+Kiedy stosowanie Variable Fonts przynosi największe korzyści wydajnościowe?	Gdy projekt wykorzystuje wiele różnych wag i stylów tej samej rodziny czcionek.
+Właściwość `font-family: {{c1::system-ui}}` pozwala użyć domyślnej czcionki systemu operacyjnego bez pobierania plików.	system-ui
+Właściwość CSS `background` jest tzw. {{c1::shorthandem}} (skrótem) dla 8 różnych właściwości związanych z tłem.	shorthandem
+Jeśli zdefiniujesz wiele obrazów tła (`background-image`), który z nich zostanie wyrenderowany na samym wierzchu?	Ten, który jest wymieniony jako pierwszy na liście.
+Czy w przypadku właściwości `background` zawsze zaleca się stosowanie zapisu skróconego (shorthand)?	Nie, czasem użycie pojedynczych właściwości (np. `background-color`) jest bardziej czytelne.
+Co robi wartość `background-size: {{c1::cover}}`?	Skaluje obraz tak, aby całkowicie wypełnił kontener, przycinając go (crop) jeśli proporcje się nie zgadzają.
+Co robi wartość `background-size: {{c1::contain}}`?	Skaluje obraz tak, aby był w całości widoczny wewnątrz kontenera, co może powodować powstanie pustych przestrzeni.
+Jaka jest różnica między `background-origin` a `background-clip`?	`origin` ustala punkt startowy pozycjonowania obrazu, a `clip` decyduje, gdzie tło (obraz i kolor) zostanie przycięte/ukryte.
+Właściwość `background-attachment: {{c1::fixed}}` sprawia, że obraz tła pozostaje w miejscu podczas przewijania strony (viewportu).	fixed
+Jeśli ustawisz `background-position: center bottom`, gdzie znajdzie się obraz?	Wyśrodkowany w poziomie i przyklejony do dołu kontenera.
+Wymień trzy podstawowe parametry definiowane w skróconej właściwości `border`.	Szerokość (width), styl (style), kolor (color).
+Która właściwość CSS służy do zaokrąglania rogów elementów?	border-radius
+Jak uzyskać efekt koła z kwadratowego elementu używając `border-radius`?	Ustawić `border-radius: 50%`.
+Co oznacza składnia z ukośnikiem w `border-radius`, np. `10px / 20px`?	Pierwsza wartość to promień poziomy, druga to promień pionowy (tworzy elipsę).
+Czy `border-radius` wpływa na przycinanie tła (background clipping) wewnątrz elementu?	Tak, tło (i `overflow: hidden`) dostosuje się do zaokrąglonych rogów.
+Jak technicznie stworzyć trójkąt w CSS używając tylko właściwości `border`?	Ustawić `width/height` na 0 i użyć szerokich obramowań, gdzie jedno ma kolor, a sąsiednie są `transparent`.
+Prawda czy Fałsz: Właściwość `outline` różni się od `border` tym, że nie zajmuje miejsca w pudełku (box model) i nie zaokrągla się z `border-radius`.	Prawda.
+Jaki efekt wizualny nadaje stronie użycie `box-shadow`?	Dodaje cień, tworząc poczucie głębi i oddzielenia elementów (warstw).
+Dobra praktyka przy `box-shadow`: Cienie powinny być {{c1::jasne i subtelne}}, a nie ciemne i wyraźne.	jasne i subtelne
+W jakiej kolejności podajemy wartości długości w `box-shadow` (np. `10px 5px 2px 1px`)?	offset-x, offset-y, blur-radius (rozmycie), spread-radius (rozszerzenie).
+Słowo kluczowe {{c1::inset}} w `box-shadow` zmienia cień z zewnętrznego na wewnętrzny.	inset
+Jaka jest różnica między `blur-radius` a `spread-radius` w `box-shadow`?	Blur rozmywa krawędzie cienia, a Spread powiększa lub pomniejsza lity kształt cienia przed rozmyciem.
+Czy `box-shadow` wpływa na layout (rozmiar) elementu w modelu pudełkowym?	Nie, cień nie zajmuje miejsca w layoucie i może nachodzić na inne elementy.
+Która właściwość CSS kontroluje zachowanie elementu, gdy jego zawartość jest zbyt duża, aby się w nim zmieścić?	overflow
+Jaka wartość właściwości `overflow` doda paski przewijania (scrollbars) do kontenera, jeśli treść się nie mieści?	auto (lub scroll)
+Co się dzieje z marginesami (margins) elementów wewnątrz kontenera z `overflow: hidden` (w kontekście BFC)?	`overflow: hidden` (i inne niż visible) tworzy Block Formatting Context, co zapobiega wypadaniu marginesów (margin collapsing) z tego kontenera.
+Jaka jest różnica między `overflow: scroll` a `overflow: auto`?	`scroll` zawsze pokazuje paski przewijania (nawet nieaktywne), a `auto` pokazuje je tylko wtedy, gdy treść się nie mieści.
+Właściwość `overflow-x` i `overflow-y` pozwala sterować przewijaniem niezależnie dla osi {{c1::poziomej}} i {{c1::pionowej}}.	poziomej
+Co kontroluje właściwość `opacity`?	Stopień przezroczystości elementu (od 0 do 1).
+Wymień jedno typowe zastosowanie dla właściwości `opacity`.	Efekty najechania myszką (hover effects) lub warstwowanie elementów.
+Jaka jest kluczowa różnica między `opacity: 0.5` a `background-color: rgba(0,0,0,0.5)`?	`opacity` wpływa na cały element i jego dzieci (wszystko jest półprzezroczyste), a `rgba` tylko na tło (tekst pozostaje nieprzezroczysty).
+Prawda czy Fałsz: Ustawienie `opacity` na wartość mniejszą niż 1 tworzy nowy kontekst układania (Stacking Context).	Prawda (wpływa to na `z-index`).
+Prawda czy Fałsz: Aby używać CSS efektywnie, musisz nauczyć się na pamięć wszystkich dostępnych właściwości.	Fałsz (używa się regularnie tylko niewielkiej części z nich).
+Jaki znak reprezentuje &quot;Child Combinator&quot; (kombinator dziecka) i co on wybiera?	`&gt;` (znak większości). Wybiera tylko bezpośrednie dzieci danego elementu.
+Jaka jest różnica między selektorem `div p` a `div &gt; p`?	`div p` wybiera wszystkie akapity wewnątrz div (potomków), a `div &gt; p` tylko te, które są bezpośrednio w nim zagnieżdżone (dzieci).
+Jaki znak reprezentuje &quot;Adjacent Sibling Combinator&quot; (kombinator przylegającego rodzeństwa)?	`+` (plus).
+Co wybierze selektor `.group1 + div`?	Wybierze element `div`, który znajduje się bezpośrednio po elemencie z klasą `.group1` (na tym samym poziomie drzewa DOM).
+Jaki znak reprezentuje &quot;General Sibling Combinator&quot; (kombinator ogólnego rodzeństwa)?	`~` (tylda).
+Co wybierze selektor `.group1 ~ div`?	Wszystkie elementy `div`, które są rodzeństwem `.group1` i znajdują się po nim w kodzie HTML (nie muszą z nim sąsiadować bezpośrednio).
+Jaka jest różnica w składni między pseudo-klasami a pseudo-elementami (według nowoczesnego standardu)?	Pseudo-klasy używają pojedynczego dwukropka (`:`), a pseudo-elementy podwójnego dwukropka (`::`).
+Do czego służą pseudo-klasy (np. `:hover`)?	Do wybierania elementów na podstawie ich stanu (np. najechanie myszką) lub struktury, które już istnieją w HTML.
+Do czego służą pseudo-elementy (np. `::before`)?	Do stylowania konkretnych części elementu lub tworzenia elementów, które nie istnieją w kodzie HTML.
+Która pseudo-klasa wybiera główny element dokumentu (zazwyczaj `&lt;html&gt;`) i służy do definiowania zmiennych globalnych?	:root
+Jaka pseudo-klasa wybiera element, który nie ma żadnych dzieci (nawet tekstu)?	:empty
+Jak wybrać co trzeci element listy za pomocą `:nth-child`?	`:nth-child(3n)`
+Co oznacza selektor `:nth-child(3n + 3)`?	Wybiera co trzeci element, zaczynając liczenie od trzeciego elementu.
+Jaka właściwość CSS jest niezbędna, aby pseudo-elementy `::before` i `::after` były widoczne?	"content (np. `content: &#x27;&#x27;"
+Co robi selektor atrybutu `[atrybut^=&quot;wartość&quot;]` (np. `a[href^=&quot;http&quot;]`)?	Wybiera elementy, których atrybut **zaczyna się** od podanego ciągu znaków.
+Co robi selektor atrybutu `[atrybut$=&quot;wartość&quot;]` (np. `img[src$=&quot;.jpg&quot;]`)?	Wybiera elementy, których atrybut **kończy się** na podany ciąg znaków.
+Co robi selektor atrybutu `[atrybut*=&quot;wartość&quot;]` (np. `[class*=&quot;btn&quot;]`)?	Wybiera elementy, których atrybut **zawiera** podany ciąg znaków w dowolnym miejscu.
+Który pseudo-element pozwala na zmianę koloru zaznaczenia tekstu przez użytkownika?	::selection
+Jaka pseudo-klasa odpowiada za stan elementu w momencie kliknięcia (np. wciśnięty przycisk)?	:active
+W jakiej kolejności w CSS powinny być zdefiniowane pseudo-klasy linków, aby działały poprawnie (tzw. zasada LVHA)?	Link (:link), Visited (:visited), Hover (:hover), Active (:active).
+Jaki znak w CSS reprezentuje &quot;Descendant Combinator&quot; (kombinator potomka)?	Pojedyncza spacja ( ).
+Co wybiera selektor potomka (np. `div p`)?	Wszystkie elementy `p` znajdujące się wewnątrz `div`, niezależnie od poziomu zagnieżdżenia (dzieci, wnuki itd.).
+Prawda czy Fałsz: Selektor `ul &gt; li` wybierze również elementy `li`, które są zagnieżdżone w innej liście wewnątrz tego `ul`.	Fałsz (wybiera tylko bezpośrednie dzieci pierwszego poziomu).
+Jaki znak reprezentuje &quot;Child Combinator&quot; (kombinator dziecka)?	{{c1::&gt;}} (znak większości).
+Jaki znak reprezentuje &quot;Next-sibling Combinator&quot; (kombinator następnego rodzeństwa)?	{{c1::+}} (plus).
+Aby wybrać element `img`, który znajduje się **bezpośrednio** po akapicie `p` (i ma tego samego rodzica), użyjesz selektora: `p {{c1::+}} img`	+
+Jaki znak reprezentuje &quot;Subsequent-sibling Combinator&quot; (kombinator dalszego rodzeństwa)?	{{c1::~}} (tylda).
+Jaka jest główna różnica w działaniu między `+` a `~`?	`+` wybiera tylko **pierwszy** sąsiadujący element, a `~` wybiera **wszystkie** pasujące elementy rodzeństwa występujące po nim.
+Prawda czy Fałsz: Kombinator `~` (tylda) wybiera elementy rodzeństwa, nawet jeśli są oddzielone innymi elementami (nie sąsiadują bezpośrednio).	Prawda (muszą tylko mieć tego samego rodzica i występować później w kodzie).
+Dlaczego nadmierne używanie długich łańcuchów kombinatorów (np. `div &gt; article &gt; p &gt; span`) jest odradzane?	Ponieważ sprawia, że CSS jest trudny do ponownego użycia (zbyt mocno związany z konkretną strukturą HTML).
+W jakiej sytuacji użycie skomplikowanych kombinatorów jest najbardziej uzasadnione?	Gdy nie mamy dostępu do edycji kodu HTML (np. jest on generowany przez CMS) i nie możemy dodać klas.
+Jaka jest domyślna wartość właściwości `position` dla wszystkich elementów HTML?	static
+Czy właściwości przesunięcia (`top`, `bottom`, `left`, `right`) działają na element z `position: static`?	Nie.
+Czym różni się `position: relative` od `static` w kontekście przepływu dokumentu (document flow)?	Niczym – element `relative` nadal zajmuje swoje pierwotne miejsce w przepływie, różni się tylko możliwością wizualnego przesunięcia.
+Względem czego przesuwany jest element, gdy ustawimy mu `position: {{c1::relative}}`?	Względem jego normalnej (pierwotnej) pozycji.
+Co dzieje się z miejscem w układzie strony (przestrzenią) po elemencie, któremu nadano `position: absolute`?	Miejsce to znika, ponieważ element jest całkowicie usuwany z normalnego przepływu dokumentu.
+Element z `position: absolute` pozycjonuje się względem najbliższego pozycjonowanego {{c1::przodka (ancestor)}}.	przodka (ancestor)
+Co to znaczy, że przodek jest &quot;pozycjonowany&quot; (positioned ancestor)?	Oznacza to, że ma ustawioną wartość `position` inną niż `static` (np. relative, absolute, fixed, sticky).
+Jeśli element z `position: absolute` nie ma żadnego pozycjonowanego przodka, względem czego się ustawi?	Względem bloku początkowego (zazwyczaj elementu `&lt;html&gt;` / widoku).
+Wymień trzy typowe zastosowania dla `position: absolute` wspomniane w tekście.	Modale, tekst na obrazku, ikony nałożone na inne elementy.
+Względem czego ZAWSZE pozycjonowany jest element z `position: {{c1::fixed}}`?	Względem okna przeglądarki (viewportu).
+Czy element z `position: fixed` przesuwa się wraz z przewijaniem strony?	Nie, pozostaje &quot;przyklejony&quot; w tym samym miejscu ekranu.
+Jak zachowuje się element z `position: sticky`?	Zachowuje się jak zwykły element (`relative`) dopóki nie zostanie przewinięty do określonego punktu, wtedy zachowuje się jak `fixed` w obrębie swojego rodzica.
+Prawda czy Fałsz: Element `sticky` jest usuwany z normalnego przepływu dokumentu (jak absolute/fixed).	Fałsz (pozostaje w przepływie i zajmuje miejsce).
+Jaki jest klasyczny przykład użycia dla `position: sticky`?	Nagłówki sekcji (section headings) lub pasek nawigacji, który przykleja się do góry po przewinięciu.
+Dlaczego odradza się budowanie całego layoutu strony na `position: absolute`?	Ponieważ jest to trudne w zarządzaniu
+Po czym rozpoznasz funkcję w składni CSS?	Po słowie kluczowym, po którym następują nawiasy zawierające argumenty, np. `rgb(0,0,0)`.
+Czy w czystym CSS (bez preprocesorów) można tworzyć własne funkcje?	Nie, można korzystać tylko z wbudowanych funkcji.
+Jaka jest główna zaleta funkcji `calc()` w kontekście jednostek?	Pozwala na wykonywanie działań matematycznych na mieszanych jednostkach (np. odejmowanie pikseli od `vh`).
+Prawda czy Fałsz: Funkcje `calc()` można zagnieżdżać wewnątrz siebie.	Prawda.
+Co zwraca funkcja CSS `min(val1, val2, ...)`?	Zwraca najmniejszą wartość z podanej listy.
+Jeśli element ma `width: min(150px, 100%)`, a kontener ma szerokość 100px, jaka będzie szerokość elementu?	100px (ponieważ 100% &lt; 150px).
+Jeśli element ma `width: min(150px, 100%)`, a kontener ma szerokość 500px, jaka będzie szerokość elementu?	150px (limituje go stała wartość, która jest mniejsza niż 100%).
+Co zwraca funkcja CSS `max(val1, val2, ...)`?	Zwraca największą wartość z podanej listy.
+Kiedy funkcja `max()` jest szczególnie przydatna (wg tekstu)?	Gdy chcemy zapewnić dostępność przy używaniu zoomu przeglądarki lub na bardzo małych oknach (element nie stanie się zbyt mały).
+Ile argumentów przyjmuje funkcja `clamp()`?	3
+W jakiej kolejności podajemy argumenty do funkcji `clamp()`?	{{c1::wartość minimalna}}, {{c1::wartość preferowana (skalująca)}}, {{c1::wartość maksymalna}}.
+Jeśli masz `font-size: clamp(1rem, 5vw, 2rem)`, a wyliczone `5vw` wynosi `0.5rem`, jaki będzie ostateczny rozmiar czcionki?	1rem (wartość minimalna).
+Jeśli masz `font-size: clamp(1rem, 5vw, 2rem)`, a wyliczone `5vw` wynosi `3rem`, jaki będzie ostateczny rozmiar czcionki?	2rem (wartość maksymalna).
+Która funkcja CSS pozwala płynnie skalować tekst między dwoma skrajnymi wartościami w oparciu o szerokość widoku?	clamp()
+Czy wewnątrz funkcji `min()` lub `max()` można wykonywać proste działania matematyczne (np. `100vw - 2rem`)?	Tak, nie trzeba wtedy używać dodatkowo `calc()`.
+Do czego służy funkcja CSS `var()`?	Służy do pobierania wartości zdefiniowanej wcześniej zmiennej CSS (Custom Property).
+Jaka funkcja CSS pozwala na użycie wartości atrybutu HTML w stylach (np. w `content`)?	attr()
+Co robi funkcja `calc()`?	Pozwala na wykonywanie obliczeń matematycznych na wartościach CSS (np. dodawanie różnych jednostek).
+Która funkcja CSS wybiera najmniejszą wartość z podanej listy argumentów?	min()
+Która funkcja CSS wybiera największą wartość z podanej listy argumentów?	max()
+Jak działa funkcja `clamp(min, val, max)`?	Ogranicza wartość `val` tak, aby nie była mniejsza niż `min` i nie większa niż `max` (idealne do responsywnej typografii).
+Do czego służy funkcja `url()`?	Do wskazywania ścieżki do zewnętrznego zasobu, np. obrazka tła lub czcionki.
+Która funkcja tworzy gradient liniowy (przejście kolorów wzdłuż linii prostej)?	linear-gradient()
+Która funkcja tworzy gradient promienisty (rozchodzący się od środka na zewnątrz)?	radial-gradient()
+Która funkcja tworzy gradient stożkowy (obracający się wokół środka, np. do wykresów kołowych)?	conic-gradient()
+Wymień funkcję, która powtarza gradient liniowy w nieskończoność.	repeating-linear-gradient()
+Do czego służy funkcja `rgb()`?	Definiuje kolor za pomocą modelu Czerwony-Zielony-Niebieski (Red-Green-Blue).
+Co oznacza skrót w funkcji `hsl()`?	Hue (barwa), Saturation (nasycenie), Lightness (jasność).
+Jaka funkcja filtra rozmywa obraz?	blur()
+Jaka funkcja filtra zmienia obraz na czarno-biały (skala szarości)?	grayscale()
+Jaka funkcja filtra odwraca kolory (tworzy negatyw)?	invert()
+Jaka funkcja filtra dodaje cień rzucany przez obiekt (często używana dla obrazków PNG z przezroczystością)?	drop-shadow()
+Czym różni się `box-shadow` od funkcji filtra `drop-shadow()`?	`box-shadow` tworzy cień pudełka (prostokąta), a `drop-shadow()` tworzy cień uwzględniający kształt zawartości (np. przezroczystego obrazka).
+Jaka funkcja transformacji przesuwa element w poziomie i pionie?	translate() (lub translate3d/translateX/translateY)
+Jaka funkcja transformacji obraca element o zadany kąt?	rotate()
+Jaka funkcja transformacji zmienia rozmiar elementu (skaluje go)?	scale()
+Jaka funkcja transformacji pochyla element wzdłuż osi X lub Y?	skew()
+W kontekście CSS Grid, co robi funkcja `repeat()`?	Pozwala powtórzyć definicję kolumny lub wiersza określoną liczbę razy (np. `repeat(3, 1fr)`).
+W CSS Grid, funkcja {{c1::minmax(min, max)}} definiuje zakres wielkości ścieżki (track) od minimalnej do maksymalnej.	minmax
+"Jaka funkcja pozwala na pobranie zmiennych środowiskowych przeglądarki (np. bezpiecznego obszaru na iPhone&#x27;ach z notchem)?"	env()
+Jaka funkcja służy do przycinania elementu do kształtu koła?	circle() (wewnątrz właściwości clip-path lub shape-outside)
+Jaka funkcja służy do przycinania elementu do dowolnego wielokąta (definiując punkty)?	polygon()
+Do czego służy funkcja `brightness()`?	Zmienia jasność obrazu/elementu (wartość &lt; 1 przyciemnia, &gt; 1 rozjaśnia).
+Do czego służy funkcja `contrast()`?	Zmienia kontrast obrazu/elementu.
+Jak inaczej nazywamy &quot;Custom properties&quot; w CSS?	Zmienne CSS (CSS variables).
+Jaka jest główna zaleta używania Custom Properties w dużych projektach?	Pozwalają na zdefiniowanie wartości w jednym miejscu i używanie jej w wielu, co ułatwia aktualizacje i zapewnia spójność (np. kolorów).
+Jaką składnią rozpoczyna się deklaracja nazwy zmiennej CSS?	Dwoma myślnikami (np. `--nazwa-zmiennej`).
+Prawda czy Fałsz: Nazwy zmiennych CSS są wrażliwe na wielkość liter (case-sensitive).	Prawda (`--main-color` to nie to samo co `--Main-Color`).
+Jakiej funkcji CSS używamy, aby odczytać wartość zmiennej?	`var()`
+Jak wygląda składnia użycia zmiennej `--main-bg` jako koloru tła?	`background-color: var(--main-bg)
+Ile parametrów przyjmuje funkcja `var()`?	Dwa (pierwszy to nazwa zmiennej, drugi to opcjonalna wartość zastępcza/fallback).
+Co się stanie, jeśli użyjesz `var(--nieistniejaca-zmienna, blue)`, a zmienna nie została zdefiniowana?	Zostanie użyta wartość `blue` (fallback).
+Czym jest &quot;zakres&quot; (scope) zmiennej CSS?	To obszar, w którym zmienna jest dostępna – obejmuje selektor, w którym została zdefiniowana, oraz wszystkich jego potomków.
+Jeśli zdefiniujesz zmienną wewnątrz klasy `.card`, czy będzie ona dostępna dla elementu na zewnątrz tej klasy?	Nie, będzie dostępna tylko dla `.card` i jego dzieci.
+W jakim selektorze najlepiej definiować zmienne globalne (dostępne w całym dokumencie)?	W selektorze `:root`.
+Co reprezentuje selektor `:root` w HTML?	Element `&lt;html&gt;`, ale z wyższą specyficznością (specificity).
+Jakie zapytanie mediów (media query) pozwala wykryć preferencje użytkownika dotyczące trybu ciemnego/jasnego w systemie operacyjnym?	`@media (prefers-color-scheme: dark)` (lub light).
+Dlaczego przy używaniu `prefers-color-scheme` warto zdefiniować domyślne kolory poza tym zapytaniem?	Aby zapewnić stylizację dla użytkowników, którzy nie mają ustawionych preferencji lub używają przeglądarek niewspierających tego zapytania.
+Jaki jest główny problem z &quot;tradycyjnym&quot; podejściem do zmiennych CSS, gdzie definiujemy kolory w `:root` i przypisujemy je ręcznie do każdego elementu dziecka w klasach modyfikatorów?	Prowadzi to do nadmiaru skomplikowanych selektorów i trudniejszego utrzymania kodu (konieczność nadpisywania stylów dla każdego elementu dziecka osobno).
+Na czym polega technika &quot;locally scoped custom properties&quot; (lokalnie zakresowanych zmiennych) omawiana w wideo?	Na definiowaniu zmiennych na poziomie rodzica komponentu (np. `.plan`), a elementy dzieci (np. przycisk, ikona) używają tych zmiennych, zamiast sztywnych wartości.
+Co oznacza konwencja nazywania zmiennych z podkreślnikiem na początku, np. `--_icon-color` (tzw. &quot;pseudo-private properties&quot;)?	Sugeruje to, że zmienna jest &quot;prywatna&quot; dla danego komponentu i służy do jego wewnętrznej logiki, a nie do konfiguracji globalnej.
+W funkcji `var(--zmienna, fallback)`, do czego służy drugi argument (fallback)?	Jest to wartość domyślna, która zostanie użyta, jeśli zmienna `--zmienna` nie została zdefiniowana.
+Dlaczego używanie `fallback` wewnątrz `var()` (np. `var(--_color, pink)`) jest kluczowe dla omawianej strategii?	Pozwala ustawić domyślny wygląd komponentu bez konieczności definiowania zmiennej, a modyfikatory (np. `.plan--dark`) muszą jedynie zdefiniować tę zmienną, aby nadpisać styl.
+Jak technika lokalnych zmiennych upraszcza tworzenie wariantów komponentów (np. inna wersja kolorystyczna karty)?	Wystarczy zmienić wartości zmiennych w klasie rodzica (np. `--_color: blue`), a wszystkie elementy dzieci automatycznie zaktualizują swój wygląd bez dodatkowych selektorów CSS.
+Jaka jest zaleta używania zmiennych przy skomplikowanych właściwościach, takich jak `box-shadow`?	Zamiast przepisywać cały ciąg wartości (offsety, rozmycie) w celu zmiany koloru cienia, wystarczy zmienić tylko zmienną odpowiadającą za kolor.
+Prawda czy Fałsz: Zmieniając lokalną zmienną w klasie modyfikatora (np. `.card--highlight`), musisz używać selektorów potomnych, aby zmienić kolor przycisku wewnątrz tej karty.	Fałsz (jeśli przycisk używa tej zmiennej, zmieni się automatycznie).
+W kontekście wydajności i &quot;czystości&quot; kodu, co eliminuje podejście oparte na lokalnych zmiennych?	Eliminuje konieczność tworzenia wielu specyficznych selektorów dla każdego wariantu (np. `.plan-dark .button`, `.plan-dark .icon`).
+Jak nazywała się pierwsza przeglądarka internetowa stworzona w 1990 roku (później przemianowana na Nexus)?	WorldWideWeb
+Kto stworzył pierwszą przeglądarkę internetową podczas pracy w CERN?	Tim Berners-Lee
+Dlaczego pierwsza przeglądarka &quot;WorldWideWeb&quot; zmieniła nazwę na &quot;Nexus&quot;?	Aby uniknąć mylenia nazwy programu z samą siecią WWW (World Wide Web).
+Jaka przeglądarka, wydana w 1995 roku, zdominowała rynek osiągając w pewnym momencie ponad 90% udziałów?	Internet Explorer
+Jaka fundacja powstała na bazie Netscape, aby stworzyć konkurencję dla Internet Explorera (i stworzyła Firefoxa)?	Mozilla Foundation
+W którym roku Google wypuściło przeglądarkę Chrome?	2008
+Czym są PWA w kontekście ewolucji oprogramowania webowego?	Progressive Web Apps (aplikacje działające w pełni w przeglądarce, zastępujące programy instalowane natywnie).
+Jaki silnik renderujący (rendering engine) jest wykorzystywany przez Chrome i przeglądarki oparte na Chromium?	{{c1::Blink}}
+Jaki silnik renderujący (rendering engine) jest wykorzystywany przez przeglądarkę Safari?	{{c1::WebKit}}
+Jeśli aplikacja webowa działa poprawnie w Chrome, w jakich innych przeglądarkach najprawdopodobniej też zadziała bez problemów?	W innych przeglądarkach opartych na Chromium (np. Edge, Brave).
+Jaka organizacja zajmuje się tworzeniem standardów webowych (w tym nowych funkcji CSS) i dbaniem o kompatybilność?	W3C (World Wide Web Consortium).
+Jaka strona internetowa jest standardem branżowym do sprawdzania wsparcia przeglądarek dla nowych funkcji HTML/CSS?	Can I Use (caniuse.com)
+Prawda czy Fałsz: Przeglądarki mobilne (np. Safari na iOS) działają identycznie jak ich wersje desktopowe (Safari na macOS).	Fałsz (często wymagają osobnych dostosowań).
+Jaki silnik renderujący jest wymuszony dla WSZYSTKICH przeglądarek (w tym Chrome i Firefox) na systemie iOS/iPadOS?	{{c1::WebKit}}
+Prawda czy Fałsz: Chrome zainstalowany na iPhonie używa silnika Blink.	Fałsz (używa WebKit z powodu restrykcji Apple).
+Czego NIE emuluje przeglądarka desktopowa (np. Chrome DevTools) podczas symulacji urządzenia mobilnego?	Specyficznych zachowań systemu operacyjnego i silnika renderującego danego telefonu (emuluje głównie rozmiar ekranu).
+Co to jest Framework CSS?	To gotowy zestaw kodu CSS (biblioteka), który dostarcza wstępnie stylowane komponenty i systemy układu, aby przyspieszyć tworzenie stron.
+Podaj przykład frameworka CSS typu &quot;component-based&quot; (opartego na gotowych komponentach, jak przyciski czy nawigacja).	Bootstrap (lub Bulma, Foundation).
+Podaj przykład frameworka CSS typu &quot;utility-first&quot; (opartego na klasach pomocniczych zmieniających pojedyncze właściwości).	Tailwind CSS.
+Jaka jest główna wada polegania na frameworkach CSS na wczesnym etapie nauki?	Ogranicza zrozumienie fundamentów CSS, co utrudnia późniejsze debugowanie i nadpisywanie domyślnych stylów frameworka.
+Co to jest Preprocesor CSS (np. Sass)?	To narzędzie/język rozszerzający możliwości CSS (np. o pętle, domieszki), który następnie jest kompilowany do zwykłego kodu CSS zrozumiałego dla przeglądarki.
+Wymień trzy popularne preprocesory CSS.	Sass, Less, Stylus.
+Jakie dwie funkcje, dawniej dostępne tylko w preprocesorach, są teraz natywnie wspierane w czystym CSS (Vanilla CSS)?	Zmienne (Custom Properties) oraz zagnieżdżanie (CSS Nesting).
+Dlaczego rekruterzy często pytają o &quot;Vanilla CSS&quot;, nawet jeśli firma używa frameworków?	Ponieważ solidne podstawy czystego CSS są niezbędne do zrozumienia, jak framework działa &quot;pod maską&quot; i do naprawiania problemów, których framework nie przewidział.
+Jaki element HTML służy jako kontener dla wszystkich kontrolek formularza?	&lt;form&gt;
+Do czego służy atrybut `action` w elemencie `&lt;form&gt;`?	Określa adres URL, na który dane formularza mają zostać wysłane do przetworzenia.
+Do czego służy atrybut `method` w elemencie `&lt;form&gt;`?	Określa metodę HTTP (np. GET lub POST), która zostanie użyta do wysłania danych.
+Której metody HTTP należy użyć, jeśli chcemy pobrać dane z serwera (np. wyniki wyszukiwania)?	GET 
+Której metody HTTP używamy, gdy chcemy zmienić coś na serwerze (np. utworzyć konto, dokonać płatności)?	POST
+Jaki atrybut elementu `&lt;input&gt;` decyduje o tym, jak przeglądarka go wyrenderuje i jakich danych oczekuje?	type 
+Dlaczego sam element `&lt;input&gt;` nie jest wystarczający z punktu widzenia UX i dostępności?	Ponieważ użytkownik nie wie, jakie dane ma wprowadzić (brak etykiety).
+Jaki element HTML służy do tworzenia etykiet dla pól formularza?	&lt;label&gt;
+Aby powiązać `&lt;label&gt;` z inputem, atrybut `for` etykiety musi być taki sam jak atrybut {{c1::id}} inputa.	id 
+Co się stanie, gdy użytkownik kliknie w tekst etykiety powiązanej z inputem?	Kursor automatycznie ustawi się w tym polu (focus).
+Do czego służy atrybut `placeholder`?	Wyświetla tymczasowy tekst wewnątrz pola, podpowiadając format lub rodzaj danych. 
+Dlaczego atrybut `name` jest kluczowy dla każdego pola formularza?	Ponieważ służy jako klucz (zmienna) identyfikujący dane po stronie serwera
+Jaki typ inputa (`type=&quot;...&quot;`) służy do wprowadzania haseł i maskuje znaki?	password
+Czym różni się `&lt;textarea&gt;` od `&lt;input type=&quot;text&quot;&gt;` w kwestii składni HTML?	`&lt;textarea&gt;` posiada tag zamykający (`&lt;/textarea&gt;`) i pozwala na wprowadzanie wielu linii tekstu. 
+Jakie atrybuty kontrolują początkowy rozmiar elementu `&lt;textarea&gt;`?	rows (wiersze) i cols (kolumny).
+Jaka właściwość CSS pozwala zablokować użytkownikowi możliwość zmiany rozmiaru pola `&lt;textarea&gt;`?	`resize` (np. `resize: none
+Jaki element HTML tworzy rozwijaną listę opcji (dropdown)?	&lt;select&gt; 
+Jaki element definiuje pojedynczą pozycję wewnątrz listy `&lt;select&gt;`?	&lt;option&gt;
+W elemencie `&lt;select&gt;`, atrybut {{c1::value}} w `&lt;option&gt;` określa dane wysyłane na serwer, a treść znacznika to tekst widoczny dla użytkownika.	value
+Jaki atrybut sprawia, że dana opcja w `&lt;select&gt;` jest domyślnie wybrana?	selected
+Do czego służy element `&lt;optgroup&gt;` wewnątrz `&lt;select&gt;`?	Do grupowania opcji w kategorie z nagłówkami.
+Kiedy należy używać przycisków radiowych (`&lt;input type=&quot;radio&quot;&gt;`) zamiast checkboxów?	Gdy użytkownik ma wybrać tylko jedną opcję z zestawu.
+W jaki sposób przeglądarka wie, że grupa przycisków radiowych jest ze sobą powiązana (zaznaczenie jednego odznacza inne)?	Wszystkie muszą mieć ten sam atrybut `name`. 
+Kiedy używamy checkboxów (`&lt;input type=&quot;checkbox&quot;&gt;`)?	Gdy użytkownik może wybrać wiele opcji jednocześnie lub przełączyć pojedynczą opcję (tak/nie).
+Jaki element służy do semantycznego grupowania powiązanych elementów formularza (np. grupy radio buttonów) w ramkę?	{{c1::&lt;fieldset&gt;}} 
+Jaki element służy do dodania podpisu (tytułu) dla grupy `&lt;fieldset&gt;`?	{{c1::&lt;legend&gt;}}
+Gdzie w strukturze `&lt;fieldset&gt;` powinien znajdować się element `&lt;legend&gt;`?	Bezpośrednio po otwierającym tagu `&lt;fieldset&gt;`.
+Jaki jest domyślny typ (`type`) dla elementu `&lt;button&gt;` wewnątrz formularza?	submit
+Co robi przycisk `&lt;button type=&quot;reset&quot;&gt;`?	Czyści formularz i przywraca wartości domyślne wszystkich pól.
+Jeśli chcesz użyć przycisku w formularzu tylko do akcji JavaScript (bez wysyłania danych), jaki `type` musisz mu nadać?	button
+Czy dozwolone jest zagnieżdżanie jednego elementu `&lt;form&gt;` wewnątrz innego?	Nie, jest to surowo zabronione i powoduje nieprzewidywalne działanie.
+W jaki sposób można powiązać element input z formularzem, jeśli input znajduje się fizycznie poza znacznikiem `&lt;form&gt;`?	Używając atrybutu `form` w inpucie (podając id formularza).
+Na czym polega &quot;niejawne&quot; (implicit) powiązanie etykiety z polem formularza?	Na zagnieżdżeniu elementu `&lt;input&gt;` bezpośrednio wewnątrz znacznika `&lt;label&gt;`.
+Jakie dwa atrybuty (pseudoklasy) pozwalają stylować pola formularza w zależności od tego, czy muszą zostać wypełnione?	:required i :optional
+Dlaczego stylowanie pól wymaganych (`:required`) wyłącznie kolorem jest niewystarczające?	Ponieważ osoby z zaburzeniami widzenia barw (daltoniści) mogą nie zauważyć różnicy
+Jakie pseudoklasy pozwalają stylować pola w zależności od poprawności wprowadzonych danych (walidacji)?	:valid i :invalid 
+Prawda czy Fałsz: Pole z atrybutem `required`, które jest puste, pasuje do pseudoklasy `:invalid`.	Prawda.
+Puste pole typu `email` (bez atrybutu `required`) będzie pasować do pseudoklasy {{c1::valid}}.	valid
+Jakie pseudoklasy służą do stylowania inputów numerycznych, których wartość mieści się (lub nie) w zakresie określonym przez `min` i `max`?	:in-range i :out-of-range
+Która pseudoklasa wybiera elementy, które są zaznaczone domyślnie po załadowaniu strony (nawet jeśli użytkownik je później odznaczy)?	:default
+Co oznacza stan `:indeterminate` dla grupy przycisków radiowych?	Żaden z przycisków w grupie nie jest zaznaczony. 
+Jaka jest różnica między polem `:disabled` a `:read-only`?	`:disabled` nie wysyła danych na serwer i nie można go kliknąć
+Czy `input` typu `text` obsługuje pseudoelementy `::before` i `::after` (generated content)?	Nie (ponieważ jest elementem pustym/zastępowanym).
+Jak obejść brak obsługi `::before`/`::after` w inputach tekstowych, aby dodać np. ikonę walidacji?	Należy dodać pusty element (np. `&lt;span&gt;`) tuż za inputem i stylować go w oparciu o stan inputa. 
+Co robi pseudoklasa `:focus-within`?	Wybiera element, jeśli on sam LUB którykolwiek z jego potomków posiada focus.
+Dlaczego stylowanie elementów takich jak `input type=&quot;date&quot;` czy `checkbox` jest trudne?	Ponieważ każda przeglądarka renderuje je w specyficzny, domyślny sposób, który trudno nadpisać samym CSS. 
+Jaka reguła CSS pozwala wymusić na elementach formularza dziedziczenie czcionki od rodzica?	`font-family: inherit
+Dlaczego zaleca się stosowanie `box-sizing: {{c1::border-box}}` dla wszystkich elementów formularza?	Aby miały spójne rozmiary niezależnie od domyślnych wartości paddingu i obramowania w różnych przeglądarkach.
+Jaka właściwość CSS służy do usuwania domyślnego, systemowego stylu kontrolek formularza (np. zaokrągleń w iOS)?	{{c1::appearance}} (z wartością `none`). 
+Dlaczego właściwość `appearance: none` jest kluczowa przy stylowaniu checkboxów i radio buttonów?	Ponieważ usuwa ich sztywny, domyślny wygląd, co pozwala na stworzenie własnego designu.
+Jak w CSS ukryć domyślny przycisk &quot;x&quot; (anuluj) wewnątrz `&lt;input type=&quot;search&quot;&gt;`?	Używając pseudoelementu `::-webkit-search-cancel-button` z `display: none`.
+Prawda czy Fałsz: Można w pełni ostylować rozwijaną listę opcji (`&lt;option&gt;`) w standardowym elemencie `&lt;select&gt;` używając tylko CSS.	Fałsz (lista rozwijana jest renderowana przez system operacyjny).
+Jaki jest sprawdzony sposób na stworzenie własnego przycisku &quot;Wybierz plik&quot; dla `&lt;input type=&quot;file&quot;&gt;`?	Ukrycie właściwego inputa i ostylowanie powiązanej z nim etykiety `&lt;label&gt;`, która działa jak przycisk.
+Co trzeba zrobić, aby w pełni kontrolować wygląd kalendarza w formularzu?	Należy użyć biblioteki JavaScript (custom date picker) zamiast natywnego `&lt;input type=&quot;date&quot;&gt;`.
+Jaka jest najważniejsza, &quot;złota zasada&quot; bezpieczeństwa aplikacji internetowych?	Nigdy nie ufaj danym pochodzącym z przeglądarki (użytkownika).
+Co oznacza skrót XSS?	Cross-Site Scripting.
+Na czym polega atak XSS (Cross-Site Scripting)?	Na wstrzyknięciu złośliwego skryptu (uruchamianego po stronie klienta) do przeglądarki innego użytkownika za pośrednictwem strony internetowej.
+Czym różni się &quot;Reflected XSS&quot; od &quot;Persistent (Stored) XSS&quot;?	Reflected XSS zwraca złośliwy skrypt natychmiastowo i jednorazowo (np. w wyniku wyszukiwania), a Persistent XSS zapisuje go na serwerze (np. w komentarzu), atakując każdego, kto wyświetli daną treść.
+Jaka jest najskuteczniejsza obrona przed atakami XSS?	Sanityzacja danych wejściowych (input sanitization) i wyłączanie/usuwanie znaczników HTML mogących uruchomić kod (np. `&lt;script&gt;`).
+Na czym polega atak SQL Injection?	Na wstrzyknięciu fragmentu kodu SQL przez dane wejściowe użytkownika, co pozwala na nieautoryzowany dostęp lub modyfikację bazy danych.
+"Dlaczego zapytania typu `SELECT * FROM users WHERE name = &#x27;` + userName + `&#x27;"	` są podatne na SQL Injection?
+Jaka jest najlepsza metoda zapobiegania SQL Injection?	Stosowanie zapytań parametryzowanych (parameterized queries / prepared statements).
+Co oznacza skrót CSRF?	Cross-Site Request Forgery.
+Na czym polega atak CSRF?	Atakujący zmusza przeglądarkę zalogowanego użytkownika do wykonania niechcianej akcji (np. przelewu) na zaufanej stronie bez wiedzy ofiary.
+Dlaczego atak CSRF jest skuteczny, nawet jeśli atakujący nie zna hasła ofiary?	Ponieważ przeglądarka ofiary automatycznie dołącza pliki cookie (z sesją logowania) do każdego żądania wysyłanego do danej domeny, nawet jeśli żądanie zostało zainicjowane przez inną stronę.
+Jaki jest powszechny mechanizm obrony przed CSRF?	Wymaganie, aby każde żądanie modyfikujące dane (POST) zawierało unikalny, generowany przez serwer &quot;token&quot; (tajny klucz), którego atakujący nie zna.
+Na czym polega atak Clickjacking?	Na umieszczeniu niewidocznej warstwy (np. przezroczystego iframe) nad widoczną stroną, co sprawia, że użytkownik klika w coś innego, niż myśli.
+Jakie nagłówki HTTP pomagają chronić przed Clickjackingiem?	Nagłówki zabraniające osadzania strony w ramkach (iframe) na innych witrynach (np. X-Frame-Options lub Content Security Policy).
+Na czym polega atak DoS (Denial of Service)?	Na zalaniu serwera ogromną liczbą fałszywych żądań, aby uniemożliwić dostęp prawowitym użytkownikom.
+Co to jest &quot;Directory Traversal&quot;?	Próba dostępu do plików poza dozwolonym katalogiem serwera poprzez użycie znaków nawigacji po ścieżkach (np. `../../`).
+Dlaczego HTTPS jest kluczowy dla bezpieczeństwa formularzy logowania?	Ponieważ szyfruje dane przesyłane między klientem a serwerem, chroniąc hasła i tokeny sesji przed podsłuchaniem.
+W jaki sposób tworzy się wyrażenie regularne za pomocą literału (literal syntax)?	Poprzez otoczenie wzorca ukośnikami, np. `const re = /ab+c/
+W jaki sposób tworzy się wyrażenie regularne za pomocą konstruktora?	Używając `new RegExp()`, np. `const re = new RegExp(&quot;ab+c&quot;)
+Kiedy należy używać literału wyrażenia regularnego (`/abc/`) zamiast konstruktora?	Gdy wzorzec jest stały (nie zmienia się). Zapewnia to kompilację podczas ładowania skryptu i lepszą wydajność.
+Kiedy należy używać konstruktora `new RegExp()`?	Gdy wzorzec jest dynamiczny (np. pochodzi z danych wprowadzonych przez użytkownika) lub zmienia się w trakcie działania programu.
+Jaki znak służy do &quot;uciekaczki&quot; (escaping) znaków specjalnych w Regex?	Backslash `\` (odwrócony ukośnik).
+Jak należy zapisać wyrażenie `/a*b/` używając konstruktora `RegExp` (uwzględniając escaping w stringu)?	`new RegExp(&quot;a\\*b&quot;)` (należy podwoić backslash, ponieważ jest to literał łańcuchowy).
+Co robi metoda `RegExp.prototype.test()`?	Sprawdza, czy wzorzec występuje w ciągu znaków. Zwraca `true` lub `false`.
+Co robi metoda `RegExp.prototype.exec()`?	Wykonuje wyszukiwanie w ciągu znaków. Zwraca tablicę z wynikami (i grupami przechwytującymi) lub `null` w przypadku braku dopasowania. 
+Wymień metody obiektu `String`, które obsługują wyrażenia regularne.	`match()`, `matchAll()`, `replace()`, `replaceAll()`, `search()`, `split()`
+Co oznacza flaga `g` w wyrażeniu regularnym?	Global search (wyszukiwanie globalne - nie zatrzymuje się po pierwszym dopasowaniu).
+Co oznacza flaga `i` w wyrażeniu regularnym?	Case-insensitive (ignorowanie wielkości liter).
+Co oznacza flaga `m` w wyrażeniu regularnym?	Multiline (wielowierszowość). Sprawia, że `^` i `$` dopasowują się do początku/końca każdej linii, a nie tylko całego ciągu. 
+Jaka jest różnica w działaniu `str.match(re)` a `re.exec(str)` gdy użyta jest flaga `g`?	`str.match(re)` zwraca tablicę wszystkich dopasowań naraz (bez szczegółów grup). `re.exec(str)` zwraca jedno dopasowanie na raz, aktualizując `lastIndex`, co pozwala na iterację w pętli.
+Co zwraca metoda `str.search(re)`?	Indeks pierwszego dopasowania lub `-1`, jeśli nie znaleziono.
+Do czego służą nawiasy `()` w wyrażeniu regularnym?	Tworzą grupę przechwytującą (capturing group), która zapamiętuje dopasowany podciąg do późniejszego wykorzystania.
+Jaki kwantyfikator oznacza &quot;0 lub więcej wystąpień&quot;?	`*`
+Jaki kwantyfikator oznacza &quot;1 lub więcej wystąpień&quot;?	`+`
+Jaki kwantyfikator oznacza &quot;0 lub 1 wystąpienie&quot; (opcjonalność)?	`?`
+Jaki wynik da `const re = /a*/	` dla ciągu `&quot;bbbb&quot;`?
+Właściwość `lastIndex` obiektu RegExp jest aktualizowana tylko wtedy, gdy włączona jest flaga {{c1::g}} (global).	g
+Jaki atrybut HTML sprawia, że pole formularza musi zostać wypełnione przed wysłaniem?	required
+Dlaczego z punktu widzenia UX i dostępności samo dodanie atrybutu `required` nie wystarcza?	Należy wizualnie oznaczyć pole (np. gwiazdką `*` w etykiecie), aby użytkownik wiedział, że jest wymagane przed próbą wysłania. 
+Jaki atrybut określa minimalną liczbę znaków, którą użytkownik musi wpisać w polu tekstowym?	minlength
+Prawda czy Fałsz: Atrybut `minlength=&quot;5&quot;` sprawia, że pole jest wymagane (nie można wysłać pustego).	Fałsz (walidacja `minlength` działa tylko wtedy, gdy użytkownik wpisze jakąś wartość, puste pole zostanie przepuszczone, chyba że dodasz też `required`).
+Jaki atrybut określa maksymalną liczbę znaków w polu tekstowym i blokuje wpisywanie kolejnych?	maxlength
+Jakie atrybuty służą do ograniczenia zakresu wartości liczbowych (dolna i górna granica) w polach typu `number`, `date` itp.?	min oraz max
+Jaka jest różnica między `minlength` a `min`?	`minlength` dotyczy liczby znaków (dla tekstu), a `min` dotyczy wartości liczbowej (dla liczb/dat).
+Jaki atrybut pozwala walidować wartość pola na podstawie wyrażenia regularnego (Regex)?	{{c1::pattern}} 
+Jaki jest domyślny komunikat przeglądarki, gdy dane nie pasują do atrybutu `pattern` i jak go ulepszyć?	Komunikat to zazwyczaj ogólne &quot;Proszę dopasować do wymaganego formatu&quot;. Należy użyć atrybutu `title` lub `placeholder`, aby pokazać użytkownikowi oczekiwany format (np. kod pocztowy).
+Jakie dwie pseudoklasy CSS pozwalają stylować pola w zależności od wyniku walidacji (np. zielona ramka dla poprawnych, czerwona dla błędnych)?	:valid oraz :invalid 
+Czy walidacja po stronie klienta (HTML/JS) jest wystarczająca do zapewnienia bezpieczeństwa danych?	Nie, zawsze niezbędna jest walidacja po stronie serwera (server-side validation), ponieważ walidację w przeglądarce można łatwo ominąć.
+Dlaczego walidacja formularzy po stronie klienta (client-side) NIE może być traktowana jako jedyny środek bezpieczeństwa?	Ponieważ walidację w przeglądarce można łatwo ominąć (np. wyłączając JS lub modyfikując żądanie sieciowe)
+Jaka jest główna zaleta walidacji po stronie klienta (w porównaniu do walidacji tylko na serwerze)?	Lepsze UX: użytkownik otrzymuje natychmiastową informację zwrotną bez konieczności oczekiwania na przeładowanie strony lub odpowiedź serwera.
+Co robi atrybut `novalidate` dodany do elementu `&lt;form&gt;`?	Wyłącza domyślne dymki z błędami i automatyczne blokowanie wysyłania przez przeglądarkę, ale nadal pozwala korzystać z API walidacji w JavaScript i pseudoklas CSS.
+Jaki obiekt w JavaScript przechowuje szczegółowe flagi błędów walidacji (np. `valueMissing`, `typeMismatch`) dla danego pola?	`validity` (np. `input.validity`). 
+W obiekcie `ValidityState`, która właściwość zwraca `true`, jeśli pole jest wymagane, ale puste?	{{c1::valueMissing}}
+W obiekcie `ValidityState`, która właściwość zwraca `true`, jeśli dane nie pasują do wyrażenia regularnego zdefiniowanego w atrybucie `pattern`?	{{c1::patternMismatch}}
+Jak za pomocą JavaScript (Constraint Validation API) ustawić niestandardowy komunikat błędu i oznaczyć pole jako nieprawidłowe?	Używając metody `input.setCustomValidity(&quot;Treść błędu&quot;)`.
+W jaki sposób w JavaScript przywrócić pole do stanu &quot;prawidłowego&quot; (valid) po wcześniejszym użyciu `setCustomValidity`?	Należy wywołać `setCustomValidity(&quot;&quot;)` z pustym ciągiem znaków.
+Co robi metoda `form.checkValidity()`?	Sprawdza, czy wszystkie pola w formularzu są poprawne
+Czym różni się pseudoklasa CSS `:invalid` od `:user-invalid`?	`:invalid` oznacza błąd natychmiast (nawet przy pustym formularzu), a `:user-invalid` czeka, aż użytkownik wejdzie w interakcję z polem (np. wpisze coś lub opuści pole), co jest lepsze dla UX. 
+Jaki atrybut ARIA warto dodać do elementu wyświetlającego komunikat błędu, aby czytniki ekranowe odczytały go natychmiast po pojawieniu się?	`aria-live=&quot;polite&quot;` (lub &quot;assertive&quot;).
+W kontekście Constraint Validation API, co oznacza flaga `validity.tooShort`?	Że wartość wprowadzona przez użytkownika jest krótsza niż wymagane `minlength`.
+Dlaczego do wprowadzania numerów kart kredytowych odradza się używania `&lt;input type=&quot;number&quot;&gt;`?	Ponieważ ten typ dodaje przyciski inkrementacji (spinners), które są bezużyteczne przy kartach, oraz pozwala na przypadkową zmianę wartości strzałkami.
+Jakie jest zalecane rozwiązanie dla pola karty kredytowej, aby wymusić klawiaturę numeryczną na mobile, ale uniknąć spinnerów?	Użycie `&lt;input type=&quot;text&quot;&gt;` z atrybutem `inputmode=&quot;numeric&quot;`. 
+Dlaczego nie należy polegać wyłącznie na atrybucie `placeholder` jako etykiecie pola?	Ponieważ znika on po wpisaniu znaku, co utrudnia użytkownikowi przypomnienie sobie celu pola, oraz często ma zbyt niski kontrast (dostępność). 
+W obiekcie `ValidityState` (JS), która właściwość zwróci `true`, jeśli wartość jest mniejsza niż atrybut `min`?	{{c1::rangeUnderflow}}
+W obiekcie `ValidityState` (JS), która właściwość zwróci `true`, jeśli wartość nie pasuje do typu pola (np. zły format emaila)?	{{c1::typeMismatch}}
+Jaka pseudoklasa CSS pozwala na stylowanie elementu rodzica (np. kontenera `div`), gdy znajdujący się wewnątrz niego input posiada focus?	{{c1:: :focus-within}}
+Jaka jest główna wada tworzenia własnych kontrolek formularza (np. custom date picker) zamiast używania natywnych?	Trudności z zapewnieniem pełnej dostępności (klawiatura, czytniki ekranu) i obsługi na wszystkich urządzeniach (dotyk, różne rozmiary ekranu). 
+Jakie zdarzenie (event) jest wyzwalane na każdym nieprawidłowym polu formularza podczas próby wysłania (jeśli nie użyto `novalidate`)?	`invalid` (zdarzenie to nie bąbelkuje / does not bubble).
+Gdzie jest najlepsze miejsce na wyświetlanie komunikatów o błędach walidacji?	Bezpośrednio przy błędnym polu (input), a nie zgrupowane w jednym miejscu (np. na górze strony). 
+Dlaczego **nie należy** wyłączać (disable) przycisku &quot;Submit&quot; w formularzu, nawet jeśli jest on niekompletny?	Ponieważ użytkownik może nie wiedzieć, co jest nie tak lub przeoczyć pole
+Dlaczego poleganie wyłącznie na kolorze (np. czerwona ramka) przy oznaczaniu błędów jest błędem UX?	Ponieważ osoby z zaburzeniami widzenia barw (daltoniści) mogą nie zauważyć błędu
+Prawda czy Fałsz: Komunikaty o błędach powinny być ukryte pod ikoną (tooltip), aby nie zaśmiecać interfejsu.	Fałsz (błędy powinny być widoczne od razu, bez konieczności najeżdżania myszką).
+Kiedy należy pokazać użytkownikowi wymagania dotyczące hasła (np. &quot;min. 8 znaków&quot;)?	Od razu (upfront), zanim zacznie pisać, a nie dopiero po wystąpieniu błędu. 
+Jaki język powinien być stosowany w komunikatach błędów?	Ludzki i zrozumiały (human language), a nie techniczny (np. &quot;Database error 503&quot; vs &quot;Coś poszło nie tak, spróbuj ponownie&quot;).
+Co jest lepsze od świetnego systemu raportowania błędów w formularzu?	Projektowanie formularza tak, aby zapobiegać błędom, zanim one wystąpią (Prevention over Cure).
+Czy warto stosować &quot;positive feedback&quot; (zielone oznaczenia) w formularzach?	Tak, warto informować użytkownika nie tylko o błędach, ale też o poprawnym wypełnieniu pola (np. zielony &quot;ptaszek&quot;).
+Do jakiego typu układów (wymiarów) został pierwotnie zaprojektowany Flexbox?	Do układów jednowymiarowych (1D) – rzędy LUB kolumny.
+Do jakiego typu układów (wymiarów) został zaprojektowany CSS Grid?	Do układów dwuwymiarowych (2D) – rzędy I kolumny jednocześnie.
+Jaka właściwość pozwala Flexboxowi na symulowanie układu dwuwymiarowego (przełamywanie linii)?	`flex-wrap`
+Jeśli chcesz stworzyć układ kart, w którym wszystkie elementy mają idealnie **równe rozmiary** (szerokość i wysokość) bez skomplikowanych obliczeń, którego narzędzia najlepiej użyć?	CSS Grid. 
+Prawda czy Fałsz: CSS Grid został wprowadzony, aby całkowicie zastąpić Flexboxa.	Fałsz (są to narzędzia komplementarne, często używane razem).
+Jaka właściwość służąca do tworzenia odstępów między elementami była początkowo dostępna tylko w CSS Grid, a teraz jest wspierana również we Flexboxie?	gap
+Czym inspirowany był model układu CSS Grid?	Układami siatki (grid layouts) stosowanymi w druku, np. w gazetach i czasopismach.
+Czym różni się CSS Grid od Flexboxa w kontekście wymiarów układu?	CSS Grid jest dwuwymiarowy (wiersze i kolumny), a Flexbox jednowymiarowy (wiersz LUB kolumna).
+Jak nazywamy element, na którym zastosowano `display: grid`?	Grid Container (Kontener siatki).
+Jak nazywamy bezpośrednie dzieci kontenera siatki?	Grid Items (Elementy siatki).
+Czym jest &quot;Grid Line&quot; (Linia siatki)?	To linia podziału tworząca strukturę siatki (może być pozioma lub pionowa). 
+Czym jest &quot;Grid Track&quot; (Ścieżka siatki)?	To przestrzeń między dwiema sąsiednimi liniami siatki (czyli kolumna lub wiersz).
+Czym jest &quot;Grid Area&quot; (Obszar siatki)?	To całkowita przestrzeń otoczona czterema liniami siatki (może składać się z wielu komórek). 
+Czym jest &quot;Grid Cell&quot; (Komórka siatki)?	To najmniejsza jednostka siatki
+Jaka jednostka w CSS Grid reprezentuje ułamek dostępnej wolnej przestrzeni?	{{c1::fr}}
+Jaką funkcję CSS można użyć w `grid-template-columns` do zdefiniowania 12 równych kolumn bez wpisywania `1fr` 12 razy?	`repeat(12, 1fr)`
+W właściwości `grid-template-areas`, jaki znak reprezentuje pustą komórkę siatki?	Kropka (`.`).
+Jaki jest skrót (shorthand) dla właściwości `grid-template-rows`, `grid-template-columns` i `grid-template-areas`?	`grid-template` (lub po prostu `grid`).
+Która właściwość wyrównuje elementy siatki wewnątrz ich komórek wzdłuż osi wiersza (inline/row axis)?	{{c1::justify-items}} 
+Która właściwość wyrównuje elementy siatki wewnątrz ich komórek wzdłuż osi kolumny (block/column axis)?	{{c1::align-items}}
+Jaki jest skrót dla `align-items` i `justify-items`?	`place-items`
+Która właściwość wyrównuje **całą siatkę** wewnątrz kontenera wzdłuż osi wiersza (gdy siatka jest mniejsza niż kontener)?	{{c1::justify-content}}
+Która właściwość wyrównuje **całą siatkę** wewnątrz kontenera wzdłuż osi kolumny?	{{c1::align-content}}
+Co to jest &quot;Implicit Grid&quot; (Siatka niejawna)?	Siatka utworzona automatycznie przez przeglądarkę dla elementów, które nie mieszczą się w zdefiniowanej siatce jawnej (explicit grid).
+Jakie właściwości określają rozmiar ścieżek utworzonych w siatce niejawnej?	`grid-auto-rows` oraz `grid-auto-columns`.
+Co robi właściwość `grid-auto-flow: dense`?	Nakazuje algorytmowi automatycznego rozmieszczania wypełnianie pustych przestrzeni (dziur) w siatce mniejszymi elementami, które pojawiają się później w kodzie HTML. 
+Jaka jest różnica między `grid-column-start` a `grid-column-end`?	`start` określa linię, na której element się zaczyna, a `end` linię, na której się kończy.
+Jak sprawić, by element siatki rozciągał się na 3 kolumny, używając słowa kluczowego `span`?	`grid-column: span 3
+Jaki jest skrót dla `grid-row-start` i `grid-row-end`?	`grid-row` (składnia: `start / end`).
+Która właściwość pozwala elementowi dziecka nadpisać wyrównanie `justify-items` ustawione na rodzicu?	`justify-self`
+Która właściwość pozwala elementowi dziecka nadpisać wyrównanie `align-items` ustawione na rodzicu?	`align-self`
+Jaka funkcja definiuje zakres wielkości ścieżki (min i max), pozwalając jej na elastyczność?	`minmax(min, max)`
+Jaka jest różnica między `auto-fill` a `auto-fit` w funkcji `repeat()`?	`auto-fill` zachowuje puste kolumny, jeśli jest na nie miejsce
+Czym jest CSS Subgrid?	To funkcja pozwalająca zagnieżdżonej siatce (dziecku elementu grid) na dziedziczenie linii i ścieżek z siatki rodzica (używając `grid-template-columns: subgrid`).
+Jak nazywamy przestrzeń w siatce ograniczoną dwiema sąsiednimi liniami (poziomymi lub pionowymi)?	Grid Track (Ścieżka siatki).
+Jak nazywamy linie dzielące siatkę, które powstają automatycznie po zdefiniowaniu ścieżek?	Grid Lines (Linie siatki).
+Od jakiej liczby zaczyna się numerowanie linii siatki?	Od 1.
+Co to jest &quot;Grid Cell&quot; (Komórka siatki)?	To najmniejsza jednostka siatki,
+ przecięcie jednej kolumny i jednego wiersza (jak w arkuszu kalkulacyjnym).	
+Jakiej właściwości CSS używa się w elemencie dziecka, aby określić, na której linii pionowej ma się zaczynać?	`grid-column-start`
+Jaki jest format skróconej właściwości `grid-column` (i `grid-row`)?	`start / end` (np. `2 / 4`).
+Jeśli element ma zająć obszar od 1 do 3 linii wiersza i od 1 do 2 linii kolumny, jak zapisać to za pomocą skrótu `grid-area` (używając numerów linii)?	`grid-area: 1 / 1 / 3 / 2
+Do czego służy właściwość `grid-area`, gdy przypisujemy jej wartość tekstową (np. `grid-area: header	`)?
+Jaka właściwość **kontenera** pozwala na wizualne mapowanie układu strony za pomocą nazwanych obszarów?	`grid-template-areas` 
+Jaki znak w `grid-template-areas` reprezentuje pustą komórkę siatki?	Kropka (`.`).
+Jaka funkcja CSS pozwala zdefiniować wiele kolumn o tym samym rozmiarze bez konieczności wpisywania ich ręcznie?	`repeat()` (np. `repeat(5, 1fr)`).
+Co reprezentuje jednostka `fr` w CSS Grid?	Ułamek **pozostałej** dostępnej przestrzeni w kontenerze (fraction of remaining space).
+Jeśli zdefiniujesz kolumny jako `1fr 2fr`, jak zostanie podzielona przestrzeń?	Druga kolumna otrzyma dwa razy więcej miejsca niż pierwsza (odpowiednio 1/3 i 2/3 dostępnej przestrzeni).
+Co zwróci funkcja CSS `min(100px, 50vw)`, jeśli okno przeglądarki ma szerokość 1000px (czyli 50vw = 500px)?	100px (ponieważ funkcja `min` zawsze wybiera **mniejszą** z podanych wartości).
+Co zwróci funkcja CSS `max(100px, 50vw)`, jeśli okno przeglądarki ma szerokość 1000px?	500px (ponieważ funkcja `max` zawsze wybiera **większą** z podanych wartości).
+Jaka funkcja CSS (specyficzna głównie dla Grida) pozwala zdefiniować zakres wielkości ścieżki od wartości minimalnej do maksymalnej?	`minmax(min, max)`
+Jaka jest składnia funkcji `clamp()`, która pozwala na płynne skalowanie elementu w określonych granicach?	`clamp(minimum, ideal, maximum)`
+Jaka jest kluczowa różnica między `auto-fit` a `auto-fill` w funkcji `repeat()`?	`auto-fit` **rozciąga** istniejące elementy, aby wypełniły cały wiersz (zwija puste ścieżki do 0), natomiast `auto-fill` **zachowuje** miejsce na potencjalne nowe kolumny (pozostawia puste przestrzenie), nawet jeśli ich nie ma.
+Jak wygląda &quot;święty graal&quot; responsywnego Grida (snippet CSS), który tworzy tyle kolumn, ile się zmieści, bez użycia Media Queries?	`grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+Czy funkcja `clamp()` może być używana tylko w CSS Grid?	Nie, `clamp()` jest uniwersalną funkcją CSS (działa np. dla `font-size`, `width` itd.), w przeciwieństwie do `minmax()`, która działa głównie w Gridzie.
+Czy CSS Grid ma na celu zastąpienie Flexboxa?	Nie, są to narzędzia komplementarne: Grid do układów dwuwymiarowych, Flexbox do jednowymiarowych.
+Które narzędzie jest lepsze do projektowania &quot;Content-First&quot; (gdzie układ wynika z wielkości i zachowania treści)?	Flexbox (pozwala elementom elastycznie rosnąć/maleć w zależności od ich zawartości).
+Które narzędzie jest lepsze do projektowania &quot;Layout-First&quot; (gdzie najpierw definiujesz sztywną strukturę wierszy/kolumn, a potem wlewasz w nią treść)?	CSS Grid (pozwala na precyzyjne rozmieszczenie elementów w zdefiniowanych ścieżkach).
+Jeśli potrzebujesz wyrównać elementy tylko w jednej linii (wierszu LUB kolumnie), które narzędzie jest zazwyczaj bardziej intuicyjne?	Flexbox.
+Jeśli potrzebujesz precyzyjnie rozmieścić elementy w dwóch wymiarach jednocześnie (wiersze I kolumny), które narzędzie wybrać?	CSS Grid.
+Jaka jest popularna strategia łączenia Grida i Flexboxa w jednym projekcie?	Użycie Grida do ogólnego układu strony (makro-layout: nagłówek, sidebar, główna treść) oraz Flexboxa do układania elementów wewnątrz poszczególnych komórek (mikro-layout: np. nawigacja, karty). 
+Co oznacza, że Flexbox jest jednowymiarowy (1D)?	Że zarządza układem tylko w jednej osi na raz (oś główna - wiersz lub kolumna), a zawijanie (wrap) tworzy po prostu nowe, niezależne linie flex.

@@ -1,0 +1,7 @@
+Czy CSS Grid ma na celu zastąpienie Flexboxa?;Nie, są to narzędzia komplementarne: Grid do układów dwuwymiarowych, Flexbox do jednowymiarowych.
+Które narzędzie jest lepsze do projektowania "Content-First" (gdzie układ wynika z wielkości i zachowania treści)?;Flexbox (pozwala elementom elastycznie rosnąć/maleć w zależności od ich zawartości).
+Które narzędzie jest lepsze do projektowania "Layout-First" (gdzie najpierw definiujesz sztywną strukturę wierszy/kolumn, a potem wlewasz w nią treść)?;CSS Grid (pozwala na precyzyjne rozmieszczenie elementów w zdefiniowanych ścieżkach).
+Jeśli potrzebujesz wyrównać elementy tylko w jednej linii (wierszu LUB kolumnie), które narzędzie jest zazwyczaj bardziej intuicyjne?;Flexbox.
+Jeśli potrzebujesz precyzyjnie rozmieścić elementy w dwóch wymiarach jednocześnie (wiersze I kolumny), które narzędzie wybrać?;CSS Grid.
+Jaka jest popularna strategia łączenia Grida i Flexboxa w jednym projekcie?;Użycie Grida do ogólnego układu strony (makro-layout: nagłówek, sidebar, główna treść) oraz Flexboxa do układania elementów wewnątrz poszczególnych komórek (mikro-layout: np. nawigacja, karty). 
+Co oznacza, że Flexbox jest jednowymiarowy (1D)?;Że zarządza układem tylko w jednej osi na raz (oś główna - wiersz lub kolumna), a zawijanie (wrap) tworzy po prostu nowe, niezależne linie flex.

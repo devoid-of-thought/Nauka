@@ -1,0 +1,11 @@
+Jak nazywamy przestrzeń w siatce ograniczoną dwiema sąsiednimi liniami (poziomymi lub pionowymi)?;Grid Track (Ścieżka siatki).
+Jak nazywamy linie dzielące siatkę, które powstają automatycznie po zdefiniowaniu ścieżek?;Grid Lines (Linie siatki).
+Od jakiej liczby zaczyna się numerowanie linii siatki?;Od 1.
+Co to jest "Grid Cell" (Komórka siatki)?;To najmniejsza jednostka siatki,
+ przecięcie jednej kolumny i jednego wiersza (jak w arkuszu kalkulacyjnym).
+Jakiej właściwości CSS używa się w elemencie dziecka, aby określić, na której linii pionowej ma się zaczynać?;`grid-column-start`
+Jaki jest format skróconej właściwości `grid-column` (i `grid-row`)?;`start / end` (np. `2 / 4`).
+Jeśli element ma zająć obszar od 1 do 3 linii wiersza i od 1 do 2 linii kolumny, jak zapisać to za pomocą skrótu `grid-area` (używając numerów linii)?;`grid-area: 1 / 1 / 3 / 2;` (kolejność: row-start / col-start / row-end / col-end).
+Do czego służy właściwość `grid-area`, gdy przypisujemy jej wartość tekstową (np. `grid-area: header;`)?;Nadaje elementowi nazwę, którą można później wykorzystać w `grid-template-areas` w kontenerze.
+Jaka właściwość **kontenera** pozwala na wizualne mapowanie układu strony za pomocą nazwanych obszarów?;`grid-template-areas` 
+Jaki znak w `grid-template-areas` reprezentuje pustą komórkę siatki?;Kropka (`.`).

@@ -1,0 +1,8 @@
+Do jakiego typu układów (wymiarów) został pierwotnie zaprojektowany Flexbox?;Do układów jednowymiarowych (1D) – rzędy LUB kolumny.
+Do jakiego typu układów (wymiarów) został zaprojektowany CSS Grid?;Do układów dwuwymiarowych (2D) – rzędy I kolumny jednocześnie.
+Jaka właściwość pozwala Flexboxowi na symulowanie układu dwuwymiarowego (przełamywanie linii)?;`flex-wrap`
+Jeśli chcesz stworzyć układ kart, w którym wszystkie elementy mają idealnie **równe rozmiary** (szerokość i wysokość) bez skomplikowanych obliczeń, którego narzędzia najlepiej użyć?;CSS Grid. 
+Prawda czy Fałsz: CSS Grid został wprowadzony, aby całkowicie zastąpić Flexboxa.;Fałsz (są to narzędzia komplementarne, często używane razem).
+Jaka właściwość służąca do tworzenia odstępów między elementami była początkowo dostępna tylko w CSS Grid, a teraz jest wspierana również we Flexboxie?;gap
+Czym inspirowany był model układu CSS Grid?;Układami siatki (grid layouts) stosowanymi w druku, np. w gazetach i czasopismach.
+
