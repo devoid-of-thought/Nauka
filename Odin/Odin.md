@@ -10,14 +10,14 @@
 
 [Projekt - Przepisy - link do repozytorium](https://github.com/devoid-of-thought/odin-recepies)
 
-    [Projekt - Przepisy - na github pages](https://devoid-of-thought.github.io/odin-recepies/)
+[Projekt - Przepisy - na github pages](https://devoid-of-thought.github.io/odin-recepies/)
 
 
 [Zadania CSS](https://github.com/devoid-of-thought/css-exercises/tree/main/foundations)
 
 [Projekt - Strona Główna - link do repozytorium](https://github.com/devoid-of-thought/odin-landing-page)
 
-    [Projekt - Strona Główna - na github pages](https://devoid-of-thought.github.io/odin-landing-page/)
+[Projekt - Strona Główna - na github pages](https://devoid-of-thought.github.io/odin-landing-page/)
 
 [Podstawy Javascript](https://github.com/devoid-of-thought/Odin/tree/main/javascript-basics)
 
@@ -27,11 +27,11 @@
 
 [Projekt - Kamień, Papier, Nożyce - link do repozytorium](https://github.com/devoid-of-thought/odin-rock-paper-scissors)
 
-    [Projekt - Kamień, Papier, Nożyce - na github pages](https://devoid-of-thought.github.io/odin-rock-paper-scissors/)
+[Projekt - Kamień, Papier, Nożyce - na github pages](https://devoid-of-thought.github.io/odin-rock-paper-scissors/)
 
 [Projekt - Etch'n'sketch - link do repozytorium](https://github.com/devoid-of-thought/odin-etch-n-sketch)
 
-    [Projekt - Etch'n'sketch - na github pages](https://devoid-of-thought.github.io/odin-etch-n-sketch/)
+[Projekt - Etch'n'sketch - na github pages](https://devoid-of-thought.github.io/odin-etch-n-sketch/)
 
 [Array Cardio](https://github.com/devoid-of-thought/Odin/tree/main/Array_cardio)
 
@@ -55,5 +55,5 @@
 
 [Projekt - Admin Dashboard - link do repozytorium](https://github.com/devoid-of-thought/odin-admin-dashboard)
 
-    [Projekt - Admin Dashboard - na github pages](https://devoid-of-thought.github.io/odin-admin-dashboard/)
+[Projekt - Admin Dashboard - na github pages](https://devoid-of-thought.github.io/odin-admin-dashboard/)
 
