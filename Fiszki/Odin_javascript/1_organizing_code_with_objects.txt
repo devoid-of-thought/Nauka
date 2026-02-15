@@ -1,0 +1,10 @@
+Jakie są dwa sposoby na pobranie wartości właściwości z obiektu w JavaScript?;Notacja kropkowa (dot notation) i notacja nawiasowa (bracket notation).
+W jakiej sytuacji **musisz** użyć notacji nawiasowej (`obj["key"]`) zamiast kropkowej?;Gdy nazwa właściwości zawiera spacje/znaki specjalne LUB gdy chcesz użyć zmiennej do odczytania właściwości.
+Co się stanie, jeśli użyjesz zapisu `myObject.variable`, gdzie `variable` to nazwa zmiennej?;JavaScript poszuka właściwości o dosłownej nazwie "variable", zamiast podstawić wartość tej zmiennej (zwróci `undefined`, jeśli taka właściwość nie istnieje).
+Czym jest "metoda" w kontekście obiektów JavaScript?;To funkcja przypisana do właściwości obiektu.
+Jaka jest główna zaleta grupowania danych w obiekty (np. `playerOne` zamiast `playerOneName`, `playerOneScore`)?;Ułatwia przekazywanie zestawu danych do funkcji (jeden argument zamiast wielu) i zapewnia "przestrzeń nazw" (namespacing), co czyści kod.
+Do czego odnosi się słowo kluczowe `this` wewnątrz standardowej metody obiektu?;Odnosi się do obiektu, na którym ta metoda została wywołana. 
+Dlaczego należy uważać przy używaniu funkcji strzałkowych (arrow functions) jako metod obiektu?;Ponieważ `this` w funkcjach strzałkowych zachowuje się inaczej (nie wiąże się z instancją obiektu) i może nie działać zgodnie z oczekiwaniami.
+Co zazwyczaj oznacza konwencja rozpoczynania nazwy właściwości od podkreślnika (np. `_privateProp`)?;Sygnalizuje, że właściwość jest przeznaczona do użytku wewnętrznego ("prywatna"), choć technicznie nadal jest publicznie dostępna.
+Na czym polega paradygmat Programowania Zorientowanego Obiektowo (OOP) w najprostszym ujęciu?;Na projektowaniu programów w oparciu o obiekty, które zawierają zarówno dane (właściwości), jak i kod/logikę (metody).
+Jak w skróconej składni (shorthand) dodać metodę `getSummary` do obiektu?;`getSummary() { ... }` (zamiast `getSummary: function() { ... }`).

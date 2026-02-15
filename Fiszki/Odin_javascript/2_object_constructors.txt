@@ -1,0 +1,21 @@
+Do czego odnosi się słowo kluczowe `this` w JavaScript?;Odnosi się do obiektu, który jest "właścicielem" obecnie wykonywanej funkcji (obiektu, na którym metoda jest wywoływana). 
+Jaka jest wartość `this` w kontekście globalnym (poza jakąkolwiek funkcją) w przeglądarce?;Obiekt globalny `window`.
+Jaka jest wartość `this` wewnątrz "zwykłej" funkcji (simple function call) w trybie **non-strict**?;Obiekt globalny (np. `window`).
+Jaka jest wartość `this` wewnątrz "zwykłej" funkcji w trybie **strict mode** (`"use strict"`)?;`undefined`
+Gdy wywołujesz funkcję jako metodę obiektu (np. `car.start()`), czym jest `this`?;Obiektem, na którym wywołano metodę (w tym przypadku `car`).
+Co się stanie z kontekstem `this`, jeśli przypiszemy metodę obiektu do zmiennej i wywołamy ją jako zwykłą funkcję (np. `let brand = car.getBrand; brand();`)?;Kontekst zostanie utracony. `this` przyjmie wartość obiektu globalnego (non-strict) lub `undefined` (strict). 
+Jaka metoda pozwala na stałe powiązanie funkcji z konkretnym obiektem, tworząc nową funkcję?;Metoda `bind()` (np. `func.bind(obj)`).
+Na co wskazuje `this` wewnątrz funkcji wywołanej jako konstruktor (przy użyciu słowa kluczowego `new`)?;Na nowo utworzony obiekt (instancję).
+Jaka "meta-właściwość" (wprowadzona w ES6) pozwala sprawdzić, czy funkcja została wywołana jako konstruktor (z `new`)?;`new.target`
+Jaka jest różnica między metodami `call()` i `apply()` służącymi do jawnego ustawiania `this`?;`call()` przyjmuje argumenty oddzielone przecinkami, a `apply()` przyjmuje argumenty jako tablicę.
+Jak zachowuje się `this` w funkcjach strzałkowych (arrow functions)?;Jest ustawiane leksykalnie (lexically) – dziedziczy `this` z zewnętrznego zakresu (funkcji otaczającej), w którym zostało zdefiniowane. Nie tworzy własnego kontekstu. 
+Dlaczego nie powinno się używać funkcji strzałkowych jako metod w obiektach (np. `getSpeed: () => this.speed`)?;Ponieważ `this` w takiej funkcji nie będzie wskazywać na instancję obiektu, lecz na zakres zewnętrzny (często obiekt globalny), co zazwyczaj prowadzi do błędu lub `undefined`.
+W jaki sposób tworzymy nową instancję obiektu, używając funkcji konstruktora?;Wywołując funkcję ze słowem kluczowym `new` (np. `const player = new Player("Steve");`).
+Jakie 4 kluczowe rzeczy dzieją się, gdy wywołujemy funkcję ze słowem kluczowym `new`?;1. Tworzony jest nowy, pusty obiekt.<br>2. Słowo kluczowe `this` wewnątrz funkcji wskazuje na ten nowy obiekt.<br>3. `[[Prototype]]` nowego obiektu zostaje połączony z właściwością `.prototype` funkcji konstruktora.<br>4. Obiekt jest zwracany z funkcji. 
+Jak zabezpieczyć konstruktor przed wywołaniem go bez słowa `new`?;Sprawdzając właściwość `new.target` (np. `if (!new.target) throw Error(...)`).
+Jaka jest różnica między `[[Prototype]]` obiektu a właściwością `.prototype` funkcji?;`[[Prototype]]` to rzeczywisty obiekt, z którego instancja dziedziczy. `.prototype` to właściwość funkcji konstruktora, która służy do ustawiania `[[Prototype]]` dla nowych instancji tworzonych przez tę funkcję.
+Jaka jest zalecana metoda dostępu do prototypu obiektu (zamiast przestarzałego `__proto__`)?;`Object.getPrototypeOf(obj)`
+Na czym polega mechanizm "Prototypal Inheritance" (dziedziczenia prototypowego) podczas szukania właściwości?;Jeśli właściwość nie istnieje w samym obiekcie, JS szuka jej w jego `[[Prototype]]`, potem w prototypie tego prototypu itd., aż do końca łańcucha (`null`). 
+W jaki sposób poprawnie ustawić dziedziczenie, aby `Player` dziedziczył metody z `Person`?;Używając `Object.setPrototypeOf(Player.prototype, Person.prototype)`.
+Dlaczego zapis `Player.prototype = Person.prototype` jest błędem przy ustawianiu dziedziczenia?;Ponieważ przypisuje ten sam obiekt w pamięci. Zmiany w `Player.prototype` (np. dodanie metody ataku) wpłynęłyby również na `Person.prototype`.
+Jak sprawdzić, czy właściwość należy bezpośrednio do obiektu, a nie pochodzi z łańcucha prototypów?;Używając metody `obj.hasOwnProperty("nazwaWłaściwości")`.
