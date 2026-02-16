@@ -18,7 +18,7 @@
 
 [Array Cardio](https://github.com/devoid-of-thought/Odin/tree/main/Array_cardio)
 
-|Kurs Odin| Projekt | Link do repozytorium | Link do github pages |
+|Projekt Odin| Projekt | Link do repozytorium | Link do github pages |
 | --- | ------- | -------------------- | -------------------- |
 |[Link](https://www.theodinproject.com/lessons/foundations-recipes)|Przepisy |  [Link](https://github.com/devoid-of-thought/odin-recepies) | [Link](https://devoid-of-thought.github.io/odin-recepies/) |
 |[Link](https://www.theodinproject.com/lessons/foundations-landing-page)|Strona Główna| [Link](https://github.com/devoid-of-thought/odin-landing-page)|[Link](https://devoid-of-thought.github.io/odin-landing-page/) |
@@ -37,13 +37,13 @@
 
 [Zadania CSS - Grid](https://github.com/devoid-of-thought/css-exercises/tree/main/intermediate-html-css)
 
-|Kurs Odin| Projekt | Link do repozytorium | Link do github pages |
+|Projekt Odin| Projekt | Link do repozytorium | Link do github pages |
 | --- | ------- | -------------------- | -------------------- |
 |[Link](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form)|Formularz Rejestracji | [Link](https://github.com/devoid-of-thought/odin-sign-up-form)|[Link](https://devoid-of-thought.github.io/odin-sign-up-form/) |
 |[Link](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard)|Admin Dashboard| [Link](https://github.com/devoid-of-thought/odin-admin-dashboard)|[Link](https://devoid-of-thought.github.io/odin-admin-dashboard/) |
 ### Odin Javascript Course
 
-|Kurs Odin| Projekt | Link do repozytorium | Link do github pages |
+|Projekt Odin| Projekt | Link do repozytorium | Link do github pages |
 | --- | ------- | -------------------- | -------------------- |
 |[Link](https://www.theodinproject.com/lessons/node-path-javascript-library)|Biblioteka| [Link](https://github.com/devoid-of-thought/odin-library)|[Link](https://devoid-of-thought.github.io/odin-library/) |
 
