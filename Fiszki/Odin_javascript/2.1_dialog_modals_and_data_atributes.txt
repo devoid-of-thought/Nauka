@@ -1,0 +1,17 @@
+Jaki element HTML służy do tworzenia natywnego okna popup lub modala?;`<dialog>`
+Która metoda JavaScript otwiera `<dialog>` jako **modal** (blokując interakcję ze stroną pod spodem)?;`dialog.showModal()` 
+Która metoda JavaScript otwiera `<dialog>` jako **niemodalny** (pozwalając na interakcję ze stroną pod spodem)?;`dialog.show()`
+Jaki pseudoelement CSS służy do stylowania przyciemnionego tła za elementem `<dialog>` (otwartym przez `showModal`)?;`::backdrop` 
+Co dzieje się domyślnie, gdy użytkownik naciśnie klawisz `Esc`, gdy aktywny jest `<dialog>` (otwarty przez `showModal`)?;Dialog zamyka się automatycznie.
+Jak zamknąć `<dialog>` używając tylko HTML (bez pisania obsługi kliknięcia w JS)?;Umieszczając wewnątrz dialogu formularz `<form>` z atrybutem `method="dialog"`.
+Jaka jest wartość zwracana przez metodę `dialog.close()`, gdy użyto formularza `method="dialog"`?;Wartość (`value`) przycisku submit, który został kliknięty.
+Jaki atrybut HTML jest obecny na elemencie `<dialog>` tylko wtedy, gdy jest on widoczny?;`open`
+Co to jest "Focus Trapping" (uwięzienie fokusu) w kontekście `showModal()`?;Zapewnia, że nawigacja klawiaturą (klawisz Tab) pozostaje wewnątrz modala i nie przechodzi do strony w tle, dopóki modal jest otwarty.
+Jaka jest poprawna składnia niestandardowego atrybutu danych w HTML?;`data-*` (np. `data-user-id="123"`).
+Jak uzyskać dostęp do wszystkich atrybutów danych elementu za pomocą JavaScript?;Używając właściwości `.dataset` (np. `element.dataset`).
+Jeśli atrybut HTML nazywa się `data-date-of-birth`, jak uzyskać do niego dostęp przez właściwość `.dataset` w JavaScript?;`element.dataset.dateOfBirth` (Kebab-case jest zamieniany na CamelCase). 
+Jaki typ danych jest zawsze zwracany przy dostępie do `element.dataset.prop`, nawet jeśli wartość wygląda jak liczba?;**String** (ciąg znaków).
+Jak wyświetlić wartość atrybutu danych (np. `data-label`) bezpośrednio w CSS (np. w pseudoelemencie `::before`)?;Używając funkcji `attr()`. Przykład: `content: attr(data-label);`.
+Czy atrybuty `data-*` są przeznaczone do przechowywania treści widocznych/dostępnych dla użytkownika (jak tekst alternatywny)?;Nie, są przeznaczone na prywatne dane dla skryptów lub stylów strony.
+Czy używanie wielkich liter w nazwie atrybutu HTML (np. `data-UserID`) jest poprawne?;Nie, nazwy atrybutów HTML powinny być pisane małymi literami (lowercase).
+Czy można przechowywać złożone obiekty (jak JSON) bezpośrednio w atrybucie danych?;Tylko jako zserializowany ciąg JSON (string), który musi zostać sparsowany z powrotem do obiektu w JavaScript.

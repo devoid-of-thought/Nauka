@@ -1,0 +1,12 @@
+Jaka jest różnica w zasięgu (scope) między zmienną zadeklarowaną przez `var`, a `let`/`const`?;`var` ma zasięg funkcyjny (function scope), a `let` i `const` mają zasięg blokowy (block scope - ograniczony nawiasami klamrowymi `{}`).
+Czym jest domknięcie (Closure) w JavaScript?;To połączenie funkcji z jej otaczającym stanem (środowiskiem leksykalnym), co pozwala funkcji wewnętrznej na dostęp do zmiennych funkcji zewnętrznej nawet po zakończeniu jej wykonywania. 
+Co to jest "Factory Function" (Funkcja Fabrykująca)?;To zwykła funkcja, która tworzy i zwraca nowy obiekt, nie używając słowa kluczowego `new` ani prototypów w klasycznym sensie.
+Dlaczego niektórzy programiści preferują Factory Functions zamiast Konstruktorów?;Ponieważ unikają problemów ze słowem kluczowym `this`, nie wymagają użycia `new` (co zapobiega błędom przy jego pominięciu) i ułatwiają tworzenie prywatnych zmiennych. 
+W jaki sposób można uzyskać "prywatne" zmienne w JavaScript używając Factory Function?;Deklarując zmienne wewnątrz funkcji fabrykującej, ale **nie zwracając** ich w obiekcie wynikowym. Dostęp do nich mają tylko zwrócone metody (dzięki mechanizmowi domknięcia).
+Co to jest "Object Shorthand" (skrót obiektowy) wprowadzony w ES6?;To możliwość zapisu `{ name }` zamiast `{ name: name }`, gdy nazwa właściwości i zmiennej, z której bierze wartość, są takie same.
+Na czym polega destrukturyzacja obiektu (Object Destructuring)?;Na wyciągnięciu właściwości z obiektu do osobnych zmiennych, np. `const { a, b } = obj;` zamiast `const a = obj.a;`.
+W jaki sposób można zrealizować dziedziczenie (lub rozszerzanie) w Factory Functions?;Poprzez wywołanie "bazowej" funkcji fabrykującej wewnątrz "potomnej" i połączenie zwróconych obiektów (np. używając `Object.assign` lub destrukturyzacji).
+Co oznacza skrót IIFE?;Immediately Invoked Function Expression (Natychmiastowo Wywołane Wyrażenie Funkcyjne).
+Jaka jest podstawowa składnia IIFE?;`(() => { ... })();` – funkcja owinięta w nawiasy i natychmiast wywołana.
+Czym jest Wzorzec Modułu (Module Pattern) w kontekście IIFE?;To wykorzystanie IIFE do zwrócenia obiektu (zazwyczaj singletona), co pozwala na ukrycie prywatnych zmiennych wewnątrz funkcji i wystawienie na zewnątrz tylko publicznego API. 
+Dlaczego w Wzorcu Modułu używamy IIFE zamiast zwykłego literału obiektu?;Aby uzyskać **enkapsulację** (prywatność zmiennych). Zwykły obiekt ma wszystkie właściwości publiczne; IIFE pozwala ukryć stan (np. `lastResult`) w domknięciu.

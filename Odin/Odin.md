@@ -46,4 +46,5 @@
 |Projekt Odin| Projekt | Link do repozytorium | Link do github pages |
 | --- | ------- | -------------------- | -------------------- |
 |[Link](https://www.theodinproject.com/lessons/node-path-javascript-library)|Biblioteka| [Link](https://github.com/devoid-of-thought/odin-library)|[Link](https://devoid-of-thought.github.io/odin-library/) |
+|[Link](https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe) | Kółko i Krzyżyk |[Link](https://github.com/devoid-of-thought/odin-tic-tac-toe) | [Link](https://devoid-of-thought.github.io/odin-tic-tac-toe/)|
 

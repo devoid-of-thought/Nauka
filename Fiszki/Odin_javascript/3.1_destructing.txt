@@ -1,0 +1,13 @@
+Co to jest destrukturyzacja (destructuring) w JavaScript?;To składnia umożliwiająca "rozpakowanie" wartości z tablic lub właściwości z obiektów do osobnych, niezależnych zmiennych.
+Na czym opiera się dopasowanie wartości w **destrukturyzacji tablic**?;Na **pozycji** (kolejności) elementów. Zmienna po lewej stronie odpowiada elementowi o tym samym indeksie po prawej. 
+W jaki sposób pominąć (zignorować) drugi element tablicy podczas destrukturyzacji?;Zostawiając puste miejsce między przecinkami, np. `const [a, , b] = [1, 2, 3];` (zmienna `b` przyjmie wartość 3).
+Jak za pomocą destrukturyzacji zamienić wartości dwóch zmiennych miejscami (swap) bez użycia zmiennej tymczasowej?;`[a, b] = [b, a];`
+Na czym opiera się dopasowanie wartości w **destrukturyzacji obiektów**?;Na **nazwach właściwości** (kluczach), a nie na kolejności.
+Jaka jest składnia, aby wyciągnąć właściwość z obiektu i przypisać ją do zmiennej o **innej nazwie**?;`const { nazwaWłaściwości: nowaNazwaZmiennej } = obiekt;` (np. `const { id: userId } = user;`).
+Co się stanie, jeśli destrukturyzowana właściwość nie istnieje w obiekcie (jest `undefined`)?;Zmienna przyjmie wartość `undefined`, chyba że zdefiniowano **wartość domyślną**.
+Jaka jest składnia ustawiania wartości domyślnej w destrukturyzacji?;Użycie znaku `=`, np. `const { a = 10 } = obj;` (jeśli `a` nie istnieje, przyjmie wartość 10).
+Do czego służy wzorzec "Reszty" (`...rest`) w destrukturyzacji?;Zbiera wszystkie pozostałe, nieprzypisane elementy tablicy lub właściwości obiektu do nowej zmiennej (musi być ostatnim elementem wzorca). 
+Jak wygląda destrukturyzacja parametrów funkcji?;Można rozpakować obiekt przekazywany jako argument bezpośrednio w definicji funkcji, np. `function drawChart({ size = 'big', radius }) { ... }`.
+Dlaczego zapis `{ a, b } = obj;` (przypisanie do istniejących zmiennych bez `let`/`const`) powoduje błąd składni?;Ponieważ JavaScript interpretuje `{ ... }` na początku linii jako blok kodu. Należy całość otoczyć nawiasami okrągłymi: `({ a, b } = obj);`.
+Czy można destrukturyzować wartość `null` lub `undefined` (np. `const {x} = null`)?;Nie, spowoduje to błąd `TypeError`.
+Co się stanie przy próbie destrukturyzacji wartości prymitywnej (np. `const { length } = "tekst"`)?;Wartość prymitywna zostanie tymczasowo przekonwertowana na obiekt (wrapper), co pozwoli na dostęp do właściwości takich jak `.length`.
