@@ -1,0 +1,10 @@
+Co to jest JSON i do czego głównie służy?;**J**ava**S**cript **O**bject **N**otation. To lekki, oparty na tekście format zapisu danych, używany powszechnie do przesyłania ustrukturyzowanych danych przez sieć (np. między serwerem a klientem).
+Czym różni się zapis kluczy i tekstów w formacie JSON od standardowych obiektów w JavaScript?;W JSON **wszystkie klucze oraz wartości tekstowe muszą być otoczone podwójnymi cudzysłowami** (`"klucz": "wartość"`). Użycie pojedynczych cudzysłowów jest błędem. 
+Jak nazywa się proces zamiany natywnego obiektu (np. JS) na ciąg znaków JSON, a jak proces odwrotny?;Zamiana obiektu na ciąg znaków (string) to **serializacja** (serialization). Zamiana ciągu znaków z powrotem na obiekt to **deserializacja** (deserialization).
+Jaki jest standardowy typ MIME oraz rozszerzenie dla plików JSON?;Typ MIME to `application/json`, a rozszerzenie pliku to `.json`.
+Jakich typów danych z JavaScript **nie można** przechowywać w formacie JSON?;Nie można przechowywać funkcji (metod), `undefined`, `NaN`, `Infinity` oraz specyficznych obiektów takich jak `Date`, `Map`, `Set`. 
+Czy w pliku JSON dozwolone są komentarze lub przecinki na końcu listy elementów (tzw. trailing commas)?;Nie, w JSON komentarze są zabronione, a zostawienie przecinka na końcu (po ostatnim elemencie obiektu lub tablicy) powoduje błąd składni.
+Jaka wbudowana metoda JavaScript służy do konwersji tekstowego ciągu JSON (string) na obiekt JavaScript?;`JSON.parse()`
+Jaka wbudowana metoda JavaScript służy do konwersji (serializacji) obiektu JavaScript na ciąg znaków JSON?;`JSON.stringify()` 
+Jeśli używasz Fetch API, jaka metoda obiektu `Response` pozwala automatycznie odczytać i sparsować odpowiedź do obiektu JavaScript?;`response.json()` (zwraca Promise, który rozwiązuje się do obiektu JS).
+Co się stanie, jeśli do `JSON.parse()` przekażesz string zawierający prawidłowy obiekt JavaScript, ale w którym liczby są zapisane w systemie szesnastkowym (hex) lub brakuje cudzysłowów wokół kluczy?;Wyrzuci błąd. JSON przyjmuje tylko liczby w formacie dziesiętnym, a każdy klucz bezwzględnie wymaga podwójnych cudzysłowów.

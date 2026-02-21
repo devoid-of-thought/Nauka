@@ -1,0 +1,9 @@
+Co to jest **npm**?;To menedżer pakietów (package manager) dla JavaScript – ogromne repozytorium narzędzi i bibliotek oraz program wiersza poleceń do zarządzania nimi.
+Czy skrót **npm** oficjalnie oznacza "Node Package Manager"?;Nie (choć często jest tak błędnie nazywany, oficjalnie to po prostu "npm").
+Jaki plik jest "sercem" każdego projektu zarządzanego przez npm?;`package.json` 
+Do czego służy plik `package.json`?;Jest to plik w formacie JSON zawierający metadane projektu (nazwa, wersja) oraz listę jego **zależności** (bibliotek) i skryptów.
+Jaka komenda pozwala automatycznie pobrać i zainstalować wszystkie biblioteki wymienione w `package.json`?;`npm install` 
+Czym są **zależności** (dependencies) w projekcie?;To zewnętrzne pakiety/kody (napisane przez innych), których Twój projekt potrzebuje do poprawnego działania, a które są pobierane z npm.
+Czym różnią się `dependencies` od `devDependencies`?;`dependencies` to biblioteki niezbędne do działania gotowej aplikacji, a `devDependencies` to narzędzia potrzebne tylko podczas **tworzenia** (np. testy, lintery), które nie trafiają na produkcję.
+Dlaczego repozytoria kodu (np. na GitHubie) zazwyczaj nie zawierają kodu samych bibliotek (folderu `node_modules`)?;Ponieważ folder ten jest bardzo duży, a każdy programista może go łatwo odtworzyć (pobrać), uruchamiając `npm install` na podstawie pliku `package.json`.
+Do czego służy sekcja `scripts` w pliku `package.json`?;Pozwala definiować skróty do komend (np. uruchamiania testów czy lintera), które można wywołać za pomocą `npm run <nazwa-skryptu>`.

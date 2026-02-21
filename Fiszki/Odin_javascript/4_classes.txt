@@ -1,0 +1,13 @@
+Jaki jest wynik operatora `typeof` dla klasy w JavaScript (np. `typeof MyClass`)?;`function` (Klasa jest technicznie funkcją, a jej metody trafiają do prototypu).
+Czy wewnątrz ciała klasy w JavaScript należy stawiać przecinki między metodami?;Nie, stawianie przecinków między metodami powoduje błąd składniowy.
+Kiedy automatycznie wywoływana jest metoda `constructor()`?;Podczas tworzenia nowej instancji obiektu za pomocą słowa kluczowego `new`.
+Gdzie w pamięci przechowywane są metody zdefiniowane w klasie (np. `sayHi()`)?;W obiekcie `prototype` danej klasy (`User.prototype`). 
+Co się stanie, jeśli spróbujesz wywołać konstruktor klasy *bez* słowa kluczowego `new`?;Zostanie wyrzucony błąd (TypeError), w przeciwieństwie do zwykłych funkcji.
+Czy metody zdefiniowane w klasie są przeliczalne (enumerable) w pętli `for..in`?;Nie, domyślnie są nieprzeliczalne (non-enumerable).
+Czy tryb ścisły (`"use strict"`) jest włączony wewnątrz ciała klasy?;Tak, cały kod wewnątrz klasy jest automatycznie wykonywany w trybie ścisłym.
+Czym są "Pola Klasy" (Class Fields) i jak się je definiuje?;Są to właściwości definiowane bezpośrednio w ciele klasy (np. `name = "Jan";`). Są przypisywane do konkretnej instancji, a nie do prototypu.
+Jaka jest różnica między polem klasy (`prop = value`) a właściwością w konstruktorze?;Składniowo jest czystsza, ale funkcjonalnie działa tak samo – tworzy właściwość na **instancji** obiektu.
+Jak rozwiązać problem "gubienia kontekstu `this`" (np. przy przekazywaniu metody do `setTimeout`) używając składni klas?;Definiując metodę jako **funkcję strzałkową** przypisaną do pola klasy (np. `click = () => { ... }`).
+Dlaczego użycie funkcji strzałkowej jako pola klasy zachowuje poprawny kontekst `this`?;Ponieważ funkcje strzałkowe nie mają własnego `this`; wiążą się z kontekstem, w którym zostały utworzone (czyli z instancją obiektu).
+Jaka jest składnia dla **Gettera** w klasie?;`get nazwaWlasciwosci() { return ... }`
+Jak zdefiniować metodę o nazwie obliczanej dynamicznie (Computed Method Name) w klasie?;Używając nawiasów kwadratowych, np. `['metoda' + 'Id']() { ... }`.

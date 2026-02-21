@@ -1,0 +1,13 @@
+Co to jest "Module Bundler" (np. Webpack)?;Narzędzie, które bierze plik wejściowy (entry point), analizuje jego zależności (buduje graf zależności) i łączy wiele plików (JS, CSS, obrazy) w jeden lub kilka plików wynikowych gotowych do wysłania do przeglądarki. 
+Jaka jest różnica między folderem `src` a `dist` w konwencji Webpacka?;`src` (source) zawiera kod źródłowy, który piszesz. `dist` (distribution) zawiera zoptymalizowany, wynikowy kod wygenerowany przez Webpacka, gotowy do wdrożenia (produkcji).
+Jaki jest domyślny plik konfiguracyjny Webpacka?;`webpack.config.js`
+Co określa właściwość `entry` w konfiguracji Webpacka?;Ścieżkę do pliku startowego (np. `./src/index.js`), od którego Webpack zaczyna budowanie grafu zależności.
+Co określa właściwość `output` w konfiguracji Webpacka?;Obiekt definiujący, gdzie (`path`) i pod jaką nazwą (`filename`) ma zostać zapisany zbudowany plik (bundle).
+Co robi opcja `clean: true` w konfiguracji `output`?;Automatycznie czyści folder docelowy (`dist`) przed każdym nowym budowaniem, usuwając stare pliki.
+Do czego służy `HtmlWebpackPlugin`?;Automatycznie generuje plik `index.html` w folderze `dist` i automatycznie wstrzykuje do niego tag `<script>` z linkiem do zbudowanego pliku JS.
+Jakie dwa loadery są potrzebne do obsługi CSS w Webpacku i co robią?;`css-loader` (zamienia CSS w string JS i obsługuje importy) oraz `style-loader` (wstrzykuje ten CSS do tagu `<style>` w DOM).
+W jakiej kolejności Webpack przetwarza loadery zdefiniowane w tablicy `use` (np. `["style-loader", "css-loader"]`)?;**Od końca do początku** (od prawej do lewej). Najpierw uruchomi się `css-loader`, a wynik przekaże do `style-loader`. 
+Jak w Webpacku 5 obsługuje się obrazy importowane w JS (bez instalowania dodatkowych loaderów)?;Używając **Asset Modules** poprzez ustawienie `type: "asset/resource"` w regułach (`rules`) dla plików graficznych.
+Co należy zrobić, aby obrazek zaimportowany w pliku JS (np. `import img from './pic.png'`) został poprawnie dołączony do bundle'a?;Należy użyć zmiennej z importu jako źródła (np. `image.src = img`), ponieważ Webpack zamieni ten import na ostateczną ścieżkę do pliku w folderze `dist`.
+Co to są **Source Maps** (np. `devtool: "eval-source-map"`)?;To mapy, które pozwalają przeglądarce powiązać zminifikowany kod w `dist` z oryginalnym kodem w `src`. Dzięki temu błędy w konsoli wskazują na linię w Twoim kodzie, a nie w bundle'u. 
+Do czego służy `webpack-dev-server`?;Uruchamia lokalny serwer, który nasłuchuje zmian w plikach i automatycznie odświeża stronę (Live Reloading), budując aplikację w pamięci RAM (nie zapisuje plików do dysku/dist).

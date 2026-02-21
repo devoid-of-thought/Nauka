@@ -1,0 +1,19 @@
+Gdzie definiuje się skrypty npm (npm scripts)?;W pliku package.json w obiekcie "scripts".
+Jak w terminalu uruchomić skrypt npm o nazwie "build" (np. "build": "webpack")?;npm run build
+Dlaczego wewnątrz skryptów npm nie musimy używać przedrostka npx (np. piszemy "dev": "webpack serve", a nie "dev": "npx webpack serve")?;Ponieważ skrypty npm automatycznie wiedzą, jak korzystać z poleceń dostarczanych przez pakiety zainstalowane lokalnie w projekcie (w node_modules).
+Jakie są dwa główne tryby (modes) budowania w Webpacku?;development (zoptymalizowany pod kątem pracy lokalnej i debugowania) oraz production (kod jest zminifikowany i zoptymalizowany pod kątem wydajności).
+Jak za pomocą skryptu npm wymusić na Webpacku użycie konkretnego, niestandardowego pliku konfiguracyjnego (np. webpack.prod.js)?;Dodając flagę --config, np. "build": "webpack --config webpack.prod.js".
+Do czego służy pakiet webpack-merge?;Pozwala na podzielenie konfiguracji Webpacka na mniejsze, reużywalne pliki (np. wspólna baza, plik dla środowiska dev i plik dla prod) i łączenie ich bez powielania kodu.
+Czym jest "Template repository" (repozytorium szablonowe) na GitHubie i do czego się przydaje?;To funkcja pozwalająca oznaczyć istniejące repozytorium (np. z gotową konfiguracją Webpacka) jako szablon. Pozwala to na tworzenie nowych projektów będących od razu kopią tego szablonu, co oszczędza czas na powtarzalną konfigurację.
+Jak uruchomić skrypt npm o nazwie `build` (zdefiniowany w sekcji `scripts` w `package.json`)?;`npm run build`
+Jakie polecenia npm pozwalają na uruchomienie skryptów `start` i `test` bez użycia słowa `run`?;`npm start` oraz `npm test` (lub `npm t`).
+W jaki sposób uzyskać dostęp do wersji pakietu określonej w `package.json` wewnątrz skryptu npm?;Używając zmiennej środowiskowej `$npm_package_version`.
+Jakiej flagi należy użyć, aby skrypt npm nie zakończył się błędem (kodem innym niż 0), jeśli dany skrypt nie istnieje w `package.json`?;`--if-present` (np. `npm run build --if-present`).
+Jak w skrypcie npm przekazać dodatkowe argumenty do już istniejącego polecenia (np. dodać flagę `--fix` do wywołania skryptu `lint`)?;Używając `--` przed dodatkowymi argumentami, np. `"lint:fix": "npm run lint -- --fix"`.
+Jak w skrypcie npm (opartym na powłoce unixowej) uruchomić dwa polecenia **sekwencyjnie** (jedno po drugim, tylko jeśli pierwsze się powiedzie)?;Używając operatora `&&` (np. `"build-and-test": "npm run build && npm run test"`).
+Jak w skrypcie npm uruchomić dwa polecenia **równolegle** (jednocześnie)?;Używając operatora `&` (np. `"build-and-test-parallel": "npm run build & npm run test"`).
+Do czego służy operator `||` w skryptach npm (powłoce)?;Wykonuje drugie polecenie **tylko wtedy**, gdy pierwsze zakończy się błędem (zwróci kod błędu).
+Czym są skrypty cyklu życia (lifecycle scripts) w npm (np. `preinstall`, `postinstall`)?;Są to predefiniowane nazwy skryptów, które npm wykonuje automatycznie na określonych etapach działania (np. przed/po instalacji pakietu, budowaniu czy publikacji). 
+Jak dodać skrypt, który uruchomi się automatycznie **przed** skryptem o nazwie `test`?;Należy utworzyć skrypt o nazwie `pretest`.
+Dlaczego należy unikać komend takich jak `rm -rf` w skryptach npm i co stosować w zamian?;Ponieważ `rm -rf` zadziała na systemach Linux/Mac, ale spowoduje błąd w systemie Windows. Zamiast tego należy używać narzędzi wieloplatformowych (cross-platform), takich jak pakiet `rimraf`.
+Jaki kod wyjścia (exit code) powinien zwrócić skrypt, aby zasygnalizować sukces, a jaki, aby zasygnalizować błąd?;`0` dla sukcesu, a kod niezerowy (np. `1`) dla błędu.

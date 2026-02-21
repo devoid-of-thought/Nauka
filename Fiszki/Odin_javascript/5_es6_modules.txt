@@ -1,0 +1,19 @@
+Jaki był główny problem z dzieleniem kodu JS na pliki przed wprowadzeniem modułów ES6?;Wszystkie zmienne trafiały do **globalnego zakresu** (global scope), co prowadziło do konfliktów nazw i zaśmiecania przestrzeni globalnej.
+W jaki sposób deweloperzy symulowali moduły przed ES6, aby uniknąć zaśmiecania zakresu globalnego?;Używali **IIFE** (Immediately Invoked Function Expressions), aby zamknąć zmienne w prywatnym zakresie i zwracali tylko to, co miało być publiczne. 
+Co oznacza skrót **ESM**?;**E**CMAScript **M**odules (znane również jako Moduły ES6).
+Jaka jest kluczowa różnica w zakresie (scope) między zwykłym skryptem JS a modułem ES6?;Zwykłe skrypty współdzielą **zakres globalny**, podczas gdy moduły ES6 mają swój własny **prywatny zakres modułu** (zmienne najwyższego poziomu nie są globalne).
+Co to jest "Entry Point" (Punkt Wejścia) w kontekście modułów ES6?;To pojedynczy plik JavaScript podlinkowany w HTML, który uruchamia aplikację; przeglądarka automatycznie ładuje jego zależności (importy). 
+Dlaczego nie trzeba dodawać atrybutu `defer` do znacznika `<script type="module">`?;Ponieważ moduły są **automatycznie odroczone** (deferred) domyślnie.
+Jakie są dwa rodzaje eksportów w modułach ES6?;Eksporty **nazwane** (Named exports) i eksporty **domyślne** (Default exports).
+Jak wyeksportować zmienną jako **Eksport Nazwany** (inline)?;`export const myVariable = ...;`
+Jak wyeksportować wiele zmiennych jako **Eksporty Nazwane** na końcu pliku?;`export { var1, var2 };` (Uwaga: to *nie jest* literał obiektu).
+Jak zaimportować **Eksporty Nazwane**?;Używając nawiasów klamrowych: `import { var1, var2 } from './file.js';`
+Ile **Eksportów Domyślnych** może mieć jeden plik?;Tylko **jeden**.
+Jak wyeksportować wartość jako **Eksport Domyślny**?;`export default myValue;` LUB `export default variableName;`
+Jak zaimportować **Eksport Domyślny**?;Bez nawiasów klamrowych, używając dowolnej wybranej nazwy: `import myName from './file.js';`
+Czy można łączyć eksporty **Nazwane** i **Domyślne** w tym samym pliku?;Tak.
+Jak zaimportować jednocześnie eksport domyślny i nazwany z tego samego pliku?;`import defaultName, { named1, named2 } from './path.js';`
+Czy ścieżka pliku w instrukcji `import` obsługuje template literals (np. `` `./${file}.js` ``)?;Nie, musi to być statyczny ciąg znaków (w cudzysłowie pojedynczym lub podwójnym).
+Jaki atrybut należy dodać do znacznika `<script>`, aby włączyć obsługę modułów ES6 w przeglądarce?;`type="module"` (np. `<script src="main.js" type="module"></script>`).
+Co to jest **CommonJS** (CJS)?;To system modułów tradycyjnie używany w **Node.js** (korzystający z `require` i `module.exports`).
+Czy przeglądarki natywnie rozumieją składnię CommonJS (`require`)?;Nie, przeglądarki natywnie wspierają **ESM** (`import`/`export`).
