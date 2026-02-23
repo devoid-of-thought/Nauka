@@ -1,0 +1,9 @@
+Jak nazywa się interfejs API wbudowany w przeglądarki, który udostępnia metody i właściwości do walidacji formularzy w JavaScript?;**Constraint Validation API** (API walidacji ograniczeń).
+Co zwraca właściwość `element.validity` wywołana na polu formularza?;Zwraca obiekt `ValidityState`, który zawiera szereg właściwości (np. `valid`, `valueMissing`, `tooShort`) opisujących szczegółowy stan poprawności tego pola. 
+Jak w JavaScript sprawdzić, czy pole formularza z atrybutem `required` zostało pozostawione puste, korzystając z obiektu `validity`?;Sprawdzając, czy właściwość `element.validity.valueMissing` zwraca `true`.
+Która właściwość obiektu `ValidityState` zwraca `true`, gdy wartość w polu `<input type="email">` lub `url` nie ma poprawnego formatu?;`element.validity.typeMismatch`
+Jaka metoda w JavaScript pozwala przypisać polu formularza niestandardowy komunikat błędu i zablokować jego wysłanie?;`element.setCustomValidity("Twój komunikat błędu")`. 
+Co należy przekazać do metody `setCustomValidity()`, aby wyczyścić wcześniej ustawiony błąd i uznać pole za poprawne?;Należy przekazać pusty ciąg znaków: `element.setCustomValidity("")`.
+Co się dzieje, gdy dodasz atrybut `novalidate` do tagu `<form>`?;Wyłącza on domyślne dymki błędów przeglądarki (pozwala to na zbudowanie własnego UI dla błędów), ale **nie wyłącza** działania Constraint Validation API ani pseudoklas CSS (takich jak `:invalid` czy `:valid`). 
+Jaka metoda Constraint Validation API sprawdza poprawność pola i automatycznie triggeruje pojawienie się domyślnych dymków z błędami (często używana razem z `preventDefault()` w zdarzeniu submit)?;`element.reportValidity()`
+Jaka jest różnica między właściwościami `patternMismatch` a `typeMismatch` w obiekcie `ValidityState`?;`patternMismatch` sprawdza, czy wartość pasuje do wyrażenia regularnego zdefiniowanego w atrybucie `pattern`, podczas gdy `typeMismatch` sprawdza wbudowaną składnię dla określonych typów inputów (jak `email` czy `url`).

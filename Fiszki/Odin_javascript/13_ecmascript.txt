@@ -1,0 +1,5 @@
+Czym jest ECMAScript w stosunku do JavaScriptu?;To oficjalny standard języka (utrzymywany przez organizację Ecma International), do którego stosuje się język JavaScript.
+Czym jest ES6 (lub ES2015)?;To przełomowa aktualizacja JavaScriptu wydana latem 2015 roku, która wprowadziła do języka ogromną liczbę nowych funkcji i ulepszeń składni.
+Jak zmienił się harmonogram wydań i nazewnictwo ECMAScript po debiucie ES6?;Komitet TC39 przeszedł z wersji liczbowych (ES6, ES7) na lata wydań (ES2015, ES2016) i rozpoczął publikowanie **corocznych**, mniejszych aktualizacji zamiast rzadkich, gigantycznych wydań. 
+Jaki jest główny problem z używaniem najnowszych funkcji JavaScriptu w projektach produkcyjnych?;Brak pełnego wsparcia we wszystkich przeglądarkach. Zanim nowa funkcja stanie się "szeroko dostępna" na rynku, mogą minąć lata, co grozi wywaleniem się aplikacji u użytkowników ze starszym oprogramowaniem.
+Czym jest Babel w ekosystemie JavaScript?;To narzędzie, które **transpiluje** (przekształca) nowoczesny kod JavaScript na starszą składnię (np. ES5), która jest bezpieczna i w pełni zrozumiała dla starszych przeglądarek.
