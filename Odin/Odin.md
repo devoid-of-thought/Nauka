@@ -50,3 +50,16 @@
 | [Link](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page) |Strona Restauracji |[Link](https://github.com/devoid-of-thought/odin-restaurant-page/tree/main) | [Link](https://devoid-of-thought.github.io/odin-restaurant-page/#) |
 | [Link](https://www.theodinproject.com/lessons/node-path-javascript-todo-list) | Lista rzeczy do zrobienia | [Link](https://github.com/devoid-of-thought/odin-to-do-list) | [Link](https://devoid-of-thought.github.io/odin-to-do-list/)|
 |[Link](https://www.theodinproject.com/lessons/node-path-javascript-weather-app) | Aplikacja Pogodowa | [Link](https://github.com/devoid-of-thought/odin-weather-forecast) | [Link]( https://devoid-of-thought.github.io/odin-weather-forecast/)|
+
+[Webpack Practise](https://github.com/devoid-of-thought/Odin/tree/main/webpack-practice)
+
+[MDN - Json](https://github.com/devoid-of-thought/Odin/tree/main/MDN/json)
+
+[Form Validation](https://github.com/devoid-of-thought/Odin/tree/main/odin-form-validation)
+
+[Giphy api](https://github.com/devoid-of-thought/Odin/tree/main/odin-giphy-api-showcase)
+
+[Test practice](https://github.com/devoid-of-thought/Odin/tree/main/test-practice)
+
+
+
