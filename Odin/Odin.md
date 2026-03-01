@@ -41,6 +41,7 @@
 | --- | ------- | -------------------- | -------------------- |
 |[Link](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form)|<strong>Formularz Rejestracji | [Link](https://github.com/devoid-of-thought/odin-sign-up-form)|[Link](https://devoid-of-thought.github.io/odin-sign-up-form/) |
 |[Link](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard)|<strong>Admin Dashboard| [Link](https://github.com/devoid-of-thought/odin-admin-dashboard)|[Link](https://devoid-of-thought.github.io/odin-admin-dashboard/) |
+
 ### Odin Javascript Course
 
 
@@ -70,6 +71,13 @@
 | [Link](https://www.theodinproject.com/lessons/node-path-javascript-battleship) |<strong> Statki| [Link](https://github.com/devoid-of-thought/odin-battleship) | [Link](https://devoid-of-thought.github.io/odin-battleship/)|
 
 
+## Odin Advanced Html and Css
+
+[Animacje](https://github.com/devoid-of-thought/css-exercises/tree/main/advanced-html-css/animation)
+
+|Projekt Odin| Projekt | Link do repozytorium | Link do github pages |
+| --- | ------- | -------------------- | -------------------- |
+|[Link](https://www.theodinproject.com/lessons/node-path-advanced-html-and-css-homepage) |<strong>Strona główna | [Link](https://github.com/devoid-of-thought/odin-homepage) |[Link](https://devoid-of-thought.github.io/odin-homepage/) | 
 
 
 
