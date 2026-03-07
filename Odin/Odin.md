@@ -63,13 +63,14 @@
 | [Link](https://www.theodinproject.com/lessons/node-path-javascript-todo-list) | <strong>Lista rzeczy do zrobienia | [Link](https://github.com/devoid-of-thought/odin-to-do-list) | [Link](https://devoid-of-thought.github.io/odin-to-do-list/)|
 |[Link](https://www.theodinproject.com/lessons/node-path-javascript-weather-app) | <strong>Aplikacja Pogodowa | [Link](https://github.com/devoid-of-thought/odin-weather-forecast) | [Link]( https://devoid-of-thought.github.io/odin-weather-forecast/)|
 | [Link](https://www.theodinproject.com/lessons/node-path-javascript-testing-practice)| <strong>Testowanie | [Link](https://github.com/devoid-of-thought/odin-test-practice) | - |
-| [Link](https://www.theodinproject.com/lessons/javascript-recursion)|<strong> Rekurencja |- |-|
-| [Link](https://www.theodinproject.com/lessons/javascript-linked-lists)|<strong> Lista łączona|- |-|
-| [Link](https://www.theodinproject.com/lessons/javascript-hashmap)|<strong> Hash mapa|- |-|
-| [Link](https://www.theodinproject.com/lessons/javascript-binary-search-trees)|<strong> Drzewo przeszukiwania binarnego |- |-|
-| [Link](https://www.theodinproject.com/lessons/javascript-knights-travails)|<strong> Ruchy skoczka |- |-|
+| [Link](https://www.theodinproject.com/lessons/javascript-recursion)|<strong> Rekurencja |* |-|
+| [Link](https://www.theodinproject.com/lessons/javascript-linked-lists)|<strong> Lista łączona|*|-|
+| [Link](https://www.theodinproject.com/lessons/javascript-hashmap)|<strong> Hash mapa|* |-|
+| [Link](https://www.theodinproject.com/lessons/javascript-binary-search-trees)|<strong> Drzewo przeszukiwania binarnego |* |-|
+| [Link](https://www.theodinproject.com/lessons/javascript-knights-travails)|<strong> Ruchy skoczka |* |-|
 | [Link](https://www.theodinproject.com/lessons/node-path-javascript-battleship) |<strong> Statki| [Link](https://github.com/devoid-of-thought/odin-battleship) | [Link](https://devoid-of-thought.github.io/odin-battleship/)|
 
+*Pominięte ze względu na przedmiot struktury danych i algorytmy na studiach - zostaną wykonane w późniejszym czasie
 
 ## Odin Advanced Html and Css
 
@@ -78,6 +79,12 @@
 |Projekt Odin| Projekt | Link do repozytorium | Link do github pages |
 | --- | ------- | -------------------- | -------------------- |
 |[Link](https://www.theodinproject.com/lessons/node-path-advanced-html-and-css-homepage) |<strong>Strona główna | [Link](https://github.com/devoid-of-thought/odin-homepage) |[Link](https://devoid-of-thought.github.io/odin-homepage/) | 
+
+## Odin React 
+
+|Projekt Odin| Projekt | Link do repozytorium | Link do github pages |
+| --- | ------- | -------------------- | -------------------- |
+|[Link](https://www.theodinproject.com/lessons/node-path-react-new-cv-application) |<strong> Aplikacja do tworzenia CV | [Link](https://github.com/devoid-of-thought/odin-cv-app) |[Link](devoid-of-cv.netlify.app) | 
 
 
 
