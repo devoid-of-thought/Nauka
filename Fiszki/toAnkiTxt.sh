@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+#Skrypt konwertujący pliki .txt z folderu źródłowego do formatu Anki, zapisując wynik w jednym pliku docelowym.
+
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 <source_folder> <destination_file.txt>"
     echo "Example: $0 txt/ Odin_intermediate_html_and_css.txt"
